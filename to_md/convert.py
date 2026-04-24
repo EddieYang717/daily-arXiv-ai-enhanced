@@ -15,6 +15,17 @@ if __name__ == "__main__":
             return preference.index(cate)
         else:
             return len(preference)
+    def relevance_score(item):
+        try:
+            return int(item.get("AI", {}).get("relevance_score", 0) or 0)
+        except (TypeError, ValueError):
+            return 0
+    def format_topics(topics):
+        if isinstance(topics, list):
+            return ", ".join(map(str, topics))
+        if isinstance(topics, str):
+            return topics
+        return ""
 
     with open(args.data, "r") as f:
         for line in f:
@@ -38,7 +49,12 @@ if __name__ == "__main__":
         markdown += f"\n\n<div id='{cate}'></div>\n\n"
         markdown += f"# {cate} [[Back]](#toc)\n\n"
         papers = []
-        for item in data:
+        category_items = [item for item in data if item["categories"][0] == cate]
+        category_items.sort(
+            key=relevance_score,
+            reverse=True
+        )
+        for item in category_items:
             if item["categories"][0] == cate:
                 # Safely access AI fields with default values
                 ai_data = item.get('AI', {})
@@ -63,6 +79,9 @@ if __name__ == "__main__":
                         method=ai_data.get('method', ''),
                         result=ai_data.get('result', ''),
                         conclusion=ai_data.get('conclusion', ''),
+                        relevance_score=ai_data.get('relevance_score', 0),
+                        relevance_reason=ai_data.get('relevance_reason', ''),
+                        relevance_topics=format_topics(ai_data.get('relevance_topics', [])),
                         cate=item['categories'][0],
                         idx=next(idx)
                     )

@@ -259,7 +259,10 @@ function outputJsonData(papers, category) {
       summary: p.summary,
       date: p.date,
       url: p.url,
-      reason: p.matchReason
+      reason: p.matchReason,
+      relevance_score: p.relevanceScore,
+      relevance_reason: p.relevanceReason,
+      relevance_topics: p.relevanceTopics
     }))
   };
 
@@ -916,6 +919,9 @@ function parseJsonlData(jsonlText, date) {
       }
       
       const summary = paper.AI && paper.AI.tldr ? paper.AI.tldr : paper.summary;
+      const relevanceScore = paper.AI && paper.AI.relevance_score !== undefined
+        ? Number(paper.AI.relevance_score) || 0
+        : 0;
       
       result[primaryCategory].push({
         title: paper.title,
@@ -930,6 +936,9 @@ function parseJsonlData(jsonlText, date) {
         method: paper.AI && paper.AI.method ? paper.AI.method : '',
         result: paper.AI && paper.AI.result ? paper.AI.result : '',
         conclusion: paper.AI && paper.AI.conclusion ? paper.AI.conclusion : '',
+        relevanceScore: Math.max(0, Math.min(5, relevanceScore)),
+        relevanceReason: paper.AI && paper.AI.relevance_reason ? paper.AI.relevance_reason : '',
+        relevanceTopics: paper.AI && Array.isArray(paper.AI.relevance_topics) ? paper.AI.relevance_topics : [],
         code_url: paper.code_url || '',
         code_stars: paper.code_stars || 0,
         code_last_update: paper.code_last_update || ''
@@ -940,6 +949,22 @@ function parseJsonlData(jsonlText, date) {
   });
   
   return result;
+}
+
+function getRelevanceScore(paper) {
+  const score = Number(paper.relevanceScore);
+  if (!Number.isFinite(score)) {
+    return 0;
+  }
+  return Math.max(0, Math.min(5, Math.round(score)));
+}
+
+function compareByRelevance(a, b) {
+  const scoreDiff = getRelevanceScore(b) - getRelevanceScore(a);
+  if (scoreDiff !== 0) {
+    return scoreDiff;
+  }
+  return (a.title || '').localeCompare(b.title || '');
 }
 
 // 获取所有类别并按偏好排序
@@ -1113,6 +1138,7 @@ function renderPapers() {
   
   // 创建匹配论文的集合
   let filteredPapers = [...papers];
+  filteredPapers.sort(compareByRelevance);
 
   // 重置所有论文的匹配状态，避免上次渲染的残留
   filteredPapers.forEach(p => {
@@ -1152,7 +1178,7 @@ function renderPapers() {
       const bm = hayB.includes(q);
       if (am && !bm) return -1;
       if (!am && bm) return 1;
-      return 0;
+      return compareByRelevance(a, b);
     });
 
     // 标记匹配项，用于卡片样式与提示
@@ -1209,7 +1235,7 @@ function renderPapers() {
         
         if (aMatches && !bMatches) return -1;
         if (!aMatches && bMatches) return 1;
-        return 0;
+        return compareByRelevance(a, b);
       });
       
       // 标记匹配的论文
@@ -1288,7 +1314,7 @@ function renderPapers() {
       
       if (aMatches && !bMatches) return -1;
       if (!aMatches && bMatches) return 1;
-      return 0;
+      return compareByRelevance(a, b);
     });
     
     // 标记匹配的论文
@@ -1351,6 +1377,8 @@ function renderPapers() {
     if (paper.isMatched) {
       // 添加匹配原因提示
       paperCard.title = `匹配: ${paper.matchReason.join(' | ')}`;
+    } else if (paper.relevanceReason) {
+      paperCard.title = `Relevance ${getRelevanceScore(paper)}/5: ${paper.relevanceReason}`;
     }
     
     const categoryTags = paper.allCategories ? 
@@ -1407,6 +1435,7 @@ function renderPapers() {
         <p class="paper-card-authors">${formattedAuthors}</p>
         <div class="paper-card-categories">
           ${categoryTags}
+          <span class="relevance-tag relevance-score-${getRelevanceScore(paper)}">Relevance ${getRelevanceScore(paper)}/5</span>
         </div>
       </div>
       <div class="paper-card-body">
@@ -1504,6 +1533,13 @@ function showPaperDetails(paper, paperIndex) {
       <p><strong>Authors: </strong>${highlightedAuthors}</p>
       <p><strong>Categories: </strong>${categoryDisplay}</p>
       <p><strong>Date: </strong>${formatDate(paper.date)}</p>
+      <div class="relevance-info">
+        <div class="relevance-info-header">
+          <span class="relevance-tag relevance-score-${getRelevanceScore(paper)}">Relevance ${getRelevanceScore(paper)}/5</span>
+          ${paper.relevanceTopics && paper.relevanceTopics.length > 0 ? `<span class="relevance-topics">${paper.relevanceTopics.join(', ')}</span>` : ''}
+        </div>
+        ${paper.relevanceReason ? `<p>${paper.relevanceReason}</p>` : ''}
+      </div>
       
       
       <h3>TL;DR</h3>

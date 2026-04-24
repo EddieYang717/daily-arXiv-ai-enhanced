@@ -44,6 +44,9 @@ jobs:
         export LANGUAGE="${{ vars.LANGUAGE }}"
         export CATEGORIES="${{ vars.CATEGORIES }}"
         export MODEL_NAME="${{ vars.MODEL_NAME }}"
+        : "${LANGUAGE:=Chinese}"
+        : "${CATEGORIES:=cs.IT,eess.SP}"
+        : "${MODEL_NAME:=deepseek-chat}"
         
         # 使用Scrapy爬取
         # Use Scrapy to crawl
@@ -109,6 +112,8 @@ jobs:
         export OPENAI_BASE_URL=${{ secrets.OPENAI_BASE_URL }}
         export LANGUAGE="${{ vars.LANGUAGE }}"
         export MODEL_NAME="${{ vars.MODEL_NAME }}"
+        : "${LANGUAGE:=Chinese}"
+        : "${MODEL_NAME:=deepseek-chat}"
         
         python enhance.py --data ../data/${today}.jsonl
         
@@ -128,6 +133,7 @@ jobs:
         
         # 设置环境变量 / Set environment variables
         export LANGUAGE="${{ vars.LANGUAGE }}"
+        : "${LANGUAGE:=Chinese}"
         
         cd to_md
         

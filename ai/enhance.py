@@ -27,6 +27,19 @@ if os.path.exists('.env'):
 template = open("template.txt", "r").read()
 system = open("system.txt", "r").read()
 
+def load_research_profile() -> str:
+    """Load the user's research profile from env or a local markdown file."""
+    profile = os.environ.get("RESEARCH_PROFILE", "").strip()
+    if profile:
+        return profile
+
+    profile_path = os.environ.get("RESEARCH_PROFILE_PATH", "../research_profile.md")
+    try:
+        with open(profile_path, "r") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        return "No research profile configured. Assign low relevance unless the abstract is clearly aligned with common interests."
+
 def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser()
@@ -121,13 +134,17 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
         "motivation": "Motivation analysis unavailable",
         "method": "Method extraction failed",
         "result": "Result analysis unavailable",
-        "conclusion": "Conclusion extraction failed"
+        "conclusion": "Conclusion extraction failed",
+        "relevance_score": 0,
+        "relevance_reason": "Relevance scoring unavailable",
+        "relevance_topics": []
     }
     
     try:
         response: Structure = chain.invoke({
             "language": language,
-            "content": item['summary']
+            "content": item['summary'],
+            "research_profile": process_single_item.research_profile
         })
         item['AI'] = response.model_dump()
     except langchain_core.exceptions.OutputParserException as e:
@@ -167,6 +184,9 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
 
 def process_all_items(data: List[Dict], model_name: str, language: str, max_workers: int) -> List[Dict]:
     """并行处理所有数据项"""
+    if not hasattr(process_single_item, "research_profile"):
+        process_single_item.research_profile = load_research_profile()
+
     llm = ChatOpenAI(model=model_name).with_structured_output(Structure, method="function_calling")
     print('Connect to:', model_name, file=sys.stderr)
     
@@ -205,7 +225,10 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
                     "motivation": "Processing failed",
                     "method": "Processing failed",
                     "result": "Processing failed",
-                    "conclusion": "Processing failed"
+                    "conclusion": "Processing failed",
+                    "relevance_score": 0,
+                    "relevance_reason": "Processing failed",
+                    "relevance_topics": []
                 }
     
     return processed_data
@@ -214,6 +237,7 @@ def main():
     args = parse_args()
     model_name = os.environ.get("MODEL_NAME", 'deepseek-chat')
     language = os.environ.get("LANGUAGE", 'Chinese')
+    process_single_item.research_profile = load_research_profile()
 
     # 检查并删除目标文件
     target_file = args.data.replace('.jsonl', f'_AI_enhanced_{language}.jsonl')

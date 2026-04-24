@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/b25712a4-fb8d-484f-863d-e8da6922f9d7
 
 
 # How to use
-This repo will daily crawl arXiv papers about **cs.CV, cs.GR, cs.CL and cs.AI**, and use **DeepSeek** to summarize the papers in **Chinese**.
+This repo will daily crawl arXiv papers about **cs.IT** and **eess.SP**, use an OpenAI-compatible LLM to summarize the papers, and score each paper against your personal research profile.
 If you wish to crawl other arXiv categories, use other LLMs, or other languages, please follow the instructions.
 Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-arXiv-ai-enhanced/. Please star it if you like :)
 
@@ -55,14 +55,25 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
 5. [Optional] Set a password in `secrets.ACCESS_PASSWORD` if you do not wish others to access your page. (see https://github.com/dw-dengwei/daily-arXiv-ai-enhanced/pull/64)
 6. Go to Variables. Variables are shown as plain text and are used for non-sensitive data
 7. Create the following repository variables:
-   1. `CATEGORIES`: separate the categories with ",", such as "cs.CL, cs.CV"
+   1. `CATEGORIES`: separate the categories with ",", such as "cs.IT,eess.SP"
    2. `LANGUAGE`: such as "Chinese" or "English"
    3. `MODEL_NAME`: such as "deepseek-chat"
    4. `EMAIL`: your email for push to GitHub
    5. `NAME`: your name for push to GitHub
-8. Go to your-own-repo -> Actions -> arXiv-daily-ai-enhanced
-9. You can manually click **Run workflow** to test if it works well (it may take about one hour). By default, this action will automatically run every day. You can modify it in `.github/workflows/run.yml`
-10. Set up GitHub pages: Go to your own repo -> Settings -> Pages. In `Build and deployment`, set `Source="Deploy from a branch"`, `Branch="main", "/(root)"`. Wait for a few minutes, go to https://\<username\>.github.io/daily-arXiv-ai-enhanced/. Please see this [issue](https://github.com/dw-dengwei/daily-arXiv-ai-enhanced/issues/14) for more precise instructions.
+8. Edit [`research_profile.md`](./research_profile.md) to describe your current research direction. The AI enhancement step uses it to generate `relevance_score`, `relevance_reason`, and `relevance_topics` for every paper.
+9. Go to your-own-repo -> Actions -> arXiv-daily-ai-enhanced
+10. You can manually click **Run workflow** to test if it works well (it may take about one hour). By default, this action will automatically run every day. You can modify it in `.github/workflows/run.yml`
+11. Set up GitHub pages: Go to your own repo -> Settings -> Pages. In `Build and deployment`, set `Source="Deploy from a branch"`, `Branch="main", "/(root)"`. Wait for a few minutes, go to https://\<username\>.github.io/daily-arXiv-ai-enhanced/. Please see this [issue](https://github.com/dw-dengwei/daily-arXiv-ai-enhanced/issues/14) for more precise instructions.
+
+## Personal relevance ranking
+
+This fork is configured for a daily triage workflow: the generated JSONL, Markdown, and web UI all carry a 0-5 relevance score. Higher-scored papers are shown first within each category, with a short reason in the paper card tooltip, detail modal, and Markdown output.
+
+You can tune the ranking without changing code:
+
+1. Update `research_profile.md` with your research direction, high-priority topics, and exclusions.
+2. Keep GitHub Actions variable `CATEGORIES` as `cs.IT,eess.SP`, or change it if your arXiv subscription changes.
+3. Run the workflow manually once to inspect whether the ranking matches your taste, then refine the profile text.
 
 # Plans
 See https://github.com/users/dw-dengwei/projects/3

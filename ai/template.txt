@@ -1,4 +1,13 @@
-Please analyze the following abstract of papers. 
+Please analyze the following paper abstract.
+
+Also evaluate how relevant the paper is to the research profile below.
+Return:
+- relevance_score: an integer from 0 to 5.
+- relevance_reason: one concise sentence explaining the score.
+- relevance_topics: short matched topics, or an empty list if none match.
+
+Research profile:
+{research_profile}
 
 Content:
 {content}
