@@ -27,6 +27,11 @@ if os.path.exists('.env'):
 template = open("template.txt", "r").read()
 system = open("system.txt", "r").read()
 
+FAILED_TLDR_VALUES = {
+    "Summary generation failed",
+    "Processing failed",
+}
+
 def load_research_profile() -> str:
     """Load the user's research profile from env or a local markdown file."""
     profile = os.environ.get("RESEARCH_PROFILE", "").strip()
@@ -187,6 +192,10 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
     if not hasattr(process_single_item, "research_profile"):
         process_single_item.research_profile = load_research_profile()
 
+    api_key_configured = bool(os.environ.get("OPENAI_API_KEY"))
+    base_url = os.environ.get("OPENAI_BASE_URL", "")
+    print(f"OPENAI_API_KEY configured: {api_key_configured}", file=sys.stderr)
+    print(f"OPENAI_BASE_URL configured: {bool(base_url)}", file=sys.stderr)
     llm = ChatOpenAI(model=model_name).with_structured_output(Structure, method="function_calling")
     print('Connect to:', model_name, file=sys.stderr)
     
@@ -233,6 +242,14 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
     
     return processed_data
 
+def has_successful_ai(item: Dict) -> bool:
+    """Return True when an item has real AI output instead of fallback placeholders."""
+    if not item:
+        return False
+    ai_data = item.get("AI") or {}
+    tldr = ai_data.get("tldr", "")
+    return bool(tldr) and tldr not in FAILED_TLDR_VALUES
+
 def main():
     args = parse_args()
     model_name = os.environ.get("MODEL_NAME", 'deepseek-chat')
@@ -269,12 +286,21 @@ def main():
         language,
         args.max_workers
     )
+
+    written_items = [item for item in processed_data if item is not None]
+    successful_ai_count = sum(1 for item in written_items if has_successful_ai(item))
+    if data and written_items and successful_ai_count == 0:
+        print(
+            "AI enhancement produced only fallback placeholders. "
+            "Please check OPENAI_API_KEY, OPENAI_BASE_URL, and MODEL_NAME.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
     
     # 保存结果
     with open(target_file, "w") as f:
-        for item in processed_data:
-            if item is not None:
-                f.write(json.dumps(item) + "\n")
+        for item in written_items:
+            f.write(json.dumps(item) + "\n")
 
 if __name__ == "__main__":
     main()
