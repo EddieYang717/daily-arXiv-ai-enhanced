@@ -19,8 +19,36 @@ let textSearchQuery = ''; // 实时文本搜索查询
 let previousActiveKeywords = null; // 文本搜索激活时，暂存之前的关键词激活集合
 let previousActiveAuthors = null; // 文本搜索激活时，暂存之前的作者激活集合
 
+function normalizePreferenceList(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map(item => String(item).trim())
+    .filter(item => item.length > 0);
+}
+
+async function loadDefaultPreferences() {
+  try {
+    const response = await fetch('assets/preferences.json', { cache: 'no-store' });
+    if (!response.ok) {
+      return { keywords: [], authors: [] };
+    }
+
+    const preferences = await response.json();
+    return {
+      keywords: normalizePreferenceList(preferences.keywords),
+      authors: normalizePreferenceList(preferences.authors)
+    };
+  } catch (error) {
+    console.warn('加载默认偏好失败:', error);
+    return { keywords: [], authors: [] };
+  }
+}
+
 // 加载用户的关键词设置
-function loadUserKeywords() {
+function loadUserKeywords(defaultKeywords = []) {
   const savedKeywords = localStorage.getItem('preferredKeywords');
   if (savedKeywords) {
     try {
@@ -33,16 +61,17 @@ function loadUserKeywords() {
       activeKeywords = [];
     }
   } else {
-    userKeywords = [];
+    userKeywords = normalizePreferenceList(defaultKeywords);
     activeKeywords = [];
   }
+  activeKeywords = [...userKeywords];
   
   // renderKeywordTags();
   renderFilterTags();
 }
 
 // 加载用户的作者设置
-function loadUserAuthors() {
+function loadUserAuthors(defaultAuthors = []) {
   const savedAuthors = localStorage.getItem('preferredAuthors');
   if (savedAuthors) {
     try {
@@ -55,9 +84,10 @@ function loadUserAuthors() {
       activeAuthors = [];
     }
   } else {
-    userAuthors = [];
+    userAuthors = normalizePreferenceList(defaultAuthors);
     activeAuthors = [];
   }
+  activeAuthors = [...userAuthors];
   
   renderFilterTags();
 }
@@ -370,16 +400,18 @@ function matchPapersByKeywordsOrAuthor(papers, keywords, author) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   initEventListeners();
 
   fetchGitHubStats();
 
+  const defaultPreferences = await loadDefaultPreferences();
+
   // 加载用户关键词
-  loadUserKeywords();
+  loadUserKeywords(defaultPreferences.keywords);
 
   // 加载用户作者
-  loadUserAuthors();
+  loadUserAuthors(defaultPreferences.authors);
 
   // 解析URL中的category、json、author和keywords参数
   urlCategoryParam = getUrlCategory();

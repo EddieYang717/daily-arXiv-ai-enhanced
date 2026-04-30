@@ -1,29 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-  initSettings();
+document.addEventListener('DOMContentLoaded', async () => {
+  const defaultPreferences = await loadDefaultPreferences();
+  initSettings(defaultPreferences);
   initEventListeners();
   fetchGitHubStats();
 });
 
+function normalizePreferenceList(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map(item => String(item).trim())
+    .filter(item => item.length > 0);
+}
+
+async function loadDefaultPreferences() {
+  try {
+    const response = await fetch('assets/preferences.json', { cache: 'no-store' });
+    if (!response.ok) {
+      return { keywords: [], authors: [] };
+    }
+
+    const preferences = await response.json();
+    return {
+      keywords: normalizePreferenceList(preferences.keywords),
+      authors: normalizePreferenceList(preferences.authors)
+    };
+  } catch (error) {
+    console.warn('加载默认偏好失败:', error);
+    return { keywords: [], authors: [] };
+  }
+}
+
 // 初始化设置，从localStorage加载已保存的设置
-function initSettings() {
+function initSettings(defaultPreferences = { keywords: [], authors: [] }) {
   // 关键词偏好设置
-  loadKeywordPreferences();
+  loadKeywordPreferences(defaultPreferences.keywords);
   // 作者偏好设置
-  loadAuthorPreferences();
+  loadAuthorPreferences(defaultPreferences.authors);
 }
 
 // 从localStorage加载关键词偏好
-function loadKeywordPreferences() {
+function loadKeywordPreferences(defaultKeywords = []) {
   const selectedKeywordsContainer = document.getElementById('selectedKeywords');
   selectedKeywordsContainer.innerHTML = '';
   
   // 获取保存的关键词，如果没有则使用默认关键词
   let savedKeywords = localStorage.getItem('preferredKeywords');
-  let keywords = []; // 默认无关键词
+  let keywords = normalizePreferenceList(defaultKeywords);
   
   if (savedKeywords) {
     try {
-      keywords = JSON.parse(savedKeywords);
+      keywords = normalizePreferenceList(JSON.parse(savedKeywords));
     } catch (e) {
       console.error('解析保存的关键词失败:', e);
     }
@@ -41,17 +70,17 @@ function loadKeywordPreferences() {
 }
 
 // 从localStorage加载作者偏好
-function loadAuthorPreferences() {
+function loadAuthorPreferences(defaultAuthors = []) {
   const selectedAuthorsContainer = document.getElementById('selectedAuthors');
   selectedAuthorsContainer.innerHTML = '';
   
   // 获取保存的作者，如果没有则为空数组
   let savedAuthors = localStorage.getItem('preferredAuthors');
-  let authors = []; // 默认无作者
+  let authors = normalizePreferenceList(defaultAuthors);
   
   if (savedAuthors) {
     try {
-      authors = JSON.parse(savedAuthors);
+      authors = normalizePreferenceList(JSON.parse(savedAuthors));
     } catch (e) {
       console.error('解析保存的作者失败:', e);
     }
