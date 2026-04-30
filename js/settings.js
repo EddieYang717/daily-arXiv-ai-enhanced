@@ -15,6 +15,21 @@ function normalizePreferenceList(value) {
     .filter(item => item.length > 0);
 }
 
+function readSavedPreferenceList(storageKey, fallbackList = []) {
+  const savedValue = localStorage.getItem(storageKey);
+  if (!savedValue) {
+    return normalizePreferenceList(fallbackList);
+  }
+
+  try {
+    const savedList = normalizePreferenceList(JSON.parse(savedValue));
+    return savedList.length > 0 ? savedList : normalizePreferenceList(fallbackList);
+  } catch (error) {
+    console.error(`解析本地偏好失败: ${storageKey}`, error);
+    return normalizePreferenceList(fallbackList);
+  }
+}
+
 async function loadDefaultPreferences() {
   try {
     const response = await fetch('assets/preferences.json', { cache: 'no-store' });
@@ -46,17 +61,8 @@ function loadKeywordPreferences(defaultKeywords = []) {
   const selectedKeywordsContainer = document.getElementById('selectedKeywords');
   selectedKeywordsContainer.innerHTML = '';
   
-  // 获取保存的关键词，如果没有则使用默认关键词
-  let savedKeywords = localStorage.getItem('preferredKeywords');
-  let keywords = normalizePreferenceList(defaultKeywords);
-  
-  if (savedKeywords) {
-    try {
-      keywords = normalizePreferenceList(JSON.parse(savedKeywords));
-    } catch (e) {
-      console.error('解析保存的关键词失败:', e);
-    }
-  }
+  // 获取保存的关键词，如果没有或为空则使用默认关键词
+  const keywords = readSavedPreferenceList('preferredKeywords', defaultKeywords);
   
   // 显示保存的关键词
   if (keywords.length > 0) {
@@ -74,17 +80,8 @@ function loadAuthorPreferences(defaultAuthors = []) {
   const selectedAuthorsContainer = document.getElementById('selectedAuthors');
   selectedAuthorsContainer.innerHTML = '';
   
-  // 获取保存的作者，如果没有则为空数组
-  let savedAuthors = localStorage.getItem('preferredAuthors');
-  let authors = normalizePreferenceList(defaultAuthors);
-  
-  if (savedAuthors) {
-    try {
-      authors = normalizePreferenceList(JSON.parse(savedAuthors));
-    } catch (e) {
-      console.error('解析保存的作者失败:', e);
-    }
-  }
+  // 获取保存的作者，如果没有或为空则使用默认作者
+  const authors = readSavedPreferenceList('preferredAuthors', defaultAuthors);
   
   // 显示保存的作者
   if (authors.length > 0) {

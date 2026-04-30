@@ -29,6 +29,21 @@ function normalizePreferenceList(value) {
     .filter(item => item.length > 0);
 }
 
+function readSavedPreferenceList(storageKey, fallbackList = []) {
+  const savedValue = localStorage.getItem(storageKey);
+  if (!savedValue) {
+    return normalizePreferenceList(fallbackList);
+  }
+
+  try {
+    const savedList = normalizePreferenceList(JSON.parse(savedValue));
+    return savedList.length > 0 ? savedList : normalizePreferenceList(fallbackList);
+  } catch (error) {
+    console.error(`解析本地偏好失败: ${storageKey}`, error);
+    return normalizePreferenceList(fallbackList);
+  }
+}
+
 async function loadDefaultPreferences() {
   try {
     const response = await fetch('assets/preferences.json', { cache: 'no-store' });
@@ -49,21 +64,7 @@ async function loadDefaultPreferences() {
 
 // 加载用户的关键词设置
 function loadUserKeywords(defaultKeywords = []) {
-  const savedKeywords = localStorage.getItem('preferredKeywords');
-  if (savedKeywords) {
-    try {
-      userKeywords = JSON.parse(savedKeywords);
-      // 默认激活所有关键词
-      activeKeywords = [...userKeywords];
-    } catch (error) {
-      console.error('解析关键词失败:', error);
-      userKeywords = [];
-      activeKeywords = [];
-    }
-  } else {
-    userKeywords = normalizePreferenceList(defaultKeywords);
-    activeKeywords = [];
-  }
+  userKeywords = readSavedPreferenceList('preferredKeywords', defaultKeywords);
   activeKeywords = [...userKeywords];
   
   // renderKeywordTags();
@@ -72,21 +73,7 @@ function loadUserKeywords(defaultKeywords = []) {
 
 // 加载用户的作者设置
 function loadUserAuthors(defaultAuthors = []) {
-  const savedAuthors = localStorage.getItem('preferredAuthors');
-  if (savedAuthors) {
-    try {
-      userAuthors = JSON.parse(savedAuthors);
-      // 默认激活所有作者
-      activeAuthors = [...userAuthors];
-    } catch (error) {
-      console.error('解析作者失败:', error);
-      userAuthors = [];
-      activeAuthors = [];
-    }
-  } else {
-    userAuthors = normalizePreferenceList(defaultAuthors);
-    activeAuthors = [];
-  }
+  userAuthors = readSavedPreferenceList('preferredAuthors', defaultAuthors);
   activeAuthors = [...userAuthors];
   
   renderFilterTags();
