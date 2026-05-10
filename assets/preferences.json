@@ -6,12 +6,7 @@
     "CSI compression",
     "channel reconstruction",
     "channel state information",
-    "channel knowledge graph",
-    "diffusion model",
-    "masked autoencoder",
-    "RIS",
-    "mmWave",
-    "MIMO"
+    "channel knowledge map"
   ],
   "authors": [
     "shi jin",
