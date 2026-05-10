@@ -29,12 +29,6 @@ relevance score from 0 to 5.
 - Channel knowledge graphs, wireless knowledge graphs, graph-based channel reasoning, retrieval-augmented wireless AI, and integration of LLMs/foundation models with structured wireless-domain knowledge.
 - Practicality-oriented AI methods: generalization across pilot densities/SNRs/scenarios, parameter-efficient architectures, low-complexity inference, online adaptation, transfer learning, and deployment-aware design.
 
-## Manuscript-Informed Interests
-
-- Location-aided masked autoencoder (LA-MAE) style methods for channel reconstruction under varying pilot densities, especially cross-modal fusion of sparse channel observations and user location.
-- Density-adaptive masking and single-model adaptation to multiple pilot densities without retraining.
-- Diffusion-model-based channel estimation for RIS-assisted mmWave systems, including DDIM-based inference, SNR-aware step matching, direct/cascaded channel estimation, and lightweight networks such as BRCNet.
-
 ## Lower Priority / Exclusions
 
 - Pure computer vision, NLP, recommender systems, robotics, bio/medical AI, or generic machine learning papers with no clear wireless communication or CSI connection.
