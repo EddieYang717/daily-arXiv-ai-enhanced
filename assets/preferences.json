@@ -1,6 +1,17 @@
 {
   "keywords": [
-    "channel estimation"
+    "channel estimation",
+    "CSI acquisition",
+    "CSI feedback",
+    "CSI compression",
+    "channel reconstruction",
+    "channel state information",
+    "channel knowledge graph",
+    "diffusion model",
+    "masked autoencoder",
+    "RIS",
+    "mmWave",
+    "MIMO"
   ],
   "authors": [
     "shi jin",
