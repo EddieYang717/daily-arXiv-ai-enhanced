@@ -31,6 +31,12 @@ FAILED_TLDR_VALUES = {
     "Summary generation failed",
     "Processing failed",
 }
+SENSITIVE_CHECK_ENABLED = os.environ.get("ENABLE_SENSITIVE_CHECK", "").lower() in {
+    "1",
+    "true",
+    "yes",
+    "on",
+}
 
 def load_research_profile() -> str:
     """Load the user's research profile from env or a local markdown file."""
@@ -58,6 +64,11 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
         调用 spam.dw-dengwei.workers.dev 接口检测内容是否包含敏感词。
         返回 True 表示触发敏感词，False 表示未触发。
         """
+        if not SENSITIVE_CHECK_ENABLED:
+            return False
+        if not content:
+            return False
+
         try:
             resp = requests.post(
                 "https://spam.dw-dengwei.workers.dev",
@@ -67,14 +78,14 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
             if resp.status_code == 200:
                 result = resp.json()
                 # 约定接口返回 {"sensitive": true/false, ...}
-                return result.get("sensitive", True)
+                return result.get("sensitive", False)
             else:
                 # 如果接口异常，默认不触发敏感词
                 print(f"Sensitive check failed with status {resp.status_code}", file=sys.stderr)
-                return True
+                return False
         except Exception as e:
             print(f"Sensitive check error: {e}", file=sys.stderr)
-            return True
+            return False
 
     def check_github_code(content: str) -> Dict:
         """提取并验证 GitHub 链接"""
