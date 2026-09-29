@@ -179,6 +179,14 @@ class TransportTests(unittest.TestCase):
         with self.assertRaises(Cooldown):
             client._request('https://arxiv.org/list/cs.IT/new')
 
+    def test_failed_robots_does_not_retry_for_each_paper(self):
+        client, _, session = self.client([Response(503)] * 3)
+        with self.assertRaises(FetchError):
+            client.get('https://arxiv.org/abs/2609.00001')
+        with self.assertRaises(FetchError):
+            client.get('https://arxiv.org/abs/2609.00002')
+        self.assertEqual(len(session.requests), 3)
+
 
 class FakeClient:
     def __init__(self, responses=None):
@@ -319,6 +327,14 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(len(names), 4)
         self.assertIn('2026-09-23_AI_enhanced_Chinese.jsonl', names)
         self.assertEqual((self.root / 'assets/file-list.txt').read_text().splitlines(), names)
+
+    def test_unexpected_processing_error_still_accounts_for_all_92_ids(self):
+        runner = self.runner()
+        manifest = Path(__file__).parents[1] / 'recovery/2026-09-24-28.json'
+        with patch.object(runner, 'process_day', side_effect=ValueError('Invalid checkpoint')):
+            self.assertFalse(runner.run('backfill', manifest=manifest))
+        self.assertEqual(len(runner.report['reconciliation']), 92)
+        self.assertEqual({r['status'] for r in runner.report['reconciliation']}, {'pending'})
 
     def test_publish_revalidates_bundle_and_only_lists_explicit_paths(self):
         runner = self.runner(enhancer=lambda rows, m, l, callback: [callback(i['id'], enriched(i)) for i in rows])

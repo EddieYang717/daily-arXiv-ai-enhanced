@@ -288,18 +288,21 @@ class Runner:
             if not self.dry_run:
                 self.report['indexed_files'] = len(reindex(self.root))
                 self.report['publication_ready'] = True
-            for paper in papers:
-                identifier = paper_id(paper['id'])
-                original = self.original_published.get(identifier)
-                result = 'already_published' if original else ('recovered' if identifier in self.published and not self.dry_run else 'pending')
-                self.report['reconciliation'].append({'id': identifier, 'status': result,
-                    'date': self.published.get(identifier, min(paper['failed_dates']))})
             return ok
         except (Exception, KeyboardInterrupt) as exc:
             ok = False
             self.report['errors'].append(f'{type(exc).__name__}: {exc}')
             return False
         finally:
+            # Include every supplied ID even when an unexpected processing error
+            # interrupts a day. Uncommittable local output is still pending.
+            for paper in papers:
+                identifier = paper_id(paper['id'])
+                original = self.original_published.get(identifier)
+                complete = self.report.get('publication_ready') and identifier in self.published
+                result = 'already_published' if original else ('recovered' if complete else 'pending')
+                self.report['reconciliation'].append({'id': identifier, 'status': result,
+                    'date': self.published.get(identifier, min(paper['failed_dates']))})
             self.save()
             self.report['ok'] = ok
             write_json(self.report_dir / 'report.json', self.report)

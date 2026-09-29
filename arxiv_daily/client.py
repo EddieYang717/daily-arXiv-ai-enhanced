@@ -56,7 +56,12 @@ class ArxivClient:
         if parsed.scheme != "https" or parsed.netloc != "arxiv.org" or not parsed.path.startswith(("/list/", "/abs/")):
             raise FetchError("Only arxiv.org listing and abstract URLs are supported")
         if self.robots is None:
-            robots_text = self._request("https://arxiv.org/robots.txt")
+            try:
+                robots_text = self._request("https://arxiv.org/robots.txt")
+            except FetchError:
+                # Do not retry a failed robots fetch for each queued paper.
+                self.stopped = True
+                raise
             self.robots = RobotFileParser()
             self.robots.parse(robots_text.splitlines())
             self.delay = max(5, self.robots.crawl_delay(USER_AGENT) or 15)

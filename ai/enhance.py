@@ -91,7 +91,7 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
                 print(f"Sensitive check failed with status {resp.status_code}", file=sys.stderr)
                 return False
         except Exception as e:
-            print(f"Sensitive check error: {e}", file=sys.stderr)
+            print(f"Sensitive check error: {type(e).__name__}", file=sys.stderr)
             return False
 
     def check_github_code(content: str) -> Dict:
@@ -184,14 +184,14 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
                 # 尝试解析修复后的 JSON
                 partial_data = json.loads(json_str)
             except Exception as json_e:
-                print(f"Failed to parse JSON for {item.get('id', 'unknown')}: {json_e}", file=sys.stderr)
+                print(f"Failed to parse JSON for {item.get('id', 'unknown')}: {type(json_e).__name__}", file=sys.stderr)
         
         # Merge partial data with defaults to ensure all fields exist
         item['AI'] = {**default_ai_fields, **partial_data}
         print(f"Using partial AI data for {item.get('id', 'unknown')}: {list(partial_data.keys())}", file=sys.stderr)
     except Exception as e:
         # Catch any other exceptions and provide default values
-        print(f"Unexpected error for {item.get('id', 'unknown')}: {e}", file=sys.stderr)
+        print(f"Unexpected error for {item.get('id', 'unknown')}: {type(e).__name__}", file=sys.stderr)
         item['AI'] = default_ai_fields
     
     # Final validation to ensure all required fields exist
@@ -243,7 +243,7 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
                 result = future.result()
                 processed_data[idx] = result
             except Exception as e:
-                print(f"Item at index {idx} generated an exception: {e}", file=sys.stderr)
+                print(f"Item at index {idx} generated an exception: {type(e).__name__}", file=sys.stderr)
                 # Add default AI fields to ensure consistency
                 processed_data[idx] = data[idx]
                 processed_data[idx]['AI'] = {
