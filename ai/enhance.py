@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Dict
 from queue import Queue
 from threading import Lock
+from pathlib import Path
 # INSERT_YOUR_CODE
 import requests
 
@@ -20,12 +21,18 @@ from langchain.prompts import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
-from structure import Structure
+if __package__:
+    from .structure import Structure
+else:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from ai.structure import Structure
+from arxiv_daily.storage import successful_ai, write_jsonl
 
 if os.path.exists('.env'):
     dotenv.load_dotenv()
-template = open("template.txt", "r").read()
-system = open("system.txt", "r").read()
+AI_DIR = Path(__file__).resolve().parent
+template = (AI_DIR / "template.txt").read_text(encoding="utf-8")
+system = (AI_DIR / "system.txt").read_text(encoding="utf-8")
 
 FAILED_TLDR_VALUES = {
     "Summary generation failed",
@@ -44,7 +51,7 @@ def load_research_profile() -> str:
     if profile:
         return profile
 
-    profile_path = os.environ.get("RESEARCH_PROFILE_PATH", "../research_profile.md")
+    profile_path = os.environ.get("RESEARCH_PROFILE_PATH") or AI_DIR.parent / "research_profile.md"
     try:
         with open(profile_path, "r") as f:
             return f.read().strip()
@@ -198,16 +205,15 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
             return None
     return item
 
-def process_all_items(data: List[Dict], model_name: str, language: str, max_workers: int) -> List[Dict]:
+def process_all_items(data: List[Dict], model_name: str, language: str, max_workers: int, on_result=None) -> List[Dict]:
     """并行处理所有数据项"""
-    if not hasattr(process_single_item, "research_profile"):
-        process_single_item.research_profile = load_research_profile()
+    process_single_item.research_profile = load_research_profile()
 
     api_key_configured = bool(os.environ.get("OPENAI_API_KEY"))
     base_url = os.environ.get("OPENAI_BASE_URL", "")
     print(f"OPENAI_API_KEY configured: {api_key_configured}", file=sys.stderr)
     print(f"OPENAI_BASE_URL configured: {bool(base_url)}", file=sys.stderr)
-    llm = ChatOpenAI(model=model_name).with_structured_output(Structure, method="function_calling")
+    llm = ChatOpenAI(model=model_name, timeout=120, max_retries=2).with_structured_output(Structure, method="function_calling")
     print('Connect to:', model_name, file=sys.stderr)
     
     prompt_template = ChatPromptTemplate.from_messages([
@@ -250,16 +256,14 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
                     "relevance_reason": "Processing failed",
                     "relevance_topics": []
                 }
+            if on_result is not None:
+                on_result(data[idx]['id'], processed_data[idx])
     
     return processed_data
 
 def has_successful_ai(item: Dict) -> bool:
     """Return True when an item has real AI output instead of fallback placeholders."""
-    if not item:
-        return False
-    ai_data = item.get("AI") or {}
-    tldr = ai_data.get("tldr", "")
-    return bool(tldr) and tldr not in FAILED_TLDR_VALUES
+    return successful_ai(item)
 
 def main():
     args = parse_args()
@@ -267,11 +271,7 @@ def main():
     language = os.environ.get("LANGUAGE", 'Chinese')
     process_single_item.research_profile = load_research_profile()
 
-    # 检查并删除目标文件
     target_file = args.data.replace('.jsonl', f'_AI_enhanced_{language}.jsonl')
-    if os.path.exists(target_file):
-        os.remove(target_file)
-        print(f'Removed existing file: {target_file}', file=sys.stderr)
 
     # 读取数据
     data = []
@@ -300,18 +300,16 @@ def main():
 
     written_items = [item for item in processed_data if item is not None]
     successful_ai_count = sum(1 for item in written_items if has_successful_ai(item))
-    if data and written_items and successful_ai_count == 0:
+    if len(written_items) != len(data) or successful_ai_count != len(data):
         print(
-            "AI enhancement produced only fallback placeholders. "
+            "AI enhancement is incomplete; existing output has been preserved. "
             "Please check OPENAI_API_KEY, OPENAI_BASE_URL, and MODEL_NAME.",
             file=sys.stderr,
         )
         sys.exit(1)
     
     # 保存结果
-    with open(target_file, "w") as f:
-        for item in written_items:
-            f.write(json.dumps(item) + "\n")
+    write_jsonl(target_file, written_items)
 
 if __name__ == "__main__":
     main()

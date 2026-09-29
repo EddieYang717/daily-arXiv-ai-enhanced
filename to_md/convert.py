@@ -1,91 +1,53 @@
-import json
+"""Render every validated paper; incomplete input is an error."""
 import argparse
 import os
-from itertools import count
+from pathlib import Path
+import sys
+
+if not __package__:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from arxiv_daily.storage import atomic_text, read_jsonl, successful_ai
+
+
+def render(items):
+    preference = [v.strip() for v in os.environ.get("CATEGORIES", "cs.IT,eess.SP").split(",")]
+    template = Path(__file__).with_name("paper_template.md").read_text(encoding="utf-8")
+    by_category = {}
+    seen = set()
+    for item in items:
+        if item["id"] in seen or not successful_ai(item, historical=True):
+            raise ValueError(f"Duplicate or incomplete Markdown input: {item['id']}")
+        seen.add(item["id"])
+        by_category.setdefault(item["categories"][0], []).append(item)
+    categories = sorted(by_category, key=lambda c: (preference.index(c) if c in preference else len(preference), c))
+    markdown = "<div id=toc></div>\n\n# Table of Contents\n\n"
+    for category in categories:
+        markdown += f"- [{category}](#{category}) [Total: {len(by_category[category])}]\n"
+    rendered = set()
+    for category in categories:
+        markdown += f"\n\n<div id='{category}'></div>\n\n# {category} [[Back]](#toc)\n\n"
+        rows = sorted(by_category[category], key=lambda item: (-int(item['AI'].get('relevance_score', 0) or 0), item['id']))
+        for item in rows:
+            ai = item['AI']
+            topics = ai.get('relevance_topics', [])
+            markdown += template.format(title=item['title'], authors=",".join(item['authors']),
+                summary=item['summary'], url=item['abs'], cate=category, idx=len(rendered) + 1,
+                **{field: ai[field] for field in ('tldr', 'motivation', 'method', 'result', 'conclusion')},
+                relevance_score=ai.get('relevance_score', 0), relevance_reason=ai.get('relevance_reason', ''),
+                relevance_topics=", ".join(topics) if isinstance(topics, list) else topics) + "\n\n"
+            rendered.add(item['id'])
+    return markdown, rendered
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data", required=True, type=Path)
+    parser.add_argument("--output", type=Path)
+    args = parser.parse_args()
+    markdown, _ = render(read_jsonl(args.data))
+    output = args.output or args.data.with_name(args.data.stem.split('_AI_enhanced_')[0] + '.md')
+    atomic_text(output, markdown)
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data", type=str, help="Path to the jsonline file")
-    args = parser.parse_args()
-    data = []
-    preference = os.environ.get('CATEGORIES', 'cs.CV, cs.CL').split(',')
-    preference = list(map(lambda x: x.strip(), preference))
-    def rank(cate):
-        if cate in preference:
-            return preference.index(cate)
-        else:
-            return len(preference)
-    def relevance_score(item):
-        try:
-            return int(item.get("AI", {}).get("relevance_score", 0) or 0)
-        except (TypeError, ValueError):
-            return 0
-    def format_topics(topics):
-        if isinstance(topics, list):
-            return ", ".join(map(str, topics))
-        if isinstance(topics, str):
-            return topics
-        return ""
-
-    with open(args.data, "r") as f:
-        for line in f:
-            data.append(json.loads(line))
-
-    categories = set([item["categories"][0] for item in data])
-    template = open("paper_template.md", "r").read()
-    categories = sorted(categories, key=rank)
-    cnt = {cate: 0 for cate in categories}
-    for item in data:
-        if item["categories"][0] not in cnt.keys():
-            continue
-        cnt[item["categories"][0]] += 1
-
-    markdown = f"<div id=toc></div>\n\n# Table of Contents\n\n"
-    for idx, cate in enumerate(categories):
-        markdown += f"- [{cate}](#{cate}) [Total: {cnt[cate]}]\n"
-
-    idx = count(1)
-    for cate in categories:
-        markdown += f"\n\n<div id='{cate}'></div>\n\n"
-        markdown += f"# {cate} [[Back]](#toc)\n\n"
-        papers = []
-        category_items = [item for item in data if item["categories"][0] == cate]
-        category_items.sort(
-            key=relevance_score,
-            reverse=True
-        )
-        for item in category_items:
-            if item["categories"][0] == cate:
-                # Safely access AI fields with default values
-                ai_data = item.get('AI', {})
-                if not ai_data or not isinstance(ai_data, dict):
-                    print(f"Skipping item '{item.get('title', 'Unknown')}' due to missing or invalid AI data")
-                    continue
-                
-                # Check if all required AI fields are present
-                required_fields = ['tldr', 'motivation', 'method', 'result', 'conclusion']
-                if not all(field in ai_data for field in required_fields):
-                    print(f"Skipping item '{item.get('title', 'Unknown')}' due to incomplete AI fields")
-                    continue
-                
-                papers.append(
-                    template.format(
-                        title=item["title"],
-                        authors=",".join(item["authors"]),
-                        summary=item["summary"],
-                        url=item['abs'],
-                        tldr=ai_data.get('tldr', ''),
-                        motivation=ai_data.get('motivation', ''),
-                        method=ai_data.get('method', ''),
-                        result=ai_data.get('result', ''),
-                        conclusion=ai_data.get('conclusion', ''),
-                        relevance_score=ai_data.get('relevance_score', 0),
-                        relevance_reason=ai_data.get('relevance_reason', ''),
-                        relevance_topics=format_topics(ai_data.get('relevance_topics', [])),
-                        cate=item['categories'][0],
-                        idx=next(idx)
-                    )
-                )
-        markdown += "\n\n".join(papers)
-    with open(args.data.split('_')[0] + '.md', "w") as f:
-        f.write(markdown)
+    main()

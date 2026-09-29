@@ -18,3 +18,5 @@ yarn.lock
 .DS_Store
 ._*
 package.json
+_data_branch/
+run-artifacts/

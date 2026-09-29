@@ -1,0 +1,702 @@
+{
+  "checked_at": "2026-09-29T01:12:35Z",
+  "source_repository": "EddieYang717/daily-arXiv-ai-enhanced",
+  "scope": "IDs with final item-processing errors in September 24–28 workflow logs. Candidate list for recovery; not a complete category inventory and not yet checked against every historical data file.",
+  "candidate_count": 92,
+  "papers": [
+    {
+      "id": "2609.26960",
+      "abs": "https://arxiv.org/abs/2609.26960",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27017",
+      "abs": "https://arxiv.org/abs/2609.27017",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27082",
+      "abs": "https://arxiv.org/abs/2609.27082",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27083",
+      "abs": "https://arxiv.org/abs/2609.27083",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27169",
+      "abs": "https://arxiv.org/abs/2609.27169",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27226",
+      "abs": "https://arxiv.org/abs/2609.27226",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27250",
+      "abs": "https://arxiv.org/abs/2609.27250",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27343",
+      "abs": "https://arxiv.org/abs/2609.27343",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27361",
+      "abs": "https://arxiv.org/abs/2609.27361",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27369",
+      "abs": "https://arxiv.org/abs/2609.27369",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27433",
+      "abs": "https://arxiv.org/abs/2609.27433",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27436",
+      "abs": "https://arxiv.org/abs/2609.27436",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27481",
+      "abs": "https://arxiv.org/abs/2609.27481",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27486",
+      "abs": "https://arxiv.org/abs/2609.27486",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27505",
+      "abs": "https://arxiv.org/abs/2609.27505",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27506",
+      "abs": "https://arxiv.org/abs/2609.27506",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27519",
+      "abs": "https://arxiv.org/abs/2609.27519",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27527",
+      "abs": "https://arxiv.org/abs/2609.27527",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27541",
+      "abs": "https://arxiv.org/abs/2609.27541",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27552",
+      "abs": "https://arxiv.org/abs/2609.27552",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27617",
+      "abs": "https://arxiv.org/abs/2609.27617",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27733",
+      "abs": "https://arxiv.org/abs/2609.27733",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27783",
+      "abs": "https://arxiv.org/abs/2609.27783",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27887",
+      "abs": "https://arxiv.org/abs/2609.27887",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27894",
+      "abs": "https://arxiv.org/abs/2609.27894",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27895",
+      "abs": "https://arxiv.org/abs/2609.27895",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.27991",
+      "abs": "https://arxiv.org/abs/2609.27991",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28028",
+      "abs": "https://arxiv.org/abs/2609.28028",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28052",
+      "abs": "https://arxiv.org/abs/2609.28052",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28063",
+      "abs": "https://arxiv.org/abs/2609.28063",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28109",
+      "abs": "https://arxiv.org/abs/2609.28109",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28156",
+      "abs": "https://arxiv.org/abs/2609.28156",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28196",
+      "abs": "https://arxiv.org/abs/2609.28196",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28255",
+      "abs": "https://arxiv.org/abs/2609.28255",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28297",
+      "abs": "https://arxiv.org/abs/2609.28297",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28353",
+      "abs": "https://arxiv.org/abs/2609.28353",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28363",
+      "abs": "https://arxiv.org/abs/2609.28363",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28400",
+      "abs": "https://arxiv.org/abs/2609.28400",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28402",
+      "abs": "https://arxiv.org/abs/2609.28402",
+      "failed_dates": [
+        "2026-09-24"
+      ]
+    },
+    {
+      "id": "2609.28534",
+      "abs": "https://arxiv.org/abs/2609.28534",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.28546",
+      "abs": "https://arxiv.org/abs/2609.28546",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.28588",
+      "abs": "https://arxiv.org/abs/2609.28588",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.28815",
+      "abs": "https://arxiv.org/abs/2609.28815",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.28911",
+      "abs": "https://arxiv.org/abs/2609.28911",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.28916",
+      "abs": "https://arxiv.org/abs/2609.28916",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29044",
+      "abs": "https://arxiv.org/abs/2609.29044",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29086",
+      "abs": "https://arxiv.org/abs/2609.29086",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29119",
+      "abs": "https://arxiv.org/abs/2609.29119",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29128",
+      "abs": "https://arxiv.org/abs/2609.29128",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29149",
+      "abs": "https://arxiv.org/abs/2609.29149",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29164",
+      "abs": "https://arxiv.org/abs/2609.29164",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29200",
+      "abs": "https://arxiv.org/abs/2609.29200",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29286",
+      "abs": "https://arxiv.org/abs/2609.29286",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29342",
+      "abs": "https://arxiv.org/abs/2609.29342",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29688",
+      "abs": "https://arxiv.org/abs/2609.29688",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29732",
+      "abs": "https://arxiv.org/abs/2609.29732",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29741",
+      "abs": "https://arxiv.org/abs/2609.29741",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29846",
+      "abs": "https://arxiv.org/abs/2609.29846",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29868",
+      "abs": "https://arxiv.org/abs/2609.29868",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29912",
+      "abs": "https://arxiv.org/abs/2609.29912",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.29915",
+      "abs": "https://arxiv.org/abs/2609.29915",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.30129",
+      "abs": "https://arxiv.org/abs/2609.30129",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.30172",
+      "abs": "https://arxiv.org/abs/2609.30172",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.30176",
+      "abs": "https://arxiv.org/abs/2609.30176",
+      "failed_dates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "id": "2609.30539",
+      "abs": "https://arxiv.org/abs/2609.30539",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30562",
+      "abs": "https://arxiv.org/abs/2609.30562",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30567",
+      "abs": "https://arxiv.org/abs/2609.30567",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30582",
+      "abs": "https://arxiv.org/abs/2609.30582",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30629",
+      "abs": "https://arxiv.org/abs/2609.30629",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30653",
+      "abs": "https://arxiv.org/abs/2609.30653",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30671",
+      "abs": "https://arxiv.org/abs/2609.30671",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30800",
+      "abs": "https://arxiv.org/abs/2609.30800",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30825",
+      "abs": "https://arxiv.org/abs/2609.30825",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30891",
+      "abs": "https://arxiv.org/abs/2609.30891",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.30930",
+      "abs": "https://arxiv.org/abs/2609.30930",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31010",
+      "abs": "https://arxiv.org/abs/2609.31010",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31058",
+      "abs": "https://arxiv.org/abs/2609.31058",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31088",
+      "abs": "https://arxiv.org/abs/2609.31088",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31090",
+      "abs": "https://arxiv.org/abs/2609.31090",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31174",
+      "abs": "https://arxiv.org/abs/2609.31174",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31177",
+      "abs": "https://arxiv.org/abs/2609.31177",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31195",
+      "abs": "https://arxiv.org/abs/2609.31195",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31218",
+      "abs": "https://arxiv.org/abs/2609.31218",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31257",
+      "abs": "https://arxiv.org/abs/2609.31257",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31299",
+      "abs": "https://arxiv.org/abs/2609.31299",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31300",
+      "abs": "https://arxiv.org/abs/2609.31300",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31361",
+      "abs": "https://arxiv.org/abs/2609.31361",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31416",
+      "abs": "https://arxiv.org/abs/2609.31416",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31428",
+      "abs": "https://arxiv.org/abs/2609.31428",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31484",
+      "abs": "https://arxiv.org/abs/2609.31484",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31501",
+      "abs": "https://arxiv.org/abs/2609.31501",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    },
+    {
+      "id": "2609.31591",
+      "abs": "https://arxiv.org/abs/2609.31591",
+      "failed_dates": [
+        "2026-09-28"
+      ]
+    }
+  ]
+}

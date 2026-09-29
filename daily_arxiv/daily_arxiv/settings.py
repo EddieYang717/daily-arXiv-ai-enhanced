@@ -18,6 +18,13 @@ NEWSPIDER_MODULE = "daily_arxiv.spiders"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+USER_AGENT = "daily-arxiv-enhanced/1.0 (+https://github.com/EddieYang717/daily-arXiv-ai-enhanced)"
+CONCURRENT_REQUESTS = 1
+DOWNLOAD_DELAY = 15
+RANDOMIZE_DOWNLOAD_DELAY = False
+DOWNLOAD_TIMEOUT = 30
+# The shared runner owns bounded retries and persisted cooldowns.
+RETRY_ENABLED = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
