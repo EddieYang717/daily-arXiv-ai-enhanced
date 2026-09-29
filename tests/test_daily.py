@@ -307,6 +307,9 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(days, ['2026-09-24', '2026-09-25', '2026-09-28'])
         self.assertEqual([len(runner.day(d)['candidates']) for d in days], [39, 25, 28])
         self.assertEqual(len(entries), 92)
+        runner.day('2026-09-24')['status'] = 'prepared'
+        runner.seed_backfill(manifest)
+        self.assertEqual(runner.day('2026-09-24')['status'], 'prepared')
 
     def test_backfill_id_failure_returns_nonzero_and_accounts_for_every_id(self):
         manifest = Path(self.temp.name) / 'manifest.json'

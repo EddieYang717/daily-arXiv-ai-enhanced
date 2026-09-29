@@ -140,7 +140,6 @@ class Runner:
                 raise ValueError(f'{day}: a listing gap cannot be cleared by a partial ID manifest')
             state['scope'] = 'explicit-id-manifest'
             state['listing_complete'] = True
-            state['status'] = 'pending'
             state['candidates'] = sorted(set(state['candidates']) | {identifier})
             days.add(day)
         self.save()
