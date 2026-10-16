@@ -6,7 +6,8 @@
     "CSI compression",
     "channel reconstruction",
     "channel state information",
-    "channel knowledge map"
+    "channel knowledge map",
+    "beam prediction"
   ],
   "authors": [
     "shi jin",
