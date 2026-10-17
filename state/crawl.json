@@ -41410,11 +41410,717 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-10-17": {
+      "ai": {},
+      "candidates": [
+        "2610.20653",
+        "2610.20841",
+        "2610.20876",
+        "2610.20923",
+        "2610.20924",
+        "2610.20928",
+        "2610.20942",
+        "2610.20954",
+        "2610.21013",
+        "2610.21068",
+        "2610.21187",
+        "2610.21191",
+        "2610.21225",
+        "2610.21231",
+        "2610.21252",
+        "2610.21279",
+        "2610.21504",
+        "2610.21509",
+        "2610.21521",
+        "2610.21536",
+        "2610.21602",
+        "2610.21617",
+        "2610.21643",
+        "2610.21653",
+        "2610.21691",
+        "2610.21726",
+        "2610.21729",
+        "2610.21753",
+        "2610.21759",
+        "2610.21819",
+        "2610.21880",
+        "2610.21888",
+        "2610.21905",
+        "2610.21969",
+        "2610.22231",
+        "2610.22265",
+        "2610.22272",
+        "2610.22304"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2610.20653": {
+          "abs": "https://arxiv.org/abs/2610.20653",
+          "authors": [
+            "Fayez Abu-Ajamieh",
+            "Xiaoyan Huo"
+          ],
+          "categories": [
+            "cs.IT",
+            "hep-th",
+            "math.PR"
+          ],
+          "comment": "12 pages",
+          "id": "2610.20653",
+          "pdf": "https://arxiv.org/pdf/2610.20653",
+          "summary": "We study the sharp constant in the differential inequality \\[ I(t)I''(t)\\geq c\\,[I'(t)]^2 \\] for Fisher information along the probability-normalized heat flow on $\\mathbb R^2$. The unrestricted log-convexity value $c=1$ is false in two dimensions, whereas the known square-root convexity theorem gives the universal value $c=1/2$. We construct an exact, machine-verifiable sum-of-squares certificate proving the stronger universal bound \\[ c\\geq \\frac{231691}{250000}=0.926764. \\] Together with an independent exact Fourier/Gaussian-envelope construction, this gives \\[ 0.926764\\leq c_*<0.94176665012062, \\] where $c_*$ is the sharp constant for positive-time Gaussian convolutions of arbitrary probability measures on $\\mathbb R^2$. We formulate the proof in explicit two-dimensional index notation. The lower bound follows from an exact rational polynomial identity involving a strictly positive denominator, a weighted total derivative, and eleven positive rational Gram matrices. All $491$ recorded leading principal minors are strictly positive and the complete polynomial identity has zero residual. No symmetry, log-concavity, finite-variance, or finite-entropy assumption is imposed on the initial measure. The sharp value remains open.",
+          "title": "An exact computer-assisted lower bound for Fisher-information convexity along the two-dimensional heat flow"
+        },
+        "2610.20841": {
+          "abs": "https://arxiv.org/abs/2610.20841",
+          "authors": [
+            "Wentao Yu",
+            "Vincent W.S. Wong"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.ET",
+            "cs.LG",
+            "eess.SP"
+          ],
+          "comment": "We take a step toward wireless networks that can compute as well as communicate, using analog RF computing to deliver AI inference to resource-constrained edge devices while simultaneously serving conventional data transmission. This is a follow-up to our analog RF computing framework: https://arxiv.org/abs/2605.14331. To be presented at IEEE Globecom 2026",
+          "id": "2610.20841",
+          "pdf": "https://arxiv.org/pdf/2610.20841",
+          "summary": "Many resource-constrained edge devices require artificial intelligence (AI) services but are not powerful enough to store or execute neural networks (NNs). Analog radio frequency (RF) computing addresses this limitation by letting a base station (BS) multicast a waveform encoding NN weights to different clients. Each client then multiplies the received weight-encoded waveform with its locally generated input-encoded waveform through a passive mixer in its RF frontend, thereby realizing the matrix-vector multiplications (MVMs) needed for AI inference with an extremely low power and memory requirement. This can enable telecom operators to provide AI inference services to the edge devices connected to their networks. In practice, however, this multicast AI flow must share the spectrum, power, and spatial resources with other data flows. This paper considers a multi-user multiple-input multiple-output (MU-MIMO) downlink scenario and studies the resulting relative aggregate data rate reduction from integrating the multicast AI flow with the unicast data flows. We formulate a joint beamforming problem for the data and AI flows to maximize the aggregate data rate subject to computing accuracy, client energy, total power, and hardware-related constraints. We develop a weighted minimum mean-square error (WMMSE)-based algorithm to solve the problem. Numerical results based on 3rd Generation Partnership Project (3GPP) channels show that the relative aggregate data rate reduction from integrating an AI flow with data flows is below 5% in representative settings. This indicates that telecom operators can use analog RF computing to provide edge AI services while providing data communication services simultaneously.",
+          "title": "Analog RF Computing for Integrated Data and AI Flows Over Wireless Networks"
+        },
+        "2610.20876": {
+          "abs": "https://arxiv.org/abs/2610.20876",
+          "authors": [
+            "Wuxia Chen",
+            "Arman Adibi",
+            "Taposh Banerjee",
+            "Vahid Tarokh"
+          ],
+          "categories": [
+            "eess.SP",
+            "stat.ME",
+            "stat.ML"
+          ],
+          "comment": null,
+          "id": "2610.20876",
+          "pdf": "https://arxiv.org/pdf/2610.20876",
+          "summary": "A Mixture-of-Experts (MoE) framework is proposed for quickest change detection (QCD) where there are multiple experts, and each expert produces a sequence of statistics for change detection. A change is declared when a weighted sum of these statistics crosses a threshold. This framework is then applied to the problem of multi-stream QCD to obtain a family of powerful algorithms that outperform the best known algorithms in the literature. In the multi-stream QCD problem, a decision-maker observes multiple streams of observations. At the change point, the distribution of an unknown subset of the streams changes. The optimal algorithm based on a generalized likelihood ratio is computationally expensive. One of the most computationally and performance-efficient algorithms in the literature is the rank-weighted sum (RWS) scheme based on Shiryaev-Roberts statistics. It is shown in the paper that the MoE-based QCD algorithm for multi-stream data outperforms the RWS scheme. This is demonstrated through simulation results on real-valued Gaussian mean shift data and high-dimensional data from Gaussian--Bernoulli Restricted Boltzmann Machines (GB-RBMs).",
+          "title": "A Mixture-of-Experts Framework for Multi-Stream Quickest Change Detection"
+        },
+        "2610.20923": {
+          "abs": "https://arxiv.org/abs/2610.20923",
+          "authors": [
+            "Kenan Turbic",
+            "Khanh-Toan Pham",
+            "Slawomir Stanczak"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted for presentation at IEEE ISAC 2026",
+          "id": "2610.20923",
+          "pdf": "https://arxiv.org/pdf/2610.20923",
+          "summary": "This paper considers uplink channel state information (CSI)-based sensing as an opportunistic approach to enabling sensing in cellular networks, with minimum required modifications to the infrastructure. A practical sensing signal processing procedure is presented, combining 5G positioning function with multi-antenna array processing for passive target localization. The approach is validated through simulation and practical experiments with a software-defined radio-based setup, utilizing open-source software frameworks and commercially available hardware components. Results demonstrate feasibility of the uplink CSI-based sensing for detection, localization and tracking of moving targets over local areas.",
+          "title": "Evolution Toward Sensing-Enabled RAN: Practical Bistatic Sensing via Uplink"
+        },
+        "2610.20924": {
+          "abs": "https://arxiv.org/abs/2610.20924",
+          "authors": [
+            "Ahmed A. Al-habob",
+            "Octavia A. Dobre",
+            "Yindi Jing",
+            "Hyundong Shin"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.20924",
+          "pdf": "https://arxiv.org/pdf/2610.20924",
+          "summary": "This paper proposes a pinching antenna system to enhance the connectivity and efficiency in aerial wireless networks. The algebraic connectivity of the network's graph is maximized by optimizing the placement of the pinching antenna elements in the uplink and downlink waveguides. The number of deployed unmanned aerial vehicles (UAVs) is minimized while maintaining a minimum network connectivity indicator. A heuristic pinching antenna placement algorithm is designed to maximize the network connectivity. An iterative UAV deployment algorithm is also designed to find the minimum number of UAVs, their placement locations, and the pinching antenna placement. Simulation results show that the considered pinching antenna system improves network connectivity and efficiency.",
+          "title": "Resilient and Efficient Aerial Wireless Sensor Networks Using Pinching-Antenna Systems"
+        },
+        "2610.20928": {
+          "abs": "https://arxiv.org/abs/2610.20928",
+          "authors": [
+            "Saira Rafique",
+            "Ahmed Naeem",
+            "Chong Han",
+            "Huseyin Arslan"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted to IEEE Transactions on Vehicular Technology (TVT); currently under review",
+          "id": "2610.20928",
+          "pdf": "https://arxiv.org/pdf/2610.20928",
+          "summary": "High pulse repetition frequency (PRF) operation improves Doppler unambiguous sensing but reduces the maximum unambiguous range of a terahertz (THz) pulsed radar. Echoes from targets beyond this range can be incorrectly associated with subsequent transmitted pulses, causing the targets to appear at shorter ranges. This paper proposes a receiver-side framework that exploits the THz-specific temporal broadening effect as a distance-dependent signature to resolve range ambiguity. For each detected echo, the receiver applies broadening-matched filtering with references corresponding to candidate target ranges. The filter outputs are combined across pulses with Doppler compensation, and the largest normalised combined response identifies the ambiguity order needed to recover the true target range. The selected reference is then reused to reduce mismatch loss in subsequent range and velocity estimation. Simulations under known atmospheric conditions, with targets occupying distinct apparent-delay bins, demonstrate reliable range recovery beyond the conventional unambiguous interval. Range estimation errors conditioned on correct ambiguity-order identification, together with the reported velocity estimation errors, approach their corresponding derived Cramér--Rao bounds. The method preserves a fixed transmitted pulse shape, PRF, and sampling rate, at the expense of a higher signal-to-clutter-plus-noise ratio requirement for ambiguity identification relative to the evaluated diversity-based techniques.",
+          "title": "Range Ambiguity Identification and Elimination by Leveraging Temporal Broadening Effect for THz Sensing"
+        },
+        "2610.20942": {
+          "abs": "https://arxiv.org/abs/2610.20942",
+          "authors": [
+            "Blessing Isoyiza Adeika",
+            "Onyema Osuagwu"
+          ],
+          "categories": [
+            "eess.SP",
+            "q-bio.NC",
+            "q-bio.QM"
+          ],
+          "comment": "22 pages, 4 figures, 8 tables plus supplementary tables. To be submitted to Journal of Neural Engineering",
+          "id": "2610.20942",
+          "pdf": "https://arxiv.org/pdf/2610.20942",
+          "summary": "Objective. Studies that decode imagined speech from scalp electroencephalography (EEG) commonly validate their pipelines with a positive control, usually overt speech, and report null results without stating what effect size the pipeline could have detected. Approach. Using ds003626 (\"Thinking out loud\"), KaraOne and Track 3 of the 2020 International Brain-Computer Interface Competition, we audited decoding of overt speech, articulator preparation and imagined speech with artifact-channel subsets, band-limited decoding and trial selection, under a protocol that enforces split integrity by assertion. We injected class-dependent effects of known amplitude into the real recordings to measure the detection floor of five decoder families, and we checked the ds003626 labels against the dataset's acquisition protocol. Main results. On ds003626, two lip electrodes decoded overt speech at 0.7430 and the eight external channels at 0.7068, against 0.4231 for the 128-channel scalp montage, and no decodable signal survived in the 8-30 Hz band. On the other two corpora, within-subject accuracy rose monotonically with frequency into the range dominated by muscle activity. Band-power logistic regression detected an injected 8-30 Hz desynchronization of 0.54 uV under a criterion fixed in advance, whereas a compact convolutional network (EEGNet) detected nothing within subject up to 4.31 uV. In ds003626, the condition codes are the reverse of the intuitive reading, the class encoding changed between public releases, and condition is a deterministic function of time within each session. Significance. In these corpora the overt-speech positive control is dominated by myogenic signal and cannot validate a decoding pipeline. We recommend that speech-decoding studies report band-limited and artifact-channel accuracy, the direction of accuracy across frequency, and a measured detection floor.",
+          "title": "How large an effect would we have seen? Positive controls, detection floors and dataset pitfalls in scalp-EEG speech decoding"
+        },
+        "2610.20954": {
+          "abs": "https://arxiv.org/abs/2610.20954",
+          "authors": [
+            "Blessing Isoyiza Adeika",
+            "Onyema Osuagwu"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.LG",
+            "q-bio.NC"
+          ],
+          "comment": "23 pages, 5 figures, 10 tables plus supplementary tables. To be submitted to Journal of Neural Engineering",
+          "id": "2610.20954",
+          "pdf": "https://arxiv.org/pdf/2610.20954",
+          "summary": "Objective. A decoder of imagined speech that works for a new user without calibration would make a non-invasive speech interface practical. We tested whether imagined-speech content recorded with scalp electroencephalography (EEG) transfers across people, and examined why accuracy within a single person remains low. Approach. We analyzed three public corpora, ds003626, KaraOne and Track 3 of the 2020 International Brain-Computer Interface Competition, under a protocol that enforces split integrity by assertion and reports exact binomial thresholds, group tests and bootstrap confidence intervals. We trained decoders on each participant and tested them on every other, compared representational geometry across participants without a classifier, applied subject-level alignment, and tested five explanations for the within-subject ceiling. Main results. Across 482 ordered pairs of participants, no pair survived correction for multiple comparisons; mean pair-transfer accuracy lay within 0.006 of chance on every corpus, while every within-subject reference lay above it. Imagery against pre-stimulus rest generalized at about 0.61 after artifact and elapsed-time controls, but its decoder labelled the interval preceding imagery as imagery as often as imagery itself, so the contrast reflects a post-stimulus state, not imagery. Within subject, only the competition corpus decoded above threshold for every participant (0.3147; chance 0.200); syllable count explained little of this, but its frequency profile failed an artifact audit. Significance. In these corpora, imagined-speech content did not transfer between people through any representation we examined. Trial count per class was the only variable that ordered the corpora, which favors larger single-condition datasets over further model development.",
+          "title": "Cross-subject decoding of imagined speech from scalp EEG: a leakage-controlled evaluation on three public corpora"
+        },
+        "2610.21013": {
+          "abs": "https://arxiv.org/abs/2610.21013",
+          "authors": [
+            "Namhyun Kim",
+            "Sadjad Alikhani",
+            "Ahmed Alkhateeb"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "16 pages, 14 figures, 8 tables",
+          "id": "2610.21013",
+          "pdf": "https://arxiv.org/pdf/2610.21013",
+          "summary": "Received OFDM grids preserve both pilot and payload observations, yet wireless foundation models are rarely pre-trained on them. We introduce LWM-TF, a 9.58M-parameter factorized masked autoencoder pre-trained on complex 5G NR uplink grids taken after the FFT and before channel estimation. Each block attends first across OFDM symbols and then across resource blocks and receive antennas, and the mask follows the same two axes. Because the payload phase is unpredictable, the model reconstructs the normalized log-power of each masked token and predicts its scale separately; ablations show that the two terms are complementary and that this target outperforms complex-signal reconstruction. The encoder is pre-trained on 850,496 physical uplink shared channel (PUSCH) slots from a 10^6-slot dataset simulated with the NR transmit chain under various channel conditions. With the encoder frozen, linear probes classify modulation, predict CRC success, and detect UE mobility. On a separately generated test set, 16 labeled slots per class give 0.85 modulation accuracy, 0.82 CRC area under the ROC curve (AUROC), and 0.73 mobility AUROC, ahead of a supervised CNN on every paired draw. With 10,000 labels the probes reach 0.94, 0.96, and 0.92, well above engineered receiver statistics, and detect mobility where the CNN stays at chance. Without any impairment labels, distances in the frozen feature space flag unseen waveform impairments with 0.78 macro AUROC, against 0.68 for receiver statistics. A single pre-trained encoder thus provides receiver features that transfer across tasks, most strongly when labels are scarce.",
+          "title": "LWM-TF: A Wireless Foundation Model on 5G NR Time-Frequency Resource Grids"
+        },
+        "2610.21068": {
+          "abs": "https://arxiv.org/abs/2610.21068",
+          "authors": [
+            "Xunmeng Wu",
+            "Jian-Feng Cai",
+            "Zongben Xu",
+            "Zai Yang"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP",
+            "math.NA"
+          ],
+          "comment": null,
+          "id": "2610.21068",
+          "pdf": "https://arxiv.org/pdf/2610.21068",
+          "summary": "In this paper, we study the spectral compressed sensing problem of recovering a spectrally sparse signal from linear compressive measurements. Exploiting the low-rank Hankel structure associated with the signal, we formulate a nonconvex fixed-rank optimization problem with a Hankel regularization. We propose a Superfast Iterative Hard Thresholding (SIHT) algorithm, where each iteration consists of a tangent-space least-squares update followed by a fixed-rank hard thresholding projection. SIHT is the first nonconvex algorithm with provable quadratic convergence for spectral compressed sensing. For random Gaussian measurements, it achieves exact recovery in the noiseless case and stable recovery in the noisy case with near-optimal sample complexity. To efficiently implement SIHT, we develop a parameterized conjugate gradient method for solving the least-squares subproblem, endowing SIHT with state-of-the-art computational and memory efficiency. Numerical experiments are provided to validate our results.",
+          "title": "Superfast Spectral Compressed Sensing with Quadratic Convergence"
+        },
+        "2610.21187": {
+          "abs": "https://arxiv.org/abs/2610.21187",
+          "authors": [
+            "Xiaowei Wu",
+            "Min Qiu",
+            "Yueying Zhan",
+            "Lei Yang"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Accepted by IEEE Communications Letters",
+          "id": "2610.21187",
+          "pdf": "https://arxiv.org/pdf/2610.21187",
+          "summary": "We propose a novel low-complexity soft-aided hard-decision decoding scheme for product-like codes, termed iterative bounded-distance decoding (iBDD) with graded scaled reliability and bit-flipping (GSRF). This scheme operates on four-level quantized soft information. It incorporates a graded scaled reliability rule to assign decoding confidence to the bounded-distance decoding result, and employs a bit-flipping rule based on bit-level and component-code-level reliability. A selective re-decoding rule is designed to further facilitate the error performance while keeping the number of BDD attempts in reasonably low levels. The decoding parameter design of iBDD-GSRF is investigated for product codes and staircase codes, respectively. Simulation results on both codes verify that iBDD-GSRF achieves a gain of more than 0.4 dB over the conventional iBDD, comparable to several existing unquantized soft-aided decoders.",
+          "title": "Four-Level Quantized Soft Information Aided Hard-Decision Decoder for Product-like Codes"
+        },
+        "2610.21191": {
+          "abs": "https://arxiv.org/abs/2610.21191",
+          "authors": [
+            "Jinjian Liu",
+            "Xianxin Song",
+            "Xianghao Yu"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IT"
+          ],
+          "comment": "6 pages, 4 figures",
+          "id": "2610.21191",
+          "pdf": "https://arxiv.org/pdf/2610.21191",
+          "summary": "Movable antennas (MAs) have recently emerged as a promising technology to enhance the wireless sensing performance by exploiting additional spatial degrees of freedom. In this work, we consider an MA-enabled near-field target localization problem under a device-based sensing architecture, where the sensing target actively transmits signals and the sensing receiver estimates its location based on the received signals. We adopt the squared position error bound (SPEB) as the sensing performance metric and aim to minimize the target's SPEB by optimizing the antenna placement at the sensing receiver. The resulting optimization problem is highly non-convex due to the minimum antenna spacing constraints and the intricate dependence of the SPEB on the antenna locations and the intractable form of SPEB. To tackle this problem, we first relax the inter-spacing constraints and accordingly formulate an antenna position distribution problem in terms of degree-4 truncated moments. The reformulated moment-based problem admits an equivalent semidefinite programming formulation and can be optimally solved using standard convex optimization solvers. Using truncated moment theory, we then recover an optimal antenna position distribution supported on a finite number of locations and construct an efficient clustered placement policy. Numerical results demonstrate that the constructed optimal distribution exhibits a three-cluster structure with source-dependent weights. The proposed antenna placement method outperforms conventional array geometries and closely approaches the exhaustive-search benchmark scheme.",
+          "title": "Antenna Placement for Movable Antenna-Enabled Near-Field Target Localization"
+        },
+        "2610.21225": {
+          "abs": "https://arxiv.org/abs/2610.21225",
+          "authors": [
+            "Henglin Pu",
+            "Lu Su",
+            "Zhu Han",
+            "Athina P. Petropulu",
+            "Husheng Li"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21225",
+          "pdf": "https://arxiv.org/pdf/2610.21225",
+          "summary": "Integrated sensing and communication (ISAC) provides a promising foundation for low-altitude unmanned aerial vehicle (UAV) monitoring. However, most existing studies focus primarily on position and bulk velocity, thus providing limited information about UAV rotor dynamics and orientation. To address this limitation, this paper develops an orthogonal frequency-division multiplexing (OFDM)-ISAC framework that exploits UAV micro-Doppler signatures to estimate operational states, including rotor rate and rotor-axis orientation, thereby providing richer UAV state information beyond conventional ISAC localization and velocity sensing. The framework progresses from single-station micro-Doppler sensing to multi-station rotor-axis estimation. At each base station, micro-Doppler signatures are first extracted and used to estimate the rotor rate. The framework is then extended to a distributed ISAC network, where view-dependent micro-Doppler signatures from multiple sensing directions are fused to estimate the common rotor-axis direction. Since the fusion relies on Doppler-bandwidth features rather than complex channel phases, inter-station carrier-phase synchronization is not required. We show that three geometrically diverse views can locally identify both the rotor-axis direction and the unknown rotor-tip-speed scale. In addition, a feature-aware radar equation bridges blade radar cross section (RCS), sensing range, transmit power, and observation duration to micro-Doppler detection and rotor-rate estimation accuracy. The effects of residual motion and range migration on the coherent processing interval (CPI) are also analyzed. Simulations and experimental measurements validate the proposed framework and demonstrate the feasibility of rotor-rate estimation and multi-station rotor-axis sensing.",
+          "title": "Micro-Doppler Sensing for UAV Flight-State Estimation in ISAC Networks"
+        },
+        "2610.21231": {
+          "abs": "https://arxiv.org/abs/2610.21231",
+          "authors": [
+            "Hamidreza Abin",
+            "Amin Gohari"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.21231",
+          "pdf": "https://arxiv.org/pdf/2610.21231",
+          "summary": "We address an open problem raised by Polyanskiy and Wu in their textbook concerning the subadditivity of mutual \\(f\\)-information. We study two notions of generalized mutual information: mutual \\(f\\)-information, defined by \\(\\widetilde{I}_f(X;Y)=D_f(p_{XY}\\|p_Xp_Y)\\), and variational \\((G,f)\\)-information, obtained by minimizing an average of transformed \\(f\\)-divergences. For the first notion, we derive a sufficient condition on \\(g(x)=x^2f''(x)\\) that guarantees subadditivity under conditionally independent observations. This condition yields explicit families beyond the previously known examples generated by \\(x\\log x\\) and \\((x-1)\\log x\\). Our proof relies on the concavity of a generalized variance functional. For the variational notion, we extend existing sufficient conditions beyond the transforms \\(G(x)\\in\\{x,\\log(1+x),-\\log(1-x)\\}\\). Using a comparison inequality for \\(G^{-1}(G(A)+G(B))\\), we obtain differential criteria for concave and convex transforms. Explicit constructions illustrate the resulting classes of subadditive information measures.",
+          "title": "On the Subadditivity of Mutual f-Information"
+        },
+        "2610.21252": {
+          "abs": "https://arxiv.org/abs/2610.21252",
+          "authors": [
+            "Yuanjun Shen"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IT",
+            "stat.AP"
+          ],
+          "comment": null,
+          "id": "2610.21252",
+          "pdf": "https://arxiv.org/pdf/2610.21252",
+          "summary": "Fluid antenna receivers can select a service position from partial port observations, but finite historical data leave uncertainty in the covariance used for that decision. We develop deployment-before-use reliability certification for a frozen partial-observation rule. A proper predictive density defines a history-based parameter region. Gaussian covariance envelopes, shared conditional-probability bounds and selector enclosures provide simultaneous risk bounds over continuous parameters and discontinuous port decisions. Separate history-coverage and integration budgets limit erroneous positive certification to 0.05 for a single qualification procedure under the stated stationary model and numerical assumptions. Confidence-set inclusion allows a new independent history to reuse the risk computation with the rule unchanged. In a structured Gaussian example with 32 candidate positions, five noisy probes and target outage 0.001, all 282 risk groups are qualified; the largest upper bound is 0.000999748. A separate coupled comparison gives a current-rule outage interval of $[7.6820,9.1266]\\times10^{-4}$ and resolves lower outage than two observed-port controls using the same historical fit. One independently recalibrated history reuses the certificate without additional risk sampling. Unresolved and adverse-member controls delimit this reuse.",
+          "title": "Finite-History Outage Certification for Partially Observed Fluid Antenna Receivers"
+        },
+        "2610.21279": {
+          "abs": "https://arxiv.org/abs/2610.21279",
+          "authors": [
+            "Xiaowei Wu",
+            "Min Qiu",
+            "Yueying Zhan",
+            "Lei Yang"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Accepted by IEEE Information Theory Workshop 2026",
+          "id": "2610.21279",
+          "pdf": "https://arxiv.org/pdf/2610.21279",
+          "summary": "We propose a novel soft-aided hard-decision decoding scheme for product codes based on two-bit quantized reliability markers. In particular, one bit is used for a two-level tolerance miscorrection check to validate the bounded distance decoding (BDD) result, while the other identifies bits to be randomly flipped upon BDD failure and miscorrection. List decoding is incorporated to further facilitate the error performance. Density evolution is performed for the design of the quantization thresholds. Compared to iterative BDD, the proposed scheme requires only moderate increases in memory and computational overhead. Simulation results verify that our scheme outperforms several unquantized soft-aided decoders, while maintaining small memory costs and low BDD attempts.",
+          "title": "Iterative Bounded Distance Decoding With 2-Bit Reliability Marker For Product-Like Codes"
+        },
+        "2610.21504": {
+          "abs": "https://arxiv.org/abs/2610.21504",
+          "authors": [
+            "Danial Dehghani",
+            "Maximilian Lübke",
+            "Friedemann Laue",
+            "Zahra Seifaei",
+            "Norman Franchi"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21504",
+          "pdf": "https://arxiv.org/pdf/2610.21504",
+          "summary": "Cooperative multi-agent semantic communication requires deciding not only how a transmitter encodes its observation, but also which resulting semantic content should be delivered to each receiver under a limited link budget. We introduce an encoder-agnostic transmitter-side framework for receiver-specific valuation of independently selectable semantic units, termed semantic atoms. Each atom is assigned a signed value that quantifies whether delivering it is expected to improve or degrade the intended receiver's downstream decision. We formulate this effect through a controlled-delivery utility and identify it via prospective randomized payload delivery before the receiver acts. A shadow receiver estimates this utility using only transmitter-available information, from which receiver-specific leave-one-out (LOO) and Shapley atom values are computed. Experiments on a four-receiver intersection benchmark show 68.4% accuracy in recovering the sign of non-negligible LOO atom effects and a Spearman correlation of 0.302 between estimated and reference LOO values. Under limited budgets, we show that receiver-specific selection consistently outperforms shared and random alternatives, demonstrating the benefit of adapting semantic ranking to the intended receiver. At full affordability, exhaustive subset selection also outperforms full-payload transmission, showing that transmitting all available content need not maximize receiver utility. Overall, our results show that receiver-specific semantic valuation can support effective budget-constrained communication despite imperfect atom-value estimation.",
+          "title": "Receiver-Specific Interventional Valuation of Semantic Atoms for Budget-Constrained Multi-Agent Communication"
+        },
+        "2610.21509": {
+          "abs": "https://arxiv.org/abs/2610.21509",
+          "authors": [
+            "Umberto Martínez-Peñas",
+            "Rubén Rodríguez-Ballesteros"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.21509",
+          "pdf": "https://arxiv.org/pdf/2610.21509",
+          "summary": "We study structural properties of polynomial ideal (PI) codes and additive Reed--Solomon (aRS) codes in the folded Hamming metric (equivalently, the Hamming metric over a larger alphabet). We first determine the maximum possible length of PI codes, prove that the dual of every PI code is a generalized PI code, and deduce that PI codes are dually QMDS together with an explicit formula for their weight distribution. We then show that PI codes defined by irreducible polynomials correspond to aRS codes with pairwise nonconjugate evaluation points. For these aRS codes, the previous results on PI codes apply (duality, QMDS property and weight distribution). We show that, asymptotically, aRS codes with nonconjugate evaluation points achieve the same length as PI codes. We also compute the permutation group of such aRS codes. We also extend the family of PI codes to consider arbitrary polynomial modules (not necessarily pairwise coprime), and study when these and general aRS codes satisfy the QMDS and dually QMDS properties.",
+          "title": "On the structure of polynomial ideal codes and additive Reed--Solomon codes"
+        },
+        "2610.21521": {
+          "abs": "https://arxiv.org/abs/2610.21521",
+          "authors": [
+            "Sotiris Droulias",
+            "Angeliki Alexiou"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "12 pages, 9 figures",
+          "id": "2610.21521",
+          "pdf": "https://arxiv.org/pdf/2610.21521",
+          "summary": "With wireless transmission exposing information to potential interception by unintended receivers, physical layer security (PLS) offers a promising approach to securing wireless communications. Beamforming can mitigate this vulnerability by exploiting the spatial characteristics of wireless propagation to concentrate power toward the intended receiver while suppressing it at potential eavesdroppers. However, as wireless systems enter the radiating near field of large-aperture antenna arrays, the resulting wavefront curvature provides additional opportunities for spatial wavefront engineering to enhance PLS. In this work, we investigate the use of different beam types for PLS, including focused, curved, abruptly autofocusing, and cosine beams, generated using uniform linear and planar arrays (ULAs/UPAs). To quantify their performance, we introduce power-based metrics that characterize the power received by the legitimate user and a potential eavesdropper. For all beam types we introduce focusing along the vertical UPA direction, to independently control the phase distributions along the two UPA dimensions and enhance the power discrimination between the legitimate receiver and the eavesdropper. We also propose hollow-focused beams, in which an inactive strip is introduced in the transmitting aperture to create a protected low-power region between the transmitter and the legitimate receiver. The results demonstrate that vertical focusing dramatically enhances the PLS performance and that hollow-focused beams achieve superior PLS performance in both line-of-sight (LoS) and vicinity-of-user (VoU) scenarios.",
+          "title": "Wavefront Engineering for Physical Layer Security in Near-Field Wireless Communications"
+        },
+        "2610.21536": {
+          "abs": "https://arxiv.org/abs/2610.21536",
+          "authors": [
+            "Saeed Razavikia"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP",
+            "math.OC"
+          ],
+          "comment": null,
+          "id": "2610.21536",
+          "pdf": "https://arxiv.org/pdf/2610.21536",
+          "summary": "We study over-the-air computation of functions, such as empirical variance, formed by combining two separately postprocessed sums of locally transformed observations. We consider continuous encoders subject to pointwise peak-power constraints over a single use of a complex multiple-access channel. With four or more transmitters, we identify conditions under which exact noiseless recovery forces every continuous encoder collection into a common affine structure that preserves both sums, reducing infinite-dimensional encoder design to selecting a finite set of coefficients. To quantify resilience against channel noise, we introduce a robustness score that measures the separation of noiseless received aggregates relative to variations in the desired function value. Within this characterized encoder family, we formulate robustness maximization as an exact convex semi-infinite program, eliminating rank constraints without a relaxation gap, and construct a decoder that attains the minimum uniform noise-amplification constant. For several function classes, including empirical variance, we derive closed-form robustness-optimal encoders and scores. Under mild regularity conditions, we also establish sharp limits on the Gaussian mean squared error at high signal-to-noise ratios and show how using the input distribution reduces average error at the expense of uniform robustness.",
+          "title": "It Takes Two Moments: Rigidity and Limits of Continuous Encoders for Over-the-Air Computation"
+        },
+        "2610.21602": {
+          "abs": "https://arxiv.org/abs/2610.21602",
+          "authors": [
+            "Runyu Lyu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21602",
+          "pdf": "https://arxiv.org/pdf/2610.21602",
+          "summary": "Orbital angular momentum (OAM) beams provide a spatial-multiplexing dimension for wireless communications, but multipath scattering broadens their mode spectrum, so that energy leaks across modes as inter-mode interference (IMI), which conventional OAM demultiplexing discards. This paper treats the leaked modal energy not as interference but as a structured, harvestable resource: it attains up to $LK$-fold asymptotic diversity under independent-branch fading and yields harvested energy under the rank-limited per-tap fading of the operating channel. Each active OAM mode is colored with a distinct time-domain orthogonal spreading code, and a two-dimensional (2D) receiver grid spanning the OAM modes and the resolvable multipath delays jointly combines the despread outputs. The design builds on the Bessel order-difference coupling law of tilted OAM beams, summarized by a Gaussian mode-diffusion model with a mode-coherence metric that quantifies the surviving orthogonality, and on an effective diversity metric that separates the combining gain available at finite signal-to-noise ratio (SNR) from the asymptotic diversity order. At 28~GHz, with a four-mode eight-element uniform circular array (UCA) and four resolvable multipath taps, the proposed 2D modal-time Rake lowers the bit-error rate (BER) by one to three orders of magnitude and saves roughly 10--15~dB of required SNR over mode-wise detection and mode-domain zero-forcing (ZF) and minimum mean-square error (MMSE) detection, and it also outperforms an uncolored modal-time MMSE equalizer; the advantage survives the spectral-efficiency cost of spreading as well as channel-estimation and timing imperfections.",
+          "title": "From Interference to Diversity: Mode Coloring and Two-Dimensional Modal-Time Rake Combining for Multipath OAM Communications"
+        },
+        "2610.21617": {
+          "abs": "https://arxiv.org/abs/2610.21617",
+          "authors": [
+            "Sadiq Iqbal",
+            "Abdelali Arous",
+            "Huseyin Arslan"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "13 pages, 9 figures, transaction",
+          "id": "2610.21617",
+          "pdf": "https://arxiv.org/pdf/2610.21617",
+          "summary": "The synchronization signal block (SSB) is designed to synchronize a capable user-equipment (UE) with the base-station (BS) in recent cellular networks. However, the same SSB cannot be utilized by a narrowband, low-complexity, and low-power internet of things (IoT) device for synchronization. To address this limitation, this paper proposes a dual-purpose SSB (DP-SSB) to enable low-complexity IoT synchronization using the existing SSB, while ensuring uninterrupted conventional UE operation. Specifically, selected demodulation reference signal (DMRS) symbols are contiguously mapped to some physical resource blocks (PRBs) in the second and fourth symbols of the DP-SSB. These DMRS symbols are further optimized using a receiver-aware least square (LS) approach to impose a distinct time-domain structure at the output of the IoT front-end. At the IoT receiver, a reduced-rate observation of the DP-SSB is obtained after narrowband filtering and decimation that is exploited for energy detection and sequential time-frequency (TF) synchronization. For the UE, primary synchronization signal (PSS) and secondary synchronization signal (SSS)-based synchronization is preserved, while the effect of relocated DMRS on the channel estimation and physical broadcast channel (PBCH) reception is assessed. The performance of the proposed DP-SSB is evaluated in terms of detection probability, TF synchronization accuracy, IoT receiver computational complexity, and UE-side PBCH decoding. Simulation results validate the analytical detection characterization and demonstrate reliable low-power IoT synchronization performance compared with the benchmark synchronization schemes while maintaining conventional UE operation.",
+          "title": "Dual-Purpose SSB Design for Joint Time-Frequency Synchronization Using Relocated DMRS"
+        },
+        "2610.21643": {
+          "abs": "https://arxiv.org/abs/2610.21643",
+          "authors": [
+            "Shaowen Chen",
+            "Tomoki Toda"
+          ],
+          "categories": [
+            "eess.SP",
+            "eess.AS"
+          ],
+          "comment": "This manuscript is currently under review for publication in the IEEE Transactions on Signal Processing. This work has been submitted to the IEEE for possible publication",
+          "id": "2610.21643",
+          "pdf": "https://arxiv.org/pdf/2610.21643",
+          "summary": "Although the amplitude estimation of sinusoids is a linear and tractable problem when their frequencies are known, the accuracy of signal modeling is fundamentally limited by the inevitable frequency mismatches produced by existing methods. Quasi-harmonic modeling (QHM) and its extensions (aQHM and eaQHM) offer the ability to refine frequency estimates while extracting amplitudes; however, their extraction and correction capabilities remain limited. In this paper, we first revisit QHM methods from the perspective of frequency mismatches, and reveal that their performances are essentially constrained by the order of the model. Specifically, QHM methods are linear models and thus incapable of capturing higher-order frequency variations, leading to suboptimal modeling accuracy. Second, to address this limitation, we propose a higher-order modeling framework that enables more precise approximation of signal components. Eventually, we qualitatively characterize the optimization problem and employ the Levenberg--Marquardt (LM) algorithm for parameter estimation. As a result, the proposed method allows for significantly improved estimation of amplitudes, frequencies, and phases of sinusoidal components, enabling more accurate signal modeling. Experiments on both simulation study and speech signals demonstrate the superiority of the high-order model in frequency refinement and parameter extraction and its robustness under additive noise conditions.",
+          "title": "High-Order Sinusoidal Modeling for Precise Parameter Refinement"
+        },
+        "2610.21653": {
+          "abs": "https://arxiv.org/abs/2610.21653",
+          "authors": [
+            "Zexuan Jing",
+            "Yifeng Xiong",
+            "Fan Liu",
+            "Xuehua Li",
+            "Jianhua Zhang"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21653",
+          "pdf": "https://arxiv.org/pdf/2610.21653",
+          "summary": "Probabilistic constellation shaping (PCS), originally designed to fill the gap between finite uniform constellations and continuous capacity-achieving input distributions, has recently emerged as a central tool in adjusting the expected integrated sidelobe level (EISL) in integrated sensing and communication (ISAC). In this paper, we show that PCS goes beyond EISL: A large class of PCS methods, termed as type-based PCS, are capable of providing precise control over codeword-wise integrated sidelobe level ratio (ISLR) for systems employing orthogonal frequency division multiplexing (OFDM), thus yielding a stronger sensing performance guarantee than EISL control. We further show that OFDM is almost the only unitary modulation basis whose codeword-wise ISLR can be precisely controlled by type-based PCS. Based upon the analytical results, practical type-based PCS methods compatible with the probabilistic amplitude shaping (PAS) framework are conceived, which achieve higher communication rates than existing ISAC-oriented PCS methods under identical ISLR constraints.",
+          "title": "How Does Probabilistic Constellation Shaping Control Ranging Sidelobe Levels in ISAC?"
+        },
+        "2610.21691": {
+          "abs": "https://arxiv.org/abs/2610.21691",
+          "authors": [
+            "Tianyi Li",
+            "Simon Geirnaert",
+            "Davina Van den Broek",
+            "Elien Bellon",
+            "Bert De Smedt",
+            "Alexander Bertrand"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21691",
+          "pdf": "https://arxiv.org/pdf/2610.21691",
+          "summary": "Objective: Absolute auditory attention decoding (aAAD) aims to track how strongly a listener attends to a single speech source using electroencephalography (EEG). Unlike selective auditory attention decoding, aAAD lacks a competing speech reference, making reliable attention tracking challenging. Approach: We propose a fully unsupervised aAAD pipeline combining neural envelope tracking (NET) with hidden Markov model (HMM)-based temporal inference. Using EEG signals and the target speech envelope, the framework estimates a continuous attention trajectory without explicit attention-state labels. We evaluate the approach using EEG recordings from 30 adults, investigate the impact of analysis window length, and compare HMM post-processing with moving-average (MA) smoothing and alternative EEG features. Main results: With 1-s analysis windows, non-causal HMM post-processing improves the area under the receiver operating characteristic curve (AUC) for all 30 participants, increasing mean AUC from 0.547 for raw NET to 0.832. A 5-s window achieves the highest mean AUC of 0.858. Compared with non-causal MA smoothing, the HMM achieves higher AUC across the examined smoothing scales. Individual switch detection times are comparable, while the HMM generally achieves lower group-level detection times. NET also outperforms alpha power and spectral entropy as an observation feature in the unsupervised HMM framework. Significance: The proposed framework provides a label-free approach for estimating temporal fluctuations in auditory attention, demonstrating the utility of probabilistic temporal inference for continuous attention tracking in single-speaker listening scenarios.",
+          "title": "A hidden Markov model for unsupervised EEG-based tracking of auditory attention to a single voice"
+        },
+        "2610.21726": {
+          "abs": "https://arxiv.org/abs/2610.21726",
+          "authors": [
+            "Luca Barletta",
+            "Alex Dytso"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "24 pages, single-column",
+          "id": "2610.21726",
+          "pdf": "https://arxiv.org/pdf/2610.21726",
+          "summary": "We study lower bounds on the Fisher information of Gaussian location mixtures and their applications to estimation problems. First, for a discrete mixing distribution, we derive a universal positive-semidefinite lower bound on the Fisher information matrix in terms of the Rényi entropy of order two. For a mixing distribution supported on $K$ points, this bound scales as $\\log(K)/K^2$, improving by a logarithmic factor on the support-size dependence obtained from Stam's inequality. We then develop dimension-aware trace bounds using classical Sobolev inequalities. These bounds are expressed in terms of Sibson's $\\alpha$-mutual information and yield the scaling $K^{-2/n}$ in dimension $n$. A complementary bound involving the $\\alpha$-mutual information of order $1/2$ is obtained using the sharp Young convolution inequality. The derived inequalities are further specialized to rotationally invariant mixing distributions supported on discrete spherical shells. In this setting, an intrinsic-dimensional bound on Sibson mutual information leads to lower bounds on the Fisher information in terms of the number of occupied shells. As applications, we study least favorable priors for bounded Gaussian mean estimation. In the scalar case, we show that the least favorable prior on $[-R,R]$ has at least $\\Omega(R\\sqrt{\\log R})$ support points and that each of its probability masses is of order at most $1/R$. In the vector case, we show that the number of occupied shells grows at least linearly with $R$. Finally, Brown's identity and the I-MMSE relationship are used to translate the Fisher-information inequalities into upper bounds on the MMSE and mutual information.",
+          "title": "Fisher Information and Support Complexity of Gaussian Mixtures"
+        },
+        "2610.21729": {
+          "abs": "https://arxiv.org/abs/2610.21729",
+          "authors": [
+            "Massimo Battaglioni",
+            "Dania De Crescenzo",
+            "Edoardo Carnevali",
+            "Enrico Paolini"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "6 pages, 4 figures",
+          "id": "2610.21729",
+          "pdf": "https://arxiv.org/pdf/2610.21729",
+          "summary": "In asynchronous grant-free access, receivers must detect variable-length transmissions and identify their start and end. Existing decoder-aided receivers use start and tail sequences which are as long as one codeword, causing substantial overhead for short commands. This paper treats the boundary (i.e., start and tail sequences) length as an independent design parameter and proposes a convolutional neural network that detects both boundaries from the received waveform and the decoder soft output. Its waveform input size decreases with the boundary length, while the decoder input keeps the codeword length, so the boundary can be shortened without altering the decoder. Analysis and simulations quantify the resulting tradeoff among payload efficiency, collision exposure, and boundary detection. The results show that the proposed receiver can exploit very short boundaries: in the considered setting, the shortest tested boundary, $L_{\\mathrm{b}}=16$, yields the highest effective payload efficiency at all tested loads, whereas a correlation-based benchmark with the same sequences performs best with $L_{\\mathrm{b}}=64$ at moderate and high loads.",
+          "title": "Short-Boundary Signaling for Asynchronous Grant-Free Control-to-Control Communications"
+        },
+        "2610.21753": {
+          "abs": "https://arxiv.org/abs/2610.21753",
+          "authors": [
+            "Ali Waqar Azim",
+            "Mohamed Sufyan Islim",
+            "Muhammad Ali Imran",
+            "Harald Hass Hanaa Abumarshoud"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21753",
+          "pdf": "https://arxiv.org/pdf/2610.21753",
+          "summary": "This paper proposes sensing-assisted OFDM with index modulation (SA-OFDM-IM) for joint communication and localisation over optical wireless systems. In SA-OFDM-IM, a multilayer frequency-domain architecture partitions each layer's admissible subcarriers into disjoint communication and distributed sensing-pilot subsets, applying group-wise index modulation (IM) within the communication subset. A constrained sensing-to-communication energy allocation jointly minimises average bit-error rate (BER) and delay-based localisation root mean square error (RMSE) under a minimum power-domain margin, enabling low-complexity, ordered-energy detection of both sensing and communication subcarriers without exhaustive maximum-likelihood search. Sensing tones are aggregated across the frame to reconstruct the channel frequency response, yielding the line-of-sight (LoS) delay tap and phase-compensated LoS gain for multilateration and, via the proposed delay-aided received signal strength (RSS) refinement. Simulation results indicate that SA-OFDM-IM can achieve up to 5 dB lower SNR requirement in BER and up to three orders of magnitude lower channel-estimation error than DC-biased optical OFDM, while the RSS estimator removes the SNR-independent error floors of delay-only and hybrid-RSS benchmarks to attain sub-delay-bin range and position accuracy, remaining robust under random known and unknown receiver orientations.",
+          "title": "Sensing-Assisted OFDM with Index Modulation: A Waveform for Optical Wireless Integrated Communication and Localisation"
+        },
+        "2610.21759": {
+          "abs": "https://arxiv.org/abs/2610.21759",
+          "authors": [
+            "Wei Guo",
+            "Meng He",
+            "Chuan Huang",
+            "Hengtao He",
+            "Shenghui Song",
+            "Jun Zhang",
+            "Khaled B. Letaief"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "16 pages, 10 figures. Accepted by IEEE JSAC",
+          "id": "2610.21759",
+          "pdf": "https://arxiv.org/pdf/2610.21759",
+          "summary": "Distributed detection plays a fundamental role in communication-efficient collaborative inference over large-scale networks, where spatially distributed nodes must cooperate using severely quantized messages due to bandwidth constraints. While low-bit quantization is essential for reducing communication overhead, it can significantly degrade detection performance, particularly when prior knowledge of observation noise is unavailable. To address this challenge, we propose a model-driven deep learning framework for distributed detection with low-bit quantization. For fixed local quantizers, we first derive the exact finite-sensor maximum a posteriori (MAP) detection error and prove that, under conditionally independent and identically distributed (i.i.d.) observations, independent local randomizations, and a common quantization-level constraint, identical quantizers preserve the supremum of the average network Chernoff information. Guided by these results, we develop a binary probabilistic quantizer with a trainable neural probability controller and design a tree-structured probabilistic quantizer for scalable multi-bit quantization. The exact finite-sensor MAP error provides the training objective for the binary quantizer, while we derive a computationally tractable Bhattacharyya surrogate objective for training the multi-bit quantizer. For both cases, we derive analytical MAP fusion rules based on the class-conditional probability mass functions (PMFs) of the quantized messages. When the observation statistics are unknown, these PMFs are estimated from held-out labeled data, yielding plug-in MAP detectors. Simulation results show that the proposed method approaches centralized-oracle performance at higher quantization resolutions and remains effective under changes in network size and test-time signal amplitude.",
+          "title": "Model-Driven Deep Learning for Distributed Detection with Low-Bit Quantization"
+        },
+        "2610.21819": {
+          "abs": "https://arxiv.org/abs/2610.21819",
+          "authors": [
+            "Bowen Li",
+            "Nikolaos Pappas"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.21819",
+          "pdf": "https://arxiv.org/pdf/2610.21819",
+          "summary": "This paper investigates joint accuracy and security in semantics-aware remote monitoring, where source updates intended for a legitimate receiver may also be intercepted by an eavesdropper. We define legitimate reconstruction advantage (LRA) as the joint event that the intended receiver correctly reconstructs the current source state using received updates while the eavesdropper reconstructs it incorrectly. Source evolution changes the relevance of received updates at the two receivers, so their marginal reconstruction accuracies do not, in general, determine the probability of this joint event. Under randomized stationary (RS) transmission and zero-order-hold reconstruction at both receivers, we derive an explicit joint stationary distribution and closed-form expressions for LRA probability and persistence for general finite-state ergodic Markov sources. For two-state and uniform-transition sources, we obtain algebraic expressions that enable low-complexity optimization of RS policies. Analytical and numerical results show that maximizing the probability of legitimate advantage need not maximize its persistence. For two-state sources, rare-transmission analysis reveals that, at a fixed sum of transition probabilities, greater transition asymmetry can increase persistence while reducing LRA probability. Moreover, optimizing marginal accuracy and security metrics can select policies that are suboptimal for LRA. Counterintuitively, more frequent transmission or improved legitimate-channel reliability can increase legitimate reconstruction accuracy while reducing LRA probability. Finally, a geofencing application translates prescribed LRA requirements into spatial constraints on eavesdropper locations.",
+          "title": "Legitimate Reconstruction Advantage in Wiretapped Semantics-Aware Remote Monitoring"
+        },
+        "2610.21880": {
+          "abs": "https://arxiv.org/abs/2610.21880",
+          "authors": [
+            "Sohani Munteha Hiam",
+            "Mohammad Soleymani",
+            "Rafael F. Schaefer"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted at IEEE Communications Letter",
+          "id": "2610.21880",
+          "pdf": "https://arxiv.org/pdf/2610.21880",
+          "summary": "Vision-aided beam tracking reduces mmWave beam-training overhead by predicting beam indices from camera observations. Fixed top-$K$ selection, however, assigns the same candidate beam budget to all predictions, ignoring uncertainty variations across samples and horizons. This letter proposes confidence-guided adaptive candidate selection: predictor logits are temperature-calibrated, and the smallest top-ranked beam set whose cumulative probability reaches a target threshold is retained under a maximum budget. On DeepSense~6G Scenario~8, over five random seeds and at matched overhead, the policy improves candidate set accuracy by up to 3.80 percentage points, increases normalized received power by 0.32 percentage points, and reduces outage probability by 2.06 percentage points without retraining the predictor.",
+          "title": "Confidence-Guided Adaptive Beam Selection for Vision-Aided Beam Tracking in mmWave Systems"
+        },
+        "2610.21888": {
+          "abs": "https://arxiv.org/abs/2610.21888",
+          "authors": [
+            "Wonill Kim",
+            "Yumin Kim",
+            "Hyeonsu Lyu",
+            "Hyun Jong Yang"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "13 pages, 9 figures. Submitted to IEEE Transactions on Wireless Communications",
+          "id": "2610.21888",
+          "pdf": "https://arxiv.org/pdf/2610.21888",
+          "summary": "Ambiguity function (AF) characterizes the delay--Doppler sidelobe structure that governs target resolution and masking in radar sensing. In ISAC, however, random communication symbols make the AF data-dependent, complicating its characterization and incorporation into transmit design. This raises a fundamental question: which AF characteristic can be effectively controlled through beamforming in a practical multiuser multitarget (MUMT) MIMO--OFDM system? To answer this, we statistically characterize the discrete-periodic AF (DP-AF) and derive an exact closed-form expected sidelobe level (ESL). We observe that nonzero-Doppler ESL cuts are delay-flat and the full two-dimensional integrated sidelobe level ratio (ISLR) is invariant to beamforming, whereas the zero-Doppler peak-to-sidelobe ratio (PSLR) remains controllable. We accordingly formulate an AF-aware joint beamforming and subcarrier-allocation problem with target-wise PSLR and illumination constraints. Since the direct PSLR constraint is intractable, we characterize its global optimum and prove that, for symbol kurtosis greater than one, the PSLR is maximized if and only if each target-wise directional-power profile is flat across subcarriers. We then introduce the coefficient of variation (CV) to measure deviation from this flatness and derive tight CV-dependent PSLR bounds. The lower bound yields a convex sufficient constraint for a desired PSLR, enabling an efficient reformulation. Simulations show $9.4$--$11.0$ dB worst-case PSLR gains over communication-only beamforming at the flat-spectrum point with a $2.4$--$5.9\\%$ sum-rate loss. The CV-relaxed formulation achieves $99.7\\%$ of the average sum-rate of the original PSLR-constrained problem, while reducing runtime by factors of $10.35$--$12.15$ under the considered scenarios.",
+          "title": "Statistical Ambiguity-Function-Aware Joint Beamforming and Subcarrier Allocation for MIMO-OFDM ISAC under Random Symbols"
+        },
+        "2610.21905": {
+          "abs": "https://arxiv.org/abs/2610.21905",
+          "authors": [
+            "Yifei Wang",
+            "Pradyumna Kumar Bishoyi",
+            "Marina Petrova"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.21905",
+          "pdf": "https://arxiv.org/pdf/2610.21905",
+          "summary": "In integrated sensing and communication (ISAC) systems, communication and sensing share time-frequency resources, creating a fundamental trade-off between communication quality of service (QoS) and quality of sensing (QoSe). Reusing 5G new radio (NR) reference signals (RSs) enables standard-compliant sensing, but their inherent sparsity leads to undersampled channels and strong sidelobes that degrade weak-target detection. Compressed sensing (CS) can mitigate these effects, yet existing methods either overlook communication QoS constraints or rely on reconstruction algorithms that are step-size-sensitive or employ global thresholding, leading to weak-target masking in multi-target scenarios. The multi-target detection problem, therefore, requires a joint design of resource scheduling and CS-based reconstruction. In this work, we investigate the impact of two scheduling schemes, namely QoS-guaranteed scheduling and proportional-fairness (PF)-based scheduling, on the sensing-communication trade-off. To further enhance sensing performance, we employ a 2D max-median complex approximate message passing (2D-mmCAMP) algorithm that performs adaptive row- and column-wise thresholding to suppress sidelobes while preserving weak-target responses in multi-target scenarios. Simulations demonstrate an improvement of >= 16% in weak-target detection over baseline reconstruction algorithms while meeting downlink (DL) QoS constraints, validating the effectiveness of the proposed NR-compliant ISAC scheme.",
+          "title": "Seeing Through Sparse Signals: CS-Enhanced Sensing With QoS Guarantees for 6G ISAC"
+        },
+        "2610.21969": {
+          "abs": "https://arxiv.org/abs/2610.21969",
+          "authors": [
+            "Robert-Jeron Reifert",
+            "Hayssam Dahrouj",
+            "Alaa Alameer Ahmad",
+            "Haris Gacanin",
+            "Aydin Sezgin"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.LG"
+          ],
+          "comment": "18 pages, 16 figures, 3 tables. This paper has been accepted for publication in IEEE Transactions on Mobile Computing",
+          "id": "2610.21969",
+          "pdf": "https://arxiv.org/pdf/2610.21969",
+          "summary": "The convergence of communication and computation, empowered by artificial intelligence (AI) enhanced capabilities, emerges as a key enabler for realizing the promising functionalities of the sixth-generation of communication systems (6G). To this end, this paper investigates an AI-native, robust network, where multiple base stations (BSs) simultaneously serve several extended reality (XR) devices. The paper then presents an innovative distributed deep learning-based approach to simultaneously manage the transmit and computing powers, and computation allocation, amidst uncertainties in both channel and computing states information. Under such an interference network scenario, the paper proposes a robust approach for minimizing the worst-case delay across the served XR devices, subject to computation and power constraints. The paper leverages a deep neural network (DNN) that can be trained either centrally or in a federated manner to map estimated channels and computation requirements to optimized resource allocations per BS. During training, uncertainty samples, reflecting both channel and computing estimation errors, are injected after the DNN output to account for such joint uncertainties. Our results validate the enhanced robust delay performance and scalability of joint uncertainty injection as compared to uncertainty-agnostic methods and state-of-the-art benchmarks, with federated learning-based solutions achieving near-centralized performance while enhancing efficiency, privacy, and adaptability.",
+          "title": "Uncertainty-Aware Federated Learning for Joint Communication and Computation in XR Systems"
+        },
+        "2610.22231": {
+          "abs": "https://arxiv.org/abs/2610.22231",
+          "authors": [
+            "Massimo Battaglioni",
+            "Edoardo Carnevali",
+            "Franco Chiaraluce",
+            "Marco Baldi",
+            "Giovanni Cancellieri"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "6 pages, 0 figures",
+          "id": "2610.22231",
+          "pdf": "https://arxiv.org/pdf/2610.22231",
+          "summary": "This paper studies the design of some high-rate, adaptive, low-density parity-check (LDPC) convolutional codes with short constraint length, based on interleaved parity-check polynomials. Starting from some known results regarding the selection of polynomials that yield codes free of short cycles in the associated Tanner graphs, we propose some new constructions based on Golomb rulers, along with relaxed variants that do not strictly satisfy the Golomb ruler condition, but retain similar structural properties. The result is a family of rate-adaptive code constructions with code rates of the form $R=(n_0-1)/n_0$. Conditions for the absence of length-4 cycles are derived, together with upper bounds on the free distance that are met in all considered examples.",
+          "title": "Design of a Family of Rate-Adaptive LDPC Convolutional Codes with Short Constraint Length"
+        },
+        "2610.22265": {
+          "abs": "https://arxiv.org/abs/2610.22265",
+          "authors": [
+            "Ismail Cosandal",
+            "Sennur Ulukus",
+            "Nail Akar"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.NI",
+            "math.PR"
+          ],
+          "comment": null,
+          "id": "2610.22265",
+          "pdf": "https://arxiv.org/pdf/2610.22265",
+          "summary": "In this paper, we consider a discrete-time pull-based remote estimation system involving an information source and a remote monitor where the information source is a finite-state irreducible discrete-time Markov chain (DTMC) process. In this system, the remote monitor sends a pull request towards the source which responds by sampling its process so as to transmit the sampled values towards the monitor through a delay channel, encapsulated in information packets. We consider i) zero delay (ZD) and ii) unit delay (UD) channels, where the packet transmission times are zero and one slot, respectively. For remote estimation, we use the maximum a posteriori (MAP) estimator, and for quantifying its performance, we use the mean age of incorrect information (MAoII) which is a recently proposed freshness and mismatch metric that penalizes an incorrect estimation along with its duration. Our goal is to obtain pull policies so as to minimize MAoII under a long-run sampling rate constraint. For the ZD model, we propose a semi-Markov decision process (SMDP) formulation of the problem, which allows us to find the optimum observation-dependent pull policy. On the other hand, the UD channel prevents the monitor from possessing perfect information on the actual AoII process at any given time, and the SMDP formulation of the ZD channel cannot readily be used for the UD model. For the system with the UD channel, we first provide a numerical algorithm to calculate the MAoII and the average sampling rate for a given observation-dependent pull policy. For the optimization of the underlying remote estimation system, we use the joint distribution of the age and source processes to be obtained from the history of all observations, termed as belief. Subsequently, we propose a belief-dependent policy obtained via the belief-MDP formulation and a constrained deep reinforcement learning (CDRL) algorithm.",
+          "title": "Minimizing Age of Incorrect Information in Pull-Based Remote Estimation of a Markov Source"
+        },
+        "2610.22272": {
+          "abs": "https://arxiv.org/abs/2610.22272",
+          "authors": [
+            "Roberto Bruno",
+            "Ugo Vaccaro"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Preliminary version",
+          "id": "2610.22272",
+          "pdf": "https://arxiv.org/pdf/2610.22272",
+          "summary": "Given a joint distribution $P_{XY}$ on a finite alphabet, the information bottleneck method seeks a representation $T$ of $X$ that is as informative as possible about $Y$ while compressing $X$, where $T$ and $Y$ are conditionally independent given $X$. We show that computing the optimal value $\\mathrm{IB}(P_{XY},R) = \\sup_T \\{ I(Y;T) : I(X;T) \\le R \\}$ of the information bottleneck problem, as well as its Lagrangian relaxation $L_{\\beta}(P_{XY}) = \\sup_T \\big[I(Y;T) - \\beta I(X;T)\\big]$, is NP-hard. Moreover, unless $\\mathrm{P} = \\mathrm{NP}$, neither $\\mathrm{IB}(P_{XY},R)$ nor $L_{\\beta}(P_{XY})$ can be approximated in polynomial time within an additive error of order $|\\mathcal{X}|^{-3/2}$.",
+          "title": "The Information Bottleneck is NP-hard"
+        },
+        "2610.22304": {
+          "abs": "https://arxiv.org/abs/2610.22304",
+          "authors": [
+            "Ali Nikkhah",
+            "Anthony Ephremides",
+            "Nikolaos Pappas"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.22304",
+          "pdf": "https://arxiv.org/pdf/2610.22304",
+          "summary": "We study transmission scheduling in an energy-harvesting actuation system where an actuation requires both a received update and available energy. While age of information (AoI) measures information freshness, age of actuation (AoA) measures the time elapsed since the latest completed actuation. The transmitter observes the receiver's AoA and battery state and decides whether to transmit a fresh update in each slot. We formulate average-AoA minimization as a Markov decision process and establish an AoA-threshold property for an optimal policy. We also derive the average AoA in closed form under the AoI-optimal policy, which is always-transmit. Numerical results show that AoA-aware scheduling can improve actuation freshness while reducing the number of transmissions, although information freshness may deteriorate. The two policies coincide for some pairs of channel success and energy-arrival probabilities. For a one-unit battery, the transmission rate under the AoA-optimal policy can vary nonmonotonically with the energy-arrival probability.",
+          "title": "When Fresh Information Is Not Enough: Age-of-Actuation-Optimal Scheduling for Energy-Harvesting Actuators"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-10-16",
+          "complete": true,
+          "total": 55
+        },
+        "eess.SP": {
+          "announcement": "2026-10-16",
+          "complete": true,
+          "total": 48
+        }
+      },
+      "status": "no_new_content",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1792131388.7912772,
-    "next_allowed_at": 1792131403.7912772
+    "last_response_at": 1792216939.546516,
+    "next_allowed_at": 1792216954.546516
   },
   "version": 1
 }
