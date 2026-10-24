@@ -53099,11 +53099,461 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-10-24": {
+      "ai": {},
+      "candidates": [
+        "2610.30345",
+        "2610.30401",
+        "2610.30410",
+        "2610.30541",
+        "2610.30561",
+        "2610.30670",
+        "2610.30693",
+        "2610.30809",
+        "2610.30896",
+        "2610.30906",
+        "2610.30911",
+        "2610.30925",
+        "2610.31023",
+        "2610.31136",
+        "2610.31210",
+        "2610.31217",
+        "2610.31257",
+        "2610.31358",
+        "2610.31373",
+        "2610.31437",
+        "2610.31460",
+        "2610.31493",
+        "2610.31509",
+        "2610.31531"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2610.30345": {
+          "abs": "https://arxiv.org/abs/2610.30345",
+          "authors": [
+            "Aakash Saini",
+            "Jafar Aco Mohammadi",
+            "Wolfgang Gerstacker"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.CR",
+            "cs.LG",
+            "eess.SY"
+          ],
+          "comment": null,
+          "id": "2610.30345",
+          "pdf": "https://arxiv.org/pdf/2610.30345",
+          "summary": "Neural receivers for 5G New Radio (NR) match classical model-based receivers in link-level performance, but their robustness to adversarial perturbations at the receiver input remains underexplored. We show that standard gradient-based attacks applied end-to-end through an unrolled low-density parity-check (LDPC) decoder fail to significantly outperform a matched-power Gaussian perturbation. We identify the failure as gradient masking caused by tanh saturation in the boxplus operation of the belief-propagation (BP) check-node update, with a per-iteration gradient norm decay of more than four orders of magnitude across ten unrolled BP iterations. Based on this finding, we propose two structurally independent loss functions that restore attack efficacy. L_BP routes the gradient through the unsaturated early iterations via per-iteration supervision, while L_LLR is a margin loss on pre-decoder log-likelihood ratios (LLRs) whose gradient bypasses the LDPC decoder entirely. Both loss functions increase the block-error rate (BLER) by one to four orders of magnitude at matched perturbation power, with the results reproduced on both the Sionna NeuralReceiver and DeepRx. At low PSR, L_LLR-optimized perturbations achieve up to three orders of magnitude higher BLER on unseen channel realizations than LBP-optimized perturbations.",
+          "title": "On the Adversarial Vulnerability of Neural Receivers with Unrolled LDPC Decoders"
+        },
+        "2610.30401": {
+          "abs": "https://arxiv.org/abs/2610.30401",
+          "authors": [
+            "Reinhardt Rading",
+            "Markus Hoffmann",
+            "Norbert Meyners",
+            "Holger Schlarb",
+            "Céline Hadziioannou",
+            "Oliver Gerberding",
+            "Katharina-Sophie Isleif"
+          ],
+          "categories": [
+            "eess.SP",
+            "physics.app-ph"
+          ],
+          "comment": null,
+          "id": "2610.30401",
+          "pdf": "https://arxiv.org/pdf/2610.30401",
+          "summary": "Distributed Acoustic Sensing (DAS) enables dense, kilometer-scale measurements for seismic and environmental monitoring, but its performance is limited by spatially heterogeneous noise and fiber to ground coupling. Identifying high-quality sensing channels remains a challenge, particularly in nonstationary and complex noise environments where conventional signal to noise ratio (SNR) or correlation based approaches are insufficient. In this work, we introduce a statistical framework for DAS channel quality assessment based on a semblance distance metric, which quantifies the deviation of individual channels from a locally coherent reference signal. Unlike traditional pairwise similarity measures, the proposed method formulates channel selection as a distance estimation problem in a coherence enhanced signal space, enabling identification of incoherent noise and coupling induced distortions without requiring prior knowledge of installation conditions or noise statistics. The method is validated using multiple independent datasets, including recordings of the 2023 Turkish-Syrian earthquakes, a controlled seismic source experiment, and long-term continuous measurements. Across all scenarios, the approach identifies regions of low noise and strong coupling, with results that correlate with independent SNR and root mean square error (RMSE) metrics. Furthermore, the method detects subtle sub-decibel temporal variations in coupling conditions over seasonal timescales, demonstrating its capability for continuous fiber health monitoring. These results establish semblance distance analysis as a physically interpretable tool for DAS channel selection with direct applications in seismic imaging, structural health monitoring, and noise mitigation in high sensitivity systems such as gravitational wave detectors.",
+          "title": "Semblance Distance Analysis for Channel Quality Assessment in Distributed Acoustic Sensing"
+        },
+        "2610.30410": {
+          "abs": "https://arxiv.org/abs/2610.30410",
+          "authors": [
+            "Masoud Ghazikor",
+            "Ly V. Nguyen",
+            "Morteza Hashemi"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Submitted to IEEE Transactions on Vehicular Technology for possible publication",
+          "id": "2610.30410",
+          "pdf": "https://arxiv.org/pdf/2610.30410",
+          "summary": "This paper investigates RIS-assisted downlink UAV communications based on NOMA. Since conventional NOMA becomes difficult to scale as the number of UAVs grows, we develop a cluster-based UAV-NOMA framework in which a BS serves multiple UAV groups with the aid of partitionable RISs. Within this framework, we consider direct, RIS-only indirect, and composite links, and develop an analytical model for the received SNR and outage performance under Nakagami-$m$ and double Nakagami-$m$ fading with imperfect SIC. To enable scalable transmission, we introduce a greedy RIS-aware (GRIS) clustering method, which groups UAVs according to spatial and channel-related features. Based on the resulting clusters and RIS assignment, we formulate an efficiency-reliability bilevel optimization problem that jointly optimizes inter-cluster BS power allocation, intra-cluster NOMA power coefficients, and RIS element assignment. Specifically, the outer efficiency problem maximizes the average throughput across clusters, while the inner reliability problem minimizes the worst-UAV outage probability within each cluster. To solve the formulated problem, we propose a two-level iterative framework consisting of an inter-cluster outer-efficiency solver (IOS) and an intra-cluster inner-reliability solver (I2S), where I2S combines a grid-based progressive search (GPS) for NOMA power refinement with reliability-guided RIS element reassignment, and IOS updates the BS power weights. Numerical results demonstrate the effectiveness of GRIS clustering, while pre-optimization analysis reveals efficiency-reliability trade-offs in power allocation. Baseline comparisons illustrate the ability of IOS-I2S to balance efficiency and reliability, while ablation studies highlight the importance of joint optimization.",
+          "title": "Outage Analysis and Bilevel Resource Optimization in RIS-Assisted Clustered UAV-NOMA Networks"
+        },
+        "2610.30541": {
+          "abs": "https://arxiv.org/abs/2610.30541",
+          "authors": [
+            "Aashish Shaju",
+            "Steve Southward",
+            "Mehdi Ahmadian"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Preprint under review at Journal of Vibration and Control",
+          "id": "2610.30541",
+          "pdf": "https://arxiv.org/pdf/2610.30541",
+          "summary": "This study evaluates a non-contact screening method for stationary railroad wheelsets using air-coupled ultrasonic measurements excited by hammer impacts. Two decay features are considered. First, an effective damping ratio is obtained by normalizing the measured decay rate by the dominant response frequency. Second, strike-to-strike variations are measured to assess the quality of the energy-decay fit for the overall wheel. The method was evaluated using 22 wheelsets at two railroad facilities. The analysis indicates that a random forest trained on one dataset and tested on another performed poorly. This result motivated a simpler approach based on thresholds applied to the two decay features, which fixed the feature definitions and calibrated the thresholds on either dataset. This approach correctly classified every wheelset in the other dataset. A more stringent wheel-level validation repeated second-feature selection and threshold calibration while each test wheelset was withheld. This procedure correctly classifies 21 of 22 wheelsets. All defective wheelsets are identified, while one healthy wheelset yields a false positive. The results further show that the two-feature detector transferred between the tested datasets for stationary assessment of wheel damage. Further evaluation is required using worn but serviceable wheels, controlled support conditions, and additional independent datasets.",
+          "title": "Damage detection in railway wheels from impact-induced ultrasonic ring-down using self-referenced decay features"
+        },
+        "2610.30561": {
+          "abs": "https://arxiv.org/abs/2610.30561",
+          "authors": [
+            "Keita Ishizuka"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.30561",
+          "pdf": "https://arxiv.org/pdf/2610.30561",
+          "summary": "We extend the complete classifications of linear complementary dual (LCD) codes from length 15 to length 19 in the binary case, from length 10 to length 15 in the ternary case and from length 12 to length 13 in the quaternary Hermitian case. The classification rests on a reduction of the monomial equivalence of LCD codes to graph isomorphism on the coordinates, combined with canonical augmentation.",
+          "title": "Classification of binary, ternary and quaternary Hermitian LCD codes"
+        },
+        "2610.30670": {
+          "abs": "https://arxiv.org/abs/2610.30670",
+          "authors": [
+            "Jingze Ding",
+            "Zijian Zhou",
+            "Bingli Jiao",
+            "Rui Zhang"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "This paper has been accepted by IEEE Transactions on Communications",
+          "id": "2610.30670",
+          "pdf": "https://arxiv.org/pdf/2610.30670",
+          "summary": "This paper introduces a two-timescale antenna position optimization framework for the pinching-antenna system (PASS). The proposed framework exploits statistical channel state information (CSI) to determine large-timescale pinching-antenna (PA) positions over the entire waveguide, and utilizes instantaneous CSI to refine PA positions at the small timescale within a local region. This approach effectively captures the benefits of large-timescale PA positioning for long-term system performance and small-timescale PA movement for real-time adaptation to fast channel fluctuations. For the single-user case, we derive closed-form solutions for the optimal large-timescale PA positions, and further analyze a performance upper bound together with the conditions for achieving this bound, which guide the small-timescale position refinement. For the multi-user case, an upper bound on the minimum rate among all users is derived. To maximize their minimum rate, we develop an element-wise search algorithm for large-timescale PA positioning and a projected gradient ascent method for small-timescale position refinement. Simulation results show that the proposed scheme closely approaches the derived bounds and consistently outperforms conventional schemes by reducing path loss via large-timescale PA positioning and suppressing inter-user interference through small-timescale local movement.",
+          "title": "Two-Timescale Antenna Positioning for Pinching-Antenna System Based on Statistical Channel Information"
+        },
+        "2610.30693": {
+          "abs": "https://arxiv.org/abs/2610.30693",
+          "authors": [
+            "Yi Zhang",
+            "Zesong Fei",
+            "Jingxuan Huang",
+            "Hua Dang",
+            "Jihao Luo",
+            "Wenyu Liang",
+            "Haoran Zhang",
+            "Xinyi Wang"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.30693",
+          "pdf": "https://arxiv.org/pdf/2610.30693",
+          "summary": "The growing volume and timeliness requirements of remote sensing data are exposing the limitations of the conventional \"transmit-then-process\" architecture, particularly under intermittent satellite-ground connectivity, constrained downlink bandwidth, and limited onboard computing resources. This article presents a semantic-aware space-ground collaborative remote sensing (SSGC-RS) framework, in which remote sensing data are processed to different semantic depths according to task requirements and available communication-computing resources. Three operating modes are considered, ranging from fully onboard task inference to semantic representation delivery and space-ground split inference. A land-cover recognition case study illustrates how these modes address different communication and computing bottlenecks. Finally, emerging challenges and future directions for intelligent remote sensing systems are discussed.",
+          "title": "In-Orbit Computing for Remote Sensing: Task-Oriented Processing and Transmission"
+        },
+        "2610.30809": {
+          "abs": "https://arxiv.org/abs/2610.30809",
+          "authors": [
+            "Jae-Hyun Baek",
+            "Jon-Lark Kim"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "10 pages",
+          "id": "2610.30809",
+          "pdf": "https://arxiv.org/pdf/2610.30809",
+          "summary": "It is well known that the length $n$ of a binary Type II code is divisible by $8$. The classical proof relies on Gleason's theorem on weight enumerators. Motivated by a question of Vera Pless, we give elementary proofs of this fact that avoid invariant theory. Our main tool is a congruence modulo $8$ for the determinant of the integer Gram matrix $AA^{\\mathsf T}$ of a binary orthogonal matrix $A$, obtained directly from the Leibniz expansion. It gives a short proof of a theorem of Janusz: the number of rows of weight congruent to $3 \\pmod 4$ in a binary orthogonal matrix is divisible by $4$. From this single statement we derive both the length restriction for Type II codes and the theorem of Conway and Sloane that every vector in the shadow of a binary self-dual code of length $n$ has weight congruent to $n/2 \\pmod 4$. We also give two short character-theoretic proofs of the length restriction and explain how all of these arguments detect the Arf invariant of a quadratic form.",
+          "title": "An integer determinant approach to the length of Type II codes and the weights of shadows"
+        },
+        "2610.30896": {
+          "abs": "https://arxiv.org/abs/2610.30896",
+          "authors": [
+            "Matteo Nerini",
+            "Juan Vidal Alegría",
+            "Bruno Clerckx"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "To be presented at Asilomar 2026",
+          "id": "2610.30896",
+          "pdf": "https://arxiv.org/pdf/2610.30896",
+          "summary": "Yes, if and only if some optimal non-reciprocal RIS (i.e., maximizing a given performance metric) makes the round-trip channel transmitter-RIS-transmitter symmetric, which holds if the channel transmitter-RIS has rank one or if single-stream transmission is optimal.",
+          "title": "Can Reciprocal RIS Perform as Non-Reciprocal RIS?"
+        },
+        "2610.30906": {
+          "abs": "https://arxiv.org/abs/2610.30906",
+          "authors": [
+            "Dimitrios Tyrovolas",
+            "Nikos C. Sagias",
+            "Ke Guan",
+            "George K. Karagiannidis",
+            "Stylianos D. Asimonis"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.30906",
+          "pdf": "https://arxiv.org/pdf/2610.30906",
+          "summary": "Pinching-antenna systems (PAS) rely on local perturbations of a guiding structure to radiate part of the guided electromagnetic energy, making the physical response of the resulting pinching antenna (PA) fundamental to both guided-wave propagation and free-space radiation. To capture this coupled behavior, we develop an electromagnetic model of a finite deformation-based PA that directly relates the applied waveguide perturbation to its complex reflection and transmission responses and three-dimensional radiation characteristics. Full-wave MEEP simulations validate the model and demonstrate how the pinching ratio and pinched-section length jointly affect the transmitted power and phase, radiation power-fraction, and radiation pattern, thereby establishing PA geometry as a degree of freedom for controlling the radiation response. Importantly, this geometric dependence extends to communication performance, as the received signal-to-noise ratio (SNR) results reveal that neither minimizing the PA--user distance nor maximizing the radiation power-fraction necessarily yields the highest SNR, since the applied perturbation also determines the realized gain toward the user.",
+          "title": "Electromagnetic Modeling of Deformation-Based Pinching Antennas"
+        },
+        "2610.30911": {
+          "abs": "https://arxiv.org/abs/2610.30911",
+          "authors": [
+            "Maedeh Fallahreyhani",
+            "Paeiz Azmi",
+            "Nader Mokari",
+            "M. Reza Abedi"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.30911",
+          "pdf": "https://arxiv.org/pdf/2610.30911",
+          "summary": "Semantic communication systems based on deep joint source-channel coding can provide task-oriented wireless transmission, but adversarial robustness may require substantial radio and receiver-side defensive-computation energy. This paper develops an energy-efficient, risk-constrained semantic communication framework under source-domain, over-the-air (OTA), and potentially composite adversarial conditions. Long-term total energy, including communication and diffusion-purification energy, is minimized subject to average semantic-loss, trajectory-level tail-risk, and end-to-end latency constraints. A recurrent primal-dual proximal policy optimization controller jointly adapts transmit power, semantic/channel bandwidth ratio, and purification complexity using causal channel observations, semantic confidence, imperfect attack-belief estimates, and recurrent history. A conditional value-at-risk (CVaR) constraint explicitly limits severe semantic failures. On CIFAR-100, at the unseen source-domain level $\\epsilon=12/255$, the proposed controller achieves approximately $61\\%$ robust Top-1 accuracy with $\\mathrm{CVaR}_{0.9}\\approx0.36$ while using about $9\\%$ less total energy than diffusion-only defense. At the unseen OTA level $\\Gamma_A=-5$ dB, it achieves approximately $52\\%$ robust Top-1 accuracy, reduces semantic tail risk by $40\\%$, and consumes about $8\\%$ less total energy than diffusion-only defense. These results demonstrate energy-efficient semantic defense under partially observable adversarial conditions.",
+          "title": "Energy-Efficient Risk-Constrained Adaptive Semantic Communications Under Uncertain Adversarial Threats"
+        },
+        "2610.30925": {
+          "abs": "https://arxiv.org/abs/2610.30925",
+          "authors": [
+            "Chiran Siriwardena",
+            "Chanula Luckshan",
+            "Samiru Gayan",
+            "Hazer Inaltekin",
+            "Wonjae Shin"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.30925",
+          "pdf": "https://arxiv.org/pdf/2610.30925",
+          "summary": "Maximum likelihood (ML) detection in massive multiple-input multiple-output (MIMO) systems is an NP-hard combinatorial problem whose complexity grows exponentially with the number of transmit antennas and the modulation order. The Quantum Approximate Optimization Algorithm (QAOA) has recently emerged as a promising near-term quantum heuristic for such problems; however, existing qubit-based formulations require $\\log_2 M$ qubits per $M$-QAM symbol, inflating both circuit width and depth. In this paper, we propose a qudit-based QAOA framework that encodes each $M$-QAM symbol directly into a pair of $d$-dimensional quantum states, where $d=\\sqrt{M}$. We derive a Hermitian cost Hamiltonian via a real-imaginary decomposition of the constellation, and introduce a generalized cyclic-shift mixer that ensures ergodic exploration of the search space without binary encoding. The proposed formulation reduces the number of quantum carriers from $\\mathcal{O}(N_t \\log_2 M)$ to $\\mathcal{O}(N_t)$ and the Hamiltonian interaction complexity from $\\mathcal{O}((N_t \\log_2 M)^2)$ to $\\mathcal{O}(N_t^2)$, while preserving the geometric structure of the constellation. Bit-error-rate (BER) simulations for $2\\times 2$ MIMO systems employing 4-QAM and 16-QAM over Rayleigh fading channels, with circuit depth $p=3$, demonstrate that the proposed detector closely approximates the performance of the optimal classical maximum-likelihood (ML) detector, while consistently outperforming the conventional minimum mean square error (MMSE) detector.",
+          "title": "Beyond Binary Encoding: Qudit-Based QAOA Framework for ML Detection in $M$-QAM MIMO Systems"
+        },
+        "2610.31023": {
+          "abs": "https://arxiv.org/abs/2610.31023",
+          "authors": [
+            "Puyin Wang",
+            "Jinquan Luo"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.31023",
+          "pdf": "https://arxiv.org/pdf/2610.31023",
+          "summary": "In this paper, we investigate extending of $[n,k,n-k+1]$ non-Reed--Solomon(non-RS) MDS codes to $[n+1,k,n-k+2]$ non-RS MDS codes. We develop a practical iterative algorithm for constructing longer MDS codes while preserving their non-RS structure. The proposed algorithm is inspired by the meet-in-the-middle algorithm in cryptanalysis. On average, it requires at most $O(kq^k)$ multiplications, compared with $O\\left(\\binom{n}{k-1} q^{k-1} k^3\\right)$ multiplications for generic exhaustive search. Applying the proposed algorithm to several known families of MDS codes, including elliptic-curve, twisted Reed--Solomon, column-twisted Reed--Solomon, cyclic, and missing-monomial MDS codes over fields of order at most $32$, we obtain new MDS codes of increased lengths that remain inequivalent to Reed--Solomon codes. In particular, we construct $[9,4,6]$ codes over $\\F_9$ and $\\F_{13}$, each with Schur-square dimension $9$. Over $\\F_{17}$, we obtain two inequivalent $[10,4,7]$ codes with Schur-square dimensions $9$ and $10$, respectively. The latter is the dual of an extended $[10,6,5]$ code, demonstrating that the method also applies when $k>n/2$. For these dimension-four codes, the Schur-square dimensions $9$ and $10$ exceed both that of RS code (Schur-square dimension $7$) and those of specific elliptic-curve and column-twisted Reed--Solomon families (Schur-square dimension $8$). Some of these parameters of non-RS MDS codes have not been reported before.",
+          "title": "Extension of MDS Codes over Finite Fields"
+        },
+        "2610.31136": {
+          "abs": "https://arxiv.org/abs/2610.31136",
+          "authors": [
+            "Marziyeh Soltani",
+            "Mark F. Flanagan"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.31136",
+          "pdf": "https://arxiv.org/pdf/2610.31136",
+          "summary": "This paper studies near-field integrated sensing and communication (ISAC) with a rotatable base-station array under an exact spherical-wave propagation model. For a general transmit covariance, we derive a Cramér--Rao bound (CRB) decomposition that separates target-side geometry from transmit-covariance-dependent terms. We then specialize the framework to two representative low-complexity architectures: a single-stream superposition architecture, and a dual-waveform split architecture design. We characterize the communication-, detection-, and estimation-optimal rotations for each architecture using the exact finite-array model. In addition, we show how a second-order approximation yields compact approximate expressions for the optimal rotation angles. We also study uncertainty in the target state used for beamforming design through a correlated Gaussian perturbation model, and derive approximations of the optimal robust rotation angles for target sensing and detection. The analysis shows that the two architectures behave differently under rotation: the single-stream design can align communication and detection tasks, whereas the dual-waveform design exhibits a direct communication--detection tradeoff and can incur a larger communication loss when sensing is prioritized. Numerical results show clear gains over a fixed array orientation, especially for range estimation, and close agreement between the approximate and exact rotation choices. Detection is less affected by target-state errors than estimation in the considered cases.",
+          "title": "Array Rotation in Near-Field ISAC: Communication, Detection, and Estimation Under Low-Complexity Transmit Architectures"
+        },
+        "2610.31210": {
+          "abs": "https://arxiv.org/abs/2610.31210",
+          "authors": [
+            "Ummay Sumaya Khan",
+            "Lizhong Zheng",
+            "Lingjia Liu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.31210",
+          "pdf": "https://arxiv.org/pdf/2610.31210",
+          "summary": "AI-enabled receivers offer a promising approach to adaptive physical-layer processing, but conventional neural receivers often require extensive offline training and computationally expensive backpropagation, limiting their suitability for low-latency cellular systems. Moreover, classical MIMO-OFDM receivers rely on accurate channel estimation, leading to substantial pilot overhead. This paper introduces skip-RNN, a lightweight skip-augmented recurrent neural receiver that performs online time-domain receive processing using fixed recurrent and skip branches with an adaptive linear readout. We show that the skip-RNN can be interpreted as a structured deconvolution filter whose recurrent and skip branches realize IIR and FIR basis functions, respectively. We develop a domain-knowledge informed weight-configuration framework for the skip-RNN by exploiting its structural correspondence with the target stable and causal inverse filter of mixed-phase channels. The dominant IIR structure extracted from estimated channel statistics is used to configure the recurrent dynamics, while the non-minimum-phase component is addressed through the skip branch and a statistical FIR readout prior incorporated into prior-centered regularized online readout adaptation. We further derive an approximation-error bound that characterizes the resulting configured neural-receiver representation. Simulations over standardized 3GPP channels demonstrate the effectiveness of the configured neural receiver under extremely low pilot overhead.",
+          "title": "Telling Neural Network What We Know: Weight Configuration for RNN and Its Application to NextG Real-Time Neural Receiver"
+        },
+        "2610.31217": {
+          "abs": "https://arxiv.org/abs/2610.31217",
+          "authors": [
+            "Ludvig Lindström",
+            "Isaac Skog",
+            "Magnus Lundberg Nordenvaad",
+            "Andreas Gällström"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted to IEEE Journal of Ocean Engineering, 9 pages, 5 figures",
+          "id": "2610.31217",
+          "pdf": "https://arxiv.org/pdf/2610.31217",
+          "summary": "Underwater vehicles rely on noisy dead-reckoning systems, such as Doppler velocity log (DVL)-aided inertial navigation systems, for positioning. However, DVLs rely on active acoustic measurements and are thus unsuitable for covert operations. Magnetic velocity estimation using a magnetic sensor array is a potential silent alternative. In outdoor environments, spatial variations in magnetic field magnitude are small, whereas temporal variations are large, making the achievable velocity-estimation accuracy uncertain. In this paper, Cramér-Rao lower bounds (CRLBs) are derived for magnetic velocity estimation using different sensor configurations and measurement models in one dimension, ignoring platform disturbances, to quantify the potential accuracy of magnetic sensor arrays. The analysis suggests that, when spatial variations are sufficient and temporal variations can be corrected using correction data, the resulting CRLB is comparable to that of an export-controlled DVL. If, instead, temporal variations are not corrected, the sensor noise must be reduced by around two orders of magnitude for the CRLB to reach the accuracy of an export-controlled DVL. Therefore, the results indicate that current magnetic sensor arrays may complement, rather than replace, DVLs in inertial navigation systems.",
+          "title": "Can An Array of Magnetometers Replace a DVL - A Cramér-Rao Bound Analysis"
+        },
+        "2610.31257": {
+          "abs": "https://arxiv.org/abs/2610.31257",
+          "authors": [
+            "Anuj Kumar Bhagat",
+            "Krishna Kaipa"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.31257",
+          "pdf": "https://arxiv.org/pdf/2610.31257",
+          "summary": "A $[n,k]_q$ Generalized Reed--Solomon (GRS) code can be represented, up to monomial equivalence, by a projective system consisting of $n$ points on a degree $(k-1)$ rational normal curve (RNC) $C_{k-1}$ in PG$(k-1,q)$. We use the term \\textit{Column-Twisted Reed--Solomon (CTRS)} codes broadly for $[n,k]_q$ codes whose projective system contains at least $(k+2)$ points on a $C_{k-1}$ of PG$(k-1,q)$. By a chord of $C_{k-1}$, we mean a line which is either a tangent, a real secant, or an imaginary secant of $C_{k-1}$. Roth and Lempel constructed non-GRS MDS $[n,k]_q$ codes by considering projective systems consisting of $(n-1)$ points on $C_{k-1}$ together with a point on a tangent line. More recently, Liu et al. obtained non-GRS $[n, k]_q$ MDS codes by considering projective systems consisting of $(n-2)$ points on $C_{k-1}$ together with a pair of points on a real secant. In the case when $q$ is odd, the length of these codes satisfies $k+4 \\leq n \\leq (q+3)/2$. In this article, we construct non-GRS $[n,k]_q$ MDS codes by considering projective systems consisting of $(n-2)$ points on $C_{k-1}$ together with a pair of Galois conjugate points on an imaginary secant. For odd $q$, these codes have lengths satisfying $k+4 \\le n\\le (q+5)/2$, thereby improving both the attainable lengths and dimension ranges of previous TRS and CTRS constructions. In particular, our code attains the length $(q+5)/2$ for every $3\\le k\\le (q-3)/2$. We use a geometric argument to establish the non-GRS property of CTRS codes for the range $3\\le k \\le n-4$, while the traditional method of comparison with the Schur square of GRS codes proves the non-GRS property only for the narrower range $3\\le k \\le n/2$. We also determine the structure of the dual of any CTRS code.",
+          "title": "Chordal Construction of Column-Twisted Reed--Solomon Codes"
+        },
+        "2610.31358": {
+          "abs": "https://arxiv.org/abs/2610.31358",
+          "authors": [
+            "Alessandro Neri",
+            "Giuseppe Zampella"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.CO",
+            "math.RA"
+          ],
+          "comment": null,
+          "id": "2610.31358",
+          "pdf": "https://arxiv.org/pdf/2610.31358",
+          "summary": "Let $\\mathbb L/\\mathbb K$ be a finite Abelian Galois extension with a fixed decomposition $\\mathrm{Gal}(\\mathbb L/\\mathbb K)=\\langle\\sigma_1\\rangle\\times\\cdots\\times\\langle\\sigma_m\\rangle$. We show that the quotient of the multivariate skew polynomial ring $\\mathbb L[x_1,\\ldots,x_m;\\sigma_1,\\ldots,\\sigma_m]$ by suitable central polynomials $H_1(x_1),\\ldots,H_m(x_m)$ is isomorphic to a product of $t$ copies of $\\mathrm{End}_{\\mathbb K}(\\mathbb L)$, so that one skew polynomial represents all blocks of a sum-rank metric space. The sum-rank weight of an element equals the rank of an associated Dickson matrix and of a generalized Moore matrix. Using this, we define sum-rank Reed--Muller-type codes and show that their dimension and minimum distance are given by the formulas for affine Cartesian codes with side lengths $\\mathrm{deg}\\,H_1,\\ldots,\\mathrm{deg}\\,H_m$; the same holds for codes supported on lower sets. The family contains as special cases linearized Reed--Solomon codes, Gabidulin codes, rank-metric Reed--Muller codes, and affine Cartesian codes. Over finite fields, every linearized Reed--Muller code of Berardini and Caruso is, after a monomial change of variables, a monomial code in our framework. This gives the dimension of all these codes, and their exact minimum distance in every degree whenever the support is a lower set.",
+          "title": "Sum-rank analogues of Reed--Muller codes over Abelian Galois extensions"
+        },
+        "2610.31373": {
+          "abs": "https://arxiv.org/abs/2610.31373",
+          "authors": [
+            "Xu Hu",
+            "Bin Lin",
+            "Ping Wang",
+            "Xiao Lu",
+            "Weihua Zhuang",
+            "Shuang Qi"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.31373",
+          "pdf": "https://arxiv.org/pdf/2610.31373",
+          "summary": "Low Earth orbit (LEO) satellites are vital in providing seamless connectivities to ground users (GUs). However, complex satellite-to-ground propagation and non-negligible satellite failure probabilities make single-satellite transmission unreliable. To address this issue, we consider a multi-LEO-satellite communication network (mLEO-CN), where a typical GU is served by multiple LEO satellites. The satellite locations are modeled as a binomial point process on a sphere and ordered according to their distances to the GU. To improve communication reliability, a serial communication scheme is adopted, in which the subsequent satellite is activated only when all preceding satellites fail to satisfy the target signal-to-noise ratio threshold. By employing the tool of stochastic geometry, we derive key performance metrics, including overall transmission success probability, average transmission rate, and end-to-end delay under the serial communication scheme by incorporating both shadowed Rician (SR) fading and satellite failure probabilities. To improve analytical tractability, we derive asymptotic expressions for the end-to-end transmission success probability in two special cases by leveraging the asymptotic expression of the SR fading model and a Gamma-distribution, and further propose a cluster-based approximation approach for the overall transmission success probability. Building on these analyses, we formulate an optimization problem to maximize the ratio of the overall transmission success probability to the end-to-end delay, and obtain its solution using a one-dimensional search approach. Numerical results validate the analysis, reveal the impact of key parameters, and identify the optimal number of serving LEO satellites under different constellation altitudes.",
+          "title": "Stochastic Geometry Analysis and Optimization for Multi-LEO Satellite-Assisted Communications"
+        },
+        "2610.31437": {
+          "abs": "https://arxiv.org/abs/2610.31437",
+          "authors": [
+            "Haodong Yang",
+            "Venkata Gandikota"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.CR"
+          ],
+          "comment": "28 pages",
+          "id": "2610.31437",
+          "pdf": "https://arxiv.org/pdf/2610.31437",
+          "summary": "Homomorphic encryption enables computation on input data without decrypting it. This paper extends a construction based on scalar message codes, utilizing coset codes to pack $k$ message symbols into a ciphertext vector of length $n$. For a given field and vector length, this packing method reduces the number of ciphertext vectors required to transmit a message record. A compatible family of evaluation codes supports public addition and multiplication operations up to a predetermined degree. We prove that the scheme achieves bounded chosen-plaintext security under the coordinate-label distinguishability assumption.",
+          "title": "Homomorphic Encryption with Coset Code Construction"
+        },
+        "2610.31460": {
+          "abs": "https://arxiv.org/abs/2610.31460",
+          "authors": [
+            "Xiang Fan"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.CO",
+            "math.NT"
+          ],
+          "comment": "43 pages",
+          "id": "2610.31460",
+          "pdf": "https://arxiv.org/pdf/2610.31460",
+          "summary": "Let $u$ be a received word for the full-length Reed--Solomon code $\\operatorname{RS}_q(k)$, with interpolation polynomial $f_u$ of degree $k+m$. For each $m\\in\\{3,4,5,6,7\\}$, we classify all such deep holes over every finite field, without a field-size hypothesis. None occur for odd $m$ in this range. At $m=4$ and $m=6$, the only exceptions are, respectively, the Segre sextic and Frobenius-power families; these occur only in dimension two over fields of characteristic two. For arbitrary $m\\geqslant3$, we also establish two uniform bounds. If $\\sqrt q\\geqslant12(m+1)\\log(2m+2)$, no word of interpolation degree $k+m$ is a deep hole when $q$ is odd, $k\\geqslant3$, or $m$ is odd. If $q>16(m+2)^4$, we obtain the corresponding complete classification at every admissible $k$, including the explicit dimension-two exceptions. Our proofs use an agreement criterion expressed in complete homogeneous symmetric functions, agreement-count estimates, finite geometry, permutation-polynomial restrictions, and subset constructions for solving the resulting symmetric-function equations. The remaining finite cases are settled by finite computations with supplied certificates and deterministic verification programs.",
+          "title": "Deep holes of full-length Reed--Solomon codes: uniform bounds and exact classifications"
+        },
+        "2610.31493": {
+          "abs": "https://arxiv.org/abs/2610.31493",
+          "authors": [
+            "Tom Maitre"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.PR"
+          ],
+          "comment": null,
+          "id": "2610.31493",
+          "pdf": "https://arxiv.org/pdf/2610.31493",
+          "summary": "Let $\\mu$ be a log-concave isotropic probability measure on $R^d$ , and let $\\mu^n$ denote the law of the normalized sum of $n$ independent random vectors with law $\\mu$. We prove that \\[ H(\\mu^n|\\gamma)\\leq \\frac{C}{n} \\min\\left\\{1+\\log(ed)^2H(\\mu|\\gamma)\\ ,\\ d\\right\\}. \\] Compared to the previous best known bound, our estimate replaces the polynomial dependence on the dimension by a polylogarithmic one. The proof relies on a new combination of the De Bruijn identity with Eldan's stochastic localization process.",
+          "title": "Improved Bounds for the Entropic Central Limit Theorem in the Log-Concave Case"
+        },
+        "2610.31509": {
+          "abs": "https://arxiv.org/abs/2610.31509",
+          "authors": [
+            "Youval Klioui"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.31509",
+          "pdf": "https://arxiv.org/pdf/2610.31509",
+          "summary": "This paper proposes a Square-root Atomic Norm Minimization (SR-ANM) estimator for direction-of-arrival (DoA) estimation in the single measurement vector (SMV) setting. This new framework, inspired by the Square-root Least Absolute Shrinkage and Selection Operator (Square-root LASSO), relies on a residual term based on the $L_{2}$-norm rather than the usual squared $L_{2}$-norm so as to obtain an estimator whereby the hyperparameter of the atomic norm in the unconstrained convex optimization problem exhibits robustness to the noise level compared to classical ANM. Experimental verification across a wide signal-to-noise ratio (SNR) range from 0 dB to 40 dB using the the probability of detection and the angular root-mean-squared error (RMSE) confirms the increased noise robustness of the proposed framework compared to ANM.",
+          "title": "SR-ANM: A Square-Root Atomic Norm Minimization Estimator for Noise-Robust Direction-of-Arrival Estimation"
+        },
+        "2610.31531": {
+          "abs": "https://arxiv.org/abs/2610.31531",
+          "authors": [
+            "Weijun Fang"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.31531",
+          "pdf": "https://arxiv.org/pdf/2610.31531",
+          "summary": "For full-length Reed--Solomon codes, every received word whose interpolation polynomial has degree equal to the code dimension is a deep hole. The Cheng--Murray conjecture asserts that these are the only deep holes in dimensions $3\\le k\\le q-2$, except when $q$ is even and $k=q-3$. Earlier results settled the conjecture over odd prime fields and in the high-dimensional range. We resolve the remaining cases $3\\le k\\le\\lfloor q/2\\rfloor$ over every finite field $\\F_q$, thereby completing the classification in all nonexceptional dimensions. Our proof combines two complementary approaches. The tangent envelope of a marked arc yields differential constraints that settle the even-characteristic range $3\\le k\\le q/2$ and the odd-characteristic range $3\\le k\\le q/3$. In the remaining odd-characteristic range, local syndrome compatibility and combinatorial counting rule out additional deep holes.",
+          "title": "The Cheng-Murray Conjecture on Deep Holes of Full-Length Reed-Solomon Codes"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-10-23",
+          "complete": true,
+          "total": 36
+        },
+        "eess.SP": {
+          "announcement": "2026-10-23",
+          "complete": true,
+          "total": 28
+        }
+      },
+      "status": "no_new_content",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1792736714.8018904,
-    "next_allowed_at": 1792736729.8018904
+    "last_response_at": 1792822872.6513526,
+    "next_allowed_at": 1792822887.6513526
   },
   "version": 1
 }
