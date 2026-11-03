@@ -68701,11 +68701,663 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-11-03": {
+      "ai": {},
+      "candidates": [
+        "2610.40826",
+        "2610.40845",
+        "2610.40856",
+        "2610.41034",
+        "2610.41054",
+        "2610.41144",
+        "2610.41145",
+        "2610.41248",
+        "2610.41253",
+        "2610.41302",
+        "2610.41380",
+        "2610.41382",
+        "2610.41440",
+        "2610.41471",
+        "2610.41498",
+        "2610.41579",
+        "2610.41580",
+        "2610.41612",
+        "2610.41646",
+        "2610.41656",
+        "2610.41693",
+        "2610.41744",
+        "2610.41757",
+        "2610.41779",
+        "2610.41783",
+        "2610.41786",
+        "2610.41791",
+        "2610.41858",
+        "2610.41859",
+        "2610.41860",
+        "2610.41913",
+        "2610.41997",
+        "2610.42023",
+        "2610.42078",
+        "2610.42101"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2610.40826": {
+          "abs": "https://arxiv.org/abs/2610.40826",
+          "authors": [
+            "Mohammadreza Barzegaran",
+            "Hamid Jafarkhani"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.40826",
+          "pdf": "https://arxiv.org/pdf/2610.40826",
+          "summary": "Distributed consensus-based sensing enables a multi-agent system to collaboratively estimate an unknown state by combining local measurements with information received from neighboring agents. In practice, however, the communication network, transmission delays, and finite-rate communication directly affect the disagreement among agents. On the other hand, agreement among agents does not ensure accuracy, particularly when sensors have different measurement uncertainties. We develop a sampled consensus-plus-innovations framework under realistic wireless network constraints that jointly accounts for inter-agent disagreement and estimation inaccuracy. We derive a computable upper bound on the worst-case steady-state estimation error that captures consensus disagreement due to the communication graph, quantization error, and transmission delay, together with estimation inaccuracy, which accounts for measurement uncertainty against the true state. We then use this bound as a network design objective and propose a semi-distributed auction-based algorithm that jointly modifies the communication graph and link-rate allocation. The proposed method preserves connectivity, converges in finite time to a locally auction-stable network configuration, and reduces the bound on the estimation error at every accepted change. The proposed method has been evaluated on various test cases, and the results show that it reduces the estimation error while maintaining fewer links and allocating moderate link rates in a short time.",
+          "title": "Joint Estimation and Network Configuration in Multi-Agent Systems"
+        },
+        "2610.40845": {
+          "abs": "https://arxiv.org/abs/2610.40845",
+          "authors": [
+            "Maciej Skorski"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.PR"
+          ],
+          "comment": null,
+          "id": "2610.40845",
+          "pdf": "https://arxiv.org/pdf/2610.40845",
+          "summary": "Estimating biased finite-memory sources from a single trajectory is a fundamental problem with practical impact, for example in estimating entropy for cryptography. We study order-$d$ binary sources whose conditional probabilities have bias at most $\\epsilon$, and establish *sharp* sample complexity bounds: relative accuracy $\\gamma$ with confidence $1-\\delta$ needs $\\gamma^{-2}\\,(\\tfrac12-\\epsilon)^{-d}\\,(\\log d+\\log\\tfrac1\\delta)$ samples up to constants depending on $\\epsilon$, with matching upper and lower bounds and no dependence on mixing time or spectral gap. The proof rests on a sharp bound on expected hitting times of the sliding-window (de Bruijn) chain, which stay of order $1/\\pi(w)$ uniformly in $d$ exactly when $\\epsilon<\\tfrac3{10}$, and on majorization of the window masses by those of independent biased coins. Applied to published entropy-source validations, the bounds show that their trace lengths may be underpowered: $10^6$ bits cannot resolve all transitions of an $8$-bit model to better than about $4.5\\%$ relative error.",
+          "title": "Learning Finite-Memory Binary Sources"
+        },
+        "2610.40856": {
+          "abs": "https://arxiv.org/abs/2610.40856",
+          "authors": [
+            "Paul Jürß",
+            "Marija Boberg",
+            "Philip Suskin",
+            "Tobias Knopp",
+            "Fynn Foerger"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted at IEEE Sensors 2026",
+          "id": "2610.40856",
+          "pdf": "https://arxiv.org/pdf/2610.40856",
+          "summary": "Various applications require accurate 3-D characterization of magnetic fields with high spatial and temporal resolution. Building on our previously introduced spherical magnetic field camera employing 86 three-axis Hall sensors arranged on a spherical surface, we present a novel magnetic-field reconstruction approach based on the magnetic scalar potential and its spherical harmonic expansion. Unlike the previous reconstruction method that expands each vector component separately, our scalar-potential-based formulation is inherently consistent with Maxwell's equations for source-free fields by design, yielding curl-free and divergence-free field models. Using a simulated magnetic gradient field generated by two permanent magnets, we demonstrate that the proposed method achieves higher reconstruction accuracy, improved robustness to sensor noise and failure, and substantially reduced non-physical divergence and curl compared to the component-wise baseline. Furthermore, the scalar-potential approach attains superior performance with fewer coefficients, indicating a more efficient use of measurement data allowing higher-degree polynomial representations.",
+          "title": "Maxwell-Consistent 3-D Magnetic Field Camera using Scalar-Potential-Based Reconstruction"
+        },
+        "2610.41034": {
+          "abs": "https://arxiv.org/abs/2610.41034",
+          "authors": [
+            "Vamoua Yachongka",
+            "Rémi A. Chou"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "A preliminary version of this paper was presented at IEEE ISIT 2025",
+          "id": "2610.41034",
+          "pdf": "https://arxiv.org/pdf/2610.41034",
+          "summary": "Consider distributed databases that contain both sensitive (private) and non-sensitive (public) attributes. A user seeks to compute a function of public attributes and side information by interacting with the databases and downloading their responses. In this paper, we study the trade-offs among download cost, information leakage about the private attributes, and distortion between the computed function and its reconstruction, referred to as the capacity region. Our main contributions are as follows. For a single database, we provide a complete characterization of the capacity region for general discrete sources and characterize the capacity region of two different setups for Gaussian sources when the computed function is defined as the sum of the public attribute and side information. For distributed databases, we establish inner and outer bounds on the capacity region of discrete sources and we characterize the capacity region when the databases and the side information are mutually independent. As a special instance, we study lossless function computation, and results analogous to the lossy case are obtained.",
+          "title": "Privacy-Constrained Function Computation in Distributed Databases"
+        },
+        "2610.41054": {
+          "abs": "https://arxiv.org/abs/2610.41054",
+          "authors": [
+            "Minh Q. Vu",
+            "Erin L. Bratu",
+            "Jack H. Noble"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41054",
+          "pdf": "https://arxiv.org/pdf/2610.41054",
+          "summary": "Purpose: Patient-specific electro-anatomical models (EAMs) of the implanted cochlea are crucial for auditory nerve fiber simulation in cochlear implant (CI) programming and neural health estimation. Fitting an EAM to the stimulation current induced non-stimulating electrode voltage (SCINSEV) currently requires manual expert adjustment or exhaustive search over precomputed forward solutions, neither of which scales to routine clinical use. We present an automated optimization pipeline that fits patient specific EAMs in minutes. Methods: Four compartment tissue label maps (perilymph, soft tissue, modiolus, and bone) derived from postoperative CT were used to construct a finite difference forward model, fitted to the measured SCINSEV by Gaussian process Bayesian optimization. Three reductions cut fitting cost: a coarsened grid with trilinear injection and readout at sub-voxel contact positions; solving half the stimulating contacts and completing three quarters of the matrix by reciprocity; and a Jacobian-based identifiability analysis reducing four resistivities to two. Each reduction was validated separately against the measurement's reciprocity residual and the reproducibility of the fit. Results: Across 43 implanted ears, fitting took a median of 2.6 minutes per ear. Median SCINSEV RMSE on the reduced-resolution objective was 0.069 mV, against 0.084 mV for grid search at a matched evaluation budget. Against an exhaustive full-resolution grid search requiring a median of 9.1 hours per ear, the pipeline reached statistically indistinguishable fitting error roughly 210x faster. Conclusion: Patient-specific cochlear EAM fitting can be performed at clinically practical timescales without expert supervision, removing a major computational barrier to patient-specific cochlear implant programming and cochlear simulation.",
+          "title": "Automated Optimization of Patient-Specific Electro-Anatomical Models Fitted to Cochlear Implant SCINSEV"
+        },
+        "2610.41144": {
+          "abs": "https://arxiv.org/abs/2610.41144",
+          "authors": [
+            "Wei-Chen Chen",
+            "Yu-Chih Huang",
+            "Ming-Chun Lee"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Submitted to IEEE ICC 2027",
+          "id": "2610.41144",
+          "pdf": "https://arxiv.org/pdf/2610.41144",
+          "summary": "Integrated sensing and communications (ISAC) has been extensively studied from the perspective of communication-sensing performance tradeoffs. In MIMO communication systems, the diversity-multiplexing tradeoff (DMT) fundamentally characterizes the tradeoff between communication reliability and multiplexing gain, and DMT-optimal space-time codes achieve this optimal tradeoff without instantaneous channel state information at the transmitter (CSIT), making them particularly attractive for ISAC scenarios where accurate CSIT is difficult to acquire or maintain. In this work, we propose an analytical framework for characterizing the sensing behavior and communication-sensing gain tradeoff of DMT-optimal space-time codes in ISAC systems. Under a single-target detection model, we propose the sensing diversity order as the high-SNR sensing reliability metric. We further show that a class of DMT-optimal space-time codes, exemplified by Perfect codes, eliminates sensing blind spots for all nonzero codewords, thereby achieving joint DMT-sensing-diversity (DMTS) optimality. Furthermore, using the Perfect code as a representative DMT-optimal construction, we show that its isotropic average transmit covariance limits the achievable sensing gain when the target angular region is narrow. We therefore develop a full-rank spatial precoding framework and a low-complexity surrogate precoder that preserve joint DMTS optimality while shaping the transmit beampattern. Simulation results show that, for a target angular region of $\\theta\\in[-\\pi/10,\\pi/10]$, the proposed design achieves approximately 3 dB sensing-gain improvement over the unprecoded Perfect code.",
+          "title": "On the Communication-Sensing Tradeoff in DMT-Optimal Space-time-Coded ISAC Systems"
+        },
+        "2610.41145": {
+          "abs": "https://arxiv.org/abs/2610.41145",
+          "authors": [
+            "Huy Trinh"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41145",
+          "pdf": "https://arxiv.org/pdf/2610.41145",
+          "summary": "Tracked FMCW radar already carries a prediction of the next target state, yet the downstream digital hardware is commonly provisioned for a fixed spectral search. We present prediction-induced sparsity (PIS), a tracked-mode architecture that uses the prior before event formation and hardware scheduling. The predicted beat is derotated to an innovation-centred coordinate, while tracker covariance is propagated to a bounded residual support K. Sparse level-crossing packets are then executed by an exact event-gap resonator engine with a shared complex processing element and K-dependent state/coefficient memory. On a public FMCW dataset, causal prior-only con- ditioning reduces event records by 33.1% on average, and the representative fixed-point stream is bit-exact in RTL. And on an Artix-7 implementation, reducing physical support from 129 to 23 states lowers LUT and BRAM use by 65.0% and 88.1%, respectively, and reduces measured VCCINT power by 19.9% at matched throughput. The results show how tracking uncertainty can become a hardware-capacity implication for future adaptive radar accelerators.",
+          "title": "Prediction-Induced Sparsity for Tracked FMCW Radar: A Track-Conditioned Event-Gap FPGA Architecture"
+        },
+        "2610.41248": {
+          "abs": "https://arxiv.org/abs/2610.41248",
+          "authors": [
+            "Bikshapathi Gouda",
+            "Neng Wang",
+            "Masoud Sajadieh",
+            "Meghna Agrawal"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted IEEE WCM",
+          "id": "2610.41248",
+          "pdf": "https://arxiv.org/pdf/2610.41248",
+          "summary": "Direct-to-device connectivity from low Earth orbit (LEO) satellites is commercially available, but its throughput is limited by the satellite antenna size and by payloads that separate users only by beams and frequency reuse. This article shows that a single LEO satellite with a meter-scale array can serve hundreds of users on the same time-frequency resource through multi-user multiple-input multiple-output precoding. The number of users it can separate with a single stream each, i.e., its spatial degrees of freedom (DoF), follows from the aperture in wavelengths, the orbit altitude, and the minimum elevation angle. With minimum mean-square error (MMSE) precoding, the throughput of these users grows with the signal-to-noise ratio (SNR), whereas maximum-ratio transmission becomes interference-limited. The precoder can be computed from the user positions and the satellite ephemeris and attitude, with a throughput loss of less than 0.5\\% at 20~dB SNR compared with perfect channel knowledge under the 3GPP non-terrestrial channel models. The DoF also set the number of digital chains of a hybrid payload, and the functional split among satellites and ground trades inter-satellite-link and feeder-link load against on-board processing. As the satellite moves, the precoder can be updated from the known geometry every radio frame, i.e., 10~ms, while the computationally intensive user pairing can be kept for a few seconds with a throughput loss below 1\\%. Finally, we keep the cell-specific signals on fixed beams while precoding the user data jointly across all cells of the satellite. For a $50\\times50$ array at 600~km and a minimum elevation angle of $60^\\circ$, one satellite serves 410 users at 6.1~bps/Hz on average, more than four times the throughput of fixed beams with four-color frequency reuse.",
+          "title": "Downlink MU-MIMO for LEO Direct-to-Device: Feasibility, Architecture, and Implementation"
+        },
+        "2610.41253": {
+          "abs": "https://arxiv.org/abs/2610.41253",
+          "authors": [
+            "Hang Yue",
+            "Junlin Chang",
+            "Tianqing Zhao",
+            "Yulin Zhao",
+            "Rongke Liu"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "6 pages, 6 figures, 1 table. Accepted for IEEE GLOBECOM 2026",
+          "id": "2610.41253",
+          "pdf": "https://arxiv.org/pdf/2610.41253",
+          "summary": "Point clouds have become a fundamental data format for emerging three dimensional (3D) applications, while their wireless delivery remains challenging due to the large data volume and irregular geometric structure. Existing semantic point cloud transmission methods are mainly developed for single-input single-output systems, making them difficult to apply directly to multiple-input multiple-output (MIMO) systems. To address this issue, we propose a partition-oriented semantic transmission framework for MIMO (POST-MIMO) point cloud delivery. POST-MIMO partitions the input point cloud into spatially coherent blocks and aligns them with parallel MIMO streams. Based on this block-aligned representation, the transmitter employs a hierarchical encoder to capture both intra-block local geometry and inter-block global dependency, while the auxiliary side information is transmitted jointly to assist reconstruction. At the receiver, a progressive decoder reconstructs the block geometry in a progressive manner and restores the final point cloud with block-aware adjustment. Experiments demonstrate improved reconstruction quality and lower computational resource consumption than representative reference schemes under the considered MIMO setting.",
+          "title": "POST-MIMO: Partition-Oriented Semantic Transmission for MIMO Point Cloud Delivery"
+        },
+        "2610.41302": {
+          "abs": "https://arxiv.org/abs/2610.41302",
+          "authors": [
+            "Nan Meng",
+            "Yun-Bin Zhao"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.41302",
+          "pdf": "https://arxiv.org/pdf/2610.41302",
+          "summary": "Thresholding methods provide a simple iterative framework for sparse signal recovery by combining a search direction with a thresholding operation. Gradient-based search directions are computationally efficient because they require only first-order information for the error metric. We incorporate componentwise gradient scaling into this framework by preserving large-magnitude components and attenuating the remaining components of the gradient of error metric. Combining this strategy with hard thresholding yields scaled-gradient hard thresholding (SGHT) and its pursuit variant SGHTP. Under suitable restricted isometry conditions, we establish recovery error bounds for both methods that account for measurement noise and deviations from exact sparsity. Numerical experiments indicate that SGHTP achieves recovery performance comparable to established pursuit methods on the tested ECG signals.",
+          "title": "Scaled-Gradient Hard Thresholding Algorithms for Sparse Signal Recovery"
+        },
+        "2610.41380": {
+          "abs": "https://arxiv.org/abs/2610.41380",
+          "authors": [
+            "Qian Gao",
+            "Ruikang Zhong"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.AI"
+          ],
+          "comment": null,
+          "id": "2610.41380",
+          "pdf": "https://arxiv.org/pdf/2610.41380",
+          "summary": "Integrated sensing and communication (ISAC) is a core design principle for sixth-generation (6G) wireless systems, yet fixed antenna geometry limits its performance. Pinching antenna systems (PASS) guide electromagnetic waves along dielectric waveguides and radiate them through position-adaptive antennas, allowing communication links and sensing observations to benefit from spatial reconfiguration. This article reviews PASS-enabled ISAC through single-waveguide, multi-waveguide, and segmented-waveguide architectures, comparing their feed structures, spatial degrees of freedom, operating protocols, and uplink/downlink support. We organize solution pathways around physics-consistent modeling, joint spatial-signal optimization, dynamic channel acquisition, and stable real-time control. A segmented waveguide-enabled pinching-antenna array (SWAN) case study demonstrates joint segment selection, antenna po?sitioning, and transmit beamforming using segment-hysteresis reinforcement learning. The results illustrate how waveguide loss and per-segment aperture gain create communication-sensing tradeoffs. We conclude with research directions in joint transmit?receive operation, measurement-calibrated digital twins, and trustworthy control.",
+          "title": "Pinching Antennas for ISAC: Waveguide Architectures, Solutions, and Future Directions"
+        },
+        "2610.41382": {
+          "abs": "https://arxiv.org/abs/2610.41382",
+          "authors": [
+            "Yueling Zhao",
+            "Ping Yang",
+            "Hong Niu",
+            "Shuaixin Yang",
+            "Yue Xiao",
+            "Gang Wu",
+            "Merouane Debbah",
+            "Ertugrul Basar"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted for publication in IEEE Communications Magazine. 7 pages, 2 figures",
+          "id": "2610.41382",
+          "pdf": "https://arxiv.org/pdf/2610.41382",
+          "summary": "Fluid antenna systems (FAS) introduce dynamic positional degrees of freedom (DoFs), extending the spatial domain from a static and discrete resource to a quasi-continuous and reconfigurable design space. This spatial flexibility provides an effective means of alleviating the geometric rigidity and functional conflicts that constrain integrated sensing and communication (ISAC) systems. Against this backdrop, we provide a comprehensive overview of FAS-enabled ISAC, tracing the evolution from theoretical performance limits to practical transceiver architectures. To illustrate the surveyed design evolution, we further propose the fluid antenna multi-mode modulation (FA-MM) framework as a representative case study of multidimensional physical-layer design for FAS-ISAC. Finally, several open challenges are discussed, with emphasis on predictive sensing, adaptive coordination, and secure spatial-state management in future FAS-ISAC systems.",
+          "title": "Fluid Antenna Systems for ISAC Design: A Survey"
+        },
+        "2610.41440": {
+          "abs": "https://arxiv.org/abs/2610.41440",
+          "authors": [
+            "Lowie Rombouts",
+            "Jeroen Famaey",
+            "Roger Sanchez-Vital"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.41440",
+          "pdf": "https://arxiv.org/pdf/2610.41440",
+          "summary": "Low Earth Orbit (LEO) constellations are a promising way to connect Internet of Things (IoT) devices beyond terrestrial coverage, yet the intermittent visibility of their satellites imposes hard constraints on system and protocol design. Coverage probability and other snapshot statistics, which are often computed without accounting for the terminal's latitude, are insufficient for this purpose. Designers also need the temporal structure of coverage: the rate of coverage gaps, their duration distribution and mean, and quantities such as the probability that a retransmission succeeds after an initial transmission has failed. We develop an ergodic framework for Walker Star constellations in which these quantities reduce to spatial integrals over a two-dimensional torus that can be evaluated efficiently. We validate the framework against a seven-day Simplified General Perturbations 4 (SGP4) simulation of the Iridium NEXT constellation and find close agreement for the coverage probability, the revisit-time distribution, and the retransmission success probability. A comparison of Walker Star configurations further shows that constellations with similar satellite counts can yield substantially different packet-delivery probabilities with at most one retransmission, depending on the number of orbital planes. The results show that the ergodic model accurately gives the long-run values that finite time-domain simulations can only approximate, providing researchers with a tractable basis for the analytical modelling of IoT connectivity over non-terrestrial networks (NTN).",
+          "title": "LEO Constellation Analysis for Satellite IoT: An Analysis of Coverage Gaps and Retransmissions"
+        },
+        "2610.41471": {
+          "abs": "https://arxiv.org/abs/2610.41471",
+          "authors": [
+            "Yanan Zhao",
+            "Feng Ji",
+            "Alba Carballo-Castro",
+            "Jingyang Dai",
+            "Antonio Ortega",
+            "Pascal Frossard",
+            "Wee Peng Tay"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41471",
+          "pdf": "https://arxiv.org/pdf/2610.41471",
+          "summary": "Directed graphs model asymmetric relationships in biology, transportation, social networks, and electronic design automation. Recent discrete diffusion and flow-matching methods generate directed graphs effectively, but their edge-wise categorical formulations require dense predictions over all ordered node pairs and repeated categorical updates during generation. This motivates a fundamental question: can comparable generative quality be achieved through a more computationally efficient formulation that better exploits the structure of directed adjacency matrices? Existing benchmarks also cover limited network structures, restricting comprehensive evaluation. We introduce PolarFlow, a continuous geometric flow-matching framework based on polar decomposition and truncated spectral coordinates. Its representation comprises four coupled components: a Stiefel frame and rotation angles encoding the orthogonal factor, and a second Stiefel frame and nonnegative eigenvalues characterizing the positive-semidefinite factor. PolarFlow learns a joint velocity field along geometry-aware conditional paths on this product space, reconstructs a continuous adjacency-score matrix, and discretizes it into a binary directed graph. By replacing discrete edge-wise generation with joint continuous transport, PolarFlow improves computational efficiency while retaining global adjacency structure. To broaden evaluation, we introduce complementary Circuit and Twitter benchmarks spanning engineered functional and naturally evolved social networks. Across synthetic and real-world datasets, PolarFlow achieves generative quality comparable to competitive discrete methods while substantially reducing training and sampling time.",
+          "title": "PolarFlow: Spectral Geometric Flow Matching for Directed Graph Generation via Polar Decomposition"
+        },
+        "2610.41498": {
+          "abs": "https://arxiv.org/abs/2610.41498",
+          "authors": [
+            "J. Fermín Llorente",
+            "Ernesto M. López",
+            "Javier A. Smidt",
+            "Pedro A. Roncagliolo"
+          ],
+          "categories": [
+            "eess.SP",
+            "eess.SY"
+          ],
+          "comment": null,
+          "id": "2610.41498",
+          "pdf": "https://arxiv.org/pdf/2610.41498",
+          "summary": "This paper presents a measurement noise adaptation mechanism for Kalman filter-based carrier tracking in a navigation-aided GNSS receiver designed for launch-vehicle applications. The tracking loop is tuned for 20\\,g acceleration steps, which requires a wide bandwidth that makes the loop vulnerable to noise-driven pull-out at low carrier-to-noise density ratios. To resolve this tradeoff, the measurement noise covariance, $R$, is inflated via a two-layer gate: a sigmoid envelope keyed to the signal $C/N_0$, modulated by a dynamics indicator derived from the discriminator output statistics of the Loop Bandwidth Control Algorithm. During noise-dominated periods the gate inflates~$R$, reducing the Kalman gain so the filter coasts on the navigation-aided prediction; when dynamics are detected the gate opens within one epoch, restoring the high-bandwidth tuning. The navigation aiding is formulated as a stochastic control input whose uncertainty is propagated from the navigation EKF covariance. Simulation results on a 20\\,g acceleration step scenario show that the adapted vector architecture doubles the lock-retention rate relative to the standalone scalar filter at $C/N_0 = 31$\\,dB-Hz. The receiver is implemented in MSGR, an open-source MATLAB GNSS software-defined receiver.",
+          "title": "GNSS Receiver Operating Point Comparison Between Vector and Scalar Tracking Under High-Dynamics"
+        },
+        "2610.41579": {
+          "abs": "https://arxiv.org/abs/2610.41579",
+          "authors": [
+            "Parsa Rajabi",
+            "Mohammad Reza Abedi",
+            "Paeiz Azmi",
+            "Nader Mokari"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.CR"
+          ],
+          "comment": null,
+          "id": "2610.41579",
+          "pdf": "https://arxiv.org/pdf/2610.41579",
+          "summary": "Coordinated high-altitude platform station (HAPS) networks need to authenticate group responses and protect private data under shared power constraints. This paper studies joint group physical-layer authentication (PLA) and confidential beamforming using a fresh secret tag superimposed on private data. For received attacks independent of the current tag, we derive exact finite-block expressions for false acceptance and legitimate rejection. These expressions translate authentication error targets into a required tag signal-to-interference-plus-noise ratio (SINR). We establish a nonzero asymptotic tag-energy floor and analyze residual frequency offset and peak-power restrictions. The legitimate receiver removes the tag by orthogonal projection, which discards one temporal dimension. For colluding eavesdroppers, we identify the spatial coverage condition under which artificial noise (AN) keeps their SINR bounded as data and AN powers increase together. We jointly optimize the private beams, tag beam, and AN covariance to minimize transmit power under authentication, secrecy, and per-HAPS power constraints. The method combines semidefinite relaxation (SDR), exact private-beam rank reduction, and feasible successive convex approximation. A corrected dual lower bound measures the remaining optimality gap. Numerical results show that increasing the tag length from 16 to 64 symbols reduces the required tag SINR by 7.16 dB. Joint beam design reduces mean transmit power by 27.4% relative to an optimized fixed-tag-direction baseline. The authentication guarantee requires fresh secret tags and excludes relays of the current response.",
+          "title": "Group Physical-Layer Authentication and Confidential Beamforming in Non-Terrestrial Networks"
+        },
+        "2610.41580": {
+          "abs": "https://arxiv.org/abs/2610.41580",
+          "authors": [
+            "Bingcheng Chen",
+            "Giuseppe Durisi",
+            "Christian Häger"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "6 pages",
+          "id": "2610.41580",
+          "pdf": "https://arxiv.org/pdf/2610.41580",
+          "summary": "Learned schemes that jointly perform tasks such as synchronization and decoding have achieved promising results for short-packet communication. However, it remains unclear how close their performance is to information-theoretic bounds. To investigate this question, we extend the turbo autoencoder (TurboAE) proposed in Dörner et al. (2023) to a single-input single-output waveform channel with an unknown delay and memoryless block fading, for which an achievability bound from finite-blocklength information theory is available. Our extension incorporates a pilot-free, model-guided neural synchronizer and enables joint synchronization, channel estimation, and decoding. At a blocklength of $64$ complex symbols and a rate of one bit per channel use, the proposed TurboAE achieves a lower bit error rate (BER) than all evaluated pilot-assisted 5G baselines, with gains of $1.9$ dB at a BER of $10^{-3}$ over a baseline involving a low-density parity-check (LDPC) code and $1.7$ dB over a baseline involving a polar code and successive cancellation list decoding (list size $8$). In terms of block error rate (BLER), the TurboAE outperforms the LDPC-coded baseline, but lags behind the polar-coded baseline by about $0.8$ dB at a BLER of $10^{-3}$. Moreover, all evaluated schemes remain at least $2.1$ dB away from a pilot-assisted achievability bound, indicating substantial room for improved designs.",
+          "title": "Learning Joint Synchronization, Channel Estimation, and Decoding: Comparison with a Finite-Blocklength Achievability Bound"
+        },
+        "2610.41612": {
+          "abs": "https://arxiv.org/abs/2610.41612",
+          "authors": [
+            "Mohamadreza Delbari",
+            "Mohammad Zarei",
+            "Denis Giniatoulline",
+            "Vahid Jamali"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41612",
+          "pdf": "https://arxiv.org/pdf/2610.41612",
+          "summary": "Liquid crystal (LC)-based dynamic metasurface antennas (DMAs) offer a power-efficient, low-cost, and scalable solution for low Earth orbit (LEO) satellite communications where large apertures are needed to compensate for large path loss in the Earth-satellite link. However, beam tracking with LC-DMAs is governed by two coupled dynamics: the required time-varying beam direction caused by user and satellite mobility, and the finite response time of the LC phase shifters. This raises the question of whether LC-DMAs can reconfigure sufficiently fast to support high-mobility LEO satellite links. To address this problem, we develop a dynamic-aware beam-tracking framework that explicitly accounts for both dynamics. In particular, we formulate an optimization problem to maximize the cumulative received signal-to-noise ratio (SNR) over a predictive tracking horizon subject to the physical dynamics of the LC unit cells as well as transmit power constraints. To solve this non-convex problem efficiently, we develop an alternating optimization framework combining a closed-form maximum ratio transmission (MRT) digital precoder and maximum ratio combining (MRC) with a parallel, closed-form dynamic-aware phase-shift update. Simulation results show that when the time response of LC-DMAs is properly accounted for, it can support practical mobility scenarios. Moreover, the proposed dynamic-aware algorithm maintains stable SNR and outperforms conventional designs, particularly at high vehicle velocities and low orbital azimuth angles.",
+          "title": "Dynamic-Aware LC-DMA Beam Tracking for LEO Satellite Communications"
+        },
+        "2610.41646": {
+          "abs": "https://arxiv.org/abs/2610.41646",
+          "authors": [
+            "Vida Gholamian",
+            "Yaning Zhao",
+            "Christian Deppe",
+            "Holger Boche",
+            "Rafael F. Schaefer"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.41646",
+          "pdf": "https://arxiv.org/pdf/2610.41646",
+          "summary": "Identification differs from classical transmission in that the receiver determines whether a particular identity was sent rather than recovering a message. We study secure deterministic identification over state-dependent discrete memoryless wiretap channels with private noiseless feedback and a sensing distortion constraint. The encoder has no local randomness and uses only the identity and past feedback. A symbol-wise input restriction guarantees the sensing constraint. We show that the secure deterministic identification capacity equals its non-secure feedback counterpart when the admissible main channel has positive ordinary transmission capacity and H(Y|Z,X=x)>0 for some fixed admissible input x. This equality does not require positive classical wiretap secrecy capacity. For achievability, noiseless feedback generates common randomness for identification and enables secret-key extraction by privacy amplification. The extracted key one-time-pad encrypts a short identification tag, whose reliable transmission requires only a sublinear number of additional channel uses. We also present an alternative construction in which feedback-generated randomness replaces the local randomization of a stochastic wiretap encoder. We further prove that secure identification capacity vanishes whenever non-secure identification capacity is zero. We also identify a class of channels with input-independent wiretapper observations that achieves full non-secure identification capacity even when the private conditional feedback entropy is zero, illustrated by a binary state-dependent wiretap channel. Thus, feedback can support both identification and secrecy without local encoder randomization while satisfying sensing constraints.",
+          "title": "Secure Deterministic Identification with Feedback and Sensing over State-Dependent Wiretap Channels"
+        },
+        "2610.41656": {
+          "abs": "https://arxiv.org/abs/2610.41656",
+          "authors": [
+            "Aditya Jolly",
+            "Vitaly Petrov",
+            "Gábor Fodor",
+            "Emil Björnson"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted to IEEE TCOM on 20th October 2026. Copyright 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material, creating new works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+          "id": "2610.41656",
+          "pdf": "https://arxiv.org/pdf/2610.41656",
+          "summary": "Bessel beams have recently been explored as a candidate complement to focused beams in radiative near-field communications due to their non-diffracting and self-healing properties. However, recent work has shown that the practically useful range of finite-aperture Bessel beams can occupy only a fraction of the radiative near-field region, establishing the existence of a finite propagation limit. In this paper, we establish such a limitation analytically from a depth-of-field perspective for Bessel beams generated by finite circular and square apertures. To quantify the Bessel beam depth, we first derive analytical expressions for the normalized array gain and use them to establish absolute and peak-normalized $3$-dB depth-of-field criteria. These criteria reveal critical cone-angle thresholds that partition the Bessel-beam configuration space into (i) undefined, (ii) finite, and (iii) infinite depth-of-field regimes. Our analysis further reveals that the maximum usable non-diffracting range under the proposed depth-of-field criterion is limited to $\\approx22\\%$ and $\\approx19\\%$ of the Fraunhofer distance for circular and square apertures, respectively. Numerical results confirm the accuracy of the derived limits for discrete planar arrays, providing practical engineering guidelines for the design of finite-aperture Bessel beams in future near-field communications.",
+          "title": "Limitation of Bessel Beams in Near Field Communications: A Depth of Field Perspective"
+        },
+        "2610.41693": {
+          "abs": "https://arxiv.org/abs/2610.41693",
+          "authors": [
+            "Juliana G. F. Souza",
+            "Yu-Chih Huang"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.41693",
+          "pdf": "https://arxiv.org/pdf/2610.41693",
+          "summary": "We study finite $2\\times2$ Alamouti-type space--time codes associated with classical maximal orders in definite quaternion algebras over $\\mathbb Q$. For the family indexed by primes $q\\equiv3\\pmod4$, we prove that the Eisenstein case $q=3$ uniquely minimises the finite quotient-alphabet energy at fixed minimum lattice distance and alphabet size. This ordering holds for every integer $p\\geq2$, including when the representatives and their common translation are jointly optimised, with an explicit positive gap for every $q>3$. For uniform finite inputs, we derive a controlled high-SNR expansion of the information variance and determine its limiting ratio to the mutual information deficit. The mutual information expansion specialises arbitrary input fading results and gives an explicit remainder. Standard random-coding and second-order achievability tools relate these quantities to reliability over independently faded Alamouti blocks. All alphabets preserve symbol-wise maximum-likelihood detection at the Alamouti level. Numerical energy, mutual information, and error-rate comparisons support the analysis. Centred comparisons with classical Alamouti, Golden, and Silver codes illustrate the trade-off between reliability, symbol rate, and decoding effort.",
+          "title": "Shaping and Finite-Blocklength Analysis of Quaternionic Alamouti-Type Codes"
+        },
+        "2610.41744": {
+          "abs": "https://arxiv.org/abs/2610.41744",
+          "authors": [
+            "Surya Harsha",
+            "Shankar Prakriya"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "Accepted at IEEE GLOBECOM 2026. 6 pages, 5 figures",
+          "id": "2610.41744",
+          "pdf": "https://arxiv.org/pdf/2610.41744",
+          "summary": "Reusing the Rate-Splitting Multiple Access (RSMA) common stream for sensing eliminates dedicated probing signals in Integrated Sensing and Communication (ISAC), but creates a feasibility bottleneck: the common-power fraction must simultaneously support common decoding, private decoding, and target detection. This paper investigates this tradeoff in downlink zero-forcing RSMA with imperfect channel state information at the transmitter (CSIT) and imperfect successive interference cancellation (SIC). With the common beam fixed over a sensing dwell through sensing geometry, the common-power fraction becomes the sole design variable. We prove that the communication-feasible set is either a closed interval or empty. Analytical outage expressions localize these endpoints, revealing a high-signal-to-noise ratio (SNR) floor-ceiling effect: common decoding dictates a common-power floor, while imperfect CSIT and SIC impose a private-decoding ceiling. For sensing, the conditional detection constraint is affine, preserving the interval structure. A geometry-matched common beam ensures monotonic detection improvement, reducing joint-feasibility check to the communication-feasible upper endpoint. Simulations validate our analysis, identifying regimes where common-stream-only sensing is viable.",
+          "title": "Feasibility of Common-Stream-Only Sensing in ZF-RSMA with Imperfect CSIT"
+        },
+        "2610.41757": {
+          "abs": "https://arxiv.org/abs/2610.41757",
+          "authors": [
+            "Leihao Zhao",
+            "Xiucheng Wang",
+            "Junxi Huang",
+            "Conghao Zhou",
+            "Yuxiang Zhang",
+            "Huixin Xu",
+            "Nan Cheng"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "5 pages, 6 figures, 4 tables",
+          "id": "2610.41757",
+          "pdf": "https://arxiv.org/pdf/2610.41757",
+          "summary": "Radio fingerprint localization supports mobile robots and location-aware services when satellite positioning is unreliable. Angle-delay power fingerprints capture power distributions over angles and delays, but localization remains vulnerable to spatial ambiguity and measurement perturbations. Reflections and blockage can produce similar fingerprints at distant locations, while noise in query fingerprints can alter query-reference rankings despite a clean reference library. These effects can place a distant reference first in the ranking, creating tail errors. Similarity scores can generate plausible candidates, but reliable selection requires candidate-specific residual evidence and comparison across alternatives. This separation motivates RFLocMatch, which uses complementary joint and link-specific matching to preserve candidate locations supported by different links. Reference-conditioned residual learning then scores each candidate using the query and reference fingerprints, their absolute difference, and their element-wise product, while candidate-context modeling compares alternatives. Tail-focused training emphasizes costly errors, and inference replaces the initial match only when a candidate's score advantage exceeds a validation-calibrated threshold. On ray-tracing-generated data, RFLocMatch reduces dual-transmitter 99th-percentile error by 75.2% under link and receiver perturbations relative to the best-performing baseline. On real-world single-transmitter channel impulse response (CIR) measurements with motion-assisted angular-spectrum estimation, it attains 8.25-m 90th-percentile error and 3.83-m mean absolute error.",
+          "title": "RFLocMatch: Reference-Conditioned Residual Learning from Angle-Delay Spectra for Accurate Localization"
+        },
+        "2610.41779": {
+          "abs": "https://arxiv.org/abs/2610.41779",
+          "authors": [
+            "Jiaxin Wang",
+            "Yadi Wei",
+            "Fang-Wei Fu",
+            "Jin Li",
+            "Fulin Li"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.41779",
+          "pdf": "https://arxiv.org/pdf/2610.41779",
+          "summary": "Bent partitions play a significant role in the theory of bent functions. In this paper, we study weakly regular bent partitions, that is, all generated bent functions are weakly regular (called in class $\\mathcal{WRBP}$). Let $\\Gamma=\\{A_{i}, i \\in V_{m}\\}$ be a bent partition of $V_{n}$ in class $\\mathcal{WRBP}$, where $V_{n}$ denotes an $n$-dimensional vector space over the prime field $\\mathbb{F}_{p}$, $n$ is even, $m \\leq \\frac{n}{2}$, and $m \\geq 2$ if $p=2$. We first characterize bent partition $\\Gamma$ in terms of the duals of component functions of vectorial bent functions. In particular, we prove that if $p \\neq 3$, then all bent functions generated by $\\Gamma$ are regular. Building on the above result, we give characterizations of bent partition $\\Gamma$ in terms of two classes of linear codes. When $n \\geq 4$ and $m=\\frac{n}{2}$, except for the case where $(p, n)=(2, 4)$ and $|A_{i_{0}}|=1$ for some $i_{0}$, we show that $\\Gamma$ is obtained from a spread (after a shift). Particularly, any normal bent partition of $V_{n}$ of depth $p^{\\frac{n}{2}}$ in class $\\mathcal{WRBP}$ must be obtained from a spread (after a shift), where $n \\geq 4$. We establish the Macwilliams-like identities for bent partitions in class $\\mathcal{WRBP}$. Furthermore, if $p$ is odd, we present some nonexistence results on bent partitions in class $\\mathcal{WRBP}$.",
+          "title": "Characterizations and MacWilliams-Like Identities of Weakly Regular Bent Partitions"
+        },
+        "2610.41783": {
+          "abs": "https://arxiv.org/abs/2610.41783",
+          "authors": [
+            "Cole Dickerson",
+            "Ismail Guvenc",
+            "Wahab Khawaja",
+            "Ali Cafer Gurbuz"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted to IEEE ICC 2027: Communication & Information System Security Track",
+          "id": "2610.41783",
+          "pdf": "https://arxiv.org/pdf/2610.41783",
+          "summary": "Broadcast Remote Identification (Remote ID) is a key enabler for integrating unmanned aircraft into the airspace. However, the position it reports is self-declared and can be falsified with low-cost hardware. In this paper, we study how Remote ID receivers can verify the declared position from the received signal strength (RSS) when neither the transmit power nor the path-loss exponent is known. In particular, we derive a Rao score test whose null distribution is exactly chi-squared for any number of packets. Its threshold and detection probability therefore follow in closed form. We then bound the detection probability of any detector that is invariant to the unknown link parameters. This bound saturates as the falsified position recedes along a fixed bearing, so a sufficiently large falsification can remain undetectable. From this limit, we obtain the worst-case bearing in closed form, the observation length needed to close it, and a receiver placement rule. Simulation results show that the proposed test considerably outperforms an estimate-then-threshold detector at low false-alarm rates.",
+          "title": "RSS-Based Verification of Drone Remote ID Position Claims with Unknown Transmit Power"
+        },
+        "2610.41786": {
+          "abs": "https://arxiv.org/abs/2610.41786",
+          "authors": [
+            "Zixuan Guo",
+            "Xiucheng Wang",
+            "Wenshuo Chen",
+            "Conghao Zhou",
+            "Chuan Huang",
+            "Ruijin Sun",
+            "Nan Cheng"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41786",
+          "pdf": "https://arxiv.org/pdf/2610.41786",
+          "summary": "Aerial networks require radio propagation information at unvisited positions and heights to plan routes, select links, and allocate wireless resources. A three-dimensional radio map (3D RM) represents propagation conditions over the service area, enabling these decisions before flight. However, constructing such a map from autonomous aerial vehicle (AAV) measurements is challenging, since radio measurements are available only along the trajectory, whereas the target covers the 3D service volume. Existing methods use fixed AAV trajectories that ignore how building distributions and heights affect electromagnetic propagation, missing the heights most informative for RM reconstruction. To address these issues, we propose RadioTraj3D, which uses building-height information to coordinate measurement selection and layer-wise reconstruction. Building-height variations reveal propagation-sensitive layers that guide height-adaptive sampling. We therefore propose G-METS to select geometry-sensitive heights and allocate an exact budget across edge, corridor, and open regions before channel acquisition. A dual-view reconstructor then integrates local three-dimensional boundaries with full-height context through one bounded coefficient per layer. Simulated outdoor and indoor maps demonstrate state-of-the-art reconstruction across environments and vertical grids. On real-world AAV measurements from the LACN dataset, RadioTraj3D improves peak signal-to-noise ratio by 0.84 dB and reduces normalized mean squared error by 17.5% over Completion AE.",
+          "title": "RadioTraj3D: Height-Aware Adaptive Sampling for 3D Radio-Map Reconstruction from Ultra-Sparse Trajectories"
+        },
+        "2610.41791": {
+          "abs": "https://arxiv.org/abs/2610.41791",
+          "authors": [
+            "Jared A. Rybarczyk",
+            "Erin L. Bratu",
+            "Robert F. Labadie",
+            "Jack H. Noble"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41791",
+          "pdf": "https://arxiv.org/pdf/2610.41791",
+          "summary": "Objectives: While cochlear implants (CI) can provide excellent speech perception outcomes, speech recognition in noise remains a consistent problem for many patients due to channel interaction. Recent work shows the clinical feasibility of an apical return contact placed in the cochlear helicotrema, which presents new possibilities in terms of experimental stimulation schemes. This study explores the interactions between apical and extracochlear ground contacts, aiming to characterize the effects of dual ground usage on auditory nerve fiber (ANF) dynamics and determine their utility in improving spectral resolution. Design: 6 patients with CIs were used in this retrospective study. Volume conduction models encompassing patient specific electro-anatomical characteristics and ANF compartment models defining neural dynamics were used to generate activation thresholds for 75 evenly spaced fiber bundles throughout each modeled cochlea and for 4 different grounding configurations, including the use of combined grounds. We compare our intra-patient models in terms of threshold shifts and standard deviation of fiber proportions to determine the effects of ground configuration used on channel interaction. Results: For all 6 patients, we observe shifts in ANF activation thresholds for the combined ground models indicative of more specific fiber stimulation per contact. Additionally, our combined ground models exhibit reduced fiber proportion standard deviation for several contacts of the stimulating array when compared to the standard extracochlear ground configuration or apical ground configuration. Conclusions: The shifts in activation thresholds and reduction in standard deviations suggest that stimulation schemes utilizing extracochlear and apical grounds in conjunction can provide reduced channel interaction and enhanced spectral resolution for certain contacts in an array.",
+          "title": "Improving Spectral Resolution via Simultaneous Extracochlear and Apical Ground Contacts: A Neural Simulation Study"
+        },
+        "2610.41858": {
+          "abs": "https://arxiv.org/abs/2610.41858",
+          "authors": [
+            "Aadil Oufkir",
+            "Mario Berta"
+          ],
+          "categories": [
+            "cs.IT",
+            "quant-ph"
+          ],
+          "comment": "34 pages, 4 figures",
+          "id": "2610.41858",
+          "pdf": "https://arxiv.org/pdf/2610.41858",
+          "summary": "We study channel interconversion under non-signalling superchannels, where the asymptotic conversion rate is given by the ratio of the channel capacities. Our main result determines the second-order expansion of the optimal target length. Namely, when each channel has a single capacity-achieving dispersion, the coefficient is given by the inverse sesquinormal distribution, with parameters determined by the capacities and dispersions. The result extends state-dichotomy theory to channels: one superchannel approximates the target uniformly over inputs and maps every reference channel whose output is independent of its input to another such channel. As in state dichotomies, there are finite-error resonances where the second-order term vanishes, leaving an $O(\\log n)$ remainder. Crucially, our new characterization cannot be obtained by concatenating channel coding and simulation protocols [Cao {\\it et al.}~IEEE Trans.~Inf.~Theory (2024)]. Instead, the proof combines comparisons of binary hypothesis testing experiments with uniform Gaussian estimates and a construction that uses symmetry within type classes to satisfy the non-signalling constraints. Shared randomness assistance already suffices at first order, but we show that its second-order behaviour can differ strictly from the non-signalling case.",
+          "title": "Channel dichotomies"
+        },
+        "2610.41859": {
+          "abs": "https://arxiv.org/abs/2610.41859",
+          "authors": [
+            "Marco Bondaschi",
+            "Michael Gastpar"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Submitted to the IEEE Transactions on Information Theory",
+          "id": "2610.41859",
+          "pdf": "https://arxiv.org/pdf/2610.41859",
+          "summary": "Modern language models motivate renewed interest in universal prediction problems in which a predictor can exploit previously observed data before predicting a fresh sequence. We study an idealized version of this setting by introducing \\emph{batch regret}: a conditional analogue of classical average regret in which a predictor observes a batch of $n$ training sequences and is then evaluated on an independent test sequence generated by the same unknown source. Additive smoothing estimators, which add a bias to the observed token frequencies before predicting the next token, played a fundamental role as a simple prediction strategy with almost-optimal average regret for memoryless and Markov sources. Their equivalent under batch regret are the conditional additive smoothing estimators, which estimate the conditional distribution of the test sequence given the training batch. In this work, we study their asymptotical batch regret for binary memoryless and first-order Markov sources. For binary memoryless sources, we show how the optimal bias of the estimator, and consequently the corresponding batch regret, change as a function of the training batch size $n$, by extending the Poisson-based analysis of Krichevsky. For binary Markov sources with positive transitions, we characterize the leading coefficient of batch regret and its dependence on whether the initial law is known, free, or stationary. Finally, we introduce a Rényi analogue of batch regret and identify the corresponding optimal predictors as conditional $\\alpha$-NML estimators, thereby giving an operational interpretation to a conditional version of Sibson's $\\alpha$-mutual information.",
+          "title": "Batch Universal Prediction via Conditional Additive Smoothing"
+        },
+        "2610.41860": {
+          "abs": "https://arxiv.org/abs/2610.41860",
+          "authors": [
+            "Amos Lapidoth",
+            "Baohua Ni"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "31 pages, 2 figures",
+          "id": "2610.41860",
+          "pdf": "https://arxiv.org/pdf/2610.41860",
+          "summary": "The problem of transmitting both data and state over a memoryless state-dependent multi-access channel with causal state information is addressed. The state comprises three independent components: a common component, which is revealed to both en- coders, and two private components, each of which is revealed to a different encoder. The data are to be recovered with arbitrarily-small probability of error, and the state sequence with arbitrarily-small symbol-error rate. Under the assumption that the capacity region in the absence of a state recon- struction constraint is nonempty, the capacity region is derived and is shown to be achievable using a Block-Markov coding scheme employing binning and superposition coding.",
+          "title": "Rates and Nearly-Lossless State over a Multi-Access Channel with Causal State Information"
+        },
+        "2610.41913": {
+          "abs": "https://arxiv.org/abs/2610.41913",
+          "authors": [
+            "Yukun Liu",
+            "Shanshan Wang",
+            "Paul Lagouanelle",
+            "Yarui Zhang",
+            "Joe Wiart"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41913",
+          "pdf": "https://arxiv.org/pdf/2610.41913",
+          "summary": "Electromagnetic field exposure in urban environments is highly variable, and conventional exposure maps provide a deterministic estimate, without considering its uncertainty. To address the gap, this paper proposes B-ExposNet, a Bayesian neural network for spatial exposure estimation with uncertainty quantification. B-ExposNet extends ExposNet by treating the weights of regression head as random variables, inferred by variational inference, so that the model provides probabilistic estimates from posterior predictive distribution. The method is evaluated on drive-test measurement campaigns conducted in three French cities, and compared with conventional method such as universal Kriging, in both predictive accuracy and the quality of the estimated uncertainty. On the test region, B-ExposNet achieves a mean absolute percentage error of 28.19\\% and a continuous ranked probability score of 0.198~V/m, improving on canonical methods in both accuracy and uncertainty quantification.",
+          "title": "B-ExposNet: Bayesian Deep Learning for EMF Exposure Mapping with Uncertainty Quantification"
+        },
+        "2610.41997": {
+          "abs": "https://arxiv.org/abs/2610.41997",
+          "authors": [
+            "Qu Luo",
+            "Limin Liu",
+            "Zhe Li",
+            "Qihao Peng",
+            "Haowei Wu",
+            "Pei Xiao"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2610.41997",
+          "pdf": "https://arxiv.org/pdf/2610.41997",
+          "summary": "This paper investigates channel estimation for affine frequency division multiplexing (AFDM) systems over channels with fractional delay and fractional Doppler (FDFD) shifts. An exact FDFD channel model is first established, and the corresponding input--output relationship is also derived. To address the FDFD-induced delay--Doppler coupling, a first-order linear approximation grid-refinement sparse Bayesian learning (FLA-GR-SBL) method is developed. To further remedy the convergence and stability issues caused by the limited accuracy of the first-order approximation, we propose a two-dimensional grid-approximation SBL (2D-GA-SBL) algorithm, which iteratively refines the delay--Doppler grid and thereby characterizes the channel more accurately. Simulation results demonstrate that the proposed algorithms significantly outperform existing on-grid and off-grid SBL benchmarks in terms of both normalized mean square error (NMSE) and bit error rate (BER).",
+          "title": "Grid-Refinement SBL for AFDM Channel Estimation Under Fractional Delay and Fractional Doppler Channels"
+        },
+        "2610.42023": {
+          "abs": "https://arxiv.org/abs/2610.42023",
+          "authors": [
+            "Hua Sun"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.42023",
+          "pdf": "https://arxiv.org/pdf/2610.42023",
+          "summary": "$K$ users each observe a fixed linear function of common data over a finite field of characteristic $p$, and a server must recover another fixed linear function with zero error from one message sent by each user. The capacity, the minimum total number of symbols the users send per computed instance, depends only on the configuration of subspaces formed by these linear functions. We study the instance in which three users observe $\\boldsymbol{a}$, $\\boldsymbol{b}$ and $\\boldsymbol{a}+\\boldsymbol{b}$ and the server wants $\\boldsymbol{a}+\\lambda\\boldsymbol{b}$. The four functions span four lines in a plane with cross-ratio $\\lambda$, the smallest instance of the four subspace problem of representation theory. It is the smallest configuration whose capacity is not determined by the dimensions of the subspaces formed by sums and intersections: these dimensions are the same for every $\\lambda$, but the capacity depends on the cross-ratio and on the prime subfield. For the harmonic cross-ratios, $\\lambda=-1$, $\\lambda=2$ or $2\\lambda=1$, it is $2$: every zero-error code reveals $(\\boldsymbol{a},\\boldsymbol{b})$ to the server, so no code beats having two users send their observations. For $\\lambda$ outside the prime subfield it is the cut-set bound $3/2$, achieved by codes linear over the prime subfield, while codes linear over the field need $2$. For the other $\\lambda$ in the prime subfield it lies in $[3p/(2p-1),2]$, so no code at any block length approaches the cut-set bound. The qualitative separation persists under vanishing error for uniform data: the cut-set bound is tight exactly for $\\lambda$ outside the prime subfield. The four-line instance is also exact repair of one node of a $[4,2]$ MDS storage code, and the results translate to that setting.",
+          "title": "Capacity Meets the Four Subspace Problem: Distributed Linear Computation and the Cross-Ratio"
+        },
+        "2610.42078": {
+          "abs": "https://arxiv.org/abs/2610.42078",
+          "authors": [
+            "Yewen Cao",
+            "Dengke Wei",
+            "Yulin Shao"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2610.42078",
+          "pdf": "https://arxiv.org/pdf/2610.42078",
+          "summary": "This paper introduces embodied movable antennas (MAs), a new MA architecture that rethinks the source of antenna mobility. Unlike conventional MAs that rely on dedicated antenna actuators, embodied MAs harness the mechanical degrees of freedom already present in physical agents to reconfigure antenna position and orientation. We distinguish two modes of embodied MAs: task-coupled and task-preserving. Focusing on the latter, we show how wireless channels can be reconfigured by exploiting task-equivalent host configurations without altering the prescribed physical task. Using a redundant robotic manipulator as a canonical realization, we characterize the intrinsically coupled antenna translation and orientation induced by task-preserving self-motion and derive an exact Fourier representation of the resulting multipath channel. Our analysis reveals that the wireless value of embodied mobility depends not merely on how far an antenna can move, but on which configurations remain feasible under the physical task and how their coupled motion interacts with polarization and multipath propagation. Building on this insight, we develop a cross-task antenna mounting design that enables wireless adaptation with a fixed physical installation. Numerical results demonstrate substantial communication gains through task-preserving motion. These findings establish mechanical redundancy as a new, quantifiable resource for wireless channel reconfiguration.",
+          "title": "Embodied Movable Antennas"
+        },
+        "2610.42101": {
+          "abs": "https://arxiv.org/abs/2610.42101",
+          "authors": [
+            "Andrés Cristi",
+            "Yilin Kong",
+            "Jiechen Zhang"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.DS"
+          ],
+          "comment": "48 pages, 8 figures. A preliminary version has been accepted to WINE 2026",
+          "id": "2610.42101",
+          "pdf": "https://arxiv.org/pdf/2610.42101",
+          "summary": "The Pareto secretary problem asks for online selection of a Pareto-maximal observation from an i.i.d. sample: no other observation is at least as good in every coordinate and strictly better in one. For every fixed dimension $d\\ge2$ and independent continuous coordinates, the optimal failure probability is of order $1/[(\\log n)^{d-1}\\log\\log n]$, both with full information and with coordinate ranks alone. A deterministic rank rule attains the optimal leading term uniformly over the marginals. For every fixed positive definite Gaussian covariance, the same failure order holds, with a leading constant depending on the correlation matrix, and a rank-based rule attains the optimal leading failure probability without knowing the Gaussian parameters. In both models, we determine the optimal fixed cutoff and its leading failure constant; its failure probability exceeds the unrestricted optimum by a factor $\\Theta_d((\\log\\log n)^2)$. Under arbitrary dependence, a fixed joint density with uniform marginals can instead have optimal full-information success tending to approximately $0.58$. The proof uses the scarcity of observations with very small domination probability to bound every stopping rule. A matching rule selects a currently maximal point when this probability is below a threshold that increases as time runs out. Coordinate ranks from an initial sample provide sufficiently accurate estimates to preserve the optimal leading failure probability. For singular Gaussian distributions with known correlations, we characterize the optimal failure asymptotics attainable using ranks. Singular dependence can make every observation acceptable or recover the difficulty of selecting a single best point.",
+          "title": "The Pareto Secretary Problem"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-11-02",
+          "complete": true,
+          "total": 37
+        },
+        "eess.SP": {
+          "announcement": "2026-11-02",
+          "complete": true,
+          "total": 36
+        }
+      },
+      "status": "no_new_content",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1793606924.2904983,
-    "next_allowed_at": 1793606939.2904983
+    "last_response_at": 1793694520.3225667,
+    "next_allowed_at": 1793694535.3225667
   },
   "version": 1
 }
