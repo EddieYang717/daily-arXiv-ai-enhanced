@@ -78659,11 +78659,36 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-11-10": {
+      "ai": {},
+      "candidates": [],
+      "errors": {
+        "_listing": "Missing, inconsistent or unverified listing pages; candidate set is incomplete"
+      },
+      "language": "Chinese",
+      "listing_complete": false,
+      "metadata": {},
+      "sources": {
+        "cs.IT": {
+          "complete": false,
+          "error": "Three consecutive HTTP 406/429 responses; crawl paused"
+        },
+        "eess.SP": {
+          "complete": false,
+          "error": "arXiv requests paused for this run"
+        }
+      },
+      "status": "incomplete",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1794213332.9381154,
-    "next_allowed_at": 1794213347.9381154
+    "last_response_at": 1794300480.2817657,
+    "next_allowed_at": 1794301380.2817657
   },
   "version": 1
 }
