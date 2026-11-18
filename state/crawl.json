@@ -90484,11 +90484,1151 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-11-18": {
+      "ai": {
+        "2611.21781": {
+          "item": {
+            "AI": {
+              "conclusion": "TriX-EEG提供统一的多维EEG去噪器评估基准，推动模型兼顾准确性、忠实性与可解释性；但其属生物医学信号评估领域，与被调研者的无线CSI研究方向无直接关联。",
+              "method": "构建三级评估框架：Level 1信号有效性（重构质量与神经频带功率保持）；Level 2去除忠实性（伪迹误差、残余伪迹/神经泄漏）；Level 3解释可靠性（时间对齐、因果相关性、稳定性）。在EEGDenoiseNet与PhysioNet运动伪迹数据集三个基准上评测9种已发表神经去噪器（EOG/EMG/运动伪迹），并在独立EEG/EOG数据集与BCI Competition IV-2a上做外部验证。",
+              "motivation": "EEG去伪迹深度学习方法仅依赖重构类指标（误差、相关、SNR），无法判断是否真正抑制伪迹、保留神经活动或提供可靠解释，缺少可信评估体系。",
+              "relevance_reason": "该文是EEG伪迹去除的可信性/可解释性评估框架，不涉及CSI获取、信道估计、CSI反馈压缩或无线物理层AI，仅\"信号去噪+可解释评估\"方法论层面略有间接借鉴。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "可解释/可信去噪评估",
+                "信号重构与保真度度量",
+                "神经信号去噪（非无线）"
+              ],
+              "result": "仅用重构指标不足以评估去噪器可信度：RF可区分误差来自残余伪迹还是神经活动被抑制，ER刻画解释行为的独立方面；数据集偏移下评分排序基本一致，排名靠前的去噪器保留更多任务相关信息、下游性能下降更少。",
+              "tldr": "提出TriX-EEG三级评估框架（信号有效性、去除忠实性、解释可靠性），用于可信、可解释地评价EEG去伪迹深度模型。"
+            },
+            "abs": "https://arxiv.org/abs/2611.21781",
+            "authors": [
+              "Phat Lam",
+              "Hung Nguyen",
+              "Lam Pham",
+              "Huy Phan",
+              "Dat Tran",
+              "Ian McLoughlin",
+              "Roozbeh Razavi-Far",
+              "Hung Cao"
+            ],
+            "categories": [
+              "eess.SP",
+              "cs.AI"
+            ],
+            "comment": "IEEE journal manuscript under review",
+            "id": "2611.21781",
+            "pdf": "https://arxiv.org/pdf/2611.21781",
+            "summary": "Deep-learning methods have achieved strong performance in EEG artifact removal, but evaluation remains dominated by reconstruction metrics such as error, correlation, and signal-to-noise ratio. Although these metrics assess similarity to clean EEG, they do not establish whether models effectively suppress artifacts, preserve neural activity, or provide reliable explanations. To address these limitations, we propose TriX-EEG, a three-level framework for trustworthy and explainable EEG artifact removal. Level 1, Signal Validity (SV), evaluates reconstruction quality and neural band-power preservation. Level 2, Removal Faithfulness (RF), assesses the removed component through artifact error and residual artifact/neural leakage. Level 3, Explanation Reliability (ER), examines model behavior through temporal alignment, causal relevance, and stability. We evaluate TriX-EEG using nine published neural denoisers across three public benchmarks derived from EEGDenoiseNet and the PhysioNet Motion Artifact Contaminated EEG Dataset, covering EOG, EMG, and motion artifacts. Results show that reconstruction metrics alone are insufficient for trustworthy denoiser assessment: RF complements it by revealing whether errors stem from residual artifact or suppressed neural activity, while ER captures distinct aspects of explanation behavior, supporting joint evaluation of three aspects within a unified framework rather than reliance on any single factor. External validation on an independent EEG/EOG dataset and the BCI Competition IV-2a motor-imagery dataset further demonstrates broadly consistent rankings under dataset shift. Higher-ranked denoisers generally preserve more task-relevant information or cause less downstream performance degradation. Overall, TriX-EEG provides a comprehensive basis for EEG denoiser assessment, encouraging models that are not only accurate but also faithful and explainable.",
+            "title": "Beyond Reconstruction: A Unified Framework for Trustworthy and Explainable EEG Artifact Removal Evaluation"
+          },
+          "key": "9382c250beb0275ff5e20364f14de708bbbb3ebf117cc59bcead5bd29828c1de"
+        },
+        "2611.21888": {
+          "item": {
+            "AI": {
+              "conclusion": "首次为GQR码给出达到平方根界一半的确定性译码算法，补齐了经典代数编码中该族码的译码空白。",
+              "method": "推广Helleseth对QR码的描述到GQR码，使伴随式给出错误定位多项式的二次特征值；再借鉴定制Kopparty从带噪特征值恢复多项式的技术进行恢复译码。",
+              "motivation": "GQR码满足最小距离平方根下界d≥√q，但长期缺乏多项式时间、能纠到该界一半的译码算法（仅个别短码长已知）。",
+              "relevance_reason": "该文属经典代数编码理论（QR/GQR码的确定性译码算法），与CSI获取、信道估计、CSI反馈压缩或无线AI方法均无关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "给出确定性译码算法，复杂度O(q^{9/2})次F_q运算，纠错半径⌊(√q−1)/2⌋；由于q为平方时平方根界可达，该半径已是该类码上可统一保证的最大值。",
+              "tldr": "提出确定性算法，对长度q≡±1 (mod 8)的二元广义二次剩余(GQR)码，可在O(q^{9/2})次F_q运算内纠正重量≤⌊(√q−1)/2⌋的所有错误图样，达到平方根界。"
+            },
+            "abs": "https://arxiv.org/abs/2611.21888",
+            "authors": [
+              "Phlippe Gaborit",
+              "Philippe Lebacque"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.21888",
+            "pdf": "https://arxiv.org/pdf/2611.21888",
+            "summary": "Binary quadratic residue (QR) codes, introduced by Prange in 1958, are cyclic codes of prime length $p\\equiv\\pm1\\pmod 8$ and dimension $(p+1)/2$ whose minimum distance satisfies the square-root bound $d\\ge\\sqrt p$. They include the Hamming code $[7,4,3]$ and the Golay code $[23,12,7]$, and were generalized by van Lint and MacWilliams to generalized quadratic residue (GQR) codes of prime-power length $q$, for which the bound $d\\ge\\sqrt q$ still holds and is attained when $q$ is a square. In coding theory, one usually first finds a lower bound on the minimum distance of a family of codes, and then a polynomial-time algorithm decoding up to half of this bound, as for BCH, Reed--Muller or Gabidulin codes. Until now, GQR codes had resisted this approach: no such algorithm was known, apart from individual short lengths. We give a deterministic algorithm which, for every odd prime power $q\\equiv\\pm1\\pmod 8$, corrects every error pattern of weight at most $\\lfloor(\\sqrt q-1)/2\\rfloor$ in the binary GQR code of length $q$, in $O(q^{9/2})$ operations in $\\F_q$. We start from a description of QR codes due to Helleseth, which we extend to GQR codes, and in which the syndrome gives the values of the quadratic character of the error-locator polynomial. We then recover this polynomial by adapting to GQR codes the tools that Kopparty developed for recovering polynomials from noisy character values, with the decoding of dual BCH codes as an application. Since the square-root bound is attained when $q$ is a square, this radius is the largest that can be guaranteed uniformly on the class of GQR codes.",
+            "title": "A polynomial-time decoding algorithm up to half the square-root bound for quadratic residue and generalized quadratic residue codes"
+          },
+          "key": "67ecd281027c51fec9a81f7e7d14e91f6547c12be53c25c320bbbdd8d1aad480"
+        },
+        "2611.21913": {
+          "item": {
+            "AI": {
+              "conclusion": "非重叠码的渐近最大值比此前已知更紧，为组合编码理论提供了更强工具。",
+              "method": "基于 Fimmel–Michel–Pirot–Sereni–Strüngmann (2019) 与 Stanovnik–Moškon–Mraz (2024) 的组合/信息论论证，给出自包含的渐近上界证明。",
+              "motivation": "非重叠码研究逾六十年，近年出现新应用且关注度上升；希望收紧其最大码字数的上界。",
+              "relevance_reason": "纯组合编码理论研究，与无线通信、CSI 获取/反馈及物理层 AI 无任何关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "建立了 |X| ≤ (5/(6e)+O(n^-1))·2^n/n 的渐近上界，改进 Levenshtein 1970 的经典结果。",
+              "tldr": "证明二元非重叠码（bifix-free/强逗号自由码）的基数上界 |X| ≤ (5/(6e)+O(n^-1))·2^n/n，比 Levenshtein (1970) 的界改进了 5/6 因子。"
+            },
+            "abs": "https://arxiv.org/abs/2611.21913",
+            "authors": [
+              "Simon R. Blackburn"
+            ],
+            "categories": [
+              "cs.IT",
+              "math.CO"
+            ],
+            "comment": "22 pages",
+            "id": "2611.21913",
+            "pdf": "https://arxiv.org/pdf/2611.21913",
+            "summary": "Non-overlapping codes (also known as bifix-free codes or strong comma-free codes) have now been studied for over 60 years as part of information theory, with regular new applications appearing and much recent interest. Let $X$ be a binary non-overlapping code of length $n$. The paper contains a self-contained proof that \\[ |X|\\leq \\left(\\frac{5}{6e} +O(n^{-1})\\right)\\frac{2^n}{n} \\] as $n\\rightarrow\\infty$. This improves, by a factor of $5/6$, the best previously known bound due to Levenshtein (1970). The paper builds on work by Fimmel, Michel, Pirot, Sereni and Strüngmann (2019), and by Stanovnik, Mo\\v skon and Mraz (2024).",
+            "title": "An upper bound on non-overlapping codes"
+          },
+          "key": "8a737f21d276f9ad633e4f38d97d7272faa2ba45b382252c493ccbfeec40ac99"
+        },
+        "2611.22019": {
+          "item": {
+            "AI": {
+              "conclusion": "CPTC 以低复杂度、通用位宽的高保真张量量化格式实现可部署的 LLM 权重压缩，但其价值限于模型存储与推理加速。",
+              "method": "解码器将状态乘以两个系数，取乘积高位相加索引 64 字节表；利用和分布非均匀性，用小表容纳尾部极端值；单一解码器覆盖 1–6 bit 并精确复现标准整数与浮点格式。",
+              "motivation": "INT4/FP4 等逐值舍入格式浪费大量比特，未逼近信息论最优；已有 trellis 解码器要么依赖超大查找表，要么受哈希限制。",
+              "relevance_reason": "该文为 LLM 权重低比特量化与硬件解码格式，不涉及 CSI 获取、信道估计/反馈/压缩或无线物理层 AI，仅\"神经压缩/量化\"字面相近。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "低位宽张量量化",
+                "Trellis 编码/码本",
+                "模型压缩"
+              ],
+              "result": "4 bit 下距理想 0.07 bit；质量匹敌表大数千倍的随机置换 trellis 码，优于所有 QTIP 码本；在 Llama 3.1 8B/70B Instruct 免微调权重量化中 KL 散度最低（最高优 27%）；已集成于 AWS Trainium 4，吞吐等同原生 FP4/FP8，面积开销可忽略。",
+              "tldr": "提出 Computed Permutation Trellis Coding (CPTC)，一种面向只写一次、多次读取张量的低位宽量化格式，用小型 64 字节表的联合解码器在 4 bit 下距理想仅 0.07 bit。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22019",
+            "authors": [
+              "Muhammed Fatih Balın"
+            ],
+            "categories": [
+              "cs.IT",
+              "cs.AI",
+              "cs.AR",
+              "cs.LG"
+            ],
+            "comment": "38 pages, 6 figures, 27 tables",
+            "id": "2611.22019",
+            "pdf": "https://arxiv.org/pdf/2611.22019",
+            "summary": "We propose Computed Permutation Trellis Coding (CPTC), a low-bit quantization format for tensors written once and read many times. Formats that round each value on its own, such as INT4 and FP4, waste a large part of their bits against the information-theoretic ideal. Trellis codes recover this loss by encoding values jointly, but prior decoders either need a large lookup table for their best quality or compute values with a hash that restricts what they can decode. CPTC's decoder multiplies its state by two coefficients and adds the top bits of the products to index a 64-byte table. Because that sum is not uniformly distributed, the rarely used ends of a small table can hold values far out in the tails. One decoder serves every bit width from 1 to 6, reproduces the standard integer and floating-point formats exactly, and comes within 0.07 bits of the ideal at 4 bits. It matches a random-permutation trellis code whose table is thousands of times larger, and exceeds every QTIP codebook. In LLM weight quantization without fine-tuning, CPTC has the lowest KL divergence to the unquantized model at every tested bit width on Llama 3.1 8B and 70B Instruct against QTIP's codebooks (by up to 27%). The decoder has been built into the AWS Trainium 4 AI accelerator, where it runs at the throughput of the native FP4 and FP8 formats for a negligible fraction of the systolic array's area. Fused encoding kernels quantize an 8B model's linear layers in under two minutes on one GPU and, in cycle-level simulation, on one Trainium 4 chip.",
+            "title": "Computed Permutation Trellis Coding: Near-Optimal Quantization from Two Multiplications and a 64-Byte Table"
+          },
+          "key": "0cc2552637aebdbd4283d1ce42f575966f2aa09c3b1663ecf95250b7b929f58c"
+        },
+        "2611.22100": {
+          "item": {
+            "AI": {
+              "conclusion": "将语义编码前移至模拟射频计算并结合语义敏感度驱动的资源分配与噪声感知联合设计，可显著降低网络语义失真，为低能耗边缘语义通信提供可行方案。",
+              "method": "基站以RF波形广播编码器权重，边缘设备复用接收机无源混频器进行模拟RF计算得到语义隐变量并经上行传输；将逐层模拟计算噪声与信道噪声统一建模，定义任务后验语义失真并做二阶分解为每用户/每阶段敏感度，据此得到闭式语义感知注水分配，导出考虑逐层精度需求的广播波束成形问题，结合随机优化与多任务噪声感知训练联合设计。",
+              "motivation": "语义通信终端在资源受限边缘设备上运行语义编码器带来显著能耗与内存开销，需在射频前端以超低能耗完成编码。",
+              "relevance_reason": "论文聚焦语义通信的模拟射频计算与能耗/精度分配，虽属物理层AI与波束成形，但不涉及CSI获取、反馈压缩或信道知识建模，与研究方向关联很弱。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "语义通信（非CSI）",
+                "物理层AI",
+                "模拟射频计算",
+                "资源分配/波束成形"
+              ],
+              "result": "MNIST仿真中，在总客户端能耗相同时，所提分配相较均匀精度降低语义失真9.2%–19.2%，相较客户端无感分配降低5.1%–13.1%；噪声感知联合设计进一步降低约46%。",
+              "tldr": "提出在客户端射频接收前端用模拟计算执行语义编码器的端到端语义通信框架，将模拟计算噪声与信道噪声统一建模，给出二阶语义敏感度分解与闭式语义感知注水能量分配，并联合波束成形与噪声感知训练。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22100",
+            "authors": [
+              "Christo Kurisummoottil Thomas"
+            ],
+            "categories": [
+              "eess.SP",
+              "cs.AI",
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.22100",
+            "pdf": "https://arxiv.org/pdf/2611.22100",
+            "summary": "Semantic communication (SC) systems transmit continuous latent representations of meaning, but computing the semantic encoder at resource-constrained edge devices incurs substantial energy and memory costs. To address this challenge, we propose an end-to-end SC framework that executes the semantic encoder in the client's RF receiver front end using analog RF computing. A base station (BS) broadcasts encoder weights as RF waveforms, while each edge device reuses its receiver's passive mixer to compute semantic latents at ultra-low energy. These latents are transmitted over the uplink for network-side task inference. We show that analog computing noise across encoder layers and channel noise affecting transmitted latents admit a unified mathematical model. We define a task-posterior semantic distortion metric and derive its second-order decomposition into per-client, per-stage semantic sensitivities. Using this decomposition, we obtain a closed-form semantic-aware water-filling allocation of the total client energy budget across clients, encoder layers, and uplinks, assigning tighter accuracy targets to semantically sensitive stages. This allocation induces a broadcast beamforming problem that accounts for client-specific, per-layer accuracy requirements. We further refine the allocation through stochastic optimization and jointly design it with multi-task noise-aware training of the shared semantic model. MNIST simulations show that, at matched total client energy, the proposed allocation reduces network semantic distortion by 9.2\\%-19.2\\% compared with uniform precision and 5.1\\%-13.1\\% compared with client-blind allocation. Noise-aware co-design yields a further 46\\% reduction.",
+            "title": "Semantic Communication via Analog RF Computing: When the Radio Computes the Meaning"
+          },
+          "key": "3d30331b8cfa8e763816b2b0f459434c214ca5f65d77694107c55ef78aedb4ef"
+        },
+        "2611.22184": {
+          "item": {
+            "AI": {
+              "conclusion": "协作式终端间相对楼层差观测可弥补稀疏AP部署下楼层级定位信息不足，具备实际可部署性。",
+              "method": "以AP-终端RSS上/下行AP对比度表征AP侧信息，将终端间观测按楼层差类别统计建模为成对分数，融合为加权楼层标签目标，并用双阶序贯迭代条件模式(ICM)近似求解。",
+              "motivation": "施工中的多层建筑通信与供电设施有限、环境动态变化，密集基础设施或指纹库难以部署；LPWA稀疏AP场景下仅靠AP-终端观测楼层信息不足。",
+              "relevance_reason": "该文属LPWA室内楼层级定位，关注RSS测距/定位而非CSI获取、重建、反馈或信道知识建模，与研究方向关联很弱。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "LPWA/LoRa RSS定位",
+                "室内楼层估计",
+                "稀疏AP部署"
+              ],
+              "result": "射线追踪仿真与LoRa实测实验表明，在不同AP部署与终端选择限制下方法有效。",
+              "tldr": "提出一种设备中心式协作楼层估计方法，利用终端间观测作为相对楼层差信息补充稀疏AP的RSS信息，并用双阶序贯ICM近似优化加权楼层标签目标。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22184",
+            "authors": [
+              "Jiaxu Liang",
+              "Zhuoran Li",
+              "Osamu Muta",
+              "Haruto Morokuma",
+              "Naohiro Ikeda",
+              "Takamasa Kitanouma"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.22184",
+            "pdf": "https://arxiv.org/pdf/2611.22184",
+            "summary": "For construction-site applications in multi-story buildings, accurate floor-level estimation is important for tracking workers, equipment, and Internet of Things (IoT) devices. In buildings under construction, communication infrastructure and power-supply facilities are often limited and the indoor environment changes as construction progresses, making localization systems that rely on dense wireless infrastructure or fingerprint databases difficult to deploy and maintain. Low-power wide-area (LPWA) communication can provide wide-area coverage with a small number of temporarily deployed access points (APs), but under sparse AP deployment, AP-to-terminal observations alone may provide insufficient floor-related information for reliable floor-level estimation. To address this problem, this paper develops a device-centric cooperative floor-level estimation method that exploits inter-terminal observations as relative floor-difference information to complement AP-side information. For practical application with limited measurement data, AP-to-terminal observations are represented by an upper/lower-AP RSS contrast, while inter-terminal observations are statistically modeled according to floor-difference classes. The resulting AP-side and pairwise scores are combined in a weighted floor-label objective and approximately optimized using dual-order sequential iterated conditional modes (ICM). Ray-tracing simulations and LoRa measurement experiments demonstrate the effectiveness of the proposed method under different AP deployments and terminal-selection limits.",
+            "title": "Device-Centric Cooperative Floor-Level Estimation under Sparse Anchor Deployment for Construction-Site Applications"
+          },
+          "key": "4a1d150268404506cf40ce7c3abc5c76a6e223cc137f68de3d0d7b1f65db498e"
+        },
+        "2611.22221": {
+          "item": {
+            "AI": {
+              "conclusion": "该工作为子系统稳定子码的局部擦除恢复提供了统一的代数框架与界的体系，并给出多族达到界的最优构造。",
+              "method": "给出局部擦除恢复的代数判据并应用于CSS与Hermitian hull构造；对一般(非纯)情形推导不相交修复集冗余界、支撑子空间界与混合计数界；对纯码且修复集重叠情形建立Singleton型与字母表相关界及Griesmer/Hamming/Plotkin界；由MDS稳定子码、RS码与MDS Hermitian hull线性码构造九类F_q-线性纯(r,δ)-SSLRCs。",
+              "motivation": "局部擦除恢复是分布式量子存储修复的关键限制；对子系统稳定子码，需要判定在给定修复集合内能否纠正擦除，并刻画其码率-冗余极限。",
+              "relevance_reason": "纯量子纠错编码理论，涉及稳定子码/擦除恢复但与无线CSI、信道估计或反馈压缩无任何关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "获得多类新的上界，并构造出九类同时在多个界下达到最优的纯局部可恢复子系统稳定子码。",
+              "tldr": "该论文研究子系统稳定子码的(r,δ)-局部可恢复码((r,δ)-SSLRCs)，给出局部擦除恢复的代数刻画、多种冗余/子空间/计数界，并基于MDS稳定子码、RS码和MDS Hermitian hull构造九类最优码。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22221",
+            "authors": [
+              "Yaozong Zhang",
+              "Sihem Mesnager",
+              "Xiaoqiang Wang",
+              "Jian Gao"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.22221",
+            "pdf": "https://arxiv.org/pdf/2611.22221",
+            "summary": "Local erasure recovery limits the number of physical systems accessed to repair a distributed quantum memory. For subsystem stabilizer codes (SSCs), a basic question is whether erasures can be corrected within a prescribed repair set. In this paper, we study subsystem stabilizer $(r,\\delta)$-locally recoverable codes ($(r,\\delta)$-SSLRCs), in which each coordinate belongs to a repair set of size between $\\delta$ and $r+\\delta-1$ that corrects any set of up to $\\delta-1$ erasures while preserving the logical subsystem and allowing the gauge subsystem to change. We first characterize local erasure recovery algebraically and apply this criterion to Calderbank-Shor-Steane (CSS) and Hermitian hull constructions for $(r,\\delta)$-SSLRCs. For $(r,\\delta)$-SSLRCs, without assuming purity, we derive a redundancy bound for disjoint repair sets, a supported-subspace bound based on supported stabilizer and gauge subspaces, and a mixed counting bound for known erasures within selected repair sets and errors at unknown positions outside their union. For pure $(r,\\delta)$-SSLRCs with overlapping repair sets, we establish the Singleton-type and alphabet-dependent bounds, together with explicit Griesmer, Hamming, and Plotkin bounds. Moreover, we construct nine classes of $\\F_q$-linear pure $(r,\\delta)$-SSLRCs from maximum distance separable (MDS) stabilizer codes, Reed-Solomon (RS) codes, and linear codes with MDS Hermitian hulls, which are simultaneously optimal with respect to several bounds for $(r,\\delta)$-SSLRCs.",
+            "title": "Subsystem Stabilizer $(r,δ)$-Locally Recoverable Codes: Characterization, Bounds and Constructions"
+          },
+          "key": "c3e7c8ec24bff7a207c79498b18b3edab1ae3dae43cf6c0234b59c7d3e8edffe"
+        },
+        "2611.22322": {
+          "item": {
+            "AI": {
+              "conclusion": "逆优化结合信赖域线性化与松弛对偶间隙，是估计流体天线硬件损伤参数的有效途径，并能在硬件非理想条件下改善系统频谱效率。",
+              "method": "构建正向频谱效率最大化问题并引入聚合干扰变量，用定价机制保证其与物理小区间干扰一致；利用接收端干扰测量获取聚合干扰；在观测位置附近建立位置更新问题的信赖域线性模型，并提出带显式对偶间隙容差的逆优化模型，用序列二次规划（SQP）求解，以兼容由非精确或启发式算法给出的天线位置。",
+              "motivation": "流体天线的硬件系数未知，会扭曲实际可达频谱效率，需要在不掌握硬件参数的情况下从可观测的网络决策中反推这些参数。",
+              "relevance_reason": "该文聚焦流体天线硬件损伤参数的逆优化估计与波束成形/频谱效率优化，不涉及CSI获取、信道重建、CSI反馈压缩或信道知识建模等核心主题。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "fluid antenna",
+                "inverse optimization",
+                "hardware impairment",
+                "beamforming optimization"
+              ],
+              "result": "在两种发射功率水平下，估计误差均低于KKT残差最小化（KKT-RM）方法，频谱效率相较理想硬件假设方案最高提升22.86%。",
+              "tldr": "基于逆优化与信赖域线性模型，从观测到的流体天线位置与波束成形决策中估计多基站多用户系统的硬件损伤系数，并通过SQP求解带对偶间隙容差的逆优化问题。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22322",
+            "authors": [
+              "Songling Zhang",
+              "Zhaohui Yang",
+              "Ruopeng Xu",
+              "Hao Xu",
+              "Xusheng Zhu",
+              "Zhaoyang Zhang",
+              "Kai-Kit Wong"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "Accepted by IEEE GLOBECOM 2026",
+            "id": "2611.22322",
+            "pdf": "https://arxiv.org/pdf/2611.22322",
+            "summary": "In this paper, the problem of estimating the hardware impairment parameters of fluid antennas (FAs) in a multi-base station (BS) multi-user communication system is studied. The actual hardware coefficients are unknown, whereas the FA positions and transmit beamforming vectors adopted by the BSs are known. We first formulate a forward spectral efficiency (SE) maximization problem and introduce aggregate interference variables whose consistency with the physical inter-cell interference can be maintained through a pricing mechanism. For inverse estimation, the aggregate interference is obtained from receiver-side interference measurements associated with the observed network decisions. We then construct a trust-region linear model of the position-update problem around the observed FA positions. To extend the applicability of the proposed framework to antenna positions obtained from inexact or heuristic algorithms, we develop an inverse optimization model with an explicit duality-gap tolerance, which is solved using sequential quadratic programming (SQP). Simulation results show that the proposed scheme attains a lower estimation error than KKT residual minimization (KKT-RM) at both considered transmit-power levels and improves the SE by up to 22.86% over the Ideal-hardware-assumption scheme.",
+            "title": "Hardware Impairment Parameter Estimation in Fluid Antenna Systems by Inverse Optimization"
+          },
+          "key": "9dfcf988259ec9f311107e77e066926b17d0416ce7b00f4721aa8602e86baefe"
+        },
+        "2611.22416": {
+          "item": {
+            "AI": {
+              "conclusion": "基于真实生物机制启发的噪声建模能更准确反映分子通信信道特性，序列级最大似然检测可大幅提升可靠性，但需权衡计算开销；该框架为生物启发的MC系统设计提供依据。",
+              "method": "搭建以酵母为载体的细胞间分子通信实验平台；将基因转录识别为主要噪声源并用泊松到达/离开的马尔可夫生灭过程建模，噪声表达用混合高斯分布拟合；在此模型上评估逐符号与序列传输两种方案下的最大似然检测BER。",
+              "motivation": "现有分子通信（MC）噪声刻画大多沿用无线通信文献中的方法，缺乏基于真实生物信号通路的噪声表征，因此需要更贴近实际的噪声模型来设计信号检测策略。",
+              "relevance_reason": "论文属分子通信/生物信号检测方向，仅借用无线通信噪声概念，未涉及CSI获取、信道估计、反馈压缩或无线物理层AI方法。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "分子通信噪声建模",
+                "最大似然信号检测"
+              ],
+              "result": "适当调整检测阈值后逐符号检测误码率最低约10%，仍不可忽略；序列检测误码率可低至0.4%，但计算复杂度显著上升。",
+              "tldr": "论文基于酵母细胞实验平台研究分子通信中的噪声建模与信号检测，用马尔可夫生灭过程刻画基因转录噪声、混合高斯建模FUS1表达，并评估最大似然检测的误码率性能。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22416",
+            "authors": [
+              "Nikolaos Ntetsikas",
+              "Styliana Kyriakoudi",
+              "Antonis Kirmizis",
+              "Ioannis Krikidis",
+              "Ian F. Akyildiz",
+              "Marios Lestas"
+            ],
+            "categories": [
+              "cs.IT",
+              "cs.ET"
+            ],
+            "comment": null,
+            "id": "2611.22416",
+            "pdf": "https://arxiv.org/pdf/2611.22416",
+            "summary": "A critical aspect of Molecular Communications (MC) is the implementation of signal detection policies amidst noise. To date, noise characterizations within the MC field have predominantly drawn from methodologies found in wireless communications literature. In this study, we diverge from existing MC research by utilizing a newly developed experimental platform that employs yeast, allowing us to consider more realistic noise characterizations based on the relevant signaling pathways. We propose suitable signal detection mechanisms tailored to this experimental setup, which focuses on yeast cell-to-cell communications. Our analysis identifies gene transcription as the primary source of noise, and we utilize a Markov birth-death process model with Poisson arrivals and departures to characterize it. The noisy expression of the FUS1 gene is best represented using a mixed Gaussian distribution model. This model serves as a foundation for evaluating the performance of Maximum Likelihood Detection mechanisms in terms of Bit Error Rate (BER) for both symbol-by-symbol and sequence transmission schemes. Error analysis indicates that appropriate adjustments to the signal threshold can reduce errors to as low as 10%, which is not negligible. In contrast, the detection of symbol sequences demonstrates enhanced error performance, achieving error rates as low as 0.4%, albeit at the cost of increased computational complexity.",
+            "title": "Noise Characterization and Robust Signal Detection in Yeast Pheromone Molecular Communication"
+          },
+          "key": "186004e165fd6bc13f76ab50899bf59a2289076604ab4822441bb08b39afca3e"
+        },
+        "2611.22441": {
+          "item": {
+            "AI": {
+              "conclusion": "Craig 格为球码构造与译码提供了兼具理论保证与实用算法的方案，其亲吻数增长规律仍为开放问题。",
+              "method": "基于 Craig 格 $A_{p-1}^k$ 的代数/数论结构设计多项式时间列表译码算法；分析 Bacher 下界的渐近紧性；并开发高效亲吻数枚举算法进行数值计算。",
+              "motivation": "Craig 格在相对维度下具有超多项式亲吻数，是构造球码的理想候选，但缺乏高效译码算法与对其亲吻数的精确刻画。",
+              "relevance_reason": "该文属格理论/编码数学，聚焦格亲吻数与球码列表译码，未涉及 CSI 获取、信道估计、CSI 反馈压缩或无线物理层 AI，与研究画像无实质关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "得到 $45^\\circ$ 以内角度距离的多项式时间列表译码器；证明 Bacher 下界在 $k=o(\\log p/\\log\\log p)$ 下渐近紧；计算至维度 521 的亲吻数并提出 $e^{\\Theta(\\sqrt{n})}$ 增长猜想。",
+              "tldr": "该论文为 Craig 格 $A_{p-1}^k$ 构造了角度距离小于 $45^\\circ$ 的多项式时间列表译码器，证明 Bacher 的亲吻数下界在 $k=o(\\log p/\\log\\log p)$ 时渐近紧，并给出高效亲吻数计算算法（维度达 521），提出亲吻数是否按 $e^{\\Theta(\\sqrt{n})}$ 增长的开放问题。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22441",
+            "authors": [
+              "Léo Ducas",
+              "Julian Nowakowski",
+              "Ailsa Robertson"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.22441",
+            "pdf": "https://arxiv.org/pdf/2611.22441",
+            "summary": "Craig's lattices $A_{p-1}^k$ are a family of lattices with large kissing numbers, i.e., relative to their dimension $n = p-1$, they contain a large number of shortest nonzero vectors. Specifically, for small $k = o(\\log p / \\log \\log p)$, a lower bound of Bacher (2015) shows that $A_{p-1}^k$ has a super-polynomial kissing number of $\\omega(n^k)$. Craig's lattices are therefore attractive candidates for the construction of spherical codes. In this work, we introduce a polynomial-time list decoder for spherical codes obtained from Craig's lattices for angular distance below $45^\\circ$. Our second main result shows that Bacher's lower bound is asymptotically tight for $k = o(\\log p / \\log \\log p)$. Finally, we introduce an efficient algorithm for computing the kissing number of $A_{p-1}^k$. Using this algorithm, we compute their kissing number in dimensions up to 521. Based on this data, we pose the open question whether the kissing number of $A_{p-1}^k$ with $k \\approx \\sqrt{p}$ grows like $e^{\\Theta(\\sqrt{n})}$ in dimension $n=p-1$. Concurrent work by Laarhoven and Kominers as well as Bennett, Hhan, Li and Stephens-Davidowitz proves such a bound for very closely related lattices.",
+            "title": "On the Kissing Number of Craig's Lattice and Spherical List Decoding"
+          },
+          "key": "5c7a3998aa60598f1c700121a2e5b2c367ad288b97f7d153bbdf250886f4a9bf"
+        },
+        "2611.22526": {
+          "item": {
+            "AI": {
+              "conclusion": "该边沿合成次谐波 mixer-first 架构在宽带上同时实现高线性度与较低功耗，证明半频LO驱动N-path开关可在不发生增益惩罚的前提下实用化。",
+              "method": "采用边沿合成技术从半频、50%占空比时钟生成N-path开关驱动；基带采用反相器型差分放大器，以背栅反馈线性化，增益由工艺定义的电容比确定，无需额外元件与功耗；22 nm FD-SOI 工艺实现原型。",
+              "motivation": "次谐波混频（LO半频）可降低LO功耗与自混频问题，但传统50%占空比时钟驱动开关会带来增益损失；需要一种既保留半频LO优势又不损失转换增益的架构。",
+              "relevance_reason": "该文为纯射频接收机电路设计论文，不涉及CSI获取、信道估计、反馈压缩或物理层AI方法。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "1–10 GHz内转换增益12.8–18.1 dB，噪声系数5.7–11 dB，带外IIP3最高15.4 dBm，功耗16.7–22.3 mW。",
+              "tldr": "提出一种1–10 GHz次谐波 mixer-first 接收机，用边沿合成由半频50%占空比时钟驱动N-path开关，避免谐波混频增益损失；自校准基带放大器用背栅反馈线性化，并以工艺电容比设定增益。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22526",
+            "authors": [
+              "Eric Danson",
+              "Jeffrey S. Walling"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "4 pages, 10 figures, 1 Table",
+            "id": "2611.22526",
+            "pdf": "https://arxiv.org/pdf/2611.22526",
+            "summary": "A 1-10 GHz subharmonic mixer-first receiver using edge combining to drive N-path switches from 50% duty-cycle clocks at half the local oscillator (LO) frequency avoids the gain penalty of harmonic mixing. Inverter-based differential baseband amplifiers with back-gate feedback linearization set their gain by process-defined capacitance ratios, using no additional components and consuming no additional power. A 22 nm fully depleted silicon on insulator (FD-SOI) prototype receiver achieves a conversion gain of 12.8-18.1 dB and a noise figure of 5.7-11 dB across the band. It achieves up to 15.4 dBm out-of-band IIP3 while consuming 16.7-22.3 mW.",
+            "title": "Edge-Combining Subharmonic Mixer-First Receiver"
+          },
+          "key": "d8fb4d5688e7bfb519d0abd00c357e54449e3a21ac75b842076b7a00bbe84912"
+        },
+        "2611.22548": {
+          "item": {
+            "AI": {
+              "conclusion": "扩散先验分布选择与时间相关性的利用对MIMO信道估计与联合恢复至关重要，似然引导与免重训练复用提升了实用性。",
+              "method": "采用标准与score-based扩散模型（高斯与α稳定先验），以观测似然引导反向扩散过程；利用location-scale族性质实现单模型复用免重训练；盲MIMO场景对图像与信道分别建模并融合；比较独立重建与时序重建。",
+              "motivation": "现有扩散模型多依赖高斯分布假设，难以刻画重尾信道数据；同时信道的时间相关性在扩散重建中尚未被充分利用。",
+              "relevance_reason": "该文将扩散模型与似然引导用于MIMO信道估计和盲联合恢复，并处理重尾衰落与时间相关性，与CSI获取和生成式信道重建高度契合。",
+              "relevance_score": 5,
+              "relevance_topics": [
+                "扩散模型信道估计",
+                "MIMO信道重建",
+                "score-based生成先验",
+                "似然引导逆问题",
+                "重尾/α稳定衰落",
+                "时序信道预测"
+              ],
+              "result": "时序重建在时变信道模型下改善信道估计与图像重建质量；对重尾信道数据，α稳定扩散先验优于高斯先验。",
+              "tldr": "研究高斯与对称α稳定衰落信道下基于扩散模型的信道估计与联合图像-信道恢复，通过观测似然引导反向扩散，并利用时间相关性提升估计性能。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22548",
+            "authors": [
+              "Rawad Kansoh",
+              "Bahaa Ammoury",
+              "Charbel Hannoun",
+              "Jihad Fahs",
+              "Ibrahim Abou-Faycal"
+            ],
+            "categories": [
+              "eess.SP",
+              "cs.LG"
+            ],
+            "comment": "14 pages, 10 figures",
+            "id": "2611.22548",
+            "pdf": "https://arxiv.org/pdf/2611.22548",
+            "summary": "Diffusion models have emerged as powerful tools for learning complex data distributions and solving inverse problems. However, most diffusion models rely on the Gaussian distribution, which does not accurately represent heavy-tailed data. In this work, we study diffusion-based reconstruction under Gaussian and symmetric $\\alpha$-stable fading channels, while also exploring the benefits of using possible temporal dependence in the channel. We consider two variants: pilot-based channel-only estimation and joint image-channel recovery for MIMO systems. Our approach is based on several standard and score-based diffusion models for both Gaussian and $\\alpha$-stable distributions. We refine these models by guiding the reverse diffusion process using the observation likelihood and show how a single trained diffusion model can be reused for the location-scale family of distributions without retraining. In blind MIMO recovery, separate diffusion models are used for the image and channel, and their estimates are combined through likelihood guidance. For each setting, we compare independent and temporal reconstruction, where information from previous observations is used to improve the estimation. We show that, under a time-dependent channel model, such a temporal reconstruction improves channel estimation and the quality of the reconstructed image. Finally, we show that, for the same heavy-tailed channel data, using an $\\alpha$-stable diffusion prior provides better channel estimation and image reconstruction than using a Gaussian diffusion prior.",
+            "title": "Temporal Diffusion Models for Joint Signal-Channel Estimation under Gaussian and $α$-Stable MIMO Channels"
+          },
+          "key": "ec80ad9735b491e158d5f98be846521259c1cb2546b26aa3bf141bd6a7d84504"
+        },
+        "2611.22559": {
+          "item": {
+            "AI": {
+              "conclusion": "GSP LLAF系列算法在无需噪声先验的情况下实现稳健图信号估计，具有低复杂度优势，可作为图结构信号处理的通用鲁棒滤波工具。",
+              "method": "以ln-cosh代价函数构造图自适应滤波，结合图移位/图拉普拉斯结构进行递归更新；并引入修正变步长策略平衡收敛速度与稳态精度。",
+              "motivation": "现有图信号自适应算法（GSP LMP需噪声先验、GSP Sign与GSP GMCC精度受限），需要在未知非高斯噪声（脉冲、alpha稳定、Cauchy、Laplace）下实现稳健估计。",
+              "relevance_reason": "论文涉及图信号处理与鲁棒自适应滤波（图上的最小ln-cosh代价、变步长），与基于图的信道知识建模/图神经网络在方法论上略有相通，但未涉及CSI、信道估计、反馈压缩或无线场景，仅是通用图信号估计算法。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "图信号处理",
+                "鲁棒自适应滤波（非高斯噪声）",
+                "变步长算法"
+              ],
+              "result": "在静态与时变图信号估计实验中，所提算法在Bernoulli-Gaussian脉冲噪声、alpha稳定、Cauchy和Laplace噪声下均表现出快速、稳定、稳健的估计性能，且计算复杂度低。",
+              "tldr": "提出基于最小ln-cosh的自适应滤波算法（GSP LLAF）及其变步长版本（GSP MVSS-LLAF），用于非高斯噪声下的图信号在线/离线估计。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22559",
+            "authors": [
+              "Chong Zhang",
+              "Haiquan Zhao"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "Accepted for publication in IEEE Transactions on Aerospace and Electronic Systems",
+            "id": "2611.22559",
+            "pdf": "https://arxiv.org/pdf/2611.22559",
+            "summary": "Currently, an increasing number of irregular signals are being defined within graph structures. This paper proposes a Least ln-cosh-based Adaptive Filtering for Graph Signal Processing (GSP LLAF) algorithm for offline/online graph signal estimation under various non-Gaussian noise conditions. Compared to the recently proposed Graph Adaptive Least Mean p-th Power (GSP LMP) algorithm, GSP LLAF eliminates the need for prior knowledge of the noise characteristics. Simultaneously, GSP LLAF addresses the limitation in estimation accuracy encountered by the Sign Algorithm for Graph Signal Processing (GSP Sign) and the Graph Signal Processing algorithm based on the Generalized Maximum Correntropy Criterion (GSP GMCC). Furthermore, the algorithm features low computational complexity and fast execution speed. To achieve a balance between convergence speed and estimation accuracy, a variable step-size variant, the Modified Variable Step-Size Least ln-cosh-based Adaptive Filtering Algorithm for Graph Signal Processing (GSP MVSS-LLAF), is proposed. In estimation experiments involving both static and time-varying graph signals, the proposed GSP LLAF and GSP MVSS-LLAF algorithms demonstrate fast, stable, and robust graph signal estimation performance under various non-Gaussian noise conditions, including Bernoulli-Gaussian (BG) modeled impulse noise, as well as alpha-stable, Cauchy, and Laplace distributions.",
+            "title": "Least ln-cosh-based adaptive filtering algorithm for graph signal processing"
+          },
+          "key": "1577f63c28022c031d7060969c5c117245904b0d06cf178f6963681ee8bdf60b"
+        },
+        "2611.22574": {
+          "item": {
+            "AI": {
+              "conclusion": "通过将阵列姿态视为可控感知自由度可缓解几何病态，旋转分集与选择性融合是提升干扰下DOA鲁棒性的有效途径。",
+              "method": "识别阵列流形与干扰子空间之间的两类几何病态条件；提出旋转分集范式，主动改变阵列姿态重构观测几何；实现Rotation-Enhanced Spatial Whitening and Normalized MUSIC框架，在多个旋转角下独立做DOA估计并选择性融合可靠估计。",
+              "motivation": "固定阵列配置下，DOA估计精度强烈依赖SOI入射方向，某些方向误差严重，其物理机理不明；作者希望阐明几何病态来源并突破算法层面无法克服的观测几何限制。",
+              "relevance_reason": "属阵列信号处理/DOA估计与抗干扰问题，与传统MUSIC类方法相关，但无AI方法、且不涉及CSI获取、反馈压缩或信道知识建模。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "阵列信号处理",
+                "DOA估计",
+                "子空间方法(MUSIC)",
+                "抗干扰/几何病态"
+              ],
+              "result": "仿真表明在固定阵列SWN-MUSIC原本估计较差的入射方向上精度显著提升，同时保持良态方向性能，DOA估计更鲁棒。",
+              "tldr": "该文针对干扰环境下GNSS类信号的DOA估计，指出阵列流形与干扰子空间存在两类几何病态条件，提出\"旋转分集\"范式将阵列姿态作为可控感知资源，并设计Rotation-Enhanced SWN-MUSIC在多旋转角下独立估计并选择性融合可靠结果。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22574",
+            "authors": [
+              "Jiyao Jiang",
+              "Xiaowei Cui",
+              "Gang Liu",
+              "Sihao Zhao",
+              "Mingquan Lu"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.22574",
+            "pdf": "https://arxiv.org/pdf/2611.22574",
+            "summary": "In jamming environments, accurate direction-of-arrival (DOA) estimation for Global Navigation Satellite System (GNSS)-like signals using antenna arrays is crucial for spoofing detection and subsequent countermeasures. However, estimation accuracy strongly depends on the incident direction of the signal of interest (SOI) under a given jamming and array configuration, with severe errors occurring in certain directions---a phenomenon whose physical mechanisms remain unclear. To address this gap, we identify two types of geometric ill-conditions between the array manifold and the jamming subspace, clarifying that certain directions suffer from inherently unfavorable observation geometry, which cannot be overcome by algorithmic refinement alone. Motivated by this insight, we introduce a paradigm namely rotational diversity, which treats the array attitude as a controllable sensing resource to actively reconfigure the observation geometry, thereby providing complementary perspectives in which the problematic directions can be accurately estimated. To implement this paradigm, we develop a Rotation-Enhanced Spatial Whitening and Normalized Multiple Signal Classification (SWN-MUSIC) framework, which performs independent DOA estimations across multiple rotation angles and selectively integrates reliable estimates. Simulation results demonstrate substantial improvement in accuracy in the directions that were poorly estimated under the fixed-array SWN-MUSIC, while maintaining performance in well-conditioned directions, thereby producing more robust DOA estimates.",
+            "title": "Robust DOA Estimation for GNSS-like Signals Under Jamming: A Rotation-Enhanced SWN-MUSIC Approach"
+          },
+          "key": "a4649c8e1350173a5ee111458395a369de63503a986dcb4d0ce0a8157f819614"
+        },
+        "2611.22587": {
+          "item": {
+            "AI": {
+              "conclusion": "该工作为可逆线性码、可逆DNA码与右多循环码提供了统一且更优的代数构造框架，扩展了MDS码与自对偶/LCD码的构造范围。",
+              "method": "提出 $T_{D,g}^n$-集构造技术；采用基于拼接的构造处理自对偶与线性互补对偶(LCD)条件并给出充要条件；引入 $(n_1,c_1|n_2,c_2)$-右多循环码概念并设计相应构造方法，覆盖任意有限交换环。",
+              "motivation": "改进Oztas等人的 $T^n$-集构造，在码参数上获得更好的可逆MDS码，并系统研究可逆线性码、可逆DNA码及右多循环码的构造与对偶性质。",
+              "relevance_reason": "论文属编码理论的代数构造研究（可逆码、DNA码、多循环码），与无线CSI获取、信道估计、CSI反馈压缩或无线AI方法无直接关联。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "所提技术产生大量参数显著优于现有 $T^n$-集构造的可逆MDS码；并得到满足自对偶与LCD性质的可逆线性码的充要条件，以及在有限交换环上参数良好的可逆右多循环码（MDS码）。",
+              "tldr": "该论文提出 $T_{D,g}^n$-集的构造技术，用于可逆线性码和可逆DNA码，得到大量参数更优的可逆MDS码，并给出基于拼接的自对偶与LCD码构造及 $(n_1,c_1|n_2,c_2)$-右多循环码的新概念。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22587",
+            "authors": [
+              "Avanish Kumar Chaturvedi",
+              "Satyadeep Pandey"
+            ],
+            "categories": [
+              "cs.IT",
+              "math.RA"
+            ],
+            "comment": null,
+            "id": "2611.22587",
+            "pdf": "https://arxiv.org/pdf/2611.22587",
+            "summary": "In this paper we give a construction technique of $T_{D,g}^n-$set for reversible linear codes and reversible DNA codes with their code parameters. This technique yields many reversible MDS codes which significantly improves the $T^n-$set construction by Oztas this http URL. in terms of obtained code parameters. Concatenation-based constructions are presented for reversible linear codes satisfying self-duality and linear complementary dual (LCD) conditions, giving necessary and sufficient condition for desired dual properties. We introduce a new notion of $(n_1,c_1|n_2,c_2)-$ right polycyclic codes. Also, a new construction technique is developed to obtain reversible linear $(n_1,c_1|n_2,c_2)-$ right polycyclic codes with good parameters (MDS codes) over any finite commutative rings.",
+            "title": "Constructions of reversible linear and DNA codes through $T_{D,g}^n-$set and $(n_1,c_1|n_2,c_2)-$right polycyclic codes"
+          },
+          "key": "609c61daec6efe7aae9e1c77ee0340441985867ef3ba9148bdf5ade56c8a6113"
+        },
+        "2611.22617": {
+          "item": {
+            "AI": {
+              "conclusion": "权重3是覆盖半径问题复杂度的精确阈值，揭示了稀疏LDPC类校验矩阵上该问题的内在计算难度。",
+              "method": "采用有界出现的量化布尔公式（quantified-SAT）归约，并借助3-正则图上的顶点覆盖问题构造显式NP-hard近似因子。",
+              "motivation": "覆盖半径是编码理论的核心参数，但对其在稀疏（低密度）校验矩阵上的计算复杂度缺乏精细刻画，尤其是权重约束下硬度阈值不明。",
+              "relevance_reason": "该文为编码理论中的计算复杂度研究，未涉及CSI获取、信道估计或AI方法，与研究方向几乎无关。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "证明行列最大权重为3时覆盖半径判定为Π₂^P-完全，且在常数乘性间隙下保持Π₂^P-难；给出NP-hard近似下界；证明行或列最大权重≤2时多项式时间可计算。",
+              "tldr": "该论文研究稀疏奇偶校验矩阵（行列权重有界）下的覆盖半径判定问题，用有界出现量化SAT归约证明最大行列权重为3时该问题为Π₂^P-完全，并在常数乘性间隙下仍Π₂^P-难；权重2时多项式可解，故权重3为精确硬度阈值。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22617",
+            "authors": [
+              "Massimo Battaglioni",
+              "Fabrizio Marinelli"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.22617",
+            "pdf": "https://arxiv.org/pdf/2611.22617",
+            "summary": "Given a binary parity-check matrix $H$ and an integer $r$, the covering-radius decision problem asks whether every attainable syndrome can be represented by an error vector of Hamming weight at most $r$. We study this problem for sparse parity-check matrices with bounded row and column weights. Using a bounded-occurrence quantified-SAT reduction, we prove that the problem is $\\Pi_2^{\\mathrm P}$-complete for matrices with maximum row and column weight three, and remains $\\Pi_2^{\\mathrm P}$-hard under a constant multiplicative gap. Starting from Vertex Cover on 3-regular graphs, we also obtain an explicit NP-hard approximation factor under the same weight constraints. We remark that weight three is the exact threshold for hardness: if either the maximum row weight or the maximum column weight is at most two, the covering radius can be computed in polynomial time.",
+            "title": "Hardness and Inapproximability of the Covering Radius for LDPC Codes"
+          },
+          "key": "15ba307aff4eb8ae6f2556f1d988a35b9534b10de54944ed4d7090ed278e92a9"
+        },
+        "2611.22752": {
+          "item": {
+            "AI": {
+              "conclusion": "完整参考下的增益定位于特定压力模型下的空间处理环节；实际效用需同时用解码准确率与一致性来评估。",
+              "method": "基于测量算子理论，区分坐标敏感、输出通道扰动和电极丢失；以精确伪逆对齐作一致性控制；提出测量算子规范化MOC（图-Tikhonov估计器）；在Cho2017与PhysioNet上用EEGNet、3个配对训练种子、3个共享噪声实现、6种前端做对比，并做Holm校正。",
+              "motivation": "EEG解码器会响应\"保持相对电位信息不变\"的参考变化，需要厘清这种敏感性的来源（坐标/通道扰动/电极丢失）并给出可控一致性评估。",
+              "relevance_reason": "论文属于EEG/脑机接口信号处理，与无线CSI获取、信道估计、反馈压缩无任何关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "10 dB输出扰动下MOC-raw不一致度差为-0.144/-0.107，平衡准确率差为0.044/0.050，四个对比均通过Holm校正；MOC在三个种子上均降低不一致度，但与伪逆后固定图平滑相比未显示额外收益；保留零参考行影响<0.001。",
+              "tldr": "该文研究EEG解码器对参考电位变化的敏感性，用测量算子理论区分坐标敏感性、输出通道扰动与电极丢失，提出图-Tikhonov的测量算子规范化(MOC)估计器，并在三个运动想象数据集、四个解码器上评估。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22752",
+            "authors": [
+              "Runni Zhou",
+              "Rongrong Fu",
+              "Xinghao Yan",
+              "Xiaoyang Li"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "45 pages including supplementary material; 5 figures in the main text. Data and code included as ancillary material",
+            "id": "2611.22752",
+            "pdf": "https://arxiv.org/pdf/2611.22752",
+            "summary": "Electroencephalography (EEG) decoders can respond to reference changes that preserve all relative-potential information. We use established measurement-operator theory to distinguish coordinate sensitivity, additional output-channel perturbations, and electrode loss. Exact pseudoinverse alignment supplies a consistency control; measurement-operator canonicalization (MOC) denotes a graph-Tikhonov estimator. The broader evaluation covers three public motor-imagery datasets and four decoders. The primary EEGNet comparison on Cho2017 and PhysioNet uses three paired training seeds, three shared noise realizations, and six front ends, with identical CAR training inputs sharing checkpoints. At 10 dB output perturbation, MOC-minus-raw disagreement was -0.144 and -0.107, while balanced-accuracy differences were 0.044 and 0.050, respectively; these four contrasts passed the retained Holm correction. MOC also reduced disagreement relative to pseudoinversion across all three seeds in both cohorts. However, comparison with fixed graph smoothing after pseudoinversion did not establish an additional MOC benefit. Preserving zero reference rows changed raw disagreement by less than 0.001 in magnitude; inverse-method predictions were unchanged. For canonical front ends, cross-reference disagreement was close to the reference obtained from independent noise within the same operator. Controlled weak-mode reconstruction and equal-rank electrode masks exposed separate stability and information-loss effects. The results locate the complete-reference gains within spatial processing under the specified stress model, while requiring decoding accuracy alongside consistency to assess practical utility.",
+            "title": "Reference Coordinates, Output Perturbations, and Information Loss in EEG Decoding"
+          },
+          "key": "91e8348ddc2f9fe8823527e8b2d2379671084363d6d23ac818bfea32edac692a"
+        },
+        "2611.22763": {
+          "item": {
+            "AI": {
+              "conclusion": "结构化USTM星座可在低复杂度下兼顾非相干与相干检测，并在不完美CSIR与相关信道下优于传统STBC，为MIMO空时调制提供实用设计。",
+              "method": "两层编码：非相干层区分Grassmann流形上的子空间，相干层区分各子空间对应的Stiefel基；推导利于顺序解码的矩阵结构，设计保持首层稀疏性的第二层星座，并给出比特标号规则。",
+              "motivation": "在既有稀疏结构Grassmannian信令基础上，为相干层（Stiefel代表）设计系统化星座，在保持稀疏性与低解码复杂度的同时实现可靠顺序解码和简单比特映射。",
+              "relevance_reason": "论文属MIMO空时调制与星座设计，不涉及CSI获取、重建、压缩或反馈，也无AI方法，仅在不完美CSIR场景与信道估计间接相关。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "MIMO空时调制",
+                "不完美CSIR",
+                "低复杂度解码"
+              ],
+              "result": "BER/SER仿真验证顺序解码的可靠性；在信道相关下性能平缓退化；在相干间隔有限、仅能估计不完美CSIR时，性能优于基于QAM/PSK的经典STBC方案。",
+              "tldr": "提出基于酉空时调制(USTM)的结构化星座设计，用于联合非相干/相干MIMO通信：第一层用Grassmann子空间、第二层用Stiefel基表示，两层顺序解码以降低复杂度。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22763",
+            "authors": [
+              "Álvaro Pendás-Recondo",
+              "Enrique Pendás-Recondo",
+              "Rafael González Ayestarán",
+              "Jesús Alberto López-Fernández",
+              "Ignacio Santamaria"
+            ],
+            "categories": [
+              "eess.SP",
+              "math.DG"
+            ],
+            "comment": "13 pages, 8 figures",
+            "id": "2611.22763",
+            "pdf": "https://arxiv.org/pdf/2611.22763",
+            "summary": "This work presents a novel structured constellation design based on unitary space-time modulation (USTM) for integrated noncoherent and coherent multiple-input multiple-output (MIMO) communications. Information is encoded into the sparse space-time matrices through two layers: a noncoherent layer that distinguishes points on the Grassmann manifold (subspaces) and a coherent layer that distinguishes among the Stiefel representatives associated with each of those points (bases for the subspaces). We consider sequential decoding of the two layers to reduce computational complexity, while explicitly identifying the matrix structures that favor this decoding strategy. The proposed constellation builds on a previous structured Grassmannian signaling design, which has the remarkable property of producing space-time matrices with a single nonzero entry per row, while introducing a novel systematic design for the second layer corresponding to the Stiefel representatives. The design of the second layer preserves the sparsity of the first layer and significantly reduces the decoding computational complexity, while ensuring reliable performance under sequential decoding and enabling a simple yet effective bit labeling, as validated by numerical results in terms of bit error rate (BER) and symbol error rate (SER). Numerical results also show graceful performance degradation under channel correlation and, for limited coherence intervals where channel state information at the receiver (CSIR) can be estimated only imperfectly, improved performance compared with classical space-time block coding (STBC) schemes based on QAM and PSK.",
+            "title": "Structured Design of Layered Sparse Unitary Space-Time Modulation for Integrated Noncoherent and Coherent MIMO Communications"
+          },
+          "key": "86b498be95871420e12cc8d7874340c1bb3fb18a7c92a9da4137d22d98b7ebd6"
+        },
+        "2611.22943": {
+          "item": {
+            "AI": {
+              "conclusion": "所提检验为复Wishart分布协方差矩阵的差异检测提供统计基础，适用于SAR数据处理。",
+              "method": "基于复Wishart分布构造差异检测的检验统计量，并给出相应的概率测度；通过仿真生成的复Wishart协方差矩阵进行分布验证。",
+              "motivation": "SAR数据的协方差矩阵表示常以复Wishart分布建模，缺乏对两个实例之间是否存在差异的统计检验工具。",
+              "relevance_reason": "该文属SAR统计检测，仅与协方差矩阵统计建模概念沾边，未涉及信道估计、CSI反馈/压缩或无线AI方法。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "复Wishart协方差矩阵统计",
+                "协方差矩阵差异检测"
+              ],
+              "result": "在无差异情形下，检验统计量与概率测度与理论预期分布一致。",
+              "tldr": "该文为复Wishart分布下的两样本差异检测提出检验统计量及其概率测度，并用生成的复Wishart协方差矩阵验证其在无差异情形下服从预期分布。"
+            },
+            "abs": "https://arxiv.org/abs/2611.22943",
+            "authors": [
+              "Allan A. Nielsen",
+              "Henning Skriver",
+              "Knut Conradsen"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "7 pages, 15 figures",
+            "id": "2611.22943",
+            "pdf": "https://arxiv.org/pdf/2611.22943",
+            "summary": "The complex Wishart distribution is used to describe synthetic aperture radar (SAR) data in the so-called covariance matrix representation. We give a test statistic for detection of differences between two instances in this distribution and an associated probability measure. Generated complex Wishart distributed covariance matrices are used to show that this test statistic and the probability measure in situations with no differences follow the expected distributions.",
+            "title": "Generation of Sample Complex Wishart Distributed Matrices and Change Detection in Polarimetric SAR Data"
+          },
+          "key": "f3909dfc9e814deeaeb099ff214efc106fffe4079f378f60d908505d487717e9"
+        },
+        "2611.23024": {
+          "item": {
+            "AI": {
+              "conclusion": "压缩不产生压缩前不存在的可区分性；在合理量化与去偏设计下，可在有限速率下逼近理想界，压缩感知的分离设计显著改善率-性能折衷。",
+              "method": "形式化压缩下的BSS可辨识性并给出数据处理视角结论；对一般协方差结构的高斯源混合推导基于率失真的理想CRLB（以干扰-源比衡量）；采用减法抖动量化配合融合中心去偏，构建四阶累积量与二阶统计量两类压缩感知分离算法。",
+              "motivation": "多传感器集中式推理场景中，链路速率/能量受限，无法传输原始观测，融合中心需从压缩后的混合信号恢复源信号；经典BSS理论未回答压缩下的可辨识性、性能界与算法修正问题。",
+              "relevance_reason": "涉及多设备压缩传输与集中式恢复、量化与率失真界，与CSI压缩/分布式获取有方法层面的相似性，但研究对象是盲源分离而非信道/CSI，缺少MIMO/OFDM等无线信道建模。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "分布式压缩传输",
+                "量化与率失真界",
+                "压缩感知/去偏",
+                "多节点融合中心处理"
+              ],
+              "result": "仿真给出通信速率与分离性能的权衡曲线，并显示压缩感知分离相较朴素方案在典型分布式感知场景中的增益。",
+              "tldr": "提出压缩混合信号下的分布式盲源分离（BSS）框架，从可辨识性、CRLB基准到压缩感知分离算法三个层面分析率-分离性能权衡。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23024",
+            "authors": [
+              "Amir Weiss"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.23024",
+            "pdf": "https://arxiv.org/pdf/2611.23024",
+            "summary": "Blind source separation (BSS) is increasingly needed in sensing architectures where mixtures are acquired by multiple remote devices but the inference itself is carried out centrally. In such systems, the sensors often cannot transmit their raw observations since the communication links are rate-limited, energy-limited, or both. The fusion center therefore must recover the latent sources from compressed versions of the mixtures. This setting raises questions that classical BSS models do not address directly: whether source identifiability survives compression, how separation accuracy changes under a specified compression model, and how the separation procedure should be modified to account for the statistical model induced by the compression stage. In this work, we develop a framework for distributed BSS from compressed mixtures that addresses these issues at three levels. First, we formalize identifiability under compression and establish a data-processing viewpoint showing that compression cannot introduce distinguishability that is absent before compression. Second, for mixtures of Gaussian sources with general covariance structures, we derive an idealized Gaussian rate-distortion-based Cramér-Rao lower bound benchmark for the interference-to-source ratio. Third, we develop practical compression-aware separation schemes based on subtractively dithered quantization together with debiasing at the fusion center for both fourth-order-cumulant-based and second-order-statistics-based methods. Simulation experiments demonstrate the resulting tradeoffs between communication rate and separation performance and the gains obtained by compression-aware separation in representative distributed sensing scenarios.",
+            "title": "Distributed Blind Source Separation from Compressed Mixtures"
+          },
+          "key": "85167962c7f8ef01f99699367c302ee2ede8aaf5ba6cb2080915e6b9cb9535eb"
+        },
+        "2611.23101": {
+          "item": {
+            "AI": {
+              "conclusion": "以轻量门控时序卷积替代循环结构，可在保持线性化性能的同时显著降低复杂度并支撑高采样率流式 DPD 的硬件部署。",
+              "method": "用 |x[n]|² 对特征通道做门控（瞬时功率门控），配合因果膨胀深度可分离卷积建模功放记忆效应；网络映射为空间展开的定点流水线，采用基于移位的二次激活与逐层混合精度，每通道每周期处理一个复样本。",
+              "motivation": "循环神经网络数字预失真（DPD）中相邻样本间的状态反馈制约了流式吞吐量，需要无状态反馈、低复杂度且可高效硬件化的模型结构。",
+              "relevance_reason": "该文聚焦功放数字预失真的硬件加速与轻量时序卷积实现，与 CSI 获取、信道重建、CSI 反馈压缩及信道知识建模等核心方向无直接关联。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "轻量卷积网络硬件加速",
+                "定点流水线与混合精度"
+              ],
+              "result": "算法复杂度 554 FLOP/复样本，较最优循环基线降低 30.1%；在三个功放及 40–320 MHz Wi-Fi 6/7 与 5G NR 波形上 ACPR 均值最低、EVM 排名第一或并列第一；四通道 FPGA 平台实现 -45.82 dBc ACPR、-42.94 dB EVM；单通道 12 nm FinFET ASIC 核面积 0.10 mm²、52 周期（40.63 ns）延迟、约 142.21 mW（111.10 pJ/样本），相对 22 nm 循环 DPD ASIC 吞吐量提升 5.1 倍、单样本能耗约为其七分之一。",
+              "tldr": "提出 StreamingDPD 硬件加速器，用 207 参数的瞬时功率门控深度可分离时序卷积网络（IPG-DWTCN）实现 320 MHz、1.28 GSa/s 的数字预失真流式处理，并给出 FPGA 与 12 nm ASIC 实现结果。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23101",
+            "authors": [
+              "Yizhuo Wu",
+              "Xinling Wang",
+              "Chang Gao"
+            ],
+            "categories": [
+              "eess.SP",
+              "cs.AR"
+            ],
+            "comment": null,
+            "id": "2611.23101",
+            "pdf": "https://arxiv.org/pdf/2611.23101",
+            "summary": "State feedback between successive samples limits the streaming throughput of recurrent neural networks for digital predistortion (DPD). We present StreamingDPD, an accelerator that processes 320-MHz signals at 1.28 GSa/s. Its 207-parameter instantaneous-power-gated depthwise temporal convolutional network (IPG-DWTCN) uses $|x[n]|^2$ to gate feature channels and causal dilated depthwise convolutions to model power amplifier memory. The network maps to a spatially unrolled fixed-point pipeline with shift-based quadratic activations and layer-wise mixed precision, sustaining one complex sample per cycle per lane. Its algorithmic cost is 554 floating-point operations per complex sample, 30.1% fewer than the recurrent baseline with the best linearization performance. In RF playback measurements on three power amplifiers driven by 40- to 320-MHz Wi-Fi 6/7 and 5G NR waveforms, IPG-DWTCN achieves the lowest mean adjacent-channel power ratio (ACPR) and ranks first or ties for first in mean error vector magnitude (EVM) against five neural baselines of comparable size. Four-lane FPGA hardware-in-the-loop tests on a 320-MHz 4096-QAM Wi-Fi 7 waveform achieve -45.82 dBc ACPR and -42.94 dB EVM at 1.28 GSa/s. At the same sample rate, post-layout evaluation of a single-lane 12-nm FinFET ASIC yields a 0.10 mm$^2$ core, a 52-cycle (40.63 ns) latency, and an estimated typical-corner power of 142.21 mW (111.10 pJ/sample). Relative to the prior 22-nm recurrent DPD ASIC, the design provides 5.1 times the throughput at about one-seventh the energy per sample.",
+            "title": "StreamingDPD: A 1.28-GSa/s Instantaneous-Power-Gated Depthwise TCN Accelerator for Real-Time 320-MHz Digital Predistortion"
+          },
+          "key": "ba605c1ddda8883ccb6aa93749963a84aaa47749c32fbdfb45953d48a606270a"
+        },
+        "2611.23116": {
+          "item": {
+            "AI": {
+              "conclusion": "最小熵估计的样本复杂度在经典与量子设定下均得到完整解决，为密码随机源的熵评估提供理论基准。",
+              "method": "理论分析：给出最小熵估计（加性误差 ε、置信度 1-δ）的样本复杂度上界构造与下界论证，分经典有限符号分布与量子态两种情形，推导紧的 Θ(·) 结果，并采用简洁证明。",
+              "motivation": "最小熵是衡量随机源不可预测性的核心指标，NIST SP 800-90B 将其作为密码随机位发生器熵源评测的关键程序，因此需要可靠的估计方法及其样本复杂度刻画。",
+              "relevance_reason": "该文属于量子信息/密码学中的熵估计理论，与无线CSI获取、信道估计、反馈压缩等研究无关。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "经典情形样本复杂度为 Θ(d log(d/δ)/ε²)；量子情形为 Θ((d²+d log(1/δ))/ε²)，均达到常数因子意义下的最优。",
+              "tldr": "该论文确定（classical 与 quantum）最小熵估计在高概率意义下的样本复杂度：经典 d 符号分布为 Θ(d log(d/δ)/ε²)，d 维量子态为 Θ((d²+d log(1/δ))/ε²)，并给出简短证明。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23116",
+            "authors": [
+              "Qisheng Wang"
+            ],
+            "categories": [
+              "cs.IT",
+              "math.ST",
+              "quant-ph"
+            ],
+            "comment": "9 pages",
+            "id": "2611.23116",
+            "pdf": "https://arxiv.org/pdf/2611.23116",
+            "summary": "Min-entropy plays a fundamental role in assessing the unpredictability of randomness sources. In particular, NIST SP 800-90B specifies min-entropy estimation as a key procedure for entropy sources used in cryptographic random bit generators, illustrating the practical importance of reliable min-entropy estimation. In this paper, we settle the sample complexity of min-entropy estimation with high probability in both the classical and quantum cases. Specifically, for min-entropy estimation with additive error $\\varepsilon$ and probability at least $1-\\delta$, the sample complexity is $\\Theta(d\\log(d/\\delta)/\\varepsilon^2)$ for classical distributions on $d$ symbols and $\\Theta((d^2+d\\log(1/\\delta))/\\varepsilon^2)$ for quantum states on a $d$-dimensional Hilbert space. Our results admit short and simple proofs.",
+            "title": "Optimal Min-Entropy Estimation with High Probability"
+          },
+          "key": "41abd58b19a6d2ced5e3e2369401e0317a4ad6a23e6ac4e33549c498c15e83a6"
+        }
+      },
+      "candidates": [
+        "2611.21781",
+        "2611.21888",
+        "2611.21913",
+        "2611.22019",
+        "2611.22100",
+        "2611.22184",
+        "2611.22221",
+        "2611.22322",
+        "2611.22416",
+        "2611.22441",
+        "2611.22526",
+        "2611.22548",
+        "2611.22559",
+        "2611.22574",
+        "2611.22587",
+        "2611.22617",
+        "2611.22752",
+        "2611.22763",
+        "2611.22943",
+        "2611.23024",
+        "2611.23101",
+        "2611.23116"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2611.21781": {
+          "abs": "https://arxiv.org/abs/2611.21781",
+          "authors": [
+            "Phat Lam",
+            "Hung Nguyen",
+            "Lam Pham",
+            "Huy Phan",
+            "Dat Tran",
+            "Ian McLoughlin",
+            "Roozbeh Razavi-Far",
+            "Hung Cao"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.AI"
+          ],
+          "comment": "IEEE journal manuscript under review",
+          "id": "2611.21781",
+          "pdf": "https://arxiv.org/pdf/2611.21781",
+          "summary": "Deep-learning methods have achieved strong performance in EEG artifact removal, but evaluation remains dominated by reconstruction metrics such as error, correlation, and signal-to-noise ratio. Although these metrics assess similarity to clean EEG, they do not establish whether models effectively suppress artifacts, preserve neural activity, or provide reliable explanations. To address these limitations, we propose TriX-EEG, a three-level framework for trustworthy and explainable EEG artifact removal. Level 1, Signal Validity (SV), evaluates reconstruction quality and neural band-power preservation. Level 2, Removal Faithfulness (RF), assesses the removed component through artifact error and residual artifact/neural leakage. Level 3, Explanation Reliability (ER), examines model behavior through temporal alignment, causal relevance, and stability. We evaluate TriX-EEG using nine published neural denoisers across three public benchmarks derived from EEGDenoiseNet and the PhysioNet Motion Artifact Contaminated EEG Dataset, covering EOG, EMG, and motion artifacts. Results show that reconstruction metrics alone are insufficient for trustworthy denoiser assessment: RF complements it by revealing whether errors stem from residual artifact or suppressed neural activity, while ER captures distinct aspects of explanation behavior, supporting joint evaluation of three aspects within a unified framework rather than reliance on any single factor. External validation on an independent EEG/EOG dataset and the BCI Competition IV-2a motor-imagery dataset further demonstrates broadly consistent rankings under dataset shift. Higher-ranked denoisers generally preserve more task-relevant information or cause less downstream performance degradation. Overall, TriX-EEG provides a comprehensive basis for EEG denoiser assessment, encouraging models that are not only accurate but also faithful and explainable.",
+          "title": "Beyond Reconstruction: A Unified Framework for Trustworthy and Explainable EEG Artifact Removal Evaluation"
+        },
+        "2611.21888": {
+          "abs": "https://arxiv.org/abs/2611.21888",
+          "authors": [
+            "Phlippe Gaborit",
+            "Philippe Lebacque"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.21888",
+          "pdf": "https://arxiv.org/pdf/2611.21888",
+          "summary": "Binary quadratic residue (QR) codes, introduced by Prange in 1958, are cyclic codes of prime length $p\\equiv\\pm1\\pmod 8$ and dimension $(p+1)/2$ whose minimum distance satisfies the square-root bound $d\\ge\\sqrt p$. They include the Hamming code $[7,4,3]$ and the Golay code $[23,12,7]$, and were generalized by van Lint and MacWilliams to generalized quadratic residue (GQR) codes of prime-power length $q$, for which the bound $d\\ge\\sqrt q$ still holds and is attained when $q$ is a square. In coding theory, one usually first finds a lower bound on the minimum distance of a family of codes, and then a polynomial-time algorithm decoding up to half of this bound, as for BCH, Reed--Muller or Gabidulin codes. Until now, GQR codes had resisted this approach: no such algorithm was known, apart from individual short lengths. We give a deterministic algorithm which, for every odd prime power $q\\equiv\\pm1\\pmod 8$, corrects every error pattern of weight at most $\\lfloor(\\sqrt q-1)/2\\rfloor$ in the binary GQR code of length $q$, in $O(q^{9/2})$ operations in $\\F_q$. We start from a description of QR codes due to Helleseth, which we extend to GQR codes, and in which the syndrome gives the values of the quadratic character of the error-locator polynomial. We then recover this polynomial by adapting to GQR codes the tools that Kopparty developed for recovering polynomials from noisy character values, with the decoding of dual BCH codes as an application. Since the square-root bound is attained when $q$ is a square, this radius is the largest that can be guaranteed uniformly on the class of GQR codes.",
+          "title": "A polynomial-time decoding algorithm up to half the square-root bound for quadratic residue and generalized quadratic residue codes"
+        },
+        "2611.21913": {
+          "abs": "https://arxiv.org/abs/2611.21913",
+          "authors": [
+            "Simon R. Blackburn"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.CO"
+          ],
+          "comment": "22 pages",
+          "id": "2611.21913",
+          "pdf": "https://arxiv.org/pdf/2611.21913",
+          "summary": "Non-overlapping codes (also known as bifix-free codes or strong comma-free codes) have now been studied for over 60 years as part of information theory, with regular new applications appearing and much recent interest. Let $X$ be a binary non-overlapping code of length $n$. The paper contains a self-contained proof that \\[ |X|\\leq \\left(\\frac{5}{6e} +O(n^{-1})\\right)\\frac{2^n}{n} \\] as $n\\rightarrow\\infty$. This improves, by a factor of $5/6$, the best previously known bound due to Levenshtein (1970). The paper builds on work by Fimmel, Michel, Pirot, Sereni and Strüngmann (2019), and by Stanovnik, Mo\\v skon and Mraz (2024).",
+          "title": "An upper bound on non-overlapping codes"
+        },
+        "2611.22019": {
+          "abs": "https://arxiv.org/abs/2611.22019",
+          "authors": [
+            "Muhammed Fatih Balın"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.AI",
+            "cs.AR",
+            "cs.LG"
+          ],
+          "comment": "38 pages, 6 figures, 27 tables",
+          "id": "2611.22019",
+          "pdf": "https://arxiv.org/pdf/2611.22019",
+          "summary": "We propose Computed Permutation Trellis Coding (CPTC), a low-bit quantization format for tensors written once and read many times. Formats that round each value on its own, such as INT4 and FP4, waste a large part of their bits against the information-theoretic ideal. Trellis codes recover this loss by encoding values jointly, but prior decoders either need a large lookup table for their best quality or compute values with a hash that restricts what they can decode. CPTC's decoder multiplies its state by two coefficients and adds the top bits of the products to index a 64-byte table. Because that sum is not uniformly distributed, the rarely used ends of a small table can hold values far out in the tails. One decoder serves every bit width from 1 to 6, reproduces the standard integer and floating-point formats exactly, and comes within 0.07 bits of the ideal at 4 bits. It matches a random-permutation trellis code whose table is thousands of times larger, and exceeds every QTIP codebook. In LLM weight quantization without fine-tuning, CPTC has the lowest KL divergence to the unquantized model at every tested bit width on Llama 3.1 8B and 70B Instruct against QTIP's codebooks (by up to 27%). The decoder has been built into the AWS Trainium 4 AI accelerator, where it runs at the throughput of the native FP4 and FP8 formats for a negligible fraction of the systolic array's area. Fused encoding kernels quantize an 8B model's linear layers in under two minutes on one GPU and, in cycle-level simulation, on one Trainium 4 chip.",
+          "title": "Computed Permutation Trellis Coding: Near-Optimal Quantization from Two Multiplications and a 64-Byte Table"
+        },
+        "2611.22100": {
+          "abs": "https://arxiv.org/abs/2611.22100",
+          "authors": [
+            "Christo Kurisummoottil Thomas"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.AI",
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.22100",
+          "pdf": "https://arxiv.org/pdf/2611.22100",
+          "summary": "Semantic communication (SC) systems transmit continuous latent representations of meaning, but computing the semantic encoder at resource-constrained edge devices incurs substantial energy and memory costs. To address this challenge, we propose an end-to-end SC framework that executes the semantic encoder in the client's RF receiver front end using analog RF computing. A base station (BS) broadcasts encoder weights as RF waveforms, while each edge device reuses its receiver's passive mixer to compute semantic latents at ultra-low energy. These latents are transmitted over the uplink for network-side task inference. We show that analog computing noise across encoder layers and channel noise affecting transmitted latents admit a unified mathematical model. We define a task-posterior semantic distortion metric and derive its second-order decomposition into per-client, per-stage semantic sensitivities. Using this decomposition, we obtain a closed-form semantic-aware water-filling allocation of the total client energy budget across clients, encoder layers, and uplinks, assigning tighter accuracy targets to semantically sensitive stages. This allocation induces a broadcast beamforming problem that accounts for client-specific, per-layer accuracy requirements. We further refine the allocation through stochastic optimization and jointly design it with multi-task noise-aware training of the shared semantic model. MNIST simulations show that, at matched total client energy, the proposed allocation reduces network semantic distortion by 9.2\\%-19.2\\% compared with uniform precision and 5.1\\%-13.1\\% compared with client-blind allocation. Noise-aware co-design yields a further 46\\% reduction.",
+          "title": "Semantic Communication via Analog RF Computing: When the Radio Computes the Meaning"
+        },
+        "2611.22184": {
+          "abs": "https://arxiv.org/abs/2611.22184",
+          "authors": [
+            "Jiaxu Liang",
+            "Zhuoran Li",
+            "Osamu Muta",
+            "Haruto Morokuma",
+            "Naohiro Ikeda",
+            "Takamasa Kitanouma"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.22184",
+          "pdf": "https://arxiv.org/pdf/2611.22184",
+          "summary": "For construction-site applications in multi-story buildings, accurate floor-level estimation is important for tracking workers, equipment, and Internet of Things (IoT) devices. In buildings under construction, communication infrastructure and power-supply facilities are often limited and the indoor environment changes as construction progresses, making localization systems that rely on dense wireless infrastructure or fingerprint databases difficult to deploy and maintain. Low-power wide-area (LPWA) communication can provide wide-area coverage with a small number of temporarily deployed access points (APs), but under sparse AP deployment, AP-to-terminal observations alone may provide insufficient floor-related information for reliable floor-level estimation. To address this problem, this paper develops a device-centric cooperative floor-level estimation method that exploits inter-terminal observations as relative floor-difference information to complement AP-side information. For practical application with limited measurement data, AP-to-terminal observations are represented by an upper/lower-AP RSS contrast, while inter-terminal observations are statistically modeled according to floor-difference classes. The resulting AP-side and pairwise scores are combined in a weighted floor-label objective and approximately optimized using dual-order sequential iterated conditional modes (ICM). Ray-tracing simulations and LoRa measurement experiments demonstrate the effectiveness of the proposed method under different AP deployments and terminal-selection limits.",
+          "title": "Device-Centric Cooperative Floor-Level Estimation under Sparse Anchor Deployment for Construction-Site Applications"
+        },
+        "2611.22221": {
+          "abs": "https://arxiv.org/abs/2611.22221",
+          "authors": [
+            "Yaozong Zhang",
+            "Sihem Mesnager",
+            "Xiaoqiang Wang",
+            "Jian Gao"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.22221",
+          "pdf": "https://arxiv.org/pdf/2611.22221",
+          "summary": "Local erasure recovery limits the number of physical systems accessed to repair a distributed quantum memory. For subsystem stabilizer codes (SSCs), a basic question is whether erasures can be corrected within a prescribed repair set. In this paper, we study subsystem stabilizer $(r,\\delta)$-locally recoverable codes ($(r,\\delta)$-SSLRCs), in which each coordinate belongs to a repair set of size between $\\delta$ and $r+\\delta-1$ that corrects any set of up to $\\delta-1$ erasures while preserving the logical subsystem and allowing the gauge subsystem to change. We first characterize local erasure recovery algebraically and apply this criterion to Calderbank-Shor-Steane (CSS) and Hermitian hull constructions for $(r,\\delta)$-SSLRCs. For $(r,\\delta)$-SSLRCs, without assuming purity, we derive a redundancy bound for disjoint repair sets, a supported-subspace bound based on supported stabilizer and gauge subspaces, and a mixed counting bound for known erasures within selected repair sets and errors at unknown positions outside their union. For pure $(r,\\delta)$-SSLRCs with overlapping repair sets, we establish the Singleton-type and alphabet-dependent bounds, together with explicit Griesmer, Hamming, and Plotkin bounds. Moreover, we construct nine classes of $\\F_q$-linear pure $(r,\\delta)$-SSLRCs from maximum distance separable (MDS) stabilizer codes, Reed-Solomon (RS) codes, and linear codes with MDS Hermitian hulls, which are simultaneously optimal with respect to several bounds for $(r,\\delta)$-SSLRCs.",
+          "title": "Subsystem Stabilizer $(r,δ)$-Locally Recoverable Codes: Characterization, Bounds and Constructions"
+        },
+        "2611.22322": {
+          "abs": "https://arxiv.org/abs/2611.22322",
+          "authors": [
+            "Songling Zhang",
+            "Zhaohui Yang",
+            "Ruopeng Xu",
+            "Hao Xu",
+            "Xusheng Zhu",
+            "Zhaoyang Zhang",
+            "Kai-Kit Wong"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted by IEEE GLOBECOM 2026",
+          "id": "2611.22322",
+          "pdf": "https://arxiv.org/pdf/2611.22322",
+          "summary": "In this paper, the problem of estimating the hardware impairment parameters of fluid antennas (FAs) in a multi-base station (BS) multi-user communication system is studied. The actual hardware coefficients are unknown, whereas the FA positions and transmit beamforming vectors adopted by the BSs are known. We first formulate a forward spectral efficiency (SE) maximization problem and introduce aggregate interference variables whose consistency with the physical inter-cell interference can be maintained through a pricing mechanism. For inverse estimation, the aggregate interference is obtained from receiver-side interference measurements associated with the observed network decisions. We then construct a trust-region linear model of the position-update problem around the observed FA positions. To extend the applicability of the proposed framework to antenna positions obtained from inexact or heuristic algorithms, we develop an inverse optimization model with an explicit duality-gap tolerance, which is solved using sequential quadratic programming (SQP). Simulation results show that the proposed scheme attains a lower estimation error than KKT residual minimization (KKT-RM) at both considered transmit-power levels and improves the SE by up to 22.86% over the Ideal-hardware-assumption scheme.",
+          "title": "Hardware Impairment Parameter Estimation in Fluid Antenna Systems by Inverse Optimization"
+        },
+        "2611.22416": {
+          "abs": "https://arxiv.org/abs/2611.22416",
+          "authors": [
+            "Nikolaos Ntetsikas",
+            "Styliana Kyriakoudi",
+            "Antonis Kirmizis",
+            "Ioannis Krikidis",
+            "Ian F. Akyildiz",
+            "Marios Lestas"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.ET"
+          ],
+          "comment": null,
+          "id": "2611.22416",
+          "pdf": "https://arxiv.org/pdf/2611.22416",
+          "summary": "A critical aspect of Molecular Communications (MC) is the implementation of signal detection policies amidst noise. To date, noise characterizations within the MC field have predominantly drawn from methodologies found in wireless communications literature. In this study, we diverge from existing MC research by utilizing a newly developed experimental platform that employs yeast, allowing us to consider more realistic noise characterizations based on the relevant signaling pathways. We propose suitable signal detection mechanisms tailored to this experimental setup, which focuses on yeast cell-to-cell communications. Our analysis identifies gene transcription as the primary source of noise, and we utilize a Markov birth-death process model with Poisson arrivals and departures to characterize it. The noisy expression of the FUS1 gene is best represented using a mixed Gaussian distribution model. This model serves as a foundation for evaluating the performance of Maximum Likelihood Detection mechanisms in terms of Bit Error Rate (BER) for both symbol-by-symbol and sequence transmission schemes. Error analysis indicates that appropriate adjustments to the signal threshold can reduce errors to as low as 10%, which is not negligible. In contrast, the detection of symbol sequences demonstrates enhanced error performance, achieving error rates as low as 0.4%, albeit at the cost of increased computational complexity.",
+          "title": "Noise Characterization and Robust Signal Detection in Yeast Pheromone Molecular Communication"
+        },
+        "2611.22441": {
+          "abs": "https://arxiv.org/abs/2611.22441",
+          "authors": [
+            "Léo Ducas",
+            "Julian Nowakowski",
+            "Ailsa Robertson"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.22441",
+          "pdf": "https://arxiv.org/pdf/2611.22441",
+          "summary": "Craig's lattices $A_{p-1}^k$ are a family of lattices with large kissing numbers, i.e., relative to their dimension $n = p-1$, they contain a large number of shortest nonzero vectors. Specifically, for small $k = o(\\log p / \\log \\log p)$, a lower bound of Bacher (2015) shows that $A_{p-1}^k$ has a super-polynomial kissing number of $\\omega(n^k)$. Craig's lattices are therefore attractive candidates for the construction of spherical codes. In this work, we introduce a polynomial-time list decoder for spherical codes obtained from Craig's lattices for angular distance below $45^\\circ$. Our second main result shows that Bacher's lower bound is asymptotically tight for $k = o(\\log p / \\log \\log p)$. Finally, we introduce an efficient algorithm for computing the kissing number of $A_{p-1}^k$. Using this algorithm, we compute their kissing number in dimensions up to 521. Based on this data, we pose the open question whether the kissing number of $A_{p-1}^k$ with $k \\approx \\sqrt{p}$ grows like $e^{\\Theta(\\sqrt{n})}$ in dimension $n=p-1$. Concurrent work by Laarhoven and Kominers as well as Bennett, Hhan, Li and Stephens-Davidowitz proves such a bound for very closely related lattices.",
+          "title": "On the Kissing Number of Craig's Lattice and Spherical List Decoding"
+        },
+        "2611.22526": {
+          "abs": "https://arxiv.org/abs/2611.22526",
+          "authors": [
+            "Eric Danson",
+            "Jeffrey S. Walling"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "4 pages, 10 figures, 1 Table",
+          "id": "2611.22526",
+          "pdf": "https://arxiv.org/pdf/2611.22526",
+          "summary": "A 1-10 GHz subharmonic mixer-first receiver using edge combining to drive N-path switches from 50% duty-cycle clocks at half the local oscillator (LO) frequency avoids the gain penalty of harmonic mixing. Inverter-based differential baseband amplifiers with back-gate feedback linearization set their gain by process-defined capacitance ratios, using no additional components and consuming no additional power. A 22 nm fully depleted silicon on insulator (FD-SOI) prototype receiver achieves a conversion gain of 12.8-18.1 dB and a noise figure of 5.7-11 dB across the band. It achieves up to 15.4 dBm out-of-band IIP3 while consuming 16.7-22.3 mW.",
+          "title": "Edge-Combining Subharmonic Mixer-First Receiver"
+        },
+        "2611.22548": {
+          "abs": "https://arxiv.org/abs/2611.22548",
+          "authors": [
+            "Rawad Kansoh",
+            "Bahaa Ammoury",
+            "Charbel Hannoun",
+            "Jihad Fahs",
+            "Ibrahim Abou-Faycal"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.LG"
+          ],
+          "comment": "14 pages, 10 figures",
+          "id": "2611.22548",
+          "pdf": "https://arxiv.org/pdf/2611.22548",
+          "summary": "Diffusion models have emerged as powerful tools for learning complex data distributions and solving inverse problems. However, most diffusion models rely on the Gaussian distribution, which does not accurately represent heavy-tailed data. In this work, we study diffusion-based reconstruction under Gaussian and symmetric $\\alpha$-stable fading channels, while also exploring the benefits of using possible temporal dependence in the channel. We consider two variants: pilot-based channel-only estimation and joint image-channel recovery for MIMO systems. Our approach is based on several standard and score-based diffusion models for both Gaussian and $\\alpha$-stable distributions. We refine these models by guiding the reverse diffusion process using the observation likelihood and show how a single trained diffusion model can be reused for the location-scale family of distributions without retraining. In blind MIMO recovery, separate diffusion models are used for the image and channel, and their estimates are combined through likelihood guidance. For each setting, we compare independent and temporal reconstruction, where information from previous observations is used to improve the estimation. We show that, under a time-dependent channel model, such a temporal reconstruction improves channel estimation and the quality of the reconstructed image. Finally, we show that, for the same heavy-tailed channel data, using an $\\alpha$-stable diffusion prior provides better channel estimation and image reconstruction than using a Gaussian diffusion prior.",
+          "title": "Temporal Diffusion Models for Joint Signal-Channel Estimation under Gaussian and $α$-Stable MIMO Channels"
+        },
+        "2611.22559": {
+          "abs": "https://arxiv.org/abs/2611.22559",
+          "authors": [
+            "Chong Zhang",
+            "Haiquan Zhao"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted for publication in IEEE Transactions on Aerospace and Electronic Systems",
+          "id": "2611.22559",
+          "pdf": "https://arxiv.org/pdf/2611.22559",
+          "summary": "Currently, an increasing number of irregular signals are being defined within graph structures. This paper proposes a Least ln-cosh-based Adaptive Filtering for Graph Signal Processing (GSP LLAF) algorithm for offline/online graph signal estimation under various non-Gaussian noise conditions. Compared to the recently proposed Graph Adaptive Least Mean p-th Power (GSP LMP) algorithm, GSP LLAF eliminates the need for prior knowledge of the noise characteristics. Simultaneously, GSP LLAF addresses the limitation in estimation accuracy encountered by the Sign Algorithm for Graph Signal Processing (GSP Sign) and the Graph Signal Processing algorithm based on the Generalized Maximum Correntropy Criterion (GSP GMCC). Furthermore, the algorithm features low computational complexity and fast execution speed. To achieve a balance between convergence speed and estimation accuracy, a variable step-size variant, the Modified Variable Step-Size Least ln-cosh-based Adaptive Filtering Algorithm for Graph Signal Processing (GSP MVSS-LLAF), is proposed. In estimation experiments involving both static and time-varying graph signals, the proposed GSP LLAF and GSP MVSS-LLAF algorithms demonstrate fast, stable, and robust graph signal estimation performance under various non-Gaussian noise conditions, including Bernoulli-Gaussian (BG) modeled impulse noise, as well as alpha-stable, Cauchy, and Laplace distributions.",
+          "title": "Least ln-cosh-based adaptive filtering algorithm for graph signal processing"
+        },
+        "2611.22574": {
+          "abs": "https://arxiv.org/abs/2611.22574",
+          "authors": [
+            "Jiyao Jiang",
+            "Xiaowei Cui",
+            "Gang Liu",
+            "Sihao Zhao",
+            "Mingquan Lu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.22574",
+          "pdf": "https://arxiv.org/pdf/2611.22574",
+          "summary": "In jamming environments, accurate direction-of-arrival (DOA) estimation for Global Navigation Satellite System (GNSS)-like signals using antenna arrays is crucial for spoofing detection and subsequent countermeasures. However, estimation accuracy strongly depends on the incident direction of the signal of interest (SOI) under a given jamming and array configuration, with severe errors occurring in certain directions---a phenomenon whose physical mechanisms remain unclear. To address this gap, we identify two types of geometric ill-conditions between the array manifold and the jamming subspace, clarifying that certain directions suffer from inherently unfavorable observation geometry, which cannot be overcome by algorithmic refinement alone. Motivated by this insight, we introduce a paradigm namely rotational diversity, which treats the array attitude as a controllable sensing resource to actively reconfigure the observation geometry, thereby providing complementary perspectives in which the problematic directions can be accurately estimated. To implement this paradigm, we develop a Rotation-Enhanced Spatial Whitening and Normalized Multiple Signal Classification (SWN-MUSIC) framework, which performs independent DOA estimations across multiple rotation angles and selectively integrates reliable estimates. Simulation results demonstrate substantial improvement in accuracy in the directions that were poorly estimated under the fixed-array SWN-MUSIC, while maintaining performance in well-conditioned directions, thereby producing more robust DOA estimates.",
+          "title": "Robust DOA Estimation for GNSS-like Signals Under Jamming: A Rotation-Enhanced SWN-MUSIC Approach"
+        },
+        "2611.22587": {
+          "abs": "https://arxiv.org/abs/2611.22587",
+          "authors": [
+            "Avanish Kumar Chaturvedi",
+            "Satyadeep Pandey"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.RA"
+          ],
+          "comment": null,
+          "id": "2611.22587",
+          "pdf": "https://arxiv.org/pdf/2611.22587",
+          "summary": "In this paper we give a construction technique of $T_{D,g}^n-$set for reversible linear codes and reversible DNA codes with their code parameters. This technique yields many reversible MDS codes which significantly improves the $T^n-$set construction by Oztas this http URL. in terms of obtained code parameters. Concatenation-based constructions are presented for reversible linear codes satisfying self-duality and linear complementary dual (LCD) conditions, giving necessary and sufficient condition for desired dual properties. We introduce a new notion of $(n_1,c_1|n_2,c_2)-$ right polycyclic codes. Also, a new construction technique is developed to obtain reversible linear $(n_1,c_1|n_2,c_2)-$ right polycyclic codes with good parameters (MDS codes) over any finite commutative rings.",
+          "title": "Constructions of reversible linear and DNA codes through $T_{D,g}^n-$set and $(n_1,c_1|n_2,c_2)-$right polycyclic codes"
+        },
+        "2611.22617": {
+          "abs": "https://arxiv.org/abs/2611.22617",
+          "authors": [
+            "Massimo Battaglioni",
+            "Fabrizio Marinelli"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.22617",
+          "pdf": "https://arxiv.org/pdf/2611.22617",
+          "summary": "Given a binary parity-check matrix $H$ and an integer $r$, the covering-radius decision problem asks whether every attainable syndrome can be represented by an error vector of Hamming weight at most $r$. We study this problem for sparse parity-check matrices with bounded row and column weights. Using a bounded-occurrence quantified-SAT reduction, we prove that the problem is $\\Pi_2^{\\mathrm P}$-complete for matrices with maximum row and column weight three, and remains $\\Pi_2^{\\mathrm P}$-hard under a constant multiplicative gap. Starting from Vertex Cover on 3-regular graphs, we also obtain an explicit NP-hard approximation factor under the same weight constraints. We remark that weight three is the exact threshold for hardness: if either the maximum row weight or the maximum column weight is at most two, the covering radius can be computed in polynomial time.",
+          "title": "Hardness and Inapproximability of the Covering Radius for LDPC Codes"
+        },
+        "2611.22752": {
+          "abs": "https://arxiv.org/abs/2611.22752",
+          "authors": [
+            "Runni Zhou",
+            "Rongrong Fu",
+            "Xinghao Yan",
+            "Xiaoyang Li"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "45 pages including supplementary material; 5 figures in the main text. Data and code included as ancillary material",
+          "id": "2611.22752",
+          "pdf": "https://arxiv.org/pdf/2611.22752",
+          "summary": "Electroencephalography (EEG) decoders can respond to reference changes that preserve all relative-potential information. We use established measurement-operator theory to distinguish coordinate sensitivity, additional output-channel perturbations, and electrode loss. Exact pseudoinverse alignment supplies a consistency control; measurement-operator canonicalization (MOC) denotes a graph-Tikhonov estimator. The broader evaluation covers three public motor-imagery datasets and four decoders. The primary EEGNet comparison on Cho2017 and PhysioNet uses three paired training seeds, three shared noise realizations, and six front ends, with identical CAR training inputs sharing checkpoints. At 10 dB output perturbation, MOC-minus-raw disagreement was -0.144 and -0.107, while balanced-accuracy differences were 0.044 and 0.050, respectively; these four contrasts passed the retained Holm correction. MOC also reduced disagreement relative to pseudoinversion across all three seeds in both cohorts. However, comparison with fixed graph smoothing after pseudoinversion did not establish an additional MOC benefit. Preserving zero reference rows changed raw disagreement by less than 0.001 in magnitude; inverse-method predictions were unchanged. For canonical front ends, cross-reference disagreement was close to the reference obtained from independent noise within the same operator. Controlled weak-mode reconstruction and equal-rank electrode masks exposed separate stability and information-loss effects. The results locate the complete-reference gains within spatial processing under the specified stress model, while requiring decoding accuracy alongside consistency to assess practical utility.",
+          "title": "Reference Coordinates, Output Perturbations, and Information Loss in EEG Decoding"
+        },
+        "2611.22763": {
+          "abs": "https://arxiv.org/abs/2611.22763",
+          "authors": [
+            "Álvaro Pendás-Recondo",
+            "Enrique Pendás-Recondo",
+            "Rafael González Ayestarán",
+            "Jesús Alberto López-Fernández",
+            "Ignacio Santamaria"
+          ],
+          "categories": [
+            "eess.SP",
+            "math.DG"
+          ],
+          "comment": "13 pages, 8 figures",
+          "id": "2611.22763",
+          "pdf": "https://arxiv.org/pdf/2611.22763",
+          "summary": "This work presents a novel structured constellation design based on unitary space-time modulation (USTM) for integrated noncoherent and coherent multiple-input multiple-output (MIMO) communications. Information is encoded into the sparse space-time matrices through two layers: a noncoherent layer that distinguishes points on the Grassmann manifold (subspaces) and a coherent layer that distinguishes among the Stiefel representatives associated with each of those points (bases for the subspaces). We consider sequential decoding of the two layers to reduce computational complexity, while explicitly identifying the matrix structures that favor this decoding strategy. The proposed constellation builds on a previous structured Grassmannian signaling design, which has the remarkable property of producing space-time matrices with a single nonzero entry per row, while introducing a novel systematic design for the second layer corresponding to the Stiefel representatives. The design of the second layer preserves the sparsity of the first layer and significantly reduces the decoding computational complexity, while ensuring reliable performance under sequential decoding and enabling a simple yet effective bit labeling, as validated by numerical results in terms of bit error rate (BER) and symbol error rate (SER). Numerical results also show graceful performance degradation under channel correlation and, for limited coherence intervals where channel state information at the receiver (CSIR) can be estimated only imperfectly, improved performance compared with classical space-time block coding (STBC) schemes based on QAM and PSK.",
+          "title": "Structured Design of Layered Sparse Unitary Space-Time Modulation for Integrated Noncoherent and Coherent MIMO Communications"
+        },
+        "2611.22943": {
+          "abs": "https://arxiv.org/abs/2611.22943",
+          "authors": [
+            "Allan A. Nielsen",
+            "Henning Skriver",
+            "Knut Conradsen"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "7 pages, 15 figures",
+          "id": "2611.22943",
+          "pdf": "https://arxiv.org/pdf/2611.22943",
+          "summary": "The complex Wishart distribution is used to describe synthetic aperture radar (SAR) data in the so-called covariance matrix representation. We give a test statistic for detection of differences between two instances in this distribution and an associated probability measure. Generated complex Wishart distributed covariance matrices are used to show that this test statistic and the probability measure in situations with no differences follow the expected distributions.",
+          "title": "Generation of Sample Complex Wishart Distributed Matrices and Change Detection in Polarimetric SAR Data"
+        },
+        "2611.23024": {
+          "abs": "https://arxiv.org/abs/2611.23024",
+          "authors": [
+            "Amir Weiss"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.23024",
+          "pdf": "https://arxiv.org/pdf/2611.23024",
+          "summary": "Blind source separation (BSS) is increasingly needed in sensing architectures where mixtures are acquired by multiple remote devices but the inference itself is carried out centrally. In such systems, the sensors often cannot transmit their raw observations since the communication links are rate-limited, energy-limited, or both. The fusion center therefore must recover the latent sources from compressed versions of the mixtures. This setting raises questions that classical BSS models do not address directly: whether source identifiability survives compression, how separation accuracy changes under a specified compression model, and how the separation procedure should be modified to account for the statistical model induced by the compression stage. In this work, we develop a framework for distributed BSS from compressed mixtures that addresses these issues at three levels. First, we formalize identifiability under compression and establish a data-processing viewpoint showing that compression cannot introduce distinguishability that is absent before compression. Second, for mixtures of Gaussian sources with general covariance structures, we derive an idealized Gaussian rate-distortion-based Cramér-Rao lower bound benchmark for the interference-to-source ratio. Third, we develop practical compression-aware separation schemes based on subtractively dithered quantization together with debiasing at the fusion center for both fourth-order-cumulant-based and second-order-statistics-based methods. Simulation experiments demonstrate the resulting tradeoffs between communication rate and separation performance and the gains obtained by compression-aware separation in representative distributed sensing scenarios.",
+          "title": "Distributed Blind Source Separation from Compressed Mixtures"
+        },
+        "2611.23101": {
+          "abs": "https://arxiv.org/abs/2611.23101",
+          "authors": [
+            "Yizhuo Wu",
+            "Xinling Wang",
+            "Chang Gao"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.AR"
+          ],
+          "comment": null,
+          "id": "2611.23101",
+          "pdf": "https://arxiv.org/pdf/2611.23101",
+          "summary": "State feedback between successive samples limits the streaming throughput of recurrent neural networks for digital predistortion (DPD). We present StreamingDPD, an accelerator that processes 320-MHz signals at 1.28 GSa/s. Its 207-parameter instantaneous-power-gated depthwise temporal convolutional network (IPG-DWTCN) uses $|x[n]|^2$ to gate feature channels and causal dilated depthwise convolutions to model power amplifier memory. The network maps to a spatially unrolled fixed-point pipeline with shift-based quadratic activations and layer-wise mixed precision, sustaining one complex sample per cycle per lane. Its algorithmic cost is 554 floating-point operations per complex sample, 30.1% fewer than the recurrent baseline with the best linearization performance. In RF playback measurements on three power amplifiers driven by 40- to 320-MHz Wi-Fi 6/7 and 5G NR waveforms, IPG-DWTCN achieves the lowest mean adjacent-channel power ratio (ACPR) and ranks first or ties for first in mean error vector magnitude (EVM) against five neural baselines of comparable size. Four-lane FPGA hardware-in-the-loop tests on a 320-MHz 4096-QAM Wi-Fi 7 waveform achieve -45.82 dBc ACPR and -42.94 dB EVM at 1.28 GSa/s. At the same sample rate, post-layout evaluation of a single-lane 12-nm FinFET ASIC yields a 0.10 mm$^2$ core, a 52-cycle (40.63 ns) latency, and an estimated typical-corner power of 142.21 mW (111.10 pJ/sample). Relative to the prior 22-nm recurrent DPD ASIC, the design provides 5.1 times the throughput at about one-seventh the energy per sample.",
+          "title": "StreamingDPD: A 1.28-GSa/s Instantaneous-Power-Gated Depthwise TCN Accelerator for Real-Time 320-MHz Digital Predistortion"
+        },
+        "2611.23116": {
+          "abs": "https://arxiv.org/abs/2611.23116",
+          "authors": [
+            "Qisheng Wang"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.ST",
+            "quant-ph"
+          ],
+          "comment": "9 pages",
+          "id": "2611.23116",
+          "pdf": "https://arxiv.org/pdf/2611.23116",
+          "summary": "Min-entropy plays a fundamental role in assessing the unpredictability of randomness sources. In particular, NIST SP 800-90B specifies min-entropy estimation as a key procedure for entropy sources used in cryptographic random bit generators, illustrating the practical importance of reliable min-entropy estimation. In this paper, we settle the sample complexity of min-entropy estimation with high probability in both the classical and quantum cases. Specifically, for min-entropy estimation with additive error $\\varepsilon$ and probability at least $1-\\delta$, the sample complexity is $\\Theta(d\\log(d/\\delta)/\\varepsilon^2)$ for classical distributions on $d$ symbols and $\\Theta((d^2+d\\log(1/\\delta))/\\varepsilon^2)$ for quantum states on a $d$-dimensional Hilbert space. Our results admit short and simple proofs.",
+          "title": "Optimal Min-Entropy Estimation with High Probability"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-11-18",
+          "complete": true,
+          "total": 31
+        },
+        "eess.SP": {
+          "announcement": "2026-11-18",
+          "complete": true,
+          "total": 31
+        }
+      },
+      "status": "prepared",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1794908485.3906667,
-    "next_allowed_at": 1794908500.3906667
+    "last_response_at": 1794992412.7535913,
+    "next_allowed_at": 1794992427.7535913
   },
   "version": 1
 }
