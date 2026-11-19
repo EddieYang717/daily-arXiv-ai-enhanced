@@ -91624,11 +91624,1731 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-11-19": {
+      "ai": {
+        "2611.23436": {
+          "item": {
+            "AI": {
+              "conclusion": "经优化的低复杂度模拟合并在近场波束聚焦中可逼近全数字性能，为6G+近场MIMO的网络级覆盖、容量与干扰分析提供可解析建模基础。",
+              "method": "推导解析合并器：ANF-AC采用相位翻转校正实现等增益合并，ANF-DC额外采用Dirichlet核幅度加权；并基于其解析性质推导最大化接收SNR的最优收发阵列尺寸折中闭式表达。",
+              "motivation": "近场MIMO中收端合并需在实现复杂度与性能之间折中，而阵列失配会破坏波束聚焦增益，缺乏可解析分析的合并方案。",
+              "relevance_reason": "属于近场MIMO波束聚焦的接收合并研究，但为经典解析信号处理而非AI方法，且不涉及信道估计、CSI获取或反馈压缩。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "近场MIMO",
+                "波束聚焦/接收合并",
+                "阵列失配"
+              ],
+              "result": "ANF-AC与最优EGC的SNR差距小于0.006 dB，ANF-DC与最优MRC匹配；优化后的模拟接收机性能距全数字MRC仅0.84 dB。",
+              "tldr": "该论文针对视距信道下阵列失配的近场波束聚焦接收，提出模拟ANF-AC与数字ANF-DC两种解析合并器，并给出最优收发阵列尺寸折中闭式解。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23436",
+            "authors": [
+              "Phinehas Chinthalagattu",
+              "Vitaly Petrov",
+              "Emil Björnson"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "7 pages, 5 figures, Submitted to IEEE ICC 2027",
+            "id": "2611.23436",
+            "pdf": "https://arxiv.org/pdf/2611.23436",
+            "summary": "This paper investigates receive combining for near-field beamfocusing in line-of-sight channels with antenna array misalignment. We propose and evaluate two analytical combiners: analog ANF-AC and digital ANF-DC. Beyond focusing the beam toward the transmitter, ANF-AC benefits from the proposed phase-flip corrections (PFCs), while ANF-DC additionally exploits Dirichlet-kernel-based amplitude tapering. ANF-AC closely matches theoretically optimal analog equal-gain combining (EGC), with an SNR gap below 0.006 dB. Similarly, ANF-DC matches optimal digital maximum-ratio combining (MRC). We then leverage the analytical properties of these combiners for link-level evaluation and optimization, deriving a closed-form expression for the optimal transmitter-receiver array-size trade-off that maximizes received SNR with analog combining. We also show that the optimized analog receiver performs within 0.84 dB of its fully digital MRC-equivalent counterpart. These results demonstrate that optimized analog combining (with potentially lower implementation complexity and cost, particularly at higher frequencies) can get close to the fully digital performance. Beyond the theoretical insights presented, the analytical tractability and EGC-like / MRC-like performance of our combiners enable accurate network-level mathematical studies of beamfocusing, such as coverage, capacity, and interference analysis and optimization toward efficient 6G+ near-field MIMO communication systems.",
+            "title": "How to Receive Focused Beams in Near-Field MIMO? Analytical Combiners and Array Size Optimization"
+          },
+          "key": "74ea8659cf670b401e1dc182f72a424cd90d31f4956ffc45a85fa8245bb1d5d7"
+        },
+        "2611.23494": {
+          "item": {
+            "AI": {
+              "conclusion": "FM 作为离线编排与监督层、轻量代理执行实时控制的架构在 6G RAN 中可行，但可靠性、开销与标准化问题待解。",
+              "method": "系统级框架设计：语言意图解析→子任务分解→MCP 接口协调任务专属代理→全生命周期监督；给出四个生命周期阶段的七个集成点与三种云到边部署对比；评估无线 FM 信道表示在噪声水平与信道估计误差偏移下的表现，并对编排闭环做插桩仿真测量意图到任务分发的开销。",
+              "motivation": "6G 无线接入网参数与服务激增，现有单任务 ML 模型泛化差、需专家重训，缺乏可复用的编排机制。",
+              "relevance_reason": "论文聚焦 6G RAN 的基础模型编排与网络控制代理，仅将无线 FM 信道表示作为鲁棒性检测对象，未涉及信道估计、CSI 反馈/压缩或信道重建等方法创新。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "无线基础模型",
+                "信道表示鲁棒性",
+                "6G RAN 智能编排"
+              ],
+              "result": "测得意图转分发的编排成本，并观察到无线 FM 信道表示在噪声与估计误差分布偏移下的性能变化；幻觉、成本与标准化仍是主要障碍。",
+              "tldr": "提出 FM-in-the-loop 框架：用基础模型（FM）解析运维意图、分解子任务，通过 MCP 接口编排轻量 ML 代理，FM 不进入时延关键控制回路；在七类集成点、三种云边部署下评估，测试无线 FM 的信道表示在噪声与信道估计误差漂移下的鲁棒性。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23494",
+            "authors": [
+              "Mohammad Ghassemi",
+              "Han Zhang",
+              "Akram Bin Sediq",
+              "Ali Afana",
+              "Melike Erol-Kantarci"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "7 pages, 3 figures, IEEE Communications Magazine",
+            "id": "2611.23494",
+            "pdf": "https://arxiv.org/pdf/2611.23494",
+            "summary": "Mobile networks are outgrowing manual tuning: parameters multiply, services diversify, and traffic shifts faster than experts can react. The machine learning (ML) models that automate radio control are narrow: each is trained for one task, degrades when conditions move, and needs specialist retraining. This article introduces FM-in-the-loop, a framework for 6G radio access networks in which a foundation model (FM) reasons while lightweight machine learning agents act. It reads operator intents in plain language, decomposes them into subtasks, coordinates task-specific agents over Model Context Protocol (MCP) interfaces, and supervises them across their lifecycle---while the orchestration FM never enters the latency-critical control path. We locate seven integration points across four lifecycle stages, compare three cloud-to-edge deployments, and evaluate two elements: channel representations from a wireless FM are tested under noise-level and channel-estimation-error shift, and an instrumented emulation of the orchestration loop reports the measured cost of turning an operator intent into dispatched agent goals. Hallucination, cost, and standardization barriers remain.",
+            "title": "Foundation Model-Driven Agentic AI for 6G"
+          },
+          "key": "5c6dad01ea152a8e63439730c3961fc01c94bf5c897c6555b51c4c60cf4704ad"
+        },
+        "2611.23503": {
+          "item": {
+            "AI": {
+              "conclusion": "该模型为感知-通信一体化中的目标定位提供了物理可解释的信道建模框架，但其为解析电磁模型，未涉及AI方法或CSI获取/反馈。",
+              "method": "以波散射理论为基础、施加边界条件的自洽方法，构建圆柱散射体的阻抗信道传输矩阵；在2D（线源）与2.5D（偶极源）配置下支持频率相关介电常数的介质圆柱，并以CRLB评估对位置、半径、介电常数的定位精度。",
+              "motivation": "现有信道模型缺乏同时包含电磁相互作用且近/远场统一的目标散射建模，难以支撑雷达式感知与定位的精度评估。",
+              "relevance_reason": "涉及信道（传输矩阵）建模与定位下界分析，但属纯电磁/散射解析理论，无AI辅助CSI获取、反馈或压缩内容，与研究方向仅为弱相关。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "信道建模",
+                "感知与定位",
+                "近场/远场传播",
+                "CRLB性能界"
+              ],
+              "result": "模型具物理一致性与近远场统一有效性，可解析刻画目标参数定位的理论下界（CRLB），并讨论向扩展目标及3GPP信道建模的推广。",
+              "tldr": "提出一种基于波散射理论与边界条件的自洽电磁无线信道模型，给出含单个圆柱散射体目标的（阻抗）信道传输矩阵，覆盖近场与远场，用于雷达类感知中的目标定位并分析CRLB。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23503",
+            "authors": [
+              "Gabriele Gradoni",
+              "Ahmed Elzanaty",
+              "Yadong Yang",
+              "Mohsen Khalily",
+              "Mahmoud Shahabadi",
+              "Fan Wang",
+              "Peiying Zhu",
+              "Wen Tong",
+              "Rahim Tafazolli"
+            ],
+            "categories": [
+              "eess.SP",
+              "cs.IT"
+            ],
+            "comment": "16 pages; published in IEEE Transactions on Wireless Communications",
+            "id": "2611.23503",
+            "pdf": "https://arxiv.org/pdf/2611.23503",
+            "summary": "We propose an electromagnetic wireless channel model for accurate target localization in radar-like sensing scenarios. The model employs a self-consistent method grounded in wave scattering theory and imposing boundary conditions, providing the (impedance) channel transfer matrix for a propagation channel with a single target modeled as a cylindrical scatterer. The model is: 1) physics-based, as it includes electromagnetic interactions between objects; 2) unified, as it is valid in both near- and far-field regions. Within the canonical two-dimensional and 2.5-dimensional configurations with line-source and dipole-source excitations, respectively, the model supports dielectric cylinders with frequency-dependent permittivity. Localization accuracy is assessed via the Cramer-Rao lower bound for a dielectric cylinder with variable position, radius, and dielectric constant. Provisions for future extensions to extended targets are discussed in the context of 3GPP channel modeling.",
+            "title": "Electromagnetic Channel Model and Sensing Performance for ISAC: The Case of a Single Cylindrical Scatterer"
+          },
+          "key": "8a854978f7baa580c2b38afe2f2e1ba75c3c7ea48de9075627d3b08b42710ce5"
+        },
+        "2611.23523": {
+          "item": {
+            "AI": {
+              "conclusion": "DEFI作为正则化信息论模型选择准则可有效抑制过度抽取成分的倾向，在因子恢复与聚类任务上显著优于现有准则。",
+              "method": "构建DEFI准则：将熵式压缩与相关性保持耦合，并对模型维度、簇不平衡与划分碎片化加惩罚；通过Rényi-2熵恒等式分析划分如何改变谱集中度与图体积归一化。",
+              "motivation": "无正则化的熵最小化在图划分选择中易偏向退化解，需要一种能同时兼顾压缩性与结构相关性的模型选择准则。",
+              "relevance_reason": "该文为通用聚类/图划分的模型选择准则，未涉及无线信道、CSI获取或反馈，仅与\"图结构表示学习\"有极弱关联。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "243条件因子恢复基准上精确恢复率97.2%（对比EGA-TMFG 75.0%、TEFI 45.8%）；局部候选电池中99.2%识别正确划分；十个聚类基准上DEFI引导的高斯混合平均ARI 0.929，优于HDBSCAN 0.809、Ward 0.700与常规GMM准则0.501–0.580。",
+              "tldr": "提出双熵拟合指数（DEFI），一种结合熵压缩、相关性保持与维度/簇失衡/碎片化惩罚的正则化信息论准则，用于图划分与降维表示的选择；在243条件基准上精确恢复率达97.2%，十个聚类基准上ARI达0.929。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23523",
+            "authors": [
+              "Gabriel Lawrence",
+              "Daniel Otero-Leon"
+            ],
+            "categories": [
+              "cs.IT",
+              "math.OC"
+            ],
+            "comment": null,
+            "id": "2611.23523",
+            "pdf": "https://arxiv.org/pdf/2611.23523",
+            "summary": "We introduce the Double-Entropy Fit Index (DEFI), a regularized information-theoretic criterion for selecting among candidate graph partitions and reduced representations. DEFI couples entropy-based compression with relevance preservation and penalizes model dimensionality, cluster imbalance, and partition fragmentation. An exact Rényi-2 entropy identity shows that partitioning alters both spectral concentration and graph-volume normalization, explaining why unregularized entropy minimization can favor degenerate solutions. Across a 243-condition population-analytic factor recovery benchmark, DEFI achieved an overall exact recovery rate of 97.2\\% (versus 75.0\\% for EGA-TMFG, 45.8\\% for TEFI on von Neumann entropy). In controlled local candidate batteries (distinguishing the true model from adjacent $K \\pm 1$ and factor-split alternatives), DEFI identified the correct partition in 99.2\\% of replications. Across ten clustering benchmarks, DEFI-guided Gaussian mixtures achieved a mean ARI of 0.929, exceeding HDBSCAN (0.809), Ward clustering (0.700), and conventional GMM criteria (0.501-0.580), with gains concentrating where standard criteria over-extract components.",
+            "title": "The Double Entropy Fit Index (DEFI): An Information-Theoretic Approach to Dimensionality Reduction and Clustering"
+          },
+          "key": "ed96f04b93ac6a9026382cb88faa2acd2512c8d1706d08404acbf92161855800"
+        },
+        "2611.23552": {
+          "item": {
+            "AI": {
+              "conclusion": "波束选择与关联策略的设计应重视干扰结构与码本量化；自适应码本设计是缩小与全CSI预编码差距的提升机制。",
+              "method": "构建符合3GPP规范的Urban Micro多小区仿真，将RSRP/RSRQ/SINR三种波束选择指标与三种UE-gNB关联策略组合评估，以RZF全CSI预编码作为性能上界基准进行对比，并分析残余差距来自码本量化。",
+              "motivation": "RSRP虽广泛用于5G NR波束选择但缺乏干扰感知能力，在密集组网中效果受限，需评估更合适的波束选择指标与关联策略，并厘清与全CSI预编码性能差距的来源。",
+              "relevance_reason": "涉及码本量化这一CSI反馈相关要素与多小区MIMO波束选择，但未使用AI方法、也未聚焦CSI获取/压缩或信道重建，联系较间接。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "有限反馈/码本量化",
+                "波束选择",
+                "多小区MIMO",
+                "全CSI预编码上界"
+              ],
+              "result": "方向性RSRQ在对称干扰场景下表现最差；序贯关联策略优于功率最优的匈牙利分配；与全CSI预编码的残余性能差距由码本量化主导而非度量指标不完善。",
+              "tldr": "论文在3GPP UMi多小区仿真中比较RSRP、RSRQ与SINR作为波束选择指标及三种UE-gNB关联策略，并与RZF全CSI上界对比，发现方向性RSRQ在对称干扰下反而最差、序贯关联优于匈牙利最优功率分配，且剩余性能差距主要来自码本量化而非指标缺陷。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23552",
+            "authors": [
+              "Saakshi Gupta",
+              "Tarun S. Cousik",
+              "Pratheek Upadhyaya",
+              "Nishith Tripathi",
+              "Jeffery Reed",
+              "Daniel J. Jakubisin"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.23552",
+            "pdf": "https://arxiv.org/pdf/2611.23552",
+            "summary": "Reference Signal Received Power (RSRP) is widely used for beam selection in 5G NR as it is an easy indicator of path loss, but is not interference-aware, limiting its effectiveness in dense deployments. In this paper, we explore RSRP, Reference Signal Received Quality (RSRQ), and Signal to Interference-plus-Noise Ratio (SINR) as beam selection metrics alongside three UE-gNB association strategies in a 3GPP-compliant Urban Micro multi-cell simulation, benchmarked against Regularized Zero-Forcing (RZF) full-Channel State Information (CSI) upper bounds. Using a 3GPP-compliant Urban Micro multi-cell simulation benchmarked against RZF full-CSI upper bounds, we demonstrate two findings: directional RSRQ, despite its inter-cell interference awareness, is the worst-performing strategy in symmetric interference, and sequential association outperforms power-optimal Hungarian assignment. We also establish that the residual performance gap to full-CSI precoding stems from codebook quantization rather than metric imperfection, identifying adaptive codebook design as a mechanism to enhance performance.",
+            "title": "Beyond RSRP: An Exploration of Alternative Metrics for Beam Management in an Urban Micro 5G NR Scenario"
+          },
+          "key": "c09dbfc75758bfd7b98783b20ea60274fb301bde18ec6e0b6d69682d1e92067b"
+        },
+        "2611.23553": {
+          "item": {
+            "AI": {
+              "conclusion": "DL初始化有助于提升声速-衰减联合FWI的计算效率与重建质量，展示了深度学习增强声学反演的潜力。",
+              "method": "在既有工作基础上构建DL辅助的FWI框架，用深度学习提供初始化，并结合较准确的声速估计进行声速与衰减联合FWI的数值实验。",
+              "motivation": "在超声CT的FWI中，声衰减重建比声速重建更难且研究较少，作者希望借助深度学习提升衰减反演的计算效率与成像质量。",
+              "relevance_reason": "该文属于医学超声CT的声学衰减FWI重建，与无线CSI获取、信道估计或反馈压缩无直接关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "DL初始化使计算成本降低约28%，在声速估计足够准确时衰减重建精度提升约70%。",
+              "tldr": "该论文提出一种深度学习辅助的全波形反演（FWI）框架，用于超声计算断层成像中声衰减的重建，实验显示DL初始化可减少28%计算量并提升70%衰减重建精度。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23553",
+            "authors": [
+              "Mingrui Liu",
+              "Michael L. Oelze"
+            ],
+            "categories": [
+              "eess.SP",
+              "physics.med-ph"
+            ],
+            "comment": null,
+            "id": "2611.23553",
+            "pdf": "https://arxiv.org/pdf/2611.23553",
+            "summary": "Acoustic attenuation is more challenging to reconstruct and has received less attention than sound speed in ultrasound computed tomography using full-waveform inversion (FWI). In this study, a deep-learning (DL)-assisted FWI framework was proposed for attenuation reconstruction based on our previous work. Some numerical experiments were conducted to investigate the strategy and the effectiveness of using DL to help accelerate and improve the reconstruction quality of attenuation imaging in FWI. The results indicated that DL saved computational cost by 28% and improved attenuation reconstruction accuracy by 70% when combined with sufficiently accurate sound speed estimates. The result supports the potential of DL initialization to improve the computational efficiency and reconstruction quality of joint SOS and attenuation FWI.",
+            "title": "Deep-Learning-Assisted Full Waveform Inversion for Attenuation Reconstruction in Ultrasound Computed Tomography"
+          },
+          "key": "f7a660a5c271ed83b6c62d3f769caffb365c1c26f2841af48d87d7c632567e8f"
+        },
+        "2611.23709": {
+          "item": {
+            "AI": {
+              "conclusion": "信道不确定性对波形域Fisher信息各分量的影响可由所提统计模型与界限统一刻画，显式建模信道随机性对避免误差下限至关重要。",
+              "method": "构建统一估计理论框架刻画直接与两步接收机的信息映射；通过最小二乘投影建立短延迟多径的标量等效统计信道模型；推导接收机状态CRB（完美/统计信道知识）与忽略信道随机性的失配CRB(MCRB)，并给出闭式近似与渐近分析。",
+              "motivation": "多径引起的信道不确定性会影响GNSS直接定位估计中波形域Fisher信息的可用性，需从估计理论角度量化直接法与两步法接收机的信息映射与利用差异。",
+              "relevance_reason": "论文涉及多径信道不确定性与定位的估计理论分析，但对象为GNSS定位而非CSI获取/反馈，且不含AI方法，仅信道统计建模与CRB分析略有借鉴意义。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "多径信道统计建模",
+                "信道不确定性下的估计界分析"
+              ],
+              "result": "DPE与全耦合两步估计精度相当，顺序解耦造成的性能损失远大于次优加权损失；统计信道知识下提升接收信号质量未必带来明显定位增益；相干信道均值趋于零时仍保留定位信息；忽略信道随机性会使MCRB发散并引入随观测时间增长更明显的定位误差下限。",
+              "tldr": "该论文研究GNSS直接定位估计(DPE)在多径引起的信道不确定性下的Fisher信息可用性与利用率，建立统一估计理论框架与标量等效统计信道模型，推导了完美/统计信道知识下的CRB及模型失配MCRB，并进行闭式近似与渐近分析。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23709",
+            "authors": [
+              "Sijia Li",
+              "Bing Xu",
+              "Shuo Tang",
+              "Pau Closas"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible",
+            "id": "2611.23709",
+            "pdf": "https://arxiv.org/pdf/2611.23709",
+            "summary": "The availability and utilization of Fisher information in global navigation satellite system (GNSS) direct position estimation (DPE) under multipath-induced channel uncertainty are investigated. First, a unified estimation-theoretic framework is developed to characterize information mapping and utilization across direct and two-step receivers. Next, a scalar-equivalent statistical channel model for short-delay multipath is established via least-squares (LS) projection. Based on this model, receiver-state Cramér-Rao bounds (CRBs) are derived under perfect and statistical channel knowledge, while misspecified CRBs (MCRBs) are derived under a simplified deterministic complex-gain model that neglects channel uncertainty. The closed-form approximations and asymptotic analyses of the derived bounds further reveal how channel uncertainty affects different components of waveform-domain Fisher information. Our results reveal that: 1) DPE and fully coupled two-step estimation achieve comparable accuracy, whereas the performance loss caused by sequential decoupling substantially exceeds the additional loss from suboptimal weighting; 2) under statistical channel knowledge, improving received signal quality does not necessarily yield noticeable positioning gains; 3) positioning information remains available even as the coherent channel mean vanishes; and 4) neglecting channel randomness causes the MCRBs to diverge in this limit and can introduce positioning error floors that become more pronounced with longer observations.",
+            "title": "Fisher Information Characterization in GNSS DPE under Multipath-Induced Channel Uncertainty"
+          },
+          "key": "f5f03ec9aa949fdb75b017e9ad48817711b20e2c6595692b6a7d7a8356d8789f"
+        },
+        "2611.23722": {
+          "item": {
+            "AI": {
+              "conclusion": "DA-AoM为动态语义通信中的模型更新提供了以漂移和服务时延为核心的度量与优化框架，可实现自适应更新频率调度；但与CSI获取、信道重建与反馈压缩等物理层AI问题关联较弱。",
+              "method": "在语义特征空间量化漂移强度，提出DA-AoM指标联合刻画漂移引起的性能退化、漂移相关的更新服务时延与传统更新时延；对边缘层M/M/1与云层D/M/1更新场景推导平均DA-AoM的闭式表达式，并在队列稳定性约束下优化更新频率。",
+              "motivation": "语义通信依赖训练域与目标域分布一致性，动态环境下的分布漂移会使离线模型过时；频繁更新增加通信/计算/排队开销，稀疏更新则导致适配滞后，需在二者之间做权衡。",
+              "relevance_reason": "论文属语义通信模型更新与AoI/排队优化，未涉及CSI获取、信道估计或CSI反馈压缩，仅在无线AI大方向上相邻。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "语义通信",
+                "模型更新调度",
+                "Age of Information",
+                "分布漂移",
+                "排队论优化"
+              ],
+              "result": "仿真表明DA-AoM能刻画漂移强度、计算速率、带宽与更新频率对模型新鲜度的联合影响，优于传统AoI；在相同资源约束下，所提策略相较代表性基线将平均DA-AoM降低9.2%–42.4%。",
+              "tldr": "该文针对动态语义通信中数据分布漂移导致离线训练语义编解码模型失效的问题，提出漂移感知的自适应模型更新策略，定义漂移感知模型年龄（DA-AoM）并优化更新频率。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23722",
+            "authors": [
+              "Bizhu Wang",
+              "Manqi Li",
+              "Shujun Han",
+              "Mengying Sun",
+              "Xiaodong Xu"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": "13 pages, 13figures",
+            "id": "2611.23722",
+            "pdf": "https://arxiv.org/pdf/2611.23722",
+            "summary": "Semantic communication reduces transmission overhead by conveying task-relevant semantic features, but its performance depends on the consistency between training and target-domain data distributions. In dynamic environments, distribution drift can make offline-trained semantic codec models stale and degrade transmission performance. Frequent updates alleviate this degradation but increase communication, computation, and queueing costs, whereas infrequent updates delay model adaptation. To address this tradeoff, we propose a drift-aware adaptive update strategy for dynamic semantic communication systems. Drift intensity is quantified in the semantic feature space, and Drift-Aware Age of Model (DA-AoM) is introduced to jointly capture drift-induced performance degradation, drift-dependent update service delay, and conventional update latency. Closed-form average DA-AoM expressions are derived for edge-layer M/M/1 and cloud-layer D/M/1 update scenarios, based on which the update frequency is optimized under the queueing-stability constraint. Simulations show that DA-AoM captures the joint effects of drift intensity, computing rate, bandwidth, and update frequency on model freshness beyond conventional Age of Information (AoI). The proposed strategy reduces average DA-AoM by 9.2\\%--42.4\\% compared with representative baselines under the same resource constraints.",
+            "title": "Drift-Aware Adaptive Semantic Codec Update Strategy for Dynamic Semantic Communications"
+          },
+          "key": "9646253e84ab4d36b6f7bae548313a4821bed86bb192bc03854e4ff67a948390"
+        },
+        "2611.23724": {
+          "item": {
+            "AI": {
+              "conclusion": "环境感知的X2X CKM可作为6G网络规划的可行基础，实测闭环校准对提升信道预测精度与部署性能至关重要。",
+              "method": "构建X2X CKM：利用环境信息、稀疏信道测量或二者融合，按规划任务选择地图类型与空间分辨率；以地图进行覆盖预测与网络部署/配置优化（含IRS室内部署、室外基站部署），并结合现场测量反馈进行CKM校正与部署迭代。",
+              "motivation": "6G跨多样环境的可靠覆盖规划需要任意候选节点位置与服务区之间的信道知识，传统点对点测量难以支撑大规模部署决策。",
+              "relevance_reason": "聚焦信道知识地图与环境感知信道表征，与地图/几何辅助CSI建模高度契合，但AI方法与CSI反馈/估计细节较弱。",
+              "relevance_score": 4,
+              "relevance_topics": [
+                "信道知识地图",
+                "环境感知信道建模",
+                "稀疏测量重建",
+                "IRS部署",
+                "覆盖预测"
+              ],
+              "result": "案例研究验证框架在室内IRS与室外BS部署中的有效性；现网试验显示IRS部署与基站重配置带来覆盖增益，测量反馈可支持CKM校准与配置优化。",
+              "tldr": "提出基于any-to-any（X2X）信道知识地图（CKM）的环境感知6G网络规划框架，从环境信息与稀疏测量构建CKM，用于覆盖预测与部署优化，并经实测反馈校正。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23724",
+            "authors": [
+              "Yilong Chen",
+              "Jiaxuan Li",
+              "Yuan Guo",
+              "Wenhai Lai",
+              "Xinhao Li",
+              "Kaiming Shen",
+              "Guangxu Zhu",
+              "Jie Xu",
+              "Rui Zhang",
+              "Zhi-Quan Luo"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.23724",
+            "pdf": "https://arxiv.org/pdf/2611.23724",
+            "summary": "Planning sixth-generation (6G) networks for reliable coverage across diverse environments is challenging, as it requires channel knowledge between candidate network node locations and potential service regions. This article proposes an environment-aware network planning framework based on any-to-any (X2X) channel knowledge maps (CKMs), which characterize channels between arbitrary transmitter-receiver location pairs. Within this framework, we first construct X2X CKMs from environmental information, sparse channel measurements, or both, with map types and spatial resolutions selected according to the planning task. We then use these maps to predict coverage and optimize network deployment and configuration subject to service requirements and practical constraints, while accounting for subsequent network operation. Finally, field measurements assess channel prediction accuracy and deployment performance, providing feedback for CKM correction and deployment refinement. We discuss implementation methods and tradeoffs across these stages. Case studies illustrate the effectiveness of the framework for indoor intelligent reflecting surface (IRS) deployment and outdoor base station (BS) deployment. Live-network trials further demonstrate coverage gains from IRS deployment and BS reconfiguration, with measurement feedback supporting CKM calibration and configuration refinement.",
+            "title": "Towards Environment-Aware 6G Network Planning: An Any-to-Any Channel Knowledge Map Approach"
+          },
+          "key": "6d1d6ed76c612c3983013b765c41656be51bac6b02659e9170a3ed0d6a0d7f66"
+        },
+        "2611.23740": {
+          "item": {
+            "AI": {
+              "conclusion": "模式测量的空间分布同时决定外推精度与重建稳定性，孔径（二阶矩）指标不足以描述多径下的采样设计，需结合路径相关性进行布局设计。",
+              "method": "从接收孔径与传播路径耦合角度建立分配方式进入逆问题的模型；对单条已校准正实响应路径，用天线位置的功率加权方差刻画固定模式数下剖面的角度信息；构造加权孔径相同但路径相关性不同的布局以揭示孔径式设计的局限；并用统一估计器（含逐检测联合角度精化）对均衡随机、连续块、交错、等矩采样做配对仿真对比。",
+              "motivation": "可重构方向图阵列的观测预算（模式数）固定，但模式的阵元空间分配是一个可自由设计的采样选择，其对多径下信道重建精度的影响缺乏理论刻画。",
+              "relevance_reason": "涉及信道重建中测量/采样模式的空间设计与非完全观测下的外推，属信道获取与重建范畴，但非标准MIMO/CSI反馈模型且AI成分较弱。",
+              "relevance_score": 3,
+              "relevance_topics": [
+                "channel reconstruction",
+                "spatial sampling / mode assignment",
+                "extrapolation from partial observations",
+                "angle parameter estimation"
+              ],
+              "result": "当部分模式完全未被观测时，均衡随机采样相比升序连续块显著降低完整信道误差，在几乎所有测试场景高SNR下均有改善；当所有模式均被采样时，平均增益对稀有的大误差更敏感。",
+              "tldr": "研究可重构方向图阵列中辐射模式在阵元上的空间分配如何影响未测量信道的重建，给出等模式数下加权孔径刻画角度信息并比较多种采样布局。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23740",
+            "authors": [
+              "Shaoyang Sun",
+              "Chongwen Huang"
+            ],
+            "categories": [
+              "cs.IT",
+              "eess.SP"
+            ],
+            "comment": "5 pages, 3 figures, and 1 table. An 18-page supplement is included as an ancillary file",
+            "id": "2611.23740",
+            "pdf": "https://arxiv.org/pdf/2611.23740",
+            "summary": "Pattern-reconfigurable arrays acquire channels by distributing radiation modes across their antenna elements. Equal mode counts fix the observation budget while leaving a spatial sampling choice that directly affects reconstruction of unmeasured channels. We establish how this assignment enters the inverse problem through the receive aperture and the coupling between propagation paths. For an isolated path with calibrated positive real responses, the power-weighted variance of antenna positions completely characterizes the assignment dependence of the profiled angle information at fixed mode counts. We then construct layouts with identical weighted apertures and different path correlations, exposing a limitation of aperture-based design in multipath propagation. A paired simulation study evaluates balanced random, contiguous, interleaved, and equal-moment sampling using a common estimator with per-detection joint angle refinement. Balanced random sampling substantially reduces complete-channel error relative to ascending contiguous blocks when some modes are entirely unobserved, with improvements across nearly all tested scenes at high signal-to-noise ratio. When every mode is sampled, the mean benefit is more sensitive to rare large errors. Together, the analysis and experiments connect the spatial distribution of mode measurements to both extrapolation accuracy and reconstruction stability.",
+            "title": "The Geometry of Mode Sampling in Reconfigurable MIMO Channel Extrapolation"
+          },
+          "key": "919cac0141f77d17c0900339cffcd292a55de318d8bae32b6aa6247266058c92"
+        },
+        "2611.23794": {
+          "item": {
+            "AI": {
+              "conclusion": "该工作提供了无参考长读长测序数据压缩的系统基准与选型参考，并展望并行加速、隐私保护、自适应参数调优与软硬件协同设计等方向。",
+              "method": "综述传统与学习型的通用及测序专用压缩器，在Oxford Nanopore与PacBio的16个真实数据集上评测35种压缩器；学习型方法因计算开销大仅在6个MinION数据集上评测；对比压缩率、存储节省、运行时间、峰值内存与跨数据集鲁棒性，并考察多线程加速。",
+              "motivation": "长读长测序产生海量数据带来存储与传输压力；基于参考基因组的压缩器依赖合适参考序列，适用性受限，因此需要系统评估无参考无损压缩方法。",
+              "relevance_reason": "该文是基因组长读长测序数据的无损压缩基准，与无线通信CSI获取、信道估计、CSI反馈压缩及信道知识建模无关。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "CoLoRd总体压缩率最佳，其他方法在速度、内存与鲁棒性上各有权衡；学习型压缩器计算成本高、适用范围受限。",
+              "tldr": "LRCBench 是一个面向长读长测序数据的无参考无损压缩器基准与综述，评测了35种传统与学习型压缩方法在16个真实数据集上的压缩率、存储节省、运行时间、峰值内存与鲁棒性。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23794",
+            "authors": [
+              "Huidong Ma",
+              "Hui Sun",
+              "Xinyan Shi",
+              "Cheng Zhong",
+              "Xiaoguang Liu",
+              "Gang Wang"
+            ],
+            "categories": [
+              "cs.IT",
+              "q-bio.GN"
+            ],
+            "comment": null,
+            "id": "2611.23794",
+            "pdf": "https://arxiv.org/pdf/2611.23794",
+            "summary": "Long-read sequencing technologies generate large volumes of data, creating substantial storage and transmission demands. Although reference-based compressors can achieve high compression, their reliance on an appropriate reference genome limits their use. We present LRCBench, a benchmark and survey of reference-free lossless compressors for long-read sequencing data. We review traditional and learning-based general-purpose and sequencing-specific methods, then evaluate 35 compressors on 16 real-world datasets from Oxford Nanopore and PacBio platforms. We compare compression ratio, storage savings, runtime, peak memory use, and robustness across datasets. Learning-based compressors are evaluated on six MinION datasets because of their high computational costs. CoLoRd achieves the best overall compression ratios in our experiments, while other methods offer trade-offs in speed, memory use, and robustness. We also examine multithreaded speedup and discuss future directions in parallel acceleration, privacy protection, adaptive parameter tuning, and hardware-algorithm co-design.",
+            "title": "Benchmarking Traditional and Learning-Based Reference-Free Compressors for Long-Read Sequencing Data"
+          },
+          "key": "1b0a34497c5dd84a05df6ff24aaed55d9d6256ae03ffb21baeab4c14f02a1e48"
+        },
+        "2611.23802": {
+          "item": {
+            "AI": {
+              "conclusion": "SFiD以自监督扩散生成数据的方式解决NG无线网络非凸优化，在RIS相移设计中兼顾效率与性能，并为低复杂度部署提供BNN变体。",
+              "method": "自监督、适应度驱动的扩散模型，自主生成训练数据并迭代学习；在解析凸与非凸问题上验证收敛性；开发SFiD-C（连续变量）与SFiD-D（离散变量）用于CF-mMIMO RIS相移优化，并提出基于二值神经网络的SFiD-D（BNN）以降低复杂度。",
+              "motivation": "下一代无线网络优化问题复杂且动态，现有方法存在计算复杂度高、可扩展性与适应性差、依赖大量标注数据、动态非凸环境下泛化弱等缺陷。",
+              "relevance_reason": "涉及扩散模型与RIS/CF-mMIMO近场问题，但重点在相位优化而非CSI获取、反馈或信道重建，AI方法可迁移但CSI关联较弱。",
+              "relevance_score": 3,
+              "relevance_topics": [
+                "扩散模型/生成模型",
+                "RIS相移优化",
+                "CF-mMIMO",
+                "非理想CSI下的优化",
+                "轻量化网络(BNN)"
+              ],
+              "result": "在解析凸/非凸问题上收敛到全局最优；实验表明相比元启发式与DRL基线，所提方法显著提升计算效率，且在连续和离散RIS相移优化上取得相当或更优性能。",
+              "tldr": "提出自监督适应度驱动扩散方法SFiD，可自主生成训练数据并迭代学习，用于NG无线网络复杂优化；以CF-mMIMO中RIS相移优化（含非理想CSI与空间相关）为案例，给出连续/离散版本及BNN轻量版。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23802",
+            "authors": [
+              "Kalpesh K. Patel",
+              "Ekant Sharma",
+              "Sandeep Kumar Singh",
+              "Lajos Hanzo"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": "14 PAGES, Journal",
+            "id": "2611.23802",
+            "pdf": "https://arxiv.org/pdf/2611.23802",
+            "summary": "Next-generation (NG) wireless networks face increasingly complex and dynamic optimization challenges driven by data-intensive applications and massive device connectivity. Existing methods suffer from one or more limitations, including high computational complexity, poor scalability and adaptability, reliance on large labeled datasets, or weak generalization in dynamic and non-convex wireless environments. To overcome these limitations, we introduce a self-supervised fitness-driven diffusion (SFiD) method that autonomously generates its own training data and iteratively learns from it. It also exhibits strong generalization capabilities and the ability to effectively tackle challenging optimization problems. We validate the convergence of our proposed method to the global optimum on both analytical convex and non-convex optimization problems. To demonstrate the effectiveness of the proposed method, we consider reconfigurable intelligent surface (RIS) phaseshift optimization in cell-free massive multiple-input multipleoutput (CF-mMIMO) systems with imperfect channel state information and spatial correlation at the RIS as a case study. Specifically, we develop SFiD-C for continuous variable optimization and apply it to optimize continuous RIS phase shifts in CF-mMIMO systems. We also develop SFiD-D for discrete variable optimization and apply it to optimize discrete RIS phase shifts in CF-mMIMO systems. Furthermore, we develop a binary neural network (BNN) based version of SFiDD for reducing its computational complexity, referred to as SFiD-D (BNN). Finally, our experimental results demonstrate that the proposed methods markedly improve computational efficiency and achieve comparable or superior performance compared to meta-heuristic and DRL benchmarks for both continuous and discrete RIS phase-shift optimization.",
+            "title": "SFiD: Self-Supervised Fitness-Driven Optimization for Next-Generation Networking"
+          },
+          "key": "73372ebce55ecc08c3414bb89c03cb3649835ca6819f963b5f7c822e96a7a84d"
+        },
+        "2611.23904": {
+          "item": {
+            "AI": {
+              "conclusion": "结构化的模式—路径耦合可由学习的迭代表达式进行提取；复增益更新与学习规则带来可迁移、可解释的收益，提示方法有潜力无需逐场景重训即可在不同初始化器间迁移。",
+              "method": "学习式迭代细化估计器：每级将阻尼最小二乘提案与由噪声功率和局部阵列敏感度缩放的学习修正相结合；在完整仿真信道上训练，奖励降低跨模式（含无测量行模式）预测误差的修正；关键是路径复增益与空间频率的联合校正；训练得到的规则可零重训迁移到ridge变量投影初始化器。",
+              "motivation": "模式可重构MIMO接收机每次只能观测部分辐射模式，即使采样全部阵元仍存在整体未被观测的模式；但 calibrated patterns 使这些缺失通道与已测行共享同一组传播路径，因此可借助路径一致性推断缺失模式，从而以更低测量开销获得完整通道。",
+              "relevance_reason": "该文直接针对MIMO信道从部分观测重构未测量维度（模式外推）并结合学习式迭代估计，与CSI获取/信道重构高度契合，但AI成分较轻、未涉及CSI反馈或扩散/MAE/知识图谱等高优先方法。",
+              "relevance_score": 4,
+              "relevance_topics": [
+                "模式可重构MIMO接收机",
+                "信道重构/外推",
+                "稀疏路径参数化(复增益与空间频率)",
+                "学习式迭代展开估计器",
+                "低开销CSI获取"
+              ],
+              "result": "匹配仿真中，细化同时降低完全未观测模式的误差与整体信道误差；增益主要来自系数（复增益）更新，学习规则在固定角度下优于自适应ridge收缩；部分信道轨迹显示存在测量行残差上升但外推性能改善的情形。",
+              "tldr": "提出一种面向模式可重构MIMO接收机的学习型迭代估计器：利用已校准天线方向图对共同传播路径的加权关系，由已测行的阻尼最小二乘提案加噪声/阵列敏感度调制的学习修正，逐步外推未测量的辐射模式通道，并在不重训的情况下从追踪式初始化迁移到ridge变量投影初始化。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23904",
+            "authors": [
+              "Shaoyang Sun",
+              "Chongwen Huang"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": "24 pages, 10 figures in total (5 pages and 3 figures in the main paper, 19 pages and 7 figures in the supplementary material). Chongwen Huang is the corresponding author",
+            "id": "2611.23904",
+            "pdf": "https://arxiv.org/pdf/2611.23904",
+            "summary": "A pattern-reconfigurable multiple-input multiple-output (MIMO) receiver can sample every antenna element and still leave entire radiation modes unobserved. The calibrated patterns weight a common set of propagation paths, which links these missing channels to the measured rows. Our estimator learns to correct the complex gains and spatial frequencies of those paths, so a correction inferred from measured rows updates every unmeasured mode. Each stage combines a damped least-squares proposal with a learned correction scaled by noise power and local array sensitivity. Training on complete simulated channels rewards corrections that reduce prediction error across modes, including those with no measured rows. The learned rule transfers from pursuit-based training estimates to a ridge variable-projection initializer without retraining. In matched simulations, refinement reduces error on wholly unobserved modes as well as across the full channel. Coefficient updates account for most of the gain, and the learned rule further improves on adaptive ridge shrinkage at fixed angles. Individual channel trajectories show that extrapolation can improve even as the residual on the measured rows increases.",
+            "title": "MIMO Channel Extrapolation to Unobserved Radiation Modes via Learned Path Refinement"
+          },
+          "key": "3fecadb631ef617db2d3a125d566c122aa75b0c7969c52666af39ca5bf60836c"
+        },
+        "2611.23927": {
+          "item": {
+            "AI": {
+              "conclusion": "该框架为低空UAV网络提供了兼顾空间占用与QoS的通信可行容量分析工具，但其最优性结论仅适用于可分离结构，耦合场景需进一步方法支撑。",
+              "method": "构建占用规划到波束负载、用户速率的映射；固定有效噪声与每波束功率下做逐波束QoS筛选求最大接纳；用精确动态规划在固定接纳下最大化聚合频谱效率；信号级仿真验证SINR表达式，并用显式阵列模型分析负载相关波束间干扰泄漏；在相同局部波束缩减下比较等时OMA与理想SIC-NOMA。",
+              "motivation": "低空UAV网络的可用通信容量同时取决于空间占用与无线QoS，需要把资源占用规划与物理层SINR/波束负载耦合起来建模。",
+              "relevance_reason": "论文聚焦UAV网络的占用规划、波束负载与多址方案，仅涉及SINR/干扰层面，未涉及CSI获取、反馈压缩或AI信道建模，与研究者核心方向关联很弱。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "波束间干扰与SINR建模",
+                "NOMA/OMA多址"
+              ],
+              "result": "动态规划对可分离整数问题给出全局最优，该最优性保证不延伸至耦合问题；信号级仿真验证了SINR表达式的有效性，并量化了负载相关的波束间泄漏；OMA与NOMA在同一约束下得到可比评估结果。",
+              "tldr": "该文建立低空UAV网络\"通信可行占用规划\"模型，将候选网格分配映射为并发波束负载与用户速率，在固定流/固定波束功率下用逐波束QoS筛选确定最大接纳，并用精确动态规划最大化聚合频谱效率；SINR表达式由信号级仿真验证，含显式阵列模型刻画负载相关的波束间泄漏，并比较OMA与理想SIC-NOMA。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23927",
+            "authors": [
+              "Xinyang Zhang",
+              "Yuanhao Cui",
+              "Xiaotong Zhao",
+              "Ningyan Guo",
+              "Christos Masouros",
+              "Dong In Kim"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "13 pages, 7 figures; submitted to IEEE Transactions on Aerospace and Electronic Systems (TAES)",
+            "id": "2611.23927",
+            "pdf": "https://arxiv.org/pdf/2611.23927",
+            "summary": "Communication-serviceable capacity for low-altitude unmanned aerial vehicle (UAV) networks depends on both spatial occupancy and wireless quality of service (QoS). This paper formulates a communication-feasible occupancy-planning model that maps candidate-grid assignments to concurrent beam loads and per-user rates under fixed-stream and fixed-beam power. With fixed effective noise, per-beam QoS screening determines maximum admission, and an exact dynamic program maximizes aggregate spectral efficiency at that fixed admission. Signal-level simulations validate the SINR expressions, while an explicit-array model examines load-dependent inter-beam leakage. The dynamic program is globally optimal for the separable integer problem, but that guarantee does not extend to the coupled problem. Equal-time orthogonal multiple access (OMA) and ideal-SIC non-orthogonal multiple access (NOMA) are evaluated through the same local beam reduction under fixed effective noise and fixed per-beam power.",
+            "title": "Trade-off Between Airspace and Channel Capacity for Low-altitude Wireless Network"
+          },
+          "key": "b0da0b1336c21fe98287fe3f4bc7aede3c02f98555cdf471731f1ab67a42200d"
+        },
+        "2611.23940": {
+          "item": {
+            "AI": {
+              "conclusion": "比特级、语义需求驱动的物理层资源分配可有效提升语义通信的安全-可靠折衷，并可扩展至MIMO窃听场景。",
+              "method": "构建窃听语义特征信道，两阶段训练得到合法接收者与窃听者的逐比特目标误比特率；在此基础上针对MISO窃听信道（最坏情况角度分离模型）建立功率与人工噪声联合分配问题，求得信息-AN功率分割的闭式解并用注水法做逐比特功率分配；进一步设计多目标轮廓下的泄漏感知选择方法，并推广到MIMO。",
+              "motivation": "数字语义通信中各语义比特的重要性和保密需求高度不均，统一的比特保护无法满足这种异构的可靠性与保密性要求。",
+              "relevance_reason": "论文聚焦语义通信的物理层保密与功率/人工噪声分配，未涉及CSI获取、信道重构、CSI反馈压缩或信道知识建模。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "仿真表明该框架在保持合法接收者重建质量与削弱窃听者重建质量之间的折衷优于均匀功率分配及所对比的基于学习的语义安全通信方案。",
+              "tldr": "提出比特级物理层安全框架：用两阶段训练的窃听语义特征信道为每个语义比特学习目标翻转概率，再据此做功率与人工噪声的联合分配（闭式信息-AN功率划分＋注水式逐比特功率分配），并扩展到MIMO。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23940",
+            "authors": [
+              "Seonjung Kim",
+              "Jaehyeok Kim",
+              "Yo-Seb Jeon"
+            ],
+            "categories": [
+              "eess.SP",
+              "eess.SY"
+            ],
+            "comment": null,
+            "id": "2611.23940",
+            "pdf": "https://arxiv.org/pdf/2611.23940",
+            "summary": "Digital semantic communication requires reliable recovery of task-relevant information at a legitimate receiver while limiting source reconstruction by an eavesdropper. Uniform bit protection, however, does not account for the heterogeneous reliability and secrecy requirements of semantic bits. This paper proposes a bit-level physical layer security (PLS) framework that learns these requirements and incorporates them into physical-layer resource allocation. We first introduce a wiretap semantic feature channel whose two-stage training learns per-bit target bit-flip probabilities for the legitimate receiver (Bob) and the eavesdropper (Eve). These targets characterize the reliability requirements at Bob and the secrecy protection requirements against Eve. Based on the learned targets, we formulate a joint power and artificial-noise (AN) allocation problem for a multiple-input single-output wiretap channel under a worst-case angular-separation model. For a given target profile, the optimal information-AN power split admits a closed-form solution, and the per-bit power allocation is obtained by water-filling. We further develop a leakage-aware selection method among multiple learned-target profiles and extend the design to multiple-input multiple-output channels. Simulation results demonstrate that the proposed framework achieves a better trade-off between preserving reconstruction quality at Bob and degrading that at Eve than uniform power allocation and the evaluated learning-based secure semantic communication schemes.",
+            "title": "Physical Layer Security for Digital Semantic Communication: A Bit-Level Perspective"
+          },
+          "key": "71144996672a9b2344836fa855e130fad9e0a13c9fae838157d9e53fe37f6284"
+        },
+        "2611.23986": {
+          "item": {
+            "AI": {
+              "conclusion": "多维源空间扩展可细化ADHD相关网络失衡的神经生理构成并改善个体层面判别，提供了可解释框架，或可推广至其他以网络失衡为特征的大脑疾病。",
+              "method": "基于MEG源定向选择性与测量特性，在21名ADHD患者与21名健康对照中构建源空间网络表征；以DMN与任务控制系统间相对Alpha活动失衡为Core，并沿空间源、频谱、时间网络组织三维度扩展为深度指标，评估其稳定性、鲁棒性与互补性；采用40次组内留出评估并集成。",
+              "motivation": "ADHD与默认模式网络和任务控制系统的失衡相关，但将神经活动压缩为单一宏观失衡指标可能掩盖个体神经生理差异，因此需要多维度的源空间表征。",
+              "relevance_reason": "该文为ADHD相关的神经影像/脑网络研究，与无线通信CSI获取、信道估计、反馈压缩等主题完全无关。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "ADHD组存在显著的Core Alpha失衡（主要由任务控制区驱动）；多维扩展揭示了Core未完全反映的互补神经生理信息。ROC-AUC由0.7607（仅Core）提升至0.8995（多维输入）和0.9051（最终集成），平均准确率由71.43%升至79.82%。",
+              "tldr": "该论文利用静息态脑磁图（MEG）源空间网络表征，将ADHD中默认网络与任务控制系统的Alpha活动失衡（Core）沿空间源、频谱成分和时间网络组织三维度展开，提升了ADHD个体判别性能。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23986",
+            "authors": [
+              "Xiran Guo",
+              "Zhihao Liu",
+              "Guanghua Liu"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "Submitted to IEEE Journal of Biomedical and Health Informatics (JBHI)",
+            "id": "2611.23986",
+            "pdf": "https://arxiv.org/pdf/2611.23986",
+            "summary": "Attention-deficit/hyperactivity disorder (ADHD) is associated with an atypical imbalance between the default mode network (DMN) and task-control systems. However, compressing neural activity into a single macroscopic imbalance measure may obscure individual neurophysiological differences. To address this, we leveraged the source-orientation selectivity and related measurement properties of resting-state magnetoencephalography (MEG) to establish a multidimensional source-space network representation in 21 individuals with ADHD and 21 healthy controls. We defined the macroscopic imbalance in relative Alpha activity between the DMN and task-control systems as the Core, and expanded its constituent information along three dimensions: spatial sources, spectral composition, and temporal network organization: into in-depth measures, assessed for stability, robustness, and complementarity. We found that the ADHD group exhibited a significant Core Alpha imbalance, driven mainly by task-control regions, while the multidimensional expansion revealed complementary ADHD-related neurophysiological information not fully represented by the Core, suggesting that similar macroscopic imbalances may reflect distinct underlying physiological states. Across 40 exploratory within-cohort held-out evaluations with separate development and test subsets, mean ROC-AUC increased from 0.7607 (Core-only) to 0.8995 with multidimensional inputs and to 0.9051 with the final ensemble, and mean accuracy increased from 71.43% to 79.82%. These findings suggest that multidimensional source-space expansion can further clarify the neurophysiological composition of ADHD-related network imbalance and improve individual-level discrimination, offering an interpretable framework potentially applicable to other brain disorders characterized by network imbalance.",
+            "title": "Multidimensional Source-Space MEG Representation of Network Imbalance in ADHD"
+          },
+          "key": "93cb9d07e9f47c5fe59d16f34ee356f78424fa1e7343f9664070e8efd099425b"
+        },
+        "2611.23987": {
+          "item": {
+            "AI": {
+              "conclusion": "卷积增强Transformer结合多域特征与预去噪，可有效缓解低SNR与高动态下的CFO估计退化，为LEO接收机同步提供数据驱动方案。",
+              "method": "多域输入特征（I/Q、极坐标、统计自相关）替代线性嵌入；卷积预去噪模块（多尺度空洞卷积+注意力）前端降噪并提取时空表示；Transformer编码器建模全局长程相位依赖；端到端数据驱动盲CFO估计。",
+              "motivation": "LEO卫星高机动带来大多普勒频移与快速时变衰落，破坏同步；传统估计器与已有深度学习CFO估计方法在强动态、低SNR下性能显著退化，需更鲁棒的盲CFO估计方案。",
+              "relevance_reason": "属于无线物理层AI（Transformer+卷积用于LEO同步的CFO估计），但研究对象是载波频偏而非CSI获取/反馈或信道知识建模，方法迁移性有限。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "物理层AI",
+                "Transformer",
+                "低信噪比鲁棒性",
+                "多域特征/去噪前端"
+              ],
+              "result": "仿真表明所提方法在估计精度与高速动态LEO环境下的鲁棒性上明显优于传统估计算法（及深度学习对比方法）。",
+              "tldr": "该文提出卷积增强Transformer用于LEO卫星通信中的盲载波频偏(CFO)估计：构建I/Q、极坐标与统计自相关多域输入特征，前端用多尺度空洞卷积+注意力的卷积预去噪模块抑制噪声，再由Transformer编码器捕捉长程相位依赖，仿真显示在高速动态低SNR下优于传统与深度学习基线。"
+            },
+            "abs": "https://arxiv.org/abs/2611.23987",
+            "authors": [
+              "Miaomiao Wei",
+              "Huaiyuan Chen",
+              "Xinnan Shao",
+              "Lulu Gao",
+              "Hang Liu"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "12 pages, 11 figures",
+            "id": "2611.23987",
+            "pdf": "https://arxiv.org/pdf/2611.23987",
+            "summary": "Low Earth Orbit (LEO) satellite communications are essential for achieving ubiquitous global connectivity. However, the high mobility of LEO satellites induces massive Doppler shifts and fast time-varying fading, severely impairing signal synchronization. Accurate Carrier Frequency Offset (CFO) estimation is critical for receiver synchronization. Nevertheless, conventional estimators and deep learning approaches often degrade significantly under highly dynamic, low-SNR conditions. To address these challenges, this paper proposes a novel Convolution Augmented Transformer architecture for robust, blind CFO estimation in LEO communication systems. Initially, to overcome the inherent limitations of standard linear embedding layers in capturing nonlinear phase rotations, we construct a multi-domain input feature that encompasses in-phase/quadrature (I/Q), polar, and statistical autocorrelation properties. Subsequently, a Convolutional Pre-Denoising (CPD) module, integrating multi-scale dilated convolutions and an attention mechanism, is deployed at the front end to adaptively suppress localized noise and extract robust spatiotemporal representations. These refined latent features are then processed by a Transformer encoder to explicitly track global, long-range phase dependencies. Extensive simulation results demonstrate that the proposed data-driven approach significantly outperforms conventional estimation algorithms, achieving enhanced estimation accuracy and superior resilience in highly dynamic LEO environments.",
+            "title": "Convolution-Augmented Transformer for Robust Blind CFO Estimation in LEO Satellite Communication System"
+          },
+          "key": "3afd1e94d5a65bb625f9f1f611392bbf605c68c17138cadd47e2ccce355a88ac"
+        },
+        "2611.24017": {
+          "item": {
+            "AI": {
+              "conclusion": "时间对齐可捕获补充于传统频谱与统计特征的判别信息，适用于自然刺激数据，并可作为保协方差的潜在流形对齐方法用于静息态数据；但 PLV、包络相关、PAC 等非线性瞬时度量不保证不变。",
+              "method": "将每个被试表示为复振荡轨迹矩阵，求解酉 Procrustes 问题，把目标被试映射到参考/组模板的时间坐标系；用 economy-SVD 分解避免构造完整时间算子，保持通道间成对关系与功率不变。",
+              "motivation": "自然刺激与静息态 EEG 缺乏离散事件时间戳，导致跨试次、跨被试难以建立共享时间坐标系，从而限制跨被试对齐与特征比较。",
+              "relevance_reason": "该论文研究对象为 EEG 信号时间对齐，属生物医学信号处理，与无线 CSI 获取、信道估计、CSI 反馈压缩或信道知识建模无直接关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "在生理与临床场景的被试独立交叉验证中，睁眼/闭眼状态判别 AUROC 达 0.9600、最高分类准确率 89.45%；阿尔茨海默病与健康对照分类在闭眼条件下最高 AUROC 0.9272，并在睁眼光刺激条件下可进一步区分。",
+              "tldr": "EEGSync 提出一种复数酉 Procrustes 时间对齐方法，对带限解析 EEG 信号进行跨被试对齐，并通过 economy-SVD 高效求解，在睁闭眼判别和阿尔茨海默病分类中取得较高 AUROC。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24017",
+            "authors": [
+              "Anand A. Joshi",
+              "Satwik Bathula",
+              "Richard M. Leahy"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "29 pages, 8 figures",
+            "id": "2611.24017",
+            "pdf": "https://arxiv.org/pdf/2611.24017",
+            "summary": "Electroencephalography (EEG) studies increasingly use naturalistic and resting-state paradigms that lack discrete event timing. These recordings contain structured oscillatory activity but often lack repeated stimulus onsets to define a shared time clock across trials or participants. We introduce EEGSync, a complex-valued unitary Procrustes temporal alignment method for band-limited analytic EEG signals. EEGSync represents each subject as a matrix of complex oscillatory trajectories and solves a unitary Procrustes problem, mapping a target subject into the temporal coordinate system of a reference or group template. The method is computationally tractable through an economy-SVD factorization that avoids constructing the full temporal operator. This alignment strictly preserves original pairwise relationships and power across EEG channels. The unitary transformation aligns latent temporal structure rather than estimating a physical clock offset. Consequently, nonlinear instantaneous measures like phase-locking value, amplitude-envelope correlation, and phase-amplitude coupling are not guaranteed to be invariant. This framing makes EEGSync highly suitable for naturalistic shared-stimulus data, and potentially useful for resting-state data as a covariance-preserving latent manifold alignment. Evaluated via subject-independent cross-validation across physiological and clinical settings, EEGSync-based features achieved an AUROC of 0.9600 and 89.45% maximum classification accuracy in eyes-open versus eyes-closed state discrimination. For Alzheimer's disease versus healthy control classification, the highest AUROC reached 0.9272 in eyes-closed recordings, with further discrimination under eyes-open photostimulation. These findings suggest temporal alignment captures discriminative information complementing conventional spectral and statistical EEG features.",
+            "title": "EEGSync: Unitary Temporal Alignment Method for Naturalistic and Resting-State EEG"
+          },
+          "key": "11991779fa800217205ed7eebaf4c1337f9042e4408b590a49e937437a3751b7"
+        },
+        "2611.24064": {
+          "item": {
+            "AI": {
+              "conclusion": "天线阵列架构设计是提升mMIMO-HAPS性能的核心，新架构与开放问题为后续智能HAPS天线系统研究提供指引。",
+              "method": "综述+提出方法：介绍mMIMO-HAPS典型应用与设计需求，系统回顾并比较代表性天线架构，基于3GPP NTN信道模型统一仿真，并提出两种新天线架构。",
+              "motivation": "HAPS被视为6G广域覆盖的重要组成，其mMIMO通信性能根本上取决于天线阵列架构，因此高效天线设计成为关键问题。",
+              "relevance_reason": "属于mMIMO/HAPS天线阵列与硬件设计综述，仅间接使用3GPP NTN信道模型，未涉及CSI获取、估计、反馈压缩或AI信道建模。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "massive MIMO",
+                "HAPS/6G",
+                "3GPP NTN信道模型",
+                "天线架构设计"
+              ],
+              "result": "给出统一框架下的架构性能对比，并提出两种改善天线-用户对齐与通信性能的新架构；讨论下一代智能HAPS天线系统的研究方向。",
+              "tldr": "综述mMIMO-HAPS系统的天线阵列设计需求与代表性架构，在3GPP NTN信道模型下统一比较，并提出两种改进天线-用户对齐的新架构及未来方向。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24064",
+            "authors": [
+              "Shasha Liu",
+              "Abla Kammoun",
+              "Mohamed Slim Alouini"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "8 pages, 3 Figures",
+            "id": "2611.24064",
+            "pdf": "https://arxiv.org/pdf/2611.24064",
+            "summary": "High-altitude platform stations (HAPS) are expected to become an important component of sixth-generation (6G) and beyond wireless networks by providing wide-area wireless connectivity through massive multiple-input multiple-output (mMIMO) technology. As the communication performance of HAPS systems is fundamentally determined by the antenna array architecture, efficient antenna design has become a critical research topic. Motivated by these considerations, this article provides a comprehensive overview of antenna array design for mMIMO-enabled HAPS systems and proposes two novel antenna architectures to improve antenna-user alignment and communication performance. Specifically, the representative applications of mMIMO-enabled HAPS are first introduced, followed by the key design requirements for HAPS antenna arrays. Representative antenna architectures are then systematically reviewed and compared under a unified simulation framework based on the 3GPP NTN channel model. Finally, several promising research directions are discussed to provide insights into the design of next-generation intelligent HAPS antenna systems.",
+            "title": "Toward Massive MIMO HAPS Networks: Antenna Architectures and Design"
+          },
+          "key": "17fc3b81763dbdc3cf9b4d94590db5f377fdbe57420aa323cf4e226d33eae8a2"
+        },
+        "2611.24072": {
+          "item": {
+            "AI": {
+              "conclusion": "索引码可作为一种有效的构造手段，用于生成满足极小性条件的三元极小线性码，并支撑秘密共享等密码学应用。",
+              "method": "提出一般化三元线性码构造，给出极小性的充要条件；分别以 spread 导出的三类索引码和 Krawtchouk 多项式索引码进行特化，计算参数与重量枚举器，并分析对偶码秘密共享方案的访问结构。",
+              "motivation": "极小线性码在秘密共享、安全两方计算等领域有应用，构造违反 Ashikhmin-Barg 条件的极小码并确定其重量分布是编码与密码学中的热点问题。",
+              "relevance_reason": "该文属编码理论与密码学（极小码、秘密共享）方向，未涉及无线信道、CSI 获取/反馈或物理层 AI，与研究画像无交集。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "得到若干族极小三元码的参数与重量枚举器，确定其秘密共享访问结构类型，其中多族构造违反 Ashikhmin-Barg 条件。",
+              "tldr": "该文给出维度为 n+r 的三元线性码的一般构造，导出其为极小码的充要条件，并用来自 spread 的索引码与 Krawtchouk 多项式索引码两个特化，得到码参数、重量枚举器及对偶码所对应秘密共享方案的访问结构类型。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24072",
+            "authors": [
+              "Haibo Liu",
+              "Qunying Liao"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.24072",
+            "pdf": "https://arxiv.org/pdf/2611.24072",
+            "summary": "Recently, minimal linear codes have been extensively studied due to their applications in secret sharing schemes, secure two-party computations, and so on. Constructing minimal linear codes violating the Ashikhmin-Barg condition and then determining their weight distributions have been interesting in coding theory and cryptography. In this paper, we present a general construction of ternary linear codes of dimension $n+r$, where $n$ and $r$ are positive integers, and derive a necessary and sufficient condition for the resulting codes to be minimal. We first specialize the construction using index codes arising from spreads, with three classes of index codes satisfying the minimality condition, we obtain the parameters and weight enumerators of the corresponding minimal codes, and determine the access structures type of the secret-sharing schemes based on their dual codes. By the index codes from Krawtchouk polynomials, we then give a second specialization of the construction, with a class of index codes satisfying the minimality condition, we obtain the parameters of the resulting minimal codes, and determine the access-structure type of the secret-sharing scheme based on each dual code. Several constructed families of minimal codes violate the Ashikhmin-Barg condition.",
+            "title": "Construction of Ternary Minimal Linear Codes with Dimension $n+r$ Via Index Codes and The Access Structures of Their Dual Codes"
+          },
+          "key": "8d6c97bcf59167e39babec7a77063a191fef9a7a9eaac98fd5fd411ec345f188"
+        },
+        "2611.24099": {
+          "item": {
+            "AI": {
+              "conclusion": "信息交换量是一个受环的代数结构（尤其Frobenius性质）约束的线性变换不变量，可用于分析DFT等变换的计算复杂性与结构对称性。",
+              "method": "在有限交换环上的线性变换框架内进行纯代数/组合论证：构造信息交换量的定义，证明可逆变换与其逆相等；证明变换与转置相等等价于环的Frobenius性质（双向证明）；再将结论用于离散傅里叶变换、Vandermonde变换及面积-时间复杂性分析。",
+              "motivation": "作者希望刻画线性变换（如DFT）在计算/通信意义上的复杂度量——信息交换量——的代数性质，厘清其与逆变换、转置变换之间的关系，并找出使得对称性成立所需的最小代数条件（Frobenius环）。",
+              "relevance_reason": "该文属纯代数与算法复杂性理论，研究有限环上线性变换的信息交换量，虽以DFT、Vandermonde变换为例，但未涉及无线信道、CSI获取/反馈或AI方法，与本方向关联很弱。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "得到两条结构性定理：逆变换不变性对所有环成立；转置不变性当且仅当环为Frobenius环；并给出在DFT、Vandermonde变换及复杂度度量上的具体应用。",
+              "tldr": "该文研究有限交换环上线性变换的\"信息交换量\"（information exchange），证明可逆线性变换与其逆的信息交换量相等；并证明任意线性变换与其转置的信息交换量相等当且仅当环为Frobenius环，并应用于DFT、Vandermonde变换和面积-时间复杂性。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24099",
+            "authors": [
+              "Gianfranco Bilardi",
+              "Carlo Fantozzi"
+            ],
+            "categories": [
+              "cs.IT",
+              "cs.CC"
+            ],
+            "comment": null,
+            "id": "2611.24099",
+            "pdf": "https://arxiv.org/pdf/2611.24099",
+            "summary": "Linear transformations are considered over finite commutative rings. It is shown that the information exchange of an invertible linear transformation and that of its inverse are equal for any ring. It is also shown that the information exchange of any linear transformation and that of its transpose are equal if and only if the ring is Frobenius. Applications are presented to the Discrete Fourier Transform, to the analysis of Vandermonde transformations, and to area-time complexity.",
+            "title": "A Characterization of Rings Where a Linear Transformation and Its Inverse and Transpose Have the Same Information Exchange"
+          },
+          "key": "f77c8dc4470ace4594d38de54109e5c8ea8c8f559d0ac9fb3b7662937a210815"
+        },
+        "2611.24107": {
+          "item": {
+            "AI": {
+              "conclusion": "神经LAP求解器可作为匈牙利算法的可行替代，代价矩阵嵌入是处理变尺寸输入的关键设计。",
+              "method": "比较CNN、GNN与GLAN三种神经LAP求解器，引入cost-matrix embedding实现尺寸无关输入；将求解器嵌入GLMB跟踪框架。",
+              "motivation": "多目标跟踪中匈牙利算法作为LAP求解器存在组合复杂度与不可微等问题，希望用神经网络替代以获得可学习、可微的分配模块。",
+              "relevance_reason": "论文属多目标跟踪中的学习型分配求解，虽用到GNN但与CSI获取、信道估计/反馈等核心方向无实质关联。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "图神经网络",
+                "学习型优化求解"
+              ],
+              "result": "嵌入提升CNN与GNN精度，GLAN精度最佳；在WILDTRACK上GLAN跟踪精度接近匈牙利参考，并与近期DL跟踪器相当。",
+              "tldr": "该文用DL求解线性分配问题（LAP）替代匈牙利算法，提出代价矩阵嵌入使单一模型适配任意尺寸代价矩阵，并集成到GLMB跟踪器在WILDTRACK上验证。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24107",
+            "authors": [
+              "Chu Tam Vu",
+              "Tran Thi Thuy Quynh",
+              "Do Hai Son"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.24107",
+            "pdf": "https://arxiv.org/pdf/2611.24107",
+            "summary": "This paper proposes and evaluates deep learning (DL)-based linear assignment problem (LAP) solvers as a replacement for the classical Hungarian algorithm in multi-object tracking (MOT) systems. Three representative neural models are studied, namely a convolutional network (CNN), a graph neural network (GNN), and the graph-based linear assignment network (GLAN). A cost-matrix embedding is introduced so that a single model operates on cost matrices of any size, as required in MOT where the number of objects varies over time, without training a separate model for each input shape. Extensive simulations show that the embedding improves the accuracy of the neural solvers (i.e., CNN and GNN), while GLAN attains the best accuracy among them. These solvers are then integrated into a generalized labeled multi-Bernoulli (GLMB) tracker and evaluated on the WILDTRACK dataset, where GLAN yields tracking accuracy close to the Hungarian reference and comparable to recent DL-based trackers.",
+            "title": "Towards Deep Learning-Based Linear Assignment Problem Solvers for Multi-Object Tracking"
+          },
+          "key": "b514d8d2f0ceed3ef32a29448b352e662632b6d04ed1e7a8339210a7c40dd761"
+        },
+        "2611.24271": {
+          "item": {
+            "AI": {
+              "conclusion": "星座成形与感知估计器的联合设计是ISAC的关键，维纳滤波配合联合成形最优，低复杂度PAS提供灵活折中，可作为实用ISAC波形设计框架。",
+              "method": "推导依赖星座的ISINR闭式表达（含加窗与多目标效应），据此求熵最大化输入分布；将自编码器框架推广到几何、概率（含常规与广义低复杂度PAS）及联合星座成形，并跨三类感知信道估计器统一优化。",
+              "motivation": "ISAC复用通信信号做感知，但通信偏好高阶调制、感知偏好恒模信号，二者约束冲突，星座成形成为ISAC性能的关键驱动因素，而现有工作缺乏对星座与感知信道估计器交互的系统分析。",
+              "relevance_reason": "论文涉及OFDM ISAC与自编码器星座成形，但其核心是调制/波形设计与感知估计器，而非CSI获取、反馈压缩或信道重建，仅与感知信道估计器与learning-based收发设计略有交集。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "ISAC",
+                "OFDM",
+                "autoencoder-based constellation shaping",
+                "sensing channel estimators"
+              ],
+              "result": "仿真与硬件在环实验验证了ISINR推导；感知性能由所选感知信道估计器主导，通信性能由成形方式主导；维纳滤波+联合成形取得最佳ISAC折中，低复杂度PAS变体性能接近且优于传统调制格式。",
+              "tldr": "该文建立统一的解析与实验框架，研究单站OFDM ISAC系统中星座成形（几何、概率、联合）与三种感知信道估计器（匹配滤波、倒数滤波、维纳滤波）的交互，用自编码器优化并在硬件在环实验中验证ISINR与感知/通信权衡。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24271",
+            "authors": [
+              "Benedikt Geiger",
+              "Daniel Gil Gaviria",
+              "Christian Karle",
+              "Delcho Donev",
+              "Charlotte Muth",
+              "Thomas Zwick",
+              "Jürgen Becker",
+              "Benjamin Nuss",
+              "Laurent Schmalen"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible",
+            "id": "2611.24271",
+            "pdf": "https://arxiv.org/pdf/2611.24271",
+            "summary": "Emerging integrated sensing and communications (ISAC) systems reuse the communications signal for radar-like sensing to provide environmental awareness. However, this integrated design imposes conflicting constraints on the modulation format, as communications systems use higher-order modulation formats while sensing systems use unit-modulus signals, making constellation shaping a key performance driver in ISAC systems. This paper develops a unified analytical and experimental framework for constellation shaping in monostatic orthogonal frequency division multiplexing ISAC systems and systematically analyzes its interaction with the three canonical sensing channel estimators (SCEs): the matched filter, the reciprocal filter, and the Wiener filter (WF). We begin by deriving constellation-dependent image signal-to-interference-and-noise ratio (ISINR) expressions for the SCEs that account for practical effects such as windowing and multi target scenarios. Based on this, we derive the corresponding entropy-maximizing channel input distributions. We generalize an autoencoder framework to optimize geometric, probabilistic, including conventional and generalized low-complexity probabilistic amplitude shaping (PAS), and joint constellation shaping across all three SCEs. Extensive simulations and hardware-in-the-loop experiments validate the derived ISINR and show that sensing performance is governed by the SCE choice, while communications performance is dominated by the shaping method. Notably, the WF combined with joint shaping achieves the best ISAC trade-off. Low-complexity PAS variants closely approach this performance, offering a flexible trade-off and outperforming legacy modulation formats.",
+            "title": "Constellation Shaping for OFDM-ISAC Systems: A Systematic and Experimental Comparison"
+          },
+          "key": "4714814e6e588bfba6d28504b9c16ef2780af5ac47f5666067040ada6853f993"
+        },
+        "2611.24430": {
+          "item": {
+            "AI": {
+              "conclusion": "论文给出迭代Jeffrey更新的轨迹与相图理论，揭示反向迭代引发的激进化现象与贝叶斯相位结构，并证明证据可设计性（结论可达成但不可完全指定），为迭代信念更新的长期行为提供了刻画。",
+              "method": "在严格正、可逆的经典信道与全支撑证据下对Jeffrey更新进行正向与反向迭代分析，用贝叶斯\"相位\"（收敛到同一纯态的先验集合）、相图与M投影刻画不动点与分离轨迹，并探讨是否可选取证据使所有内点先验得到同一结论。",
+              "motivation": "现有工作已知固定证据下迭代Jeffrey更新在适当支撑条件给出最大似然估计，但轨迹的组织结构以及反向追踪时的行为尚不清楚，作者希望刻画这些迭代动力学的长期行为与相图。",
+              "relevance_reason": "该文属概率论/贝叶斯信息几何中Jeffrey更新迭代的理论分析，未涉及无线CSI获取、信道估计、CSI反馈或物理层AI方法，与研究画像无实质关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "反向迭代表现为重复先验篡改；几乎所有内点先验在每步与证据一致性变差的情况下仍趋向某一可能性的确定性结论（激进化）；分离轨迹收敛到由M投影确定的面不动点；对严格正可逆信道总能构造使全部内点先验收敛到同一结论的证据，但该结论不能任意指定。",
+              "tldr": "该文研究经典信道下Jeffrey更新的迭代轨迹：反向迭代等价于反复\"先验篡改\"（prior hacking），几乎所有内点先验会趋于单一结论（称为\"激进化\"），而分离轨迹趋于由M投影决定的边界不动点；对严格正可逆信道，总可设计证据使所有内点先验收敛到同一结论。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24430",
+            "authors": [
+              "Clive Cenxin Aw",
+              "Lynette Zhong Ling Wang",
+              "Peter Sidajaya"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": "8 pages (7 Supplementary), 4 figures",
+            "id": "2611.24430",
+            "pdf": "https://arxiv.org/pdf/2611.24430",
+            "summary": "Iterating Jeffrey's update on fixed evidence gives a maximum-likelihood estimate under suitable support conditions. What is less clear would be how the trajectories are organized, and what happens when we trace them in reverse. For a fixed strictly positive, invertible classical channel and full-support evidence, reverse iteration corresponds to repeated prior hacking. Almost every interior prior then approaches certainty in one possibility while each nontrivial step worsens agreement with the evidence. We call this limiting behavior radicalization. Priors that approach the same pure state form a Bayes phase. In the phase diagrams, the separating trajectories instead approach facet fixed points determined by M-projections. We also ask whether one can choose evidence that brings every interior prior to the same conclusion. For a strictly positive, invertible channel this is always possible, although one cannot always prescribe which conclusion it will be",
+            "title": "Rational v. Radical: Trajectory Properties of Iterated Bayesian Updates"
+          },
+          "key": "251ed7a7af8e42dc7f721dac9f46081b23ce8652a01ee5ca2fce3ab351f6d4b3"
+        },
+        "2611.24497": {
+          "item": {
+            "AI": {
+              "conclusion": "风险感知的安全分层学习可在O-RAN中兼顾URLLC可靠性与eMBB公平性，对CSI预测误差的显式建模是保证单用户服务保障的关键。",
+              "method": "O-RAN非实时（切片级资源块与功率预算）与近实时（用户级RB与功率分配）分层策略；执行时安全层基于每用户URLLC服务检验做有界资源转移；服务检验由考虑CSI预测误差的protected rate与业务需求conformal上界推导为确定性条件；目标采用服务特定CVaR，优先照顾URLLC违约率最高与eMBB速率最低用户。",
+              "motivation": "eMBB与URLLC联合资源分配需在业务与信道不确定性下同时满足URLLC时延可靠性约束与eMBB吞吐；现有学习型分配器只优化平均聚合性能、忽略预测误差，易导致部分用户服务严重退化。",
+              "relevance_reason": "论文属RAN层资源分配与切片调度，仅将CSI预测误差作为不确定性约束处理，未涉及CSI获取、反馈压缩或信道重建等核心方向。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "CSI预测误差建模",
+                "O-RAN资源分配"
+              ],
+              "result": "名义负载下，该框架是唯一在平均意义上同时满足URLLC违约率目标与最差用户eMBB速率准则的方法，较最佳基线在该指标上降低平均违约率64%，并获得最高最差用户eMBB速率。",
+              "tldr": "提出面向O-RAN的risk-aware分层安全学习框架，联合分配eMBB/URLLC切片资源，利用考虑CSI预测误差的protected rate与conformal上界构造确定性的单用户URLLC服务检验，并以CVaR目标优化，显著降低URLLC截止违约率并提升最差用户eMBB速率。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24497",
+            "authors": [
+              "Mohammad Hussain",
+              "Dilara Gurer",
+              "Gokhan Kalem",
+              "Sinem Coleri"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "13 pages, 4 figures, 5 tables. Submitted to IEEE Transactions on Communications",
+            "id": "2611.24497",
+            "pdf": "https://arxiv.org/pdf/2611.24497",
+            "summary": "Joint resource allocation for enhanced mobile broadband (eMBB) and ultra-reliable low-latency communication (URLLC) must satisfy stringent URLLC latency and reliability requirements while maintaining eMBB throughput under uncertain traffic and channel conditions. Existing learning-based allocators often optimize average aggregate performance without explicitly accounting for prediction errors, potentially resulting in severe service degradation for individual users. We propose a risk-aware safe hierarchical learning framework for Open Radio Access Networks (O-RAN) that learns resource-feasible allocations using service-cost penalties and a per-user URLLC service test. A non-real-time policy determines slice-level resource-block and power budgets, near-real-time policies allocate resource blocks and transmit power among users, and an execution-time safety layer checks per-user URLLC service and corrects allocations through bounded resource transfers when feasible. A deterministic per-user service test, derived using protected rates accounting for channel state information prediction errors and conformal upper bounds on traffic demand, ensures satisfaction of the probabilistic URLLC requirement. Service-specific conditional value-at-risk objectives prioritize users with the highest URLLC deadline-miss ratios and lowest eMBB rates. Experimental results show that, under nominal load, the proposed framework is the only evaluated method that satisfies both the URLLC deadline-miss target and worst-user eMBB rate criterion on average. It reduces the mean miss ratio by 64% relative to the best baseline in this metric and achieves the highest worst-user eMBB rate.",
+            "title": "Risk-Aware Safe Hierarchical Learning for Robust eMBB-URLLC Resource Allocation in O-RAN"
+          },
+          "key": "10c26dee6e299eeb68c95270ea39747920dffa5302fa4344493b8449a5872dbc"
+        },
+        "2611.24527": {
+          "item": {
+            "AI": {
+              "conclusion": "为 Chen 的最大 hull 维数问题提供新界与构造性证据，深化了对码等价类中 LCD 码存在性与支撑分裂复杂度的理解。",
+              "method": "在亏格 g>0 的函数域上对 AG 码进行除子扭曲 (G,H)→(G+L,H−L)；当 gcd(G+L,H−L) 为非特殊除子时推导 hull 维数差为 ½(deg|G−H|−deg|G−H+2L|)；对真实缩放 L=−(z) 给出 2[F:F_q(z)] 界，并构造逐步升降 hull 维数的显式扭曲，在 Kummer 扩域上验证紧性。",
+              "motivation": "Hull 维数决定 Sendrier 支撑分裂算法的复杂度，并决定码等价类中是否存在 LCD 码；已有工作（Chen 等）关注最大 hull 维数，但对几何码在缩放下的 hull 变化缺乏定量刻画。",
+              "relevance_reason": "该文属纯编码理论与代数几何码的代数结构研究，与 CSI 获取、信道估计、CSI 反馈压缩及无线 AI 无任何交集。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "得到 hull 维数变化的精确公式与仅依赖 D、W 的上界及其取等条件；构造可逐一增减 hull 维数的扭曲，并在两类码族上实现从 LCD 码到给定范围内所有 hull 维数、以及从自对偶/最大 hull 码下降到 0（得到多种维数的 LCD 码）。",
+              "tldr": "研究代数几何码 C(D,G) 的 hull（C∩C^⊥）在坐标缩放/除子扭曲下的维数变化，给出精确变化量公式、上界与构造。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24527",
+            "authors": [
+              "Erik Mendoza",
+              "Sihem Mesnager",
+              "Luciane Quoos"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.24527",
+            "pdf": "https://arxiv.org/pdf/2611.24527",
+            "summary": "The hull $\\mathrm{Hull}(\\mathcal{C})=\\mathcal{C}\\cap\\mathcal{C}^{\\perp}$ of a linear code $\\mathcal{C}\\subseteq\\mathbb{F}_q^n$ interpolates between linear complementary dual (LCD) codes, with trivial hull, and self-dual codes. Its dimension is preserved by coordinate permutations but not by scalings $\\mathcal{C}\\mapsto\\mathbf{x}\\cdot\\mathcal{C}$, $\\mathbf{x}\\in(\\mathbb{F}_q^*)^n$. This governs the complexity of Sendrier's support-splitting algorithm and decides whether an equivalence class contains LCD codes. We study this hull-variation problem, formalised by Chen, for algebraic geometry codes $\\mathcal{C}(D,G)$ over a function field $\\mathcal{F}/\\mathbb{F}_q$ of genus $g>0$, where scalings are twists of $G$ by principal divisors; as a natural relaxation, we allow twists $G\\mapsto G+L$ by arbitrary divisors. Writing $\\mathcal{C}(D,G)^{\\perp}=\\mathcal{C}(D,H)$, with $H=D-G+W$, $W$ canonical, a twist acts by $(G,H)\\mapsto(G+L,H-L)$. Whenever $\\gcd(G+L,H-L)$ is non-special, the hull dimensions of $\\mathcal{C}(D,G+L)$ and $\\mathcal{C}(D,G)$ differ by exactly $\\frac12(\\mathrm{deg}|G-H|-\\mathrm{deg}|G-H+2L|)$. For a genuine scaling, $L=-(z)$, this variation is bounded by $2[\\mathcal{F}:\\mathbb{F}_q(z)]$. Under the same hypothesis, we obtain an upper bound on the hull dimension depending only on $D$ and $W$, and characterise exactly when it is attained by a scaling of it. These bounds shed new light on Chen's maximal hull dimension; explicit scalings on Kummer extensions show that the first is sharp. We construct explicit twists that raise, respectively lower, the hull dimension by prescribed amounts, one unit at a time, and apply them to two classical families. Starting from known LCD codes, we reach every hull dimension in an explicit range; starting from a self-dual code ($q$ even) or a code of maximal hull dimension ($q$ odd), we descend to $0$, yielding LCD codes of various dimensions.",
+            "title": "Hull variation of algebraic geometry codes under divisor twists"
+          },
+          "key": "34fbe5a6b4a2555f7837ee3094adaef9b360fe6a5d306e5600df13584a8cddee"
+        },
+        "2611.24553": {
+          "item": {
+            "AI": {
+              "conclusion": "轻量化状态空间模型配合硬件协同设计可在实测大规模MIMO数据上实现高精度、低资源、低延迟的室内定位，具备部署可行性。",
+              "method": "在原Mamba与信道相关性增强的CMamba基础上，提出Slim-Mamba，将选择性扫描块简化为轻量门控循环更新；并进行硬件瓶颈分析、定点量化与面向矩阵-向量运算的可重构并行MAC阵列FPGA加速器设计。",
+              "motivation": "探索基于Mamba状态空间模型的大规模MIMO室内定位方案，并解决模型复杂度与实际硬件部署（延迟、资源）之间的瓶颈问题。",
+              "relevance_reason": "使用大规模MIMO CSI类实测数据进行定位，采用Mamba序列模型与轻量硬件部署，与CSI建模和轻量化无线AI有一定关联，但核心任务是室内定位与FPGA加速，而非CSI获取、反馈或重建。",
+              "relevance_score": 2,
+              "relevance_topics": [
+                "大规模MIMO",
+                "Mamba状态空间模型",
+                "轻量化模型/硬件协同设计",
+                "定点量化部署"
+              ],
+              "result": "Slim-Mamba仅81.6万参数、3.40MB（FP32）；硬件感知定点模型平均定位误差0.14m，接近浮点基线；ZCU102上四块骨干网络每token串行延迟约212.04us@100MHz。",
+              "tldr": "利用LuViRA实测大规模MIMO数据，提出Mamba/CMamba/Slim-Mamba室内定位系统，结合FPGA硬件加速与定点量化，实现0.14m平均定位误差。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24553",
+            "authors": [
+              "Shengjie Chen",
+              "Chenxi Zhang",
+              "Sijia Cheng",
+              "Ove Edfors",
+              "Liang Liu",
+              "Ilayda Yaman"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "11 pages, 10 figures",
+            "id": "2611.24553",
+            "pdf": "https://arxiv.org/pdf/2611.24553",
+            "summary": "Using real-world massive MIMO measurements from the LuViRA dataset, we present a system-level solution combining Mamba-based model development and hardware acceleration for indoor localization. Three Mamba-based models are explored: the original Mamba architecture, CMamba, a channel-correlation-enhanced state-space model designed to exploit correlations across input channels, and our proposed Slim-Mamba. Hardware implementation and bottleneck analysis are then used to guide further model simplification and optimization. The resulting Slim-Mamba simplifies the original Mamba selective state-space block into a lightweight gated recurrent update, preserving temporal state modelling and output gating while reducing the complexity of the selective-scan computation. The deployed model contains 816k trainable parameters and has a model size of 3.40MB under FP32 precision while maintaining high localization accuracy. The corresponding accelerator provides a reconfigurable architecture with a highly parallel MAC array optimized for matrix-vector operations and fine-grained pipelining, improving resource utilization and reducing inference latency. The hardware-aware fixed-point model achieves a mean localization error of 0.14m, closely matching the floating-point baseline. Implemented on a Zynq UltraScale+ ZCU102 FPGA, the four-block backbone has an estimated serial latency of 212.04us per token at 100MHz.",
+            "title": "Slim-Mamba: An Efficient and Reconfigurable Mamba-Based Accelerator for Massive MIMO Indoor Localization"
+          },
+          "key": "2de821e6816855739ee122aff8e33a57faadf1a2edb72d24fa7dce927376ddf5"
+        },
+        "2611.24607": {
+          "item": {
+            "AI": {
+              "conclusion": "给出相对熵与有序卡方散度间的最优不等式族及收敛判据，属于纯信息论/概率论结果，不针对具体无线信道或学习模型。",
+              "method": "纯解析推导：对任意 A,B>0 建立 D(P‖Q) 的上界，构造 Bernoulli 分布对同时达到两界；并研究有限/可数字母表上序列的收敛性与精确约束下下确界。",
+              "motivation": "在信息论与统计推断中，常用卡方散度控制相对熵，但已有不等式不够紧，需要刻画双向有序卡方约束下的精确上界及其可达到性。",
+              "relevance_reason": "该文为纯信息论散度不等式研究，未涉及信道估计、CSI反馈/压缩或无线AI方法，仅与似然类目标的理论背景间接相关。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "信息论散度界",
+                "相对熵",
+                "卡方散度"
+              ],
+              "result": "得到关于有序卡方散度的紧上界；两对 Bernoulli 分布同时达到两界；若一个有序卡方散度趋于零而另一个一致有界，则双向相对熵均趋于零；无界时结论失效；精确约束下在 ≥3 元字母表上下确界为零且不可达。",
+              "tldr": "该文给出相对熵 D(P‖Q) 关于双向有序卡方散度 χ²(P‖Q)、χ²(Q‖P) 的紧上界，并分析可达到性及序列收敛性质。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24607",
+            "authors": [
+              "Igal Sason"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.24607",
+            "pdf": "https://arxiv.org/pdf/2611.24607",
+            "summary": "We derive a sharp upper bound on the relative entropy $D(P\\|Q)$ in terms of the two ordered chi-squared divergences $\\chi^2(P\\|Q)$ and $\\chi^2(Q\\|P)$. For any $A,B>0$, the constraints $\\chi^2(P\\|Q)\\leq A$ and $\\chi^2(Q\\|P)\\leq B$ yield upper bounds on $D(P\\|Q)$ and $D(Q\\|P)$. Two pairs of Bernoulli distributions each attain both bounds simultaneously. As a consequence, for sequences of probability mass functions $\\{P_n\\}$ and $\\{Q_n\\}$ on a common finite or countably infinite alphabet, both $D(P_n\\|Q_n)$ and $D(Q_n\\|P_n)$ tend to zero whenever one of the two ordered chi-squared divergences tends to zero and the other remains uniformly bounded. Without this boundedness assumption, $D(P_n\\|Q_n)$ can fail to converge to zero even when $\\chi^2(Q_n\\|P_n)\\to 0$. Finally, in contrast to the attainable upper bounds, on any finite or countably infinite alphabet containing at least three elements, the infimum of $D(P\\|Q)$ under the exact constraints $\\chi^2(P\\|Q)=A$ and $\\chi^2(Q\\|P)=B$ is zero and is not attained.",
+            "title": "Relative Entropy under Ordered Chi-Squared Constraints: Exact Bounds and Extremizers"
+          },
+          "key": "f91f8304887b3ec19742d84230059ff6e398e5a2f11962631200684e26a6d4f7"
+        },
+        "2611.24693": {
+          "item": {
+            "AI": {
+              "conclusion": "频率扩展码可在低于2的冗余下塑造OFDM谱相关，为低开销的FRESH干扰消除提供可行方案。",
+              "method": "对期望信号施加不完整的频率扩展码（冗余<2），设计兼有半正交性与谱相关均匀性的扩展码，使干扰抵消能力与干扰中心频率无关；在SIR=0、5 dB下比较扩展、LDPC、LDPC+扩展等码率下的BER。",
+              "motivation": "FRESH滤波器依赖信号谱相关统计进行同频干扰抑制，但OFDM中谱相关通常需符号重复2倍以上，严重损失频谱效率；希望以更小冗余获得可控谱相关。",
+              "relevance_reason": "论文聚焦OFDM频率扩展码与FRESH滤波的同频干扰消除，属经典物理层信号设计与干扰抑制，不涉及CSI获取、信道估计、CSI反馈压缩或信道知识建模，也无AI方法。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "OFDM波形设计",
+                "干扰抑制",
+                "扩展码/冗余"
+              ],
+              "result": "所提扩展码支持任意码率，谱相关在频率上均匀分布，据此获得与干扰中心频率无关的干扰抑制性能，并给出等码率下的BER对比结果。",
+              "tldr": "提出一种非完整频率扩展码设计，在冗余因子<2时可控制OFDM信号的谱相关特性，实现频率无关的FRESH滤波同频干扰消除，并经BER评估。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24693",
+            "authors": [
+              "Karim Said",
+              "Xinrui Li",
+              "Daniel J. Jakubisin",
+              "Jeffrey H. Reed"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": null,
+            "id": "2611.24693",
+            "pdf": "https://arxiv.org/pdf/2611.24693",
+            "summary": "Frequency shift (FRESH) filters can achieve co-channel interference cancellation by exploiting spectral correlation statistics of both the desired and interfering signals. In orthogonal frequency division multiplexing (OFDM) signals, spectral correlation can be introduced in a structured way by symbol repetition across subcarriers. While this repetition generally requires duplicating symbols by an integer multiple of 2+ times (significantly impacting spectral efficiency), in this work it is shown that applying an incomplete spreading code, that trades spectral efficiency, to the desired signal can control its spectral correlation properties at redundancy factors less than 2. The distribution of the spectral correlation across frequencies determines the level of protection against interference at a given frequency. We introduce the design of frequency spreading codes that provide uniform spectral correlation distribution across frequencies, which provides equal interference cancellation capability independent of the center frequency of the interfering signal. The introduced spreading code can achieve arbitrary code rates while possessing two important properties: 1) semi-orthogonality and 2) spectral correlation uniformity. We evaluate the BER performance at very low signal-to-interference levels SIR$=0, 5 $ dB comparing spreading, LDPC, and LDPC+spreading at equal code rates.",
+            "title": "Spectrally Correlated Frequency Spreading Codes for FRESH Filtering-based Interference Cancellation"
+          },
+          "key": "116cf31cd2297f545afb8b5b10d22880438a2d8788d6e7ca36d844b409ac5627"
+        },
+        "2611.24700": {
+          "item": {
+            "AI": {
+              "conclusion": "grabbag信道在带与不带输出反馈下容量同阶（反馈不改变容量指数），为随机混合存储类信道提供了精确的容量标度刻画。",
+              "method": "逆向证明构造基于对状态后验律势函数（用颜色计数的\"噪声立方根\"定义）的逐步信息界，并对罕见颜色插入的用时施加状态预算；正向证明利用两个输出直方图的统计量（其期望与未知初始组成无关）、外码与指定组成码字。",
+              "motivation": "刻画一种随机混合、状态不可完全观测的存储型信道（grabbag）在带/不带反馈时的容量阶，从信息论角度理解状态不确定性对通信能力的限制。",
+              "relevance_reason": "该文为纯信息论信道容量分析，信道模型为抽象随机混合存储，与CSI获取、信道估计、反馈压缩或无线物理层AI无直接关联。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "给出上界9.77(K/(M+1))^{2/3}与下界（绝对常数倍），确定容量阶Θ((K/M)^{2/3})；同时证明该信道不可分解，并将其容量与有限状态信道信息公式相联系。",
+              "tldr": "论文研究\"grabbag\"随机混合存储信道，证明在2≤K≤M+1时，无反馈容量与无噪严格因果输出反馈容量均被上界9.77(K/(M+1))^{2/3}约束，且在M+1≥2^22时也有同阶下界，故两者均为Θ((K/M)^{2/3})，对固定K则为Θ(M^{-2/3})。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24700",
+            "authors": [
+              "Jun Chen",
+              "Yuta Sakai"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.24700",
+            "pdf": "https://arxiv.org/pdf/2611.24700",
+            "summary": "The grabbag channel models communication through a randomly mixed store. At each use, an input ball of one of $K$ colors is inserted into a bag containing $M$ balls, and one of the resulting $M+1$ balls is selected uniformly, observed, and removed. We show that, when $2\\leq K\\leq M+1$, both the capacity without feedback and the capacity with noiseless strictly causal output feedback are at most $9.77(K/(M+1))^{2/3}$, and that, when moreover $M+1\\geq2^{22}$, both are at least an absolute constant times $(K/(M+1))^{2/3}$. Hence, both capacities are of order $(K/M)^{2/3}$, and of order $M^{-2/3}$ for every fixed $K$. The converse is a single bound on the information that a feedback code conveys in $n$ uses, valid for every initial state. For each initial state, it bounds the information in each output by the change of a potential of the posterior law of the state given the earlier outputs, defined through noisy cube roots of the color counts. A budget on the true state bounds the total cost of the uses in which the inserted color is rare. The lower bound uses a statistic of two output histograms whose expectation does not depend on the unknown initial composition, an outer code, and words with prescribed compositions. We also show that the channel is indecomposable and relate its capacities to the finite-state-channel information formulas.",
+            "title": "The Asymptotic Capacity of the Grabbag Channel With and Without Feedback"
+          },
+          "key": "6282bd56e05704bc825808d0e10bb4b1d1cfc518f63ba90dc21f8f1ff08a2e93"
+        },
+        "2611.24702": {
+          "item": {
+            "AI": {
+              "conclusion": "任务导向的稀疏测距调度可在稀疏距离图下实现有效网络定位，是降低测距开销的有效途径。",
+              "method": "建立S-SM-NR框架，将任务图与收发（transmit-listen）调度联合设计；分析最小轮数并给出网络定位的连通性条件；给出构造稀疏任务图与均衡调度的闭式联合设计，在完全物理连通下达到最小轮数。",
+              "motivation": "现有完整测距协议要求所有节点对交换信号，测距周期过长；而网络定位并不需要全连接的距离图，因此可按定位任务需求稀疏化测距。",
+              "relevance_reason": "该文聚焦网络定位的测距调度与任务图优化，不涉及CSI获取、信道估计、CSI反馈压缩或AI方法，与研究方向关联很弱。",
+              "relevance_score": 1,
+              "relevance_topics": [],
+              "result": "仿真表明该方案降低了占用轮次数，通过缩短测距周期提升了定位精度。",
+              "tldr": "提出稀疏信号复用网络测距(S-SM-NR)框架，通过任务图与收发调度的联合设计减少测距轮次，在保证定位连通性条件下缩短测距周期并提升定位精度。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24702",
+            "authors": [
+              "Zijian Zhang",
+              "Yuan Shen"
+            ],
+            "categories": [
+              "eess.SP",
+              "cs.IR",
+              "cs.IT",
+              "cs.NI",
+              "eess.SY"
+            ],
+            "comment": "16 pages, 14 figures, with appendices",
+            "id": "2611.24702",
+            "pdf": "https://arxiv.org/pdf/2611.24702",
+            "summary": "Measuring inter-node distances is the basis for network localization, whereas acquiring node positions does not require a fully connected graph of distances. Existing complete-ranging protocols for network localization require every node pair to exchange signals, which prolongs the ranging cycle. In this paper, we propose sparse signal-multiplexing network ranging (S-SM-NR), a task-oriented framework that adapts the transmit-listen schedule to the ranging task required by network localization. First, we establish the S-SM-NR framework by formulating the joint design of the task graph and the transmit-listen schedule. Then, we analyze the minimum round count required by S-SM-NR and establish a connectivity condition for network localization. Subsequently, we develop a closed-form joint design that constructs the sparse task graph and the balanced transmit-listen schedule. In particular, the joint design can achieve the minimum round count under the complete physical connectivity. Finally, simulations show that the proposed S-SM-NR scheme reduces the occupied-round count and improves the localization accuracy by shortening the ranging cycle.",
+            "title": "Task-Oriented Network Ranging via Joint Graph and Schedule Design"
+          },
+          "key": "c68c03bbda952685c446a05de191cc9cd6f37dfdd3faeb74153aea8728d6d307"
+        },
+        "2611.24769": {
+          "item": {
+            "AI": {
+              "conclusion": "该类分圆循环码具有可精确刻画的最小距离、LCD 与 LRC 性质，可为构造最优局部可修复码提供代数方法。",
+              "method": "利用分圆多项式与有限域代数；对偶码情形对 ω(n)≤2 使用 Hartmann–Tzeng 界，对 ω(n)≥3 采用直和分解 C_{n,t}^⊥ = C_n^⊥ ⊕ V_t 及基于素数幂分量的张量积结构。",
+              "motivation": "拓展 Bhagat 与 Sarma 近期研究的循环码族 C_n 与 C_{n,1}，尝试引入最小素因子 t 以构造新码族并刻画其距离与结构性质。",
+              "relevance_reason": "论文属于有限域代数编码理论（循环码最小距离与LCD/LRC码），与无线通信CSI获取、信道估计、反馈压缩等研究方向无关联。",
+              "relevance_score": 0,
+              "relevance_topics": [],
+              "result": "得到 d(C_{n,t,1})=2t；d(C_{n,t})=t（若 t²∤n）或 2t（若 t²|n）；d(C_{n,t}^⊥)=2^{ω(n)}。并证明四个码族均为 LCD 与 LRC 码，给出局部性参数，识别出多个关于 Singleton 型 LRC 界的 r-最优或 d-最优无限族。",
+              "tldr": "研究有限域上由分圆多项式生成的循环码族 C_{n,t} 与 C_{n,t,1}，精确确定其最小距离与对偶码最小距离，并证明其为LCD码与LRC码。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24769",
+            "authors": [
+              "Alonso S. Castellanos",
+              "Gyan Morales Solis",
+              "Guilherme Tizziotti"
+            ],
+            "categories": [
+              "cs.IT"
+            ],
+            "comment": null,
+            "id": "2611.24769",
+            "pdf": "https://arxiv.org/pdf/2611.24769",
+            "summary": "Let $n$ be a composite positive integer coprime to $\\operatorname{char}(\\mathbb{F}_q)$ and let $t = \\operatorname{lpf}(n)$ be the least prime factor of $n$. In this paper we study the cyclic codes $\\mathcal{C}_{n,t} = \\langle Q_n(X)Q_t(X)\\rangle$ and $\\mathcal{C}_{n,t,1} = \\langle Q_n(X)Q_t(X)Q_1(X)\\rangle$ over $\\mathbb{F}_q$, where $Q_d(X)$ denotes the $d$-th cyclotomic polynomial. These codes extend the families $\\mathcal{C}_n = \\langle Q_n(X)\\rangle$ and $\\mathcal{C}_{n,1} = \\langle Q_n(X)Q_1(X)\\rangle$ recently studied by Bhagat and Sarma. We determine the exact minimum distances of $\\mathcal{C}_{n,t}$ and $\\mathcal{C}_{n,t,1}$, showing that $d(\\mathcal{C}_{n,t,1}) = 2t$ and that $d(\\mathcal{C}_{n,t})$ equals $t$ if $t^2 \\nmid n$, and $2t$ if $t^2 \\mid n$. For the dual codes, we establish $d(\\mathcal{C}_{n,t}^\\perp) = 2^{\\omega(n)}$, handling the case $\\omega(n) \\le 2$ via the Hartmann--Tzeng bound, and the case $\\omega(n) \\ge 3$ via a direct-sum decomposition $\\mathcal{C}_{n,t}^\\perp = \\mathcal{C}_n^\\perp \\oplus \\mathcal{V}_t$ and the tensor-product structure of $\\mathcal{C}_n^\\perp$ over its prime-power components. As applications, we show that all four code families are linear complementary dual (LCD) and locally recoverable (LRC), and we determine their locality parameters, identifying several infinite families that are $r$-optimal or $d$-optimal with respect to the Singleton-type bound for LRC codes.",
+            "title": "On cyclic codes generated by cyclotomic polynomials"
+          },
+          "key": "bf079adf8518ee75af39cc97ff0b508e9a34fb8b59498d597452ed0554a1d0c8"
+        },
+        "2611.24829": {
+          "item": {
+            "AI": {
+              "conclusion": "MPARA为乘法器受限场景下的复数乘法/FFT实现提供了一种有效的近似方案。",
+              "method": "基于匹配追踪的贪心近似，将相位正切表示为SOPOT项的加权和，用移位与加减替代乘法。",
+              "motivation": "无乘法器硬件实现复数内积（如FFT旋转因子）需要低复杂度、高精度的旋转近似方法。",
+              "relevance_reason": "属于无乘法器硬件与FFT近似计算，未涉及CSI获取、信道估计、CSI反馈或AI辅助物理层方法，仅与无线基带实现有间接联系。",
+              "relevance_score": 1,
+              "relevance_topics": [
+                "无乘法器硬件",
+                "FFT近似实现"
+              ],
+              "result": "在FFT旋转因子近似精度上优于其他先进近似方法。",
+              "tldr": "提出MPARA贪心算法，用带符号2的幂（SOPOT）加权和近似复数元素的相位正切，从而在无乘法器硬件中实现复数内积，并在FFT旋转因子近似上优于现有方法。"
+            },
+            "abs": "https://arxiv.org/abs/2611.24829",
+            "authors": [
+              "Luiz F. da S. Coelho",
+              "Paulo S. R. Diniz",
+              "Didier Le Ruyet"
+            ],
+            "categories": [
+              "eess.SP"
+            ],
+            "comment": "This paper is submitted to ICASSP 2027",
+            "id": "2611.24829",
+            "pdf": "https://arxiv.org/pdf/2611.24829",
+            "summary": "This paper proposes a greedy approximation algorithm for performing complex-valued inner products in multiplierless hardware. The matching pursuits for accurate rotation approximation (MPARA) algorithm approximates the tangent of the phase of complex elements as a sum of signed powers of two (SOPOT) representation, enabling multiplierless hardware for complex-valued multiplication. The proposed algorithm outperforms other state-of-the-art approximation methods for approximating the twiddle factors of a fast Fourier transform (FFT).",
+            "title": "Greedy Vector Approximation Based on Rotation for Multiplierless Complex Products"
+          },
+          "key": "d1191b61f0803729612a8f3d410be26c7ba64a244cd00370b15bd627b211e962"
+        }
+      },
+      "candidates": [
+        "2611.23436",
+        "2611.23494",
+        "2611.23503",
+        "2611.23523",
+        "2611.23552",
+        "2611.23553",
+        "2611.23709",
+        "2611.23722",
+        "2611.23724",
+        "2611.23740",
+        "2611.23794",
+        "2611.23802",
+        "2611.23904",
+        "2611.23927",
+        "2611.23940",
+        "2611.23986",
+        "2611.23987",
+        "2611.24017",
+        "2611.24064",
+        "2611.24072",
+        "2611.24099",
+        "2611.24107",
+        "2611.24271",
+        "2611.24430",
+        "2611.24497",
+        "2611.24527",
+        "2611.24553",
+        "2611.24607",
+        "2611.24693",
+        "2611.24700",
+        "2611.24702",
+        "2611.24769",
+        "2611.24829"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2611.23436": {
+          "abs": "https://arxiv.org/abs/2611.23436",
+          "authors": [
+            "Phinehas Chinthalagattu",
+            "Vitaly Petrov",
+            "Emil Björnson"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "7 pages, 5 figures, Submitted to IEEE ICC 2027",
+          "id": "2611.23436",
+          "pdf": "https://arxiv.org/pdf/2611.23436",
+          "summary": "This paper investigates receive combining for near-field beamfocusing in line-of-sight channels with antenna array misalignment. We propose and evaluate two analytical combiners: analog ANF-AC and digital ANF-DC. Beyond focusing the beam toward the transmitter, ANF-AC benefits from the proposed phase-flip corrections (PFCs), while ANF-DC additionally exploits Dirichlet-kernel-based amplitude tapering. ANF-AC closely matches theoretically optimal analog equal-gain combining (EGC), with an SNR gap below 0.006 dB. Similarly, ANF-DC matches optimal digital maximum-ratio combining (MRC). We then leverage the analytical properties of these combiners for link-level evaluation and optimization, deriving a closed-form expression for the optimal transmitter-receiver array-size trade-off that maximizes received SNR with analog combining. We also show that the optimized analog receiver performs within 0.84 dB of its fully digital MRC-equivalent counterpart. These results demonstrate that optimized analog combining (with potentially lower implementation complexity and cost, particularly at higher frequencies) can get close to the fully digital performance. Beyond the theoretical insights presented, the analytical tractability and EGC-like / MRC-like performance of our combiners enable accurate network-level mathematical studies of beamfocusing, such as coverage, capacity, and interference analysis and optimization toward efficient 6G+ near-field MIMO communication systems.",
+          "title": "How to Receive Focused Beams in Near-Field MIMO? Analytical Combiners and Array Size Optimization"
+        },
+        "2611.23494": {
+          "abs": "https://arxiv.org/abs/2611.23494",
+          "authors": [
+            "Mohammad Ghassemi",
+            "Han Zhang",
+            "Akram Bin Sediq",
+            "Ali Afana",
+            "Melike Erol-Kantarci"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "7 pages, 3 figures, IEEE Communications Magazine",
+          "id": "2611.23494",
+          "pdf": "https://arxiv.org/pdf/2611.23494",
+          "summary": "Mobile networks are outgrowing manual tuning: parameters multiply, services diversify, and traffic shifts faster than experts can react. The machine learning (ML) models that automate radio control are narrow: each is trained for one task, degrades when conditions move, and needs specialist retraining. This article introduces FM-in-the-loop, a framework for 6G radio access networks in which a foundation model (FM) reasons while lightweight machine learning agents act. It reads operator intents in plain language, decomposes them into subtasks, coordinates task-specific agents over Model Context Protocol (MCP) interfaces, and supervises them across their lifecycle---while the orchestration FM never enters the latency-critical control path. We locate seven integration points across four lifecycle stages, compare three cloud-to-edge deployments, and evaluate two elements: channel representations from a wireless FM are tested under noise-level and channel-estimation-error shift, and an instrumented emulation of the orchestration loop reports the measured cost of turning an operator intent into dispatched agent goals. Hallucination, cost, and standardization barriers remain.",
+          "title": "Foundation Model-Driven Agentic AI for 6G"
+        },
+        "2611.23503": {
+          "abs": "https://arxiv.org/abs/2611.23503",
+          "authors": [
+            "Gabriele Gradoni",
+            "Ahmed Elzanaty",
+            "Yadong Yang",
+            "Mohsen Khalily",
+            "Mahmoud Shahabadi",
+            "Fan Wang",
+            "Peiying Zhu",
+            "Wen Tong",
+            "Rahim Tafazolli"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IT"
+          ],
+          "comment": "16 pages; published in IEEE Transactions on Wireless Communications",
+          "id": "2611.23503",
+          "pdf": "https://arxiv.org/pdf/2611.23503",
+          "summary": "We propose an electromagnetic wireless channel model for accurate target localization in radar-like sensing scenarios. The model employs a self-consistent method grounded in wave scattering theory and imposing boundary conditions, providing the (impedance) channel transfer matrix for a propagation channel with a single target modeled as a cylindrical scatterer. The model is: 1) physics-based, as it includes electromagnetic interactions between objects; 2) unified, as it is valid in both near- and far-field regions. Within the canonical two-dimensional and 2.5-dimensional configurations with line-source and dipole-source excitations, respectively, the model supports dielectric cylinders with frequency-dependent permittivity. Localization accuracy is assessed via the Cramer-Rao lower bound for a dielectric cylinder with variable position, radius, and dielectric constant. Provisions for future extensions to extended targets are discussed in the context of 3GPP channel modeling.",
+          "title": "Electromagnetic Channel Model and Sensing Performance for ISAC: The Case of a Single Cylindrical Scatterer"
+        },
+        "2611.23523": {
+          "abs": "https://arxiv.org/abs/2611.23523",
+          "authors": [
+            "Gabriel Lawrence",
+            "Daniel Otero-Leon"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.OC"
+          ],
+          "comment": null,
+          "id": "2611.23523",
+          "pdf": "https://arxiv.org/pdf/2611.23523",
+          "summary": "We introduce the Double-Entropy Fit Index (DEFI), a regularized information-theoretic criterion for selecting among candidate graph partitions and reduced representations. DEFI couples entropy-based compression with relevance preservation and penalizes model dimensionality, cluster imbalance, and partition fragmentation. An exact Rényi-2 entropy identity shows that partitioning alters both spectral concentration and graph-volume normalization, explaining why unregularized entropy minimization can favor degenerate solutions. Across a 243-condition population-analytic factor recovery benchmark, DEFI achieved an overall exact recovery rate of 97.2\\% (versus 75.0\\% for EGA-TMFG, 45.8\\% for TEFI on von Neumann entropy). In controlled local candidate batteries (distinguishing the true model from adjacent $K \\pm 1$ and factor-split alternatives), DEFI identified the correct partition in 99.2\\% of replications. Across ten clustering benchmarks, DEFI-guided Gaussian mixtures achieved a mean ARI of 0.929, exceeding HDBSCAN (0.809), Ward clustering (0.700), and conventional GMM criteria (0.501-0.580), with gains concentrating where standard criteria over-extract components.",
+          "title": "The Double Entropy Fit Index (DEFI): An Information-Theoretic Approach to Dimensionality Reduction and Clustering"
+        },
+        "2611.23552": {
+          "abs": "https://arxiv.org/abs/2611.23552",
+          "authors": [
+            "Saakshi Gupta",
+            "Tarun S. Cousik",
+            "Pratheek Upadhyaya",
+            "Nishith Tripathi",
+            "Jeffery Reed",
+            "Daniel J. Jakubisin"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.23552",
+          "pdf": "https://arxiv.org/pdf/2611.23552",
+          "summary": "Reference Signal Received Power (RSRP) is widely used for beam selection in 5G NR as it is an easy indicator of path loss, but is not interference-aware, limiting its effectiveness in dense deployments. In this paper, we explore RSRP, Reference Signal Received Quality (RSRQ), and Signal to Interference-plus-Noise Ratio (SINR) as beam selection metrics alongside three UE-gNB association strategies in a 3GPP-compliant Urban Micro multi-cell simulation, benchmarked against Regularized Zero-Forcing (RZF) full-Channel State Information (CSI) upper bounds. Using a 3GPP-compliant Urban Micro multi-cell simulation benchmarked against RZF full-CSI upper bounds, we demonstrate two findings: directional RSRQ, despite its inter-cell interference awareness, is the worst-performing strategy in symmetric interference, and sequential association outperforms power-optimal Hungarian assignment. We also establish that the residual performance gap to full-CSI precoding stems from codebook quantization rather than metric imperfection, identifying adaptive codebook design as a mechanism to enhance performance.",
+          "title": "Beyond RSRP: An Exploration of Alternative Metrics for Beam Management in an Urban Micro 5G NR Scenario"
+        },
+        "2611.23553": {
+          "abs": "https://arxiv.org/abs/2611.23553",
+          "authors": [
+            "Mingrui Liu",
+            "Michael L. Oelze"
+          ],
+          "categories": [
+            "eess.SP",
+            "physics.med-ph"
+          ],
+          "comment": null,
+          "id": "2611.23553",
+          "pdf": "https://arxiv.org/pdf/2611.23553",
+          "summary": "Acoustic attenuation is more challenging to reconstruct and has received less attention than sound speed in ultrasound computed tomography using full-waveform inversion (FWI). In this study, a deep-learning (DL)-assisted FWI framework was proposed for attenuation reconstruction based on our previous work. Some numerical experiments were conducted to investigate the strategy and the effectiveness of using DL to help accelerate and improve the reconstruction quality of attenuation imaging in FWI. The results indicated that DL saved computational cost by 28% and improved attenuation reconstruction accuracy by 70% when combined with sufficiently accurate sound speed estimates. The result supports the potential of DL initialization to improve the computational efficiency and reconstruction quality of joint SOS and attenuation FWI.",
+          "title": "Deep-Learning-Assisted Full Waveform Inversion for Attenuation Reconstruction in Ultrasound Computed Tomography"
+        },
+        "2611.23709": {
+          "abs": "https://arxiv.org/abs/2611.23709",
+          "authors": [
+            "Sijia Li",
+            "Bing Xu",
+            "Shuo Tang",
+            "Pau Closas"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible",
+          "id": "2611.23709",
+          "pdf": "https://arxiv.org/pdf/2611.23709",
+          "summary": "The availability and utilization of Fisher information in global navigation satellite system (GNSS) direct position estimation (DPE) under multipath-induced channel uncertainty are investigated. First, a unified estimation-theoretic framework is developed to characterize information mapping and utilization across direct and two-step receivers. Next, a scalar-equivalent statistical channel model for short-delay multipath is established via least-squares (LS) projection. Based on this model, receiver-state Cramér-Rao bounds (CRBs) are derived under perfect and statistical channel knowledge, while misspecified CRBs (MCRBs) are derived under a simplified deterministic complex-gain model that neglects channel uncertainty. The closed-form approximations and asymptotic analyses of the derived bounds further reveal how channel uncertainty affects different components of waveform-domain Fisher information. Our results reveal that: 1) DPE and fully coupled two-step estimation achieve comparable accuracy, whereas the performance loss caused by sequential decoupling substantially exceeds the additional loss from suboptimal weighting; 2) under statistical channel knowledge, improving received signal quality does not necessarily yield noticeable positioning gains; 3) positioning information remains available even as the coherent channel mean vanishes; and 4) neglecting channel randomness causes the MCRBs to diverge in this limit and can introduce positioning error floors that become more pronounced with longer observations.",
+          "title": "Fisher Information Characterization in GNSS DPE under Multipath-Induced Channel Uncertainty"
+        },
+        "2611.23722": {
+          "abs": "https://arxiv.org/abs/2611.23722",
+          "authors": [
+            "Bizhu Wang",
+            "Manqi Li",
+            "Shujun Han",
+            "Mengying Sun",
+            "Xiaodong Xu"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "13 pages, 13figures",
+          "id": "2611.23722",
+          "pdf": "https://arxiv.org/pdf/2611.23722",
+          "summary": "Semantic communication reduces transmission overhead by conveying task-relevant semantic features, but its performance depends on the consistency between training and target-domain data distributions. In dynamic environments, distribution drift can make offline-trained semantic codec models stale and degrade transmission performance. Frequent updates alleviate this degradation but increase communication, computation, and queueing costs, whereas infrequent updates delay model adaptation. To address this tradeoff, we propose a drift-aware adaptive update strategy for dynamic semantic communication systems. Drift intensity is quantified in the semantic feature space, and Drift-Aware Age of Model (DA-AoM) is introduced to jointly capture drift-induced performance degradation, drift-dependent update service delay, and conventional update latency. Closed-form average DA-AoM expressions are derived for edge-layer M/M/1 and cloud-layer D/M/1 update scenarios, based on which the update frequency is optimized under the queueing-stability constraint. Simulations show that DA-AoM captures the joint effects of drift intensity, computing rate, bandwidth, and update frequency on model freshness beyond conventional Age of Information (AoI). The proposed strategy reduces average DA-AoM by 9.2\\%--42.4\\% compared with representative baselines under the same resource constraints.",
+          "title": "Drift-Aware Adaptive Semantic Codec Update Strategy for Dynamic Semantic Communications"
+        },
+        "2611.23724": {
+          "abs": "https://arxiv.org/abs/2611.23724",
+          "authors": [
+            "Yilong Chen",
+            "Jiaxuan Li",
+            "Yuan Guo",
+            "Wenhai Lai",
+            "Xinhao Li",
+            "Kaiming Shen",
+            "Guangxu Zhu",
+            "Jie Xu",
+            "Rui Zhang",
+            "Zhi-Quan Luo"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.23724",
+          "pdf": "https://arxiv.org/pdf/2611.23724",
+          "summary": "Planning sixth-generation (6G) networks for reliable coverage across diverse environments is challenging, as it requires channel knowledge between candidate network node locations and potential service regions. This article proposes an environment-aware network planning framework based on any-to-any (X2X) channel knowledge maps (CKMs), which characterize channels between arbitrary transmitter-receiver location pairs. Within this framework, we first construct X2X CKMs from environmental information, sparse channel measurements, or both, with map types and spatial resolutions selected according to the planning task. We then use these maps to predict coverage and optimize network deployment and configuration subject to service requirements and practical constraints, while accounting for subsequent network operation. Finally, field measurements assess channel prediction accuracy and deployment performance, providing feedback for CKM correction and deployment refinement. We discuss implementation methods and tradeoffs across these stages. Case studies illustrate the effectiveness of the framework for indoor intelligent reflecting surface (IRS) deployment and outdoor base station (BS) deployment. Live-network trials further demonstrate coverage gains from IRS deployment and BS reconfiguration, with measurement feedback supporting CKM calibration and configuration refinement.",
+          "title": "Towards Environment-Aware 6G Network Planning: An Any-to-Any Channel Knowledge Map Approach"
+        },
+        "2611.23740": {
+          "abs": "https://arxiv.org/abs/2611.23740",
+          "authors": [
+            "Shaoyang Sun",
+            "Chongwen Huang"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "5 pages, 3 figures, and 1 table. An 18-page supplement is included as an ancillary file",
+          "id": "2611.23740",
+          "pdf": "https://arxiv.org/pdf/2611.23740",
+          "summary": "Pattern-reconfigurable arrays acquire channels by distributing radiation modes across their antenna elements. Equal mode counts fix the observation budget while leaving a spatial sampling choice that directly affects reconstruction of unmeasured channels. We establish how this assignment enters the inverse problem through the receive aperture and the coupling between propagation paths. For an isolated path with calibrated positive real responses, the power-weighted variance of antenna positions completely characterizes the assignment dependence of the profiled angle information at fixed mode counts. We then construct layouts with identical weighted apertures and different path correlations, exposing a limitation of aperture-based design in multipath propagation. A paired simulation study evaluates balanced random, contiguous, interleaved, and equal-moment sampling using a common estimator with per-detection joint angle refinement. Balanced random sampling substantially reduces complete-channel error relative to ascending contiguous blocks when some modes are entirely unobserved, with improvements across nearly all tested scenes at high signal-to-noise ratio. When every mode is sampled, the mean benefit is more sensitive to rare large errors. Together, the analysis and experiments connect the spatial distribution of mode measurements to both extrapolation accuracy and reconstruction stability.",
+          "title": "The Geometry of Mode Sampling in Reconfigurable MIMO Channel Extrapolation"
+        },
+        "2611.23794": {
+          "abs": "https://arxiv.org/abs/2611.23794",
+          "authors": [
+            "Huidong Ma",
+            "Hui Sun",
+            "Xinyan Shi",
+            "Cheng Zhong",
+            "Xiaoguang Liu",
+            "Gang Wang"
+          ],
+          "categories": [
+            "cs.IT",
+            "q-bio.GN"
+          ],
+          "comment": null,
+          "id": "2611.23794",
+          "pdf": "https://arxiv.org/pdf/2611.23794",
+          "summary": "Long-read sequencing technologies generate large volumes of data, creating substantial storage and transmission demands. Although reference-based compressors can achieve high compression, their reliance on an appropriate reference genome limits their use. We present LRCBench, a benchmark and survey of reference-free lossless compressors for long-read sequencing data. We review traditional and learning-based general-purpose and sequencing-specific methods, then evaluate 35 compressors on 16 real-world datasets from Oxford Nanopore and PacBio platforms. We compare compression ratio, storage savings, runtime, peak memory use, and robustness across datasets. Learning-based compressors are evaluated on six MinION datasets because of their high computational costs. CoLoRd achieves the best overall compression ratios in our experiments, while other methods offer trade-offs in speed, memory use, and robustness. We also examine multithreaded speedup and discuss future directions in parallel acceleration, privacy protection, adaptive parameter tuning, and hardware-algorithm co-design.",
+          "title": "Benchmarking Traditional and Learning-Based Reference-Free Compressors for Long-Read Sequencing Data"
+        },
+        "2611.23802": {
+          "abs": "https://arxiv.org/abs/2611.23802",
+          "authors": [
+            "Kalpesh K. Patel",
+            "Ekant Sharma",
+            "Sandeep Kumar Singh",
+            "Lajos Hanzo"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "14 PAGES, Journal",
+          "id": "2611.23802",
+          "pdf": "https://arxiv.org/pdf/2611.23802",
+          "summary": "Next-generation (NG) wireless networks face increasingly complex and dynamic optimization challenges driven by data-intensive applications and massive device connectivity. Existing methods suffer from one or more limitations, including high computational complexity, poor scalability and adaptability, reliance on large labeled datasets, or weak generalization in dynamic and non-convex wireless environments. To overcome these limitations, we introduce a self-supervised fitness-driven diffusion (SFiD) method that autonomously generates its own training data and iteratively learns from it. It also exhibits strong generalization capabilities and the ability to effectively tackle challenging optimization problems. We validate the convergence of our proposed method to the global optimum on both analytical convex and non-convex optimization problems. To demonstrate the effectiveness of the proposed method, we consider reconfigurable intelligent surface (RIS) phaseshift optimization in cell-free massive multiple-input multipleoutput (CF-mMIMO) systems with imperfect channel state information and spatial correlation at the RIS as a case study. Specifically, we develop SFiD-C for continuous variable optimization and apply it to optimize continuous RIS phase shifts in CF-mMIMO systems. We also develop SFiD-D for discrete variable optimization and apply it to optimize discrete RIS phase shifts in CF-mMIMO systems. Furthermore, we develop a binary neural network (BNN) based version of SFiDD for reducing its computational complexity, referred to as SFiD-D (BNN). Finally, our experimental results demonstrate that the proposed methods markedly improve computational efficiency and achieve comparable or superior performance compared to meta-heuristic and DRL benchmarks for both continuous and discrete RIS phase-shift optimization.",
+          "title": "SFiD: Self-Supervised Fitness-Driven Optimization for Next-Generation Networking"
+        },
+        "2611.23904": {
+          "abs": "https://arxiv.org/abs/2611.23904",
+          "authors": [
+            "Shaoyang Sun",
+            "Chongwen Huang"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "24 pages, 10 figures in total (5 pages and 3 figures in the main paper, 19 pages and 7 figures in the supplementary material). Chongwen Huang is the corresponding author",
+          "id": "2611.23904",
+          "pdf": "https://arxiv.org/pdf/2611.23904",
+          "summary": "A pattern-reconfigurable multiple-input multiple-output (MIMO) receiver can sample every antenna element and still leave entire radiation modes unobserved. The calibrated patterns weight a common set of propagation paths, which links these missing channels to the measured rows. Our estimator learns to correct the complex gains and spatial frequencies of those paths, so a correction inferred from measured rows updates every unmeasured mode. Each stage combines a damped least-squares proposal with a learned correction scaled by noise power and local array sensitivity. Training on complete simulated channels rewards corrections that reduce prediction error across modes, including those with no measured rows. The learned rule transfers from pursuit-based training estimates to a ridge variable-projection initializer without retraining. In matched simulations, refinement reduces error on wholly unobserved modes as well as across the full channel. Coefficient updates account for most of the gain, and the learned rule further improves on adaptive ridge shrinkage at fixed angles. Individual channel trajectories show that extrapolation can improve even as the residual on the measured rows increases.",
+          "title": "MIMO Channel Extrapolation to Unobserved Radiation Modes via Learned Path Refinement"
+        },
+        "2611.23927": {
+          "abs": "https://arxiv.org/abs/2611.23927",
+          "authors": [
+            "Xinyang Zhang",
+            "Yuanhao Cui",
+            "Xiaotong Zhao",
+            "Ningyan Guo",
+            "Christos Masouros",
+            "Dong In Kim"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "13 pages, 7 figures; submitted to IEEE Transactions on Aerospace and Electronic Systems (TAES)",
+          "id": "2611.23927",
+          "pdf": "https://arxiv.org/pdf/2611.23927",
+          "summary": "Communication-serviceable capacity for low-altitude unmanned aerial vehicle (UAV) networks depends on both spatial occupancy and wireless quality of service (QoS). This paper formulates a communication-feasible occupancy-planning model that maps candidate-grid assignments to concurrent beam loads and per-user rates under fixed-stream and fixed-beam power. With fixed effective noise, per-beam QoS screening determines maximum admission, and an exact dynamic program maximizes aggregate spectral efficiency at that fixed admission. Signal-level simulations validate the SINR expressions, while an explicit-array model examines load-dependent inter-beam leakage. The dynamic program is globally optimal for the separable integer problem, but that guarantee does not extend to the coupled problem. Equal-time orthogonal multiple access (OMA) and ideal-SIC non-orthogonal multiple access (NOMA) are evaluated through the same local beam reduction under fixed effective noise and fixed per-beam power.",
+          "title": "Trade-off Between Airspace and Channel Capacity for Low-altitude Wireless Network"
+        },
+        "2611.23940": {
+          "abs": "https://arxiv.org/abs/2611.23940",
+          "authors": [
+            "Seonjung Kim",
+            "Jaehyeok Kim",
+            "Yo-Seb Jeon"
+          ],
+          "categories": [
+            "eess.SP",
+            "eess.SY"
+          ],
+          "comment": null,
+          "id": "2611.23940",
+          "pdf": "https://arxiv.org/pdf/2611.23940",
+          "summary": "Digital semantic communication requires reliable recovery of task-relevant information at a legitimate receiver while limiting source reconstruction by an eavesdropper. Uniform bit protection, however, does not account for the heterogeneous reliability and secrecy requirements of semantic bits. This paper proposes a bit-level physical layer security (PLS) framework that learns these requirements and incorporates them into physical-layer resource allocation. We first introduce a wiretap semantic feature channel whose two-stage training learns per-bit target bit-flip probabilities for the legitimate receiver (Bob) and the eavesdropper (Eve). These targets characterize the reliability requirements at Bob and the secrecy protection requirements against Eve. Based on the learned targets, we formulate a joint power and artificial-noise (AN) allocation problem for a multiple-input single-output wiretap channel under a worst-case angular-separation model. For a given target profile, the optimal information-AN power split admits a closed-form solution, and the per-bit power allocation is obtained by water-filling. We further develop a leakage-aware selection method among multiple learned-target profiles and extend the design to multiple-input multiple-output channels. Simulation results demonstrate that the proposed framework achieves a better trade-off between preserving reconstruction quality at Bob and degrading that at Eve than uniform power allocation and the evaluated learning-based secure semantic communication schemes.",
+          "title": "Physical Layer Security for Digital Semantic Communication: A Bit-Level Perspective"
+        },
+        "2611.23986": {
+          "abs": "https://arxiv.org/abs/2611.23986",
+          "authors": [
+            "Xiran Guo",
+            "Zhihao Liu",
+            "Guanghua Liu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted to IEEE Journal of Biomedical and Health Informatics (JBHI)",
+          "id": "2611.23986",
+          "pdf": "https://arxiv.org/pdf/2611.23986",
+          "summary": "Attention-deficit/hyperactivity disorder (ADHD) is associated with an atypical imbalance between the default mode network (DMN) and task-control systems. However, compressing neural activity into a single macroscopic imbalance measure may obscure individual neurophysiological differences. To address this, we leveraged the source-orientation selectivity and related measurement properties of resting-state magnetoencephalography (MEG) to establish a multidimensional source-space network representation in 21 individuals with ADHD and 21 healthy controls. We defined the macroscopic imbalance in relative Alpha activity between the DMN and task-control systems as the Core, and expanded its constituent information along three dimensions: spatial sources, spectral composition, and temporal network organization: into in-depth measures, assessed for stability, robustness, and complementarity. We found that the ADHD group exhibited a significant Core Alpha imbalance, driven mainly by task-control regions, while the multidimensional expansion revealed complementary ADHD-related neurophysiological information not fully represented by the Core, suggesting that similar macroscopic imbalances may reflect distinct underlying physiological states. Across 40 exploratory within-cohort held-out evaluations with separate development and test subsets, mean ROC-AUC increased from 0.7607 (Core-only) to 0.8995 with multidimensional inputs and to 0.9051 with the final ensemble, and mean accuracy increased from 71.43% to 79.82%. These findings suggest that multidimensional source-space expansion can further clarify the neurophysiological composition of ADHD-related network imbalance and improve individual-level discrimination, offering an interpretable framework potentially applicable to other brain disorders characterized by network imbalance.",
+          "title": "Multidimensional Source-Space MEG Representation of Network Imbalance in ADHD"
+        },
+        "2611.23987": {
+          "abs": "https://arxiv.org/abs/2611.23987",
+          "authors": [
+            "Miaomiao Wei",
+            "Huaiyuan Chen",
+            "Xinnan Shao",
+            "Lulu Gao",
+            "Hang Liu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "12 pages, 11 figures",
+          "id": "2611.23987",
+          "pdf": "https://arxiv.org/pdf/2611.23987",
+          "summary": "Low Earth Orbit (LEO) satellite communications are essential for achieving ubiquitous global connectivity. However, the high mobility of LEO satellites induces massive Doppler shifts and fast time-varying fading, severely impairing signal synchronization. Accurate Carrier Frequency Offset (CFO) estimation is critical for receiver synchronization. Nevertheless, conventional estimators and deep learning approaches often degrade significantly under highly dynamic, low-SNR conditions. To address these challenges, this paper proposes a novel Convolution Augmented Transformer architecture for robust, blind CFO estimation in LEO communication systems. Initially, to overcome the inherent limitations of standard linear embedding layers in capturing nonlinear phase rotations, we construct a multi-domain input feature that encompasses in-phase/quadrature (I/Q), polar, and statistical autocorrelation properties. Subsequently, a Convolutional Pre-Denoising (CPD) module, integrating multi-scale dilated convolutions and an attention mechanism, is deployed at the front end to adaptively suppress localized noise and extract robust spatiotemporal representations. These refined latent features are then processed by a Transformer encoder to explicitly track global, long-range phase dependencies. Extensive simulation results demonstrate that the proposed data-driven approach significantly outperforms conventional estimation algorithms, achieving enhanced estimation accuracy and superior resilience in highly dynamic LEO environments.",
+          "title": "Convolution-Augmented Transformer for Robust Blind CFO Estimation in LEO Satellite Communication System"
+        },
+        "2611.24017": {
+          "abs": "https://arxiv.org/abs/2611.24017",
+          "authors": [
+            "Anand A. Joshi",
+            "Satwik Bathula",
+            "Richard M. Leahy"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "29 pages, 8 figures",
+          "id": "2611.24017",
+          "pdf": "https://arxiv.org/pdf/2611.24017",
+          "summary": "Electroencephalography (EEG) studies increasingly use naturalistic and resting-state paradigms that lack discrete event timing. These recordings contain structured oscillatory activity but often lack repeated stimulus onsets to define a shared time clock across trials or participants. We introduce EEGSync, a complex-valued unitary Procrustes temporal alignment method for band-limited analytic EEG signals. EEGSync represents each subject as a matrix of complex oscillatory trajectories and solves a unitary Procrustes problem, mapping a target subject into the temporal coordinate system of a reference or group template. The method is computationally tractable through an economy-SVD factorization that avoids constructing the full temporal operator. This alignment strictly preserves original pairwise relationships and power across EEG channels. The unitary transformation aligns latent temporal structure rather than estimating a physical clock offset. Consequently, nonlinear instantaneous measures like phase-locking value, amplitude-envelope correlation, and phase-amplitude coupling are not guaranteed to be invariant. This framing makes EEGSync highly suitable for naturalistic shared-stimulus data, and potentially useful for resting-state data as a covariance-preserving latent manifold alignment. Evaluated via subject-independent cross-validation across physiological and clinical settings, EEGSync-based features achieved an AUROC of 0.9600 and 89.45% maximum classification accuracy in eyes-open versus eyes-closed state discrimination. For Alzheimer's disease versus healthy control classification, the highest AUROC reached 0.9272 in eyes-closed recordings, with further discrimination under eyes-open photostimulation. These findings suggest temporal alignment captures discriminative information complementing conventional spectral and statistical EEG features.",
+          "title": "EEGSync: Unitary Temporal Alignment Method for Naturalistic and Resting-State EEG"
+        },
+        "2611.24064": {
+          "abs": "https://arxiv.org/abs/2611.24064",
+          "authors": [
+            "Shasha Liu",
+            "Abla Kammoun",
+            "Mohamed Slim Alouini"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "8 pages, 3 Figures",
+          "id": "2611.24064",
+          "pdf": "https://arxiv.org/pdf/2611.24064",
+          "summary": "High-altitude platform stations (HAPS) are expected to become an important component of sixth-generation (6G) and beyond wireless networks by providing wide-area wireless connectivity through massive multiple-input multiple-output (mMIMO) technology. As the communication performance of HAPS systems is fundamentally determined by the antenna array architecture, efficient antenna design has become a critical research topic. Motivated by these considerations, this article provides a comprehensive overview of antenna array design for mMIMO-enabled HAPS systems and proposes two novel antenna architectures to improve antenna-user alignment and communication performance. Specifically, the representative applications of mMIMO-enabled HAPS are first introduced, followed by the key design requirements for HAPS antenna arrays. Representative antenna architectures are then systematically reviewed and compared under a unified simulation framework based on the 3GPP NTN channel model. Finally, several promising research directions are discussed to provide insights into the design of next-generation intelligent HAPS antenna systems.",
+          "title": "Toward Massive MIMO HAPS Networks: Antenna Architectures and Design"
+        },
+        "2611.24072": {
+          "abs": "https://arxiv.org/abs/2611.24072",
+          "authors": [
+            "Haibo Liu",
+            "Qunying Liao"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.24072",
+          "pdf": "https://arxiv.org/pdf/2611.24072",
+          "summary": "Recently, minimal linear codes have been extensively studied due to their applications in secret sharing schemes, secure two-party computations, and so on. Constructing minimal linear codes violating the Ashikhmin-Barg condition and then determining their weight distributions have been interesting in coding theory and cryptography. In this paper, we present a general construction of ternary linear codes of dimension $n+r$, where $n$ and $r$ are positive integers, and derive a necessary and sufficient condition for the resulting codes to be minimal. We first specialize the construction using index codes arising from spreads, with three classes of index codes satisfying the minimality condition, we obtain the parameters and weight enumerators of the corresponding minimal codes, and determine the access structures type of the secret-sharing schemes based on their dual codes. By the index codes from Krawtchouk polynomials, we then give a second specialization of the construction, with a class of index codes satisfying the minimality condition, we obtain the parameters of the resulting minimal codes, and determine the access-structure type of the secret-sharing scheme based on each dual code. Several constructed families of minimal codes violate the Ashikhmin-Barg condition.",
+          "title": "Construction of Ternary Minimal Linear Codes with Dimension $n+r$ Via Index Codes and The Access Structures of Their Dual Codes"
+        },
+        "2611.24099": {
+          "abs": "https://arxiv.org/abs/2611.24099",
+          "authors": [
+            "Gianfranco Bilardi",
+            "Carlo Fantozzi"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.CC"
+          ],
+          "comment": null,
+          "id": "2611.24099",
+          "pdf": "https://arxiv.org/pdf/2611.24099",
+          "summary": "Linear transformations are considered over finite commutative rings. It is shown that the information exchange of an invertible linear transformation and that of its inverse are equal for any ring. It is also shown that the information exchange of any linear transformation and that of its transpose are equal if and only if the ring is Frobenius. Applications are presented to the Discrete Fourier Transform, to the analysis of Vandermonde transformations, and to area-time complexity.",
+          "title": "A Characterization of Rings Where a Linear Transformation and Its Inverse and Transpose Have the Same Information Exchange"
+        },
+        "2611.24107": {
+          "abs": "https://arxiv.org/abs/2611.24107",
+          "authors": [
+            "Chu Tam Vu",
+            "Tran Thi Thuy Quynh",
+            "Do Hai Son"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.24107",
+          "pdf": "https://arxiv.org/pdf/2611.24107",
+          "summary": "This paper proposes and evaluates deep learning (DL)-based linear assignment problem (LAP) solvers as a replacement for the classical Hungarian algorithm in multi-object tracking (MOT) systems. Three representative neural models are studied, namely a convolutional network (CNN), a graph neural network (GNN), and the graph-based linear assignment network (GLAN). A cost-matrix embedding is introduced so that a single model operates on cost matrices of any size, as required in MOT where the number of objects varies over time, without training a separate model for each input shape. Extensive simulations show that the embedding improves the accuracy of the neural solvers (i.e., CNN and GNN), while GLAN attains the best accuracy among them. These solvers are then integrated into a generalized labeled multi-Bernoulli (GLMB) tracker and evaluated on the WILDTRACK dataset, where GLAN yields tracking accuracy close to the Hungarian reference and comparable to recent DL-based trackers.",
+          "title": "Towards Deep Learning-Based Linear Assignment Problem Solvers for Multi-Object Tracking"
+        },
+        "2611.24271": {
+          "abs": "https://arxiv.org/abs/2611.24271",
+          "authors": [
+            "Benedikt Geiger",
+            "Daniel Gil Gaviria",
+            "Christian Karle",
+            "Delcho Donev",
+            "Charlotte Muth",
+            "Thomas Zwick",
+            "Jürgen Becker",
+            "Benjamin Nuss",
+            "Laurent Schmalen"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible",
+          "id": "2611.24271",
+          "pdf": "https://arxiv.org/pdf/2611.24271",
+          "summary": "Emerging integrated sensing and communications (ISAC) systems reuse the communications signal for radar-like sensing to provide environmental awareness. However, this integrated design imposes conflicting constraints on the modulation format, as communications systems use higher-order modulation formats while sensing systems use unit-modulus signals, making constellation shaping a key performance driver in ISAC systems. This paper develops a unified analytical and experimental framework for constellation shaping in monostatic orthogonal frequency division multiplexing ISAC systems and systematically analyzes its interaction with the three canonical sensing channel estimators (SCEs): the matched filter, the reciprocal filter, and the Wiener filter (WF). We begin by deriving constellation-dependent image signal-to-interference-and-noise ratio (ISINR) expressions for the SCEs that account for practical effects such as windowing and multi target scenarios. Based on this, we derive the corresponding entropy-maximizing channel input distributions. We generalize an autoencoder framework to optimize geometric, probabilistic, including conventional and generalized low-complexity probabilistic amplitude shaping (PAS), and joint constellation shaping across all three SCEs. Extensive simulations and hardware-in-the-loop experiments validate the derived ISINR and show that sensing performance is governed by the SCE choice, while communications performance is dominated by the shaping method. Notably, the WF combined with joint shaping achieves the best ISAC trade-off. Low-complexity PAS variants closely approach this performance, offering a flexible trade-off and outperforming legacy modulation formats.",
+          "title": "Constellation Shaping for OFDM-ISAC Systems: A Systematic and Experimental Comparison"
+        },
+        "2611.24430": {
+          "abs": "https://arxiv.org/abs/2611.24430",
+          "authors": [
+            "Clive Cenxin Aw",
+            "Lynette Zhong Ling Wang",
+            "Peter Sidajaya"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "8 pages (7 Supplementary), 4 figures",
+          "id": "2611.24430",
+          "pdf": "https://arxiv.org/pdf/2611.24430",
+          "summary": "Iterating Jeffrey's update on fixed evidence gives a maximum-likelihood estimate under suitable support conditions. What is less clear would be how the trajectories are organized, and what happens when we trace them in reverse. For a fixed strictly positive, invertible classical channel and full-support evidence, reverse iteration corresponds to repeated prior hacking. Almost every interior prior then approaches certainty in one possibility while each nontrivial step worsens agreement with the evidence. We call this limiting behavior radicalization. Priors that approach the same pure state form a Bayes phase. In the phase diagrams, the separating trajectories instead approach facet fixed points determined by M-projections. We also ask whether one can choose evidence that brings every interior prior to the same conclusion. For a strictly positive, invertible channel this is always possible, although one cannot always prescribe which conclusion it will be",
+          "title": "Rational v. Radical: Trajectory Properties of Iterated Bayesian Updates"
+        },
+        "2611.24497": {
+          "abs": "https://arxiv.org/abs/2611.24497",
+          "authors": [
+            "Mohammad Hussain",
+            "Dilara Gurer",
+            "Gokhan Kalem",
+            "Sinem Coleri"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "13 pages, 4 figures, 5 tables. Submitted to IEEE Transactions on Communications",
+          "id": "2611.24497",
+          "pdf": "https://arxiv.org/pdf/2611.24497",
+          "summary": "Joint resource allocation for enhanced mobile broadband (eMBB) and ultra-reliable low-latency communication (URLLC) must satisfy stringent URLLC latency and reliability requirements while maintaining eMBB throughput under uncertain traffic and channel conditions. Existing learning-based allocators often optimize average aggregate performance without explicitly accounting for prediction errors, potentially resulting in severe service degradation for individual users. We propose a risk-aware safe hierarchical learning framework for Open Radio Access Networks (O-RAN) that learns resource-feasible allocations using service-cost penalties and a per-user URLLC service test. A non-real-time policy determines slice-level resource-block and power budgets, near-real-time policies allocate resource blocks and transmit power among users, and an execution-time safety layer checks per-user URLLC service and corrects allocations through bounded resource transfers when feasible. A deterministic per-user service test, derived using protected rates accounting for channel state information prediction errors and conformal upper bounds on traffic demand, ensures satisfaction of the probabilistic URLLC requirement. Service-specific conditional value-at-risk objectives prioritize users with the highest URLLC deadline-miss ratios and lowest eMBB rates. Experimental results show that, under nominal load, the proposed framework is the only evaluated method that satisfies both the URLLC deadline-miss target and worst-user eMBB rate criterion on average. It reduces the mean miss ratio by 64% relative to the best baseline in this metric and achieves the highest worst-user eMBB rate.",
+          "title": "Risk-Aware Safe Hierarchical Learning for Robust eMBB-URLLC Resource Allocation in O-RAN"
+        },
+        "2611.24527": {
+          "abs": "https://arxiv.org/abs/2611.24527",
+          "authors": [
+            "Erik Mendoza",
+            "Sihem Mesnager",
+            "Luciane Quoos"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.24527",
+          "pdf": "https://arxiv.org/pdf/2611.24527",
+          "summary": "The hull $\\mathrm{Hull}(\\mathcal{C})=\\mathcal{C}\\cap\\mathcal{C}^{\\perp}$ of a linear code $\\mathcal{C}\\subseteq\\mathbb{F}_q^n$ interpolates between linear complementary dual (LCD) codes, with trivial hull, and self-dual codes. Its dimension is preserved by coordinate permutations but not by scalings $\\mathcal{C}\\mapsto\\mathbf{x}\\cdot\\mathcal{C}$, $\\mathbf{x}\\in(\\mathbb{F}_q^*)^n$. This governs the complexity of Sendrier's support-splitting algorithm and decides whether an equivalence class contains LCD codes. We study this hull-variation problem, formalised by Chen, for algebraic geometry codes $\\mathcal{C}(D,G)$ over a function field $\\mathcal{F}/\\mathbb{F}_q$ of genus $g>0$, where scalings are twists of $G$ by principal divisors; as a natural relaxation, we allow twists $G\\mapsto G+L$ by arbitrary divisors. Writing $\\mathcal{C}(D,G)^{\\perp}=\\mathcal{C}(D,H)$, with $H=D-G+W$, $W$ canonical, a twist acts by $(G,H)\\mapsto(G+L,H-L)$. Whenever $\\gcd(G+L,H-L)$ is non-special, the hull dimensions of $\\mathcal{C}(D,G+L)$ and $\\mathcal{C}(D,G)$ differ by exactly $\\frac12(\\mathrm{deg}|G-H|-\\mathrm{deg}|G-H+2L|)$. For a genuine scaling, $L=-(z)$, this variation is bounded by $2[\\mathcal{F}:\\mathbb{F}_q(z)]$. Under the same hypothesis, we obtain an upper bound on the hull dimension depending only on $D$ and $W$, and characterise exactly when it is attained by a scaling of it. These bounds shed new light on Chen's maximal hull dimension; explicit scalings on Kummer extensions show that the first is sharp. We construct explicit twists that raise, respectively lower, the hull dimension by prescribed amounts, one unit at a time, and apply them to two classical families. Starting from known LCD codes, we reach every hull dimension in an explicit range; starting from a self-dual code ($q$ even) or a code of maximal hull dimension ($q$ odd), we descend to $0$, yielding LCD codes of various dimensions.",
+          "title": "Hull variation of algebraic geometry codes under divisor twists"
+        },
+        "2611.24553": {
+          "abs": "https://arxiv.org/abs/2611.24553",
+          "authors": [
+            "Shengjie Chen",
+            "Chenxi Zhang",
+            "Sijia Cheng",
+            "Ove Edfors",
+            "Liang Liu",
+            "Ilayda Yaman"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "11 pages, 10 figures",
+          "id": "2611.24553",
+          "pdf": "https://arxiv.org/pdf/2611.24553",
+          "summary": "Using real-world massive MIMO measurements from the LuViRA dataset, we present a system-level solution combining Mamba-based model development and hardware acceleration for indoor localization. Three Mamba-based models are explored: the original Mamba architecture, CMamba, a channel-correlation-enhanced state-space model designed to exploit correlations across input channels, and our proposed Slim-Mamba. Hardware implementation and bottleneck analysis are then used to guide further model simplification and optimization. The resulting Slim-Mamba simplifies the original Mamba selective state-space block into a lightweight gated recurrent update, preserving temporal state modelling and output gating while reducing the complexity of the selective-scan computation. The deployed model contains 816k trainable parameters and has a model size of 3.40MB under FP32 precision while maintaining high localization accuracy. The corresponding accelerator provides a reconfigurable architecture with a highly parallel MAC array optimized for matrix-vector operations and fine-grained pipelining, improving resource utilization and reducing inference latency. The hardware-aware fixed-point model achieves a mean localization error of 0.14m, closely matching the floating-point baseline. Implemented on a Zynq UltraScale+ ZCU102 FPGA, the four-block backbone has an estimated serial latency of 212.04us per token at 100MHz.",
+          "title": "Slim-Mamba: An Efficient and Reconfigurable Mamba-Based Accelerator for Massive MIMO Indoor Localization"
+        },
+        "2611.24607": {
+          "abs": "https://arxiv.org/abs/2611.24607",
+          "authors": [
+            "Igal Sason"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.24607",
+          "pdf": "https://arxiv.org/pdf/2611.24607",
+          "summary": "We derive a sharp upper bound on the relative entropy $D(P\\|Q)$ in terms of the two ordered chi-squared divergences $\\chi^2(P\\|Q)$ and $\\chi^2(Q\\|P)$. For any $A,B>0$, the constraints $\\chi^2(P\\|Q)\\leq A$ and $\\chi^2(Q\\|P)\\leq B$ yield upper bounds on $D(P\\|Q)$ and $D(Q\\|P)$. Two pairs of Bernoulli distributions each attain both bounds simultaneously. As a consequence, for sequences of probability mass functions $\\{P_n\\}$ and $\\{Q_n\\}$ on a common finite or countably infinite alphabet, both $D(P_n\\|Q_n)$ and $D(Q_n\\|P_n)$ tend to zero whenever one of the two ordered chi-squared divergences tends to zero and the other remains uniformly bounded. Without this boundedness assumption, $D(P_n\\|Q_n)$ can fail to converge to zero even when $\\chi^2(Q_n\\|P_n)\\to 0$. Finally, in contrast to the attainable upper bounds, on any finite or countably infinite alphabet containing at least three elements, the infimum of $D(P\\|Q)$ under the exact constraints $\\chi^2(P\\|Q)=A$ and $\\chi^2(Q\\|P)=B$ is zero and is not attained.",
+          "title": "Relative Entropy under Ordered Chi-Squared Constraints: Exact Bounds and Extremizers"
+        },
+        "2611.24693": {
+          "abs": "https://arxiv.org/abs/2611.24693",
+          "authors": [
+            "Karim Said",
+            "Xinrui Li",
+            "Daniel J. Jakubisin",
+            "Jeffrey H. Reed"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.24693",
+          "pdf": "https://arxiv.org/pdf/2611.24693",
+          "summary": "Frequency shift (FRESH) filters can achieve co-channel interference cancellation by exploiting spectral correlation statistics of both the desired and interfering signals. In orthogonal frequency division multiplexing (OFDM) signals, spectral correlation can be introduced in a structured way by symbol repetition across subcarriers. While this repetition generally requires duplicating symbols by an integer multiple of 2+ times (significantly impacting spectral efficiency), in this work it is shown that applying an incomplete spreading code, that trades spectral efficiency, to the desired signal can control its spectral correlation properties at redundancy factors less than 2. The distribution of the spectral correlation across frequencies determines the level of protection against interference at a given frequency. We introduce the design of frequency spreading codes that provide uniform spectral correlation distribution across frequencies, which provides equal interference cancellation capability independent of the center frequency of the interfering signal. The introduced spreading code can achieve arbitrary code rates while possessing two important properties: 1) semi-orthogonality and 2) spectral correlation uniformity. We evaluate the BER performance at very low signal-to-interference levels SIR$=0, 5 $ dB comparing spreading, LDPC, and LDPC+spreading at equal code rates.",
+          "title": "Spectrally Correlated Frequency Spreading Codes for FRESH Filtering-based Interference Cancellation"
+        },
+        "2611.24700": {
+          "abs": "https://arxiv.org/abs/2611.24700",
+          "authors": [
+            "Jun Chen",
+            "Yuta Sakai"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.24700",
+          "pdf": "https://arxiv.org/pdf/2611.24700",
+          "summary": "The grabbag channel models communication through a randomly mixed store. At each use, an input ball of one of $K$ colors is inserted into a bag containing $M$ balls, and one of the resulting $M+1$ balls is selected uniformly, observed, and removed. We show that, when $2\\leq K\\leq M+1$, both the capacity without feedback and the capacity with noiseless strictly causal output feedback are at most $9.77(K/(M+1))^{2/3}$, and that, when moreover $M+1\\geq2^{22}$, both are at least an absolute constant times $(K/(M+1))^{2/3}$. Hence, both capacities are of order $(K/M)^{2/3}$, and of order $M^{-2/3}$ for every fixed $K$. The converse is a single bound on the information that a feedback code conveys in $n$ uses, valid for every initial state. For each initial state, it bounds the information in each output by the change of a potential of the posterior law of the state given the earlier outputs, defined through noisy cube roots of the color counts. A budget on the true state bounds the total cost of the uses in which the inserted color is rare. The lower bound uses a statistic of two output histograms whose expectation does not depend on the unknown initial composition, an outer code, and words with prescribed compositions. We also show that the channel is indecomposable and relate its capacities to the finite-state-channel information formulas.",
+          "title": "The Asymptotic Capacity of the Grabbag Channel With and Without Feedback"
+        },
+        "2611.24702": {
+          "abs": "https://arxiv.org/abs/2611.24702",
+          "authors": [
+            "Zijian Zhang",
+            "Yuan Shen"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IR",
+            "cs.IT",
+            "cs.NI",
+            "eess.SY"
+          ],
+          "comment": "16 pages, 14 figures, with appendices",
+          "id": "2611.24702",
+          "pdf": "https://arxiv.org/pdf/2611.24702",
+          "summary": "Measuring inter-node distances is the basis for network localization, whereas acquiring node positions does not require a fully connected graph of distances. Existing complete-ranging protocols for network localization require every node pair to exchange signals, which prolongs the ranging cycle. In this paper, we propose sparse signal-multiplexing network ranging (S-SM-NR), a task-oriented framework that adapts the transmit-listen schedule to the ranging task required by network localization. First, we establish the S-SM-NR framework by formulating the joint design of the task graph and the transmit-listen schedule. Then, we analyze the minimum round count required by S-SM-NR and establish a connectivity condition for network localization. Subsequently, we develop a closed-form joint design that constructs the sparse task graph and the balanced transmit-listen schedule. In particular, the joint design can achieve the minimum round count under the complete physical connectivity. Finally, simulations show that the proposed S-SM-NR scheme reduces the occupied-round count and improves the localization accuracy by shortening the ranging cycle.",
+          "title": "Task-Oriented Network Ranging via Joint Graph and Schedule Design"
+        },
+        "2611.24769": {
+          "abs": "https://arxiv.org/abs/2611.24769",
+          "authors": [
+            "Alonso S. Castellanos",
+            "Gyan Morales Solis",
+            "Guilherme Tizziotti"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.24769",
+          "pdf": "https://arxiv.org/pdf/2611.24769",
+          "summary": "Let $n$ be a composite positive integer coprime to $\\operatorname{char}(\\mathbb{F}_q)$ and let $t = \\operatorname{lpf}(n)$ be the least prime factor of $n$. In this paper we study the cyclic codes $\\mathcal{C}_{n,t} = \\langle Q_n(X)Q_t(X)\\rangle$ and $\\mathcal{C}_{n,t,1} = \\langle Q_n(X)Q_t(X)Q_1(X)\\rangle$ over $\\mathbb{F}_q$, where $Q_d(X)$ denotes the $d$-th cyclotomic polynomial. These codes extend the families $\\mathcal{C}_n = \\langle Q_n(X)\\rangle$ and $\\mathcal{C}_{n,1} = \\langle Q_n(X)Q_1(X)\\rangle$ recently studied by Bhagat and Sarma. We determine the exact minimum distances of $\\mathcal{C}_{n,t}$ and $\\mathcal{C}_{n,t,1}$, showing that $d(\\mathcal{C}_{n,t,1}) = 2t$ and that $d(\\mathcal{C}_{n,t})$ equals $t$ if $t^2 \\nmid n$, and $2t$ if $t^2 \\mid n$. For the dual codes, we establish $d(\\mathcal{C}_{n,t}^\\perp) = 2^{\\omega(n)}$, handling the case $\\omega(n) \\le 2$ via the Hartmann--Tzeng bound, and the case $\\omega(n) \\ge 3$ via a direct-sum decomposition $\\mathcal{C}_{n,t}^\\perp = \\mathcal{C}_n^\\perp \\oplus \\mathcal{V}_t$ and the tensor-product structure of $\\mathcal{C}_n^\\perp$ over its prime-power components. As applications, we show that all four code families are linear complementary dual (LCD) and locally recoverable (LRC), and we determine their locality parameters, identifying several infinite families that are $r$-optimal or $d$-optimal with respect to the Singleton-type bound for LRC codes.",
+          "title": "On cyclic codes generated by cyclotomic polynomials"
+        },
+        "2611.24829": {
+          "abs": "https://arxiv.org/abs/2611.24829",
+          "authors": [
+            "Luiz F. da S. Coelho",
+            "Paulo S. R. Diniz",
+            "Didier Le Ruyet"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "This paper is submitted to ICASSP 2027",
+          "id": "2611.24829",
+          "pdf": "https://arxiv.org/pdf/2611.24829",
+          "summary": "This paper proposes a greedy approximation algorithm for performing complex-valued inner products in multiplierless hardware. The matching pursuits for accurate rotation approximation (MPARA) algorithm approximates the tangent of the phase of complex elements as a sum of signed powers of two (SOPOT) representation, enabling multiplierless hardware for complex-valued multiplication. The proposed algorithm outperforms other state-of-the-art approximation methods for approximating the twiddle factors of a fast Fourier transform (FFT).",
+          "title": "Greedy Vector Approximation Based on Rotation for Multiplierless Complex Products"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-11-19",
+          "complete": true,
+          "total": 41
+        },
+        "eess.SP": {
+          "announcement": "2026-11-19",
+          "complete": true,
+          "total": 41
+        }
+      },
+      "status": "prepared",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1794992412.7535913,
-    "next_allowed_at": 1794992427.7535913
+    "last_response_at": 1795080104.7771707,
+    "next_allowed_at": 1795080119.7771707
   },
   "version": 1
 }
