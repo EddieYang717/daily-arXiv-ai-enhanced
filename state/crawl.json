@@ -95268,11 +95268,721 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-11-21": {
+      "ai": {},
+      "candidates": [
+        "2611.24997",
+        "2611.25054",
+        "2611.25094",
+        "2611.25262",
+        "2611.25304",
+        "2611.25353",
+        "2611.25365",
+        "2611.25378",
+        "2611.25409",
+        "2611.25468",
+        "2611.25556",
+        "2611.25678",
+        "2611.25726",
+        "2611.25729",
+        "2611.25756",
+        "2611.25769",
+        "2611.25800",
+        "2611.25859",
+        "2611.25897",
+        "2611.25932",
+        "2611.25940",
+        "2611.25968",
+        "2611.25990",
+        "2611.25995",
+        "2611.26038",
+        "2611.26068",
+        "2611.26121",
+        "2611.26133",
+        "2611.26137",
+        "2611.26142",
+        "2611.26220",
+        "2611.26258",
+        "2611.26270",
+        "2611.26378",
+        "2611.26393",
+        "2611.26442",
+        "2611.26512"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2611.24997": {
+          "abs": "https://arxiv.org/abs/2611.24997",
+          "authors": [
+            "Zhichao Tang",
+            "Xiang Fan"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.DM",
+            "math.CO"
+          ],
+          "comment": "10 pages",
+          "id": "2611.24997",
+          "pdf": "https://arxiv.org/pdf/2611.24997",
+          "summary": "We prove that no binary linear $[65,9,\\geqslant29]$ code exists, equivalently, that no even binary linear $[66,9,\\geqslant30]$ code exists. Together with known constructions, this determines $d_2(65,9)=28$, $n_2(9,29)=66$, and $n_2(9,30)=67$. A residual-code bound and a known construction also give $d_2(122,10)=56$. To prove nonexistence, we associate with a hypothetical even code a quadratic function derived from half the codeword weight modulo $2$. Its polar form determines the fourth derivative of a Boolean function of degree at most four. Character sums, weight moments, and the exclusion of weight-$42$ codewords give upper bounds on the support of this function in seven cases. Restrictions to nondegenerate affine subspaces exclude six cases. In the remaining case, equality would force four distinct coordinate functionals to be identically $1$ on an affine seven-space, although at most two can have this property. The argument uses published minimum-length results for binary linear codes of dimensions eight and nine.",
+          "title": "There is no binary linear $[65,9,29]$ code"
+        },
+        "2611.25054": {
+          "abs": "https://arxiv.org/abs/2611.25054",
+          "authors": [
+            "Luiz F. da S. Coelho",
+            "Lisandro Lovisolo",
+            "Michel P. Tcheou"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.25054",
+          "pdf": "https://arxiv.org/pdf/2611.25054",
+          "summary": "Implementing finite impulse response (FIR) adaptive filters by employing the sums of signed-powers-of-two (SOPOT) arithmetic may lead to simpler hardware and consequently reduced power consumption. In this paper, one evaluates the effects of SOPOT arithmetic on the adaptive filter's recursion algorithms. The filters' coefficients and algorithms' underlying variables are fully operated using SOPOT arithmetic in the whole iterative process. More specifically, one evaluates convergence rate, numerical stability, and accuracy since using few signed-powers-of-two (SPT) terms propagates numerical errors during the adaptive cycle that may impair the algorithm behavior. The SOPOT approximations are obtained through the technique known as Matching Pursuits with Generalized Bit-Plane (MPGBP) algorithm, with notable cost-performance trade-off and low computational complexity. Results are provided for the Least-Mean-Squares (LMS), the Normalized Least-Mean-Squares (NLMS) and the Recursive-Least-Squares (RLS) algorithms, considering adaptive filters employed for system identification and change detection.",
+          "title": "Adaptive Filtering With Reduced Computational Complexity Using SOPOT Arithmetic"
+        },
+        "2611.25094": {
+          "abs": "https://arxiv.org/abs/2611.25094",
+          "authors": [
+            "Serhat Emre Coban",
+            "Yanina Y. Shkel",
+            "Emre Telatar"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "19 pages, 1 figure. Extended version of \"On Perfect Functional Representations\", presented at the 2026 IEEE International Symposium on Information Theory (ISIT) with complete proofs and additional results",
+          "id": "2611.25094",
+          "pdf": "https://arxiv.org/pdf/2611.25094",
+          "summary": "For given random variables $(X,Y)$, functional representation lemma states that there exists a random variable $Z$ and a deterministic function $g$ such that $Y = g(X,Z)$, and $X$ is independent of $Z$. In other words, $Z$ captures all the information about $Y$ not contained in $X$. We refer to $Z$ as a `perfect functional representation' if it satisfies $I(Y;Z) = H(Y|X)$. We show that the existence of perfect representation depends solely on the conditional distribution $p_{Y|X}$ and define the corresponding conditional distributions as perfectly representable. We provide a necessary and sufficient condition for $p_{Y|X}$ to be perfectly representable. Moreover, we cast the problem of checking perfect representability as a linear program, give an algorithm whose complexity is polynomial in $|\\mathcal Y|$ and exponential in $|\\mathcal X|$, and prove that deciding perfect representability is NP-complete for rational input matrices encoded in binary.",
+          "title": "Structure and Complexity of Perfect Functional Representations"
+        },
+        "2611.25262": {
+          "abs": "https://arxiv.org/abs/2611.25262",
+          "authors": [
+            "Sihui Shen",
+            "Ryan Seah",
+            "Marvin Rübenacke",
+            "Warren J. Gross"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.25262",
+          "pdf": "https://arxiv.org/pdf/2611.25262",
+          "summary": "Emerging applications in hyper-reliable low-latency communication (HRLLC) demand channel decoders that deliver deterministic performance under stringent latency and reliability constraints. While Polar codes are well suited for this scenario due to their strong error-correction capability, conventional successive cancellation (SC) decoding exhibits inherent serial dependencies that lead to high decoding latency. This paper presents the automorphism ensemble direct-invocation successive cancellation (AE-DISC) decoder, a low-latency framework that enables the concurrent computation of the left and right decoding subtrees in the SC process, yielding substantial speed-ups. By exploiting permutation automorphisms, AE-DISC decoding further improves error-correction performance. Simulation results demonstrate that AE-DISC attains up to 1.4 dB gain over the 5G SC baseline and surpasses layered min-sum (LMS) low-density parity-check (LDPC) decoders at a frame error rate (FER) of $10^{-6}$, while maintaining fixed algorithmic complexity. Both theoretical analysis and application-specific integrated circuit (ASIC) synthesis results further show up to 2 times decoding speed-up relative to fast simplified successive cancellation (FSSC).",
+          "title": "AE-DISC: Automorphism Ensemble Direct-Invocation Successive Cancellation for Low-Latency Decoding"
+        },
+        "2611.25304": {
+          "abs": "https://arxiv.org/abs/2611.25304",
+          "authors": [
+            "Mohammad Aljarrah",
+            "Emad Alsusa"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.25304",
+          "pdf": "https://arxiv.org/pdf/2611.25304",
+          "summary": "This paper proposes an open-set radio-frequency (RF) deep learning (DL) framework that jointly performs conditionally hierarchical multi-level radio signal classification and out-of-distribution (OOD) detection. To exploit image-based classification models, the raw radio samples are transformed into time-frequency representations using the short time Fourier transform (STFT) to pre-process the radio signals. A lightweight novel architecture using neural network (CNN), that applies con- ditional hierarchical multi-task classification heads, is introduced, and compared to two baselines including: (1) The conventional convolutional neural network (CNN) and (2) Swin-T model with multitask classification heads, where the model accuracy and complexity perspectives are considered for the comparison. Moreover, to address open-set scenarios, we introduce the fusion of two OOD detectors each of which is fitted to a Gaussian mixture model by using the learned feature space (e.g. the feature embeddings and logits) from the multi-head classifica- tion network. The overall training process is achieved on two stages following a post-hoc design: the in-set classification neural network is trained first, then the learnable parameters are frozen in the evaluation mode to process the training dataset again to aggregate the embeddings and logits used to fit the GMMs for OOD detection. Moreover, a proof of concept using experimental setup is implemented to validate the operation of the introduced models and algorithms in practical scenarios. The simulation- based trained model is fine-tuned using experimentally measured radio signals. For the experimental setup, a USRP-B210 acting as a transmitter, and an edge Deepwave Air-T software-defined radio, which is equipped with the fine-tuned neural networks is used as a detector or receiver.",
+          "title": "Conditional-Hierarchical Open-Set Deep Learning for Robust Radio Signals Intelligence"
+        },
+        "2611.25353": {
+          "abs": "https://arxiv.org/abs/2611.25353",
+          "authors": [
+            "Takeo Sasai",
+            "Yukinobu Nakajima",
+            "Minami Takahashi",
+            "Runa Kaneko",
+            "Masanori Nakamura",
+            "Asuka Matsushita",
+            "Fukutaro Hamaoka",
+            "Etsushi Yamazaki"
+          ],
+          "categories": [
+            "eess.SP",
+            "physics.optics"
+          ],
+          "comment": "11 pages, 19 figures",
+          "id": "2611.25353",
+          "pdf": "https://arxiv.org/pdf/2611.25353",
+          "summary": "Coherent DSP ASICs and transceivers to date report a rich set of optical link metrics, yet these remain cumulative over the link and provide no spatial localization. This paper presents the implementation design of fiber-longitudinal power monitoring (LPM), which recovers spatially resolved power profiles from received traffic, on a coherent DSP ASIC chip. We first identify the challenges specific to DSP implementation, and describe the enabling algorithm and architecture. We then present the key design considerations for retaining the estimation fidelity of the on-chip LPM during in-service operation. On this basis, we implement LPM on a coherent DSP, a 3-nm 800G low-power DSP ASIC housed in an OSFP pluggable module, which constitutes, to our knowledge, the first coherent DSP ASIC and transceiver to perform distributed fiber monitoring and data communication simultaneously. The on-chip LPM is experimentally validated over links of up to 1005 km using 400ZR+ and 800ZR+ traffic, with no measurable impact on Q factor or module power consumption. Multi-vendor interoperability is also demonstrated, where the on-chip LPM operates on signals transmitted by third-party transceivers. These results extend coherent DSPs from cumulative to spatially resolved monitoring, allowing pluggable transceivers, deployable from DCI to long-haul, to act not only as cost-efficient transmission elements but also as distributed monitoring points across diverse optical network infrastructure.",
+          "title": "Distributed Fiber Monitoring on a Coherent DSP ASIC: Implementation of Longitudinal Power Monitoring"
+        },
+        "2611.25365": {
+          "abs": "https://arxiv.org/abs/2611.25365",
+          "authors": [
+            "Ketong Ren",
+            "Bing Liu",
+            "Cuiling Fan",
+            "Haode Yan"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.25365",
+          "pdf": "https://arxiv.org/pdf/2611.25365",
+          "summary": "This paper determines the generalized covering radii, deep holes, and complete coset leader weight distribution of the antiprimitive narrow-sense BCH code of length \\(q+1\\) and designed distance \\(3\\) over \\(\\mathbb{F}_q\\), where \\(q=2^m\\) and \\(m\\geq 2\\). We establish the complete generalized covering-radius hierarchy: the covering radius is \\(3\\), whereas the \\(t\\)-th generalized covering radius is \\(4\\) for every \\(t\\geq 2\\). Using the covering radius, we then derive necessary and sufficient conditions for a received word to be a deep hole by reducing the syndrome representations to conditions involving roots of an associated cubic polynomial. An explicit parametrization yields complete, nonredundant representatives of all deep-hole cosets. Enumerating these representatives gives closed-form expressions for the numbers of deep holes and determines the complete coset leader weight distribution, with distinct formulas according to the parity of \\(m\\).",
+          "title": "Generalized Covering radii and Deep Holes of a Family of Antiprimitive Narrow-Sense BCH Codes in Even Characteristic"
+        },
+        "2611.25378": {
+          "abs": "https://arxiv.org/abs/2611.25378",
+          "authors": [
+            "Xinyu Pan",
+            "Boxun Liu",
+            "Chen Chen",
+            "Xiang Cheng"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.25378",
+          "pdf": "https://arxiv.org/pdf/2611.25378",
+          "summary": "Wireless foundation models have shown strong generalization capabilities across heterogeneous wireless tasks and configurations. However, most existing models rely on continuous representations, limiting ultra-low-overhead channel state information (CSI) feedback, few-shot generalization, and robustness to noise. To address these limitations, this paper proposes a wireless foundation model based on discrete representations (WiFo-D), which learns multi-granularity discrete CSI representations. It comprises a CSI encoder, multi-codebook vector quantization, and a modulation-based decoder, with the learned token maps and quantized features supporting multi-rate CSI feedback, CSI reconstruction, and diverse CSI-related downstream tasks. Extensive experiments demonstrate strong CSI feedback performance at an ultra-low latent compression ratio of 1/32 with 3 bits per token, reducing normalized mean square error (NMSE) by more than 4.7 dB compared with the strongest baseline. Furthermore, for frequency-domain prediction with limited training samples, WiFo-D improves generalization and noise robustness over continuous-representation-based methods. The results also demonstrate its superiority across downstream tasks, including beam prediction, wireless localization, and line-of-sight/non-line-of-sight identification.",
+          "title": "WiFo-D: Wireless Foundation Model Based on Discrete Representations"
+        },
+        "2611.25409": {
+          "abs": "https://arxiv.org/abs/2611.25409",
+          "authors": [
+            "Jiajun Huang",
+            "Ziqian Yao",
+            "Tzu-Hsuan Hsu",
+            "Ian Anderson",
+            "Joshua Campbell",
+            "Ruochen Lu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.25409",
+          "pdf": "https://arxiv.org/pdf/2611.25409",
+          "summary": "Surface acoustic wave (SAW) resonators above 15~GHz require a fast acoustic mode that retains strong electromechanical coupling ($k^2$). This work reports longitudinal SAW (L-SAW) resonators designed for high $k^2$ in 100-nm X-cut lithium niobate (LN) on 4H silicon carbide (SiC), operating up to 21.7~GHz and reaching a $k^2$ of 8.1\\%, a maximum Bode $Q$ of 70, and a figure of merit (FoM) of 5.7 at 20.24~GHz. In this thin-film waveguide, shrinking the wavelength ($\\lambda$) keeps the normalized LN thickness ($h_\\mathrm{LN}/\\lambda$) large, sustaining both $k^2$ and acoustic confinement. Conversely, increasing $\\lambda$ from 292 to 471~nm lowers $h_\\mathrm{LN}/\\lambda$ from 0.34 to 0.21 and raises the L-SAW phase velocity from 6.32 to 7.05~km/s, within 1.1\\% of the 7126-m/s shear-wave velocity of 4H-SiC. As the velocity approaches this limit, more of the acoustic energy spreads into the non-piezoelectric SiC, and $k^2$ falls from its 8.1\\% peak at $\\lambda = 322$~nm to 1.7\\% at $\\lambda = 471$~nm. No L-SAW resonance is observed for $\\lambda \\geq 518$~nm ($h_\\mathrm{LN}/\\lambda \\leq 0.19$), where the mode becomes leaky. Overall, the FoM stays within 5\\% of its maximum for $h_\\mathrm{LN}/\\lambda$ between 0.26 to 0.31, defining a design window for L-SAW resonators in thin LN on SiC at K-band and beyond.",
+          "title": "20 ghz longitudinal surface acoustic wave resonators in 100-nm x-cut lithium niobate on silicon carbide"
+        },
+        "2611.25468": {
+          "abs": "https://arxiv.org/abs/2611.25468",
+          "authors": [
+            "Trung-Khang Tran",
+            "Jonathan Scarlett"
+          ],
+          "categories": [
+            "cs.IT",
+            "math.ST"
+          ],
+          "comment": null,
+          "id": "2611.25468",
+          "pdf": "https://arxiv.org/pdf/2611.25468",
+          "summary": "We consider the probabilistic nonadaptive group testing problem, in which a uniformly random defective set of size $d$ is to be identified among $N$ items using a binary test matrix. For the explicit Kautz--Singleton construction, it is known that order-optimal scaling $T=\\Theta(d\\log N)$ for high-probability recovery can be achieved in the regime $d=\\Omega(\\log^2 N)$. However, the leading constant in this scaling remains uncharacterized even for standard low-complexity decoders. In this work, we revisit the probabilistic analysis of this construction and improve the leading constant for the COMP decoder, as well as establishing the same bound for the DD decoder. Our approach relies on a sharper analysis of the number of distinct roots associated with the defective items, yielding tighter bounds on the decoding error probability. In particular, we show that both COMP and DD achieve vanishing average error probability with $T\\le (1/\\ln 2+\\varepsilon)d\\log N$ tests for any $\\varepsilon>0$, in the admissible regime $N=q^k$ for some prime power $q = \\Theta(d)$ and integer $k \\ge 2$. For COMP, this leading constant matches that of the random near-constant column weight design, whereas for DD, a gap remains except in the sparse regime $d = N^{o(1)}$.",
+          "title": "Improved Constants in the Kautz-Singleton Construction for Probabilistic Group Testing"
+        },
+        "2611.25556": {
+          "abs": "https://arxiv.org/abs/2611.25556",
+          "authors": [
+            "Yilong Chen",
+            "Yuan Guo",
+            "Jie Xu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "In Proc. IEEE ICCC 2026",
+          "id": "2611.25556",
+          "pdf": "https://arxiv.org/pdf/2611.25556",
+          "summary": "Channel knowledge maps (CKMs) offer reusable, site-specific radio priors to facilitate environment-aware network planning. However, deploying heterogeneous network nodes to meet diverse performance requirements in complex environments is challenging and requires executable workflows that coordinate scene preparation, candidate-site specification, CKM construction, optimization, and validation. This paper presents a large language model (LLM)-orchestrated agent framework for CKM-assisted network deployment optimization, where an LLM translates high-level requirements into modular, typed, and reproducible planning workflows. In this framework, an LLM layer interprets intent, selects modules, and populates normalized configurations; physics-grounded modules generate scene, CKM, optimization, and validation artifacts; and a deterministic guarded controller performs validation-guided refinement. A common target-candidate-CKM-optimizer interface supports the registration and composition of compatible planning modules, with CKM backends, samplers, and solvers remaining replaceable. We instantiate the proposed framework for base station (BS) deployment, intelligent reflecting surface (IRS) deployment, and unmanned aerial vehicle (UAV) trajectory planning. An urban-block case study demonstrates automatic scene consistency checks, bounded BS/IRS deployment refinement, and collision- and radio-feasible UAV planning.",
+          "title": "An LLM-Orchestrated Agent Framework for CKM-Assisted Network Deployment Optimization"
+        },
+        "2611.25678": {
+          "abs": "https://arxiv.org/abs/2611.25678",
+          "authors": [
+            "Sanka Peeris",
+            "Pandula Thennakoon",
+            "Praveen Sumanasekara",
+            "Roshan Godaliyadda",
+            "Parakrama Ekanayake",
+            "Janaka Ekanayake"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.LG",
+            "eess.SY"
+          ],
+          "comment": "10 pages, 6 figures. Submitted to IEEE Transactions on Smart Grid. S. Peeris, P. Thennakoon and P. Sumanasekara contributed equally",
+          "id": "2611.25678",
+          "pdf": "https://arxiv.org/pdf/2611.25678",
+          "summary": "Non-Intrusive Load Monitoring (NILM) is a critical enabler for demand-side management which allows for smart grid optimization. A deployment-ready NILM solution necessitates three key features: accurate disaggregation, low-frequency sampling, and low computational cost. This paper proposes a lightweight, edge-oriented NILM framework that combines activity-boundary-aware synthetic data augmentation with Karhunen-Loève Transform (KLT) feature extraction and a Temporal Convolutional Network (TCN). The augmentation stage extracts and recombines complete or near-complete appliance activation segments so that the model can be trained without new fully labeled household aggregates. The KLT filter bank extracts decorrelated, appliance-informed temporal features which are then fed into a compact TCN along with the original aggregate for energy disaggregation. Evaluations on two standard NILM datasets, UK-DALE and REDD, at 10-s sampling and with leave-one-house-out testing, demonstrate that the proposed architecture achieves comparable or superior disaggregation accuracy relative to NILMFormer, BERT4NILM, BiLSTM, and BiGRU. The computational footprint of the framework is 31,009 parameters, the fewest of the five models compared, and on a single CPU thread it needs 2.78 ms per 1000 samples, 84-95% less than the baselines. These results demonstrate a favorable accuracy-efficiency tradeoff for low-frequency smart-meter NILM.",
+          "title": "Lightweight Low-Frequency Non-Intrusive Load Monitoring via Karhunen-Loève Feature Distillation and Temporal Convolutional Networks"
+        },
+        "2611.25726": {
+          "abs": "https://arxiv.org/abs/2611.25726",
+          "authors": [
+            "Zimu Huo",
+            "Zachary Shah",
+            "Adam B Kerr",
+            "Kawin Setsompop"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "8 pages, 5 figures. Submitted to ISMRM 2027",
+          "id": "2611.25726",
+          "pdf": "https://arxiv.org/pdf/2611.25726",
+          "summary": "Motivation: Testing new ideas in MRI can require substantial effort to learn sequence programming and reconstruction tools and to debug implementations before the scientific question can be addressed. Goals: Reduce the implementation and debugging burden of testing MRI ideas while retaining researcher control of scientific decisions. Approach: We developed an environment where LLM agents develop sequences in the native Siemens IDEA platform, evaluate them through Bloch simulation and reconstruction, and further iteratively refine them using scanner feedback. Results: As test cases, the agentic environment was used to implement and validate a GIRF-based gradient-calibration sequence and reconstruction in approximately 4 hours, and to develop and optimize a rapid 3-second multichannel calibration scan in approximately 12 hours of researcher-guided iteration.",
+          "title": "A closed-loop agentic research environment for MRI development within Siemens IDEA platform"
+        },
+        "2611.25729": {
+          "abs": "https://arxiv.org/abs/2611.25729",
+          "authors": [
+            "Ziling Heng",
+            "Chenkun Xie",
+            "Jiantao Hu",
+            "Xiaoyan Jing"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.25729",
+          "pdf": "https://arxiv.org/pdf/2611.25729",
+          "summary": "Codebooks with small inner-product correlation play a central role in direct spread code division multiple access communications, space-time coding, compressed sensing, and related areas because they improve system performance. This paper presents a generic construction and a modified construction of complex codebooks from functions on finite Abelian groups. By choosing perfect nonlinear functions, we systematically obtain several families of optimal or asymptotically optimal codebooks with respect to the Welch or Levenshtein bounds. These constructions recover a number of known optimal codebooks and also yield new codebooks with previously unreported parameters.",
+          "title": "A generic construction of complex codebooks from functions over Abelian groups"
+        },
+        "2611.25756": {
+          "abs": "https://arxiv.org/abs/2611.25756",
+          "authors": [
+            "Erqiang Tang",
+            "Zixin Wang",
+            "Wei Guo",
+            "Shenghui Song",
+            "Jun Zhang",
+            "Khaled B. Letaief"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "6 pages, 4 figures. Submitted to an IEEE conference",
+          "id": "2611.25756",
+          "pdf": "https://arxiv.org/pdf/2611.25756",
+          "summary": "Fluid antenna systems (FAS) have emerged as a promising technology for enhancing wireless communications through adaptive antenna repositioning. Recently, Fourier neural operators (FNOs) have shown strong potential for FAS channel estimation owing to their ability to learn resolution-invariant mappings and generalize across different port densities. However, existing operator learning approaches require densely sampled channel realizations as training labels, whereas a practical receiver only collects noisy pilot observations from a small subset of ports. This mismatch between training requirements and practical channel acquisition poses a major obstacle to deployment. To address this challenge, we develop a self-supervised framework that trains the FNO-based estimator directly from noisy sub-sampled pilots without any labeled channel fields. The proposed objective combines a pilot splitting strategy, which creates supervision at ports hidden from the model input, with a correction based on Stein's unbiased risk estimate (SURE) that eliminates the measurement noise bias. We prove that this objective admits the same minimum mean square error (MMSE) solution as the ideal supervised criterion. Since the loss relies solely on received pilots, the estimator can be continually adapted online on the live pilot stream. Simulation results show that the self-supervised FNO achieves accuracy comparable to supervised training, generalizes zero-shot to unseen port resolutions, and rapidly recovers from distribution shift via online adaptation.",
+          "title": "Self-Supervised Operator Learning for Channel Estimation in Fluid Antenna Systems"
+        },
+        "2611.25769": {
+          "abs": "https://arxiv.org/abs/2611.25769",
+          "authors": [
+            "Luiz Coelho",
+            "Paulo Diniz",
+            "Didier Le Ruyet"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.25769",
+          "pdf": "https://arxiv.org/pdf/2611.25769",
+          "summary": "This paper explores the use of sums of signed powers-of-two (SOPOT) for a representation suitable for multiplierless applications of ZC sequences, where multiplications are reduced to a prescribed number of shift-and-add operations. The SOPOT representation is achieved using a greedy algorithm that outperforms other approaches for multiplierless approximations, such as CORDIC and CSD. The proposed algorithm is based on the matching pursuits using generalized bit planes (MPGBP), and the proposed modification enables robustness to hyperparameter tuning. The resulting sequences retain, to some extent, the good autocorrelation properties of ZC, as shown in a matched-filter detection simulation. This corroborates to their use in various practical applications across mainstream cellular systems and devices requiring moderate computational cost.",
+          "title": "Signed Powers-of-Two Greedy Vector Approximation of Zadoff-Chu Sequences"
+        },
+        "2611.25800": {
+          "abs": "https://arxiv.org/abs/2611.25800",
+          "authors": [
+            "Muhammad Rafid",
+            "Golshan Famitafreshi",
+            "Kostas Ramantas",
+            "Luis Alonso",
+            "Christos Verikoukis"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "6 pages, 2 figures. Accepted for presentation at IEEE CloudNet 2026",
+          "id": "2611.25800",
+          "pdf": "https://arxiv.org/pdf/2611.25800",
+          "summary": "Task offloading in End-Edge-Cloud computing enables resource-constrained User Devices (UDs) to execute computation-intensive applications with reduced latency and energy consumption. However, existing task offloading schemes generally overlook the heterogeneous privacy requirements of users, leading to inefficient privacy-aware offloading decisions. In this paper, we propose a personalized privacy-aware task offloading framework, where the privacy requirement of each task is quantified through a User-Centric Privacy (UCP) model that considers task sensitivity, user privacy preferences, and task urgency. The task offloading problem is formulated as a Markov Decision Process (MDP) to jointly optimize the offloading ratio and the target computing server while minimizing the long-term system cost under latency, energy, and privacy constraints. To efficiently solve the resulting high-dimensional continuous optimization problem, we develop an Advantage-Weighted Actor-Critic (AWAC)-enhanced Proximal Policy Optimization (PPO)-based Multi-Agent Reinforcement Learning (MARL) algorithm under the Centralized Training and Decentralized Execution (CTDE) paradigm. Simulation results demonstrate that the proposed framework achieves lower average system cost, lower energy consumption, and higher task success rate than representative baselines under diverse privacy requirements.",
+          "title": "Personalized Privacy-Aware MARL Offloading in the Edge-Cloud Continuum"
+        },
+        "2611.25859": {
+          "abs": "https://arxiv.org/abs/2611.25859",
+          "authors": [
+            "Yang Li",
+            "Shitao Li",
+            "Gaojun Luo",
+            "San Ling"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.25859",
+          "pdf": "https://arxiv.org/pdf/2611.25859",
+          "summary": "Quantum locally recoverable codes with $(r,\\delta)$-locality ($(r,\\delta)$-qLRCs) are quantum error-correcting codes in which $\\delta-1$ erased qudits can be recovered by accessing only $r$ other qudits. The minimum locality of a qLRC is the least $r$ such that it has $(r,\\delta)$-locality. This paper aims to construct optimal impure $(r,\\delta)$-qLRCs with disjoint recovering sets and explicit minimum localities, where the optimality is measured by the Singleton-like bound of Guruswami, Kshirsagar, and Trivedi (GKT-optimal). Such qLRCs have particular advantages in recovering as many quantum erasures as possible while operating in parallel and with minimal qudit access overhead. We first characterize the recovering sets and the minimum locality of any CSS code by local relative distances, which are relative minimum distances of punctured codes with respect to shortened codes. We then construct impure qLRCs as CSS codes from nested pairs of generalized monomial-Cartesian codes. Grouping the monomials by their degree in the last variable, we reduce both their minimum distances and their local recovery to nested pairs of codes in the remaining variables, and the coordinates with the same values of these variables form disjoint recovering sets. In this way, we obtain four infinite families of GKT-optimal impure $(r,\\delta)$-qLRCs with disjoint recovering sets, and determine their minimum localities and the recovering sets attaining them for every admissible $\\delta$, except for a partial range of $\\delta$ in one family. These minimum localities need not be monotone in $\\delta$. In particular, two of the families contain GKT-optimal impure subfamilies of CSS codes CSS$(\\mathcal{C},\\mathcal{C})$ with $(r,\\delta)$-locality for some $r<n-\\delta+1$ at values of $\\delta$ for which $\\mathcal{C}$ has no classical $(r',\\delta)$-locality for any $0<r'<n$, where $n$ is the length of $\\mathcal{C}$.",
+          "title": "Optimal Impure $(r,δ)$-Quantum Locally Recoverable Codes with Explicit Minimum Localities"
+        },
+        "2611.25897": {
+          "abs": "https://arxiv.org/abs/2611.25897",
+          "authors": [
+            "Emanuel Wennemo",
+            "Ki Won Sung",
+            "Emil Björnson"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Submitted to IEEE TWC on 4th November 2026. Copyright 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material, creating new works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+          "id": "2611.25897",
+          "pdf": "https://arxiv.org/pdf/2611.25897",
+          "summary": "Future Massive MIMO (multiple-input multiple-output) systems will fit more antennas into compact arrays, making minimum mean-square-error (MMSE) combining computationally demanding. Maximum-ratio (MR) combining serves as a cheaper alternative but performs poorly in multi-user scenarios. Existing solutions to this either mimic the MMSE combiner using second-order statistics or, as in the optimal bilinear equalizer (OBE), rely on the loose use-and-then-forget (UaTF) bound. In this paper, we propose DISC, a novel receive combiner that instead maximizes a deterministic approximation of the instantaneous signal-to-interference-plus-noise ratio (SINR), obtained by replacing the random terms in the SINR with deterministic equivalents. This approximation becomes increasingly accurate as the number of antennas grows, and it exploits useful information discarded by the UaTF bound. The computational complexity of DISC matches that of OBE, with the low-complexity variant DISC-D being even cheaper than conventional MR combining. We further prove that the SINR achieved by DISC grows unbounded with the number of antennas, even under pilot contamination, similarly to MMSE combining. Finally, we numerically demonstrate that DISC achieves a sum spectral efficiency close to that of MMSE combining under full pilot sharing, while outperforming other combiners across signal-to-noise ratio, pilot length, and spatial correlation models.",
+          "title": "DISC: A Deterministic Instantaneous-SINR Combiner for Uplink Massive MIMO Systems"
+        },
+        "2611.25932": {
+          "abs": "https://arxiv.org/abs/2611.25932",
+          "authors": [
+            "Muhammad Rafid",
+            "Golshan Famitafreshi",
+            "Vasilis Avgerinos",
+            "Kostas Ramantas",
+            "Christos Verikoukis"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "6 pages, 5 figures, 1 table. Accepted at IEEE GLOBECOM 2026",
+          "id": "2611.25932",
+          "pdf": "https://arxiv.org/pdf/2611.25932",
+          "summary": "The increasing demand for intelligent, low-latency services in edge-cloud continuum systems poses new challenges for dynamic and efficient task offloading. We propose a Multi-Agent Reinforcement Learning (MARL) framework for distributed task offloading under partial observability, where each device offloads only a portion of its computation to a target edge server while executing the remaining portion locally (partial offloading). The problem is formulated as a Markov Decision Process (MDP), where each device independently learns an optimal policy under partially observable system states. To address the non-convexity, high-dimensional state space, and continuous action space, we develop a multi-agent Advantage-Weighted Actor-Critic (AWAC)-enhanced Proximal Policy Optimization (PPO)-based computation offloading algorithm. The proposed method combines the stable policy updates of PPO with an advantage-weighting mechanism inspired by AWAC to emphasize higher-quality actions during training. To encourage cooperation without inter-device communication, a shared global reward aligned with system cost is employed. Extensive simulations demonstrate rapid convergence and significant improvement in overall system cost compared with baselines, e.g., Deep Deterministic Policy Gradient (DDPG) and Deep Q-Network (DQN).",
+          "title": "Coordinated Offloading: Cooperative Multi-Agent Reinforcement Learning for the Edge-Cloud Continuum"
+        },
+        "2611.25940": {
+          "abs": "https://arxiv.org/abs/2611.25940",
+          "authors": [
+            "Yangcheng Li",
+            "Pingzhi Yuan"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "15 pages",
+          "id": "2611.25940",
+          "pdf": "https://arxiv.org/pdf/2611.25940",
+          "summary": "We investigate Euclidean self-orthogonality and the generalized Reed--Solomon (GRS) property for coefficient-vector codes generated by a monic polynomial $g$ and its shifts $xg,\\ldots,x^{k-1}g$, of length $n=r+k$ and dimension $k$, where $°g=r$ and $3\\le k\\le r$. We give a complete classification, over any algebraically closed field, of the generators for which these codes are both self-orthogonal and GRS. Such generators have either distinct roots in a geometric progression satisfying explicit order and scalar conditions, or a single repeated root in certain positive characteristics. In particular, only finitely many generators occur for fixed $r$, $k$, and characteristic. We determine their maximal self-orthogonal lengths, show that the corresponding maximal-length codes are cyclic or negacyclic, and obtain exact generator counts over finite fields, together with the least fields of definition. In contrast, when $3\\le k<r$, we prove that every algebraically closed field supports infinitely many pairwise monomially inequivalent self-orthogonal non-GRS maximum distance separable (MDS) codes in this family. Consequently, arbitrarily many such codes can be realized over a common finite extension of any prescribed finite field, while remaining inequivalent and non-GRS over its algebraic closure.",
+          "title": "Self-Orthogonal MDS Principal-Ideal Codes"
+        },
+        "2611.25968": {
+          "abs": "https://arxiv.org/abs/2611.25968",
+          "authors": [
+            "Wei Jiang",
+            "Hans Dieter Schotten"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "5 pages, 3 figures. Submitted to IEEE Transactions on Vehicular Technology",
+          "id": "2611.25968",
+          "pdf": "https://arxiv.org/pdf/2611.25968",
+          "summary": "This correspondence enables practical frequency-division duplex (FDD) operation in cell-free massive MIMO via two mechanisms. Sparse access-point (AP) activation reduces downlink pilot overhead to enable coherent detection, while angle-reciprocity precoding steers beams using only uplink-estimated angles, eliminating channel feedback entirely. A load-adaptive dual-mode optimizer further enhances performance: closed-form signal-to-leakage-and-noise-ratio precoding for high-load rate boosting, or semidefinite relaxation for low-load power minimization. Simulations verify its superiority over existing feedback-free FDD solutions in spectral and energy efficiency, and its robustness to angle errors, reciprocity mismatch, and multipath.",
+          "title": "Feedback-Free FDD Cell-Free Massive MIMO With Sparse AP Activation and Dual-Mode Precoding"
+        },
+        "2611.25990": {
+          "abs": "https://arxiv.org/abs/2611.25990",
+          "authors": [
+            "Pengjie Zhong",
+            "Jinquan Luo"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.25990",
+          "pdf": "https://arxiv.org/pdf/2611.25990",
+          "summary": "The toroidal distance naturally describes the geometry of codes over \\(\\mathbb Z_q\\), where distances are measured modulo \\(q\\). In this paper, we study asymptotic bounds for codes in \\(\\mathbb Z_q^n\\) under the toroidal metric. We first derive an explicit asymptotic lower bound from the classical Gilbert--Varshamov bounds for the Hamming and Lee metrics, which serves as a baseline for comparison. We then develop a saddle-point approach for the toroidal metric, which yields an asymptotic Gilbert--Varshamov lower bound and an asymptotic Hamming-type upper bound. For \\(3\\mid q\\), we embed ternary Hamming codes into \\(\\mathbb Z_q^n\\) and obtain another asymptotic lower bound for the toroidal metric. In addition, we derive an asymptotic lower bound for Maximum Toroidal Distance (MTD) codes. We compare these lower bounds with the baseline and prove that they are nontrivial in the corresponding parameter ranges. Finally, we compare the asymptotic bounds numerically.",
+          "title": "Asymptotic Bounds for Codes in Toroidal Distance"
+        },
+        "2611.25995": {
+          "abs": "https://arxiv.org/abs/2611.25995",
+          "authors": [
+            "Xusheng Zhu",
+            "Kai-Kit Wong",
+            "Jiajian Wang",
+            "Songling Zhang",
+            "Shihao Fan"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.25995",
+          "pdf": "https://arxiv.org/pdf/2611.25995",
+          "summary": "Port selection in fluid antenna systems (FAS) requires instantaneous channel state information, but a single radio-frequency chain can probe only a few ports in each coherence block. Existing FAS channel estimators, even with learned or generative priors, work within a single block and are limited by its few probes, which cannot resolve several propagation paths. To overcome this limitation, we propose a two-timescale channel estimation and port selection scheme that exploits the slow variation of the path angles. Specifically, a sequential Monte Carlo filter accumulates the angle posterior over blocks, while the fast-fading path gains are integrated out in closed form. Furthermore, a Fisher information analysis reveals that a single probe per block carries no angle information, whereas two or more spread-out probes accumulate it linearly over blocks. Simulation results demonstrate that the proposed scheme approaches the selection with known angles after about twenty blocks and, with four probes per block, matches memoryless schemes with eight.",
+          "title": "Two-Timescale Channel Estimation and Port Selection for Fluid Antenna Systems With Limited Port Observations"
+        },
+        "2611.26038": {
+          "abs": "https://arxiv.org/abs/2611.26038",
+          "authors": [
+            "Chenliang Wu",
+            "Zhicheng Liu",
+            "Zhouxiang Zhao",
+            "Ruopeng Xu",
+            "Zhaohui Yang",
+            "Zhaoyang Zhang"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.26038",
+          "pdf": "https://arxiv.org/pdf/2611.26038",
+          "summary": "This paper investigates the adaptive codebook design for task-oriented token communication over wireless networks with dynamic channels. This paper proposes the channel-aware codebook (CAC), a joint channel- and reconstruction-driven framework that reorders the labels of a frozen 14-bit VQGAN codebook. In the considered framework, a balanced geometric partition forms prefix groups, a prefix bijection places the groups on the label hypercube, and bijective suffix assignments place the codewords within each group. The problem is formulated to minimize the expected full-image perceptual distortion of the frozen decoder under a binary symmetric channel, averaged over a design set of bit error rates (BERs) and retaining simultaneous token errors. An offline algorithm alternates prefix and suffix exchanges and screens and confirms candidates on paired batches under a fixed decoder-evaluation budget. The assignment preserves the error-free reconstruction and the payload and deploys as static lookup tables without retraining. Under the binary symmetric channel at BER $0.01$, it reduces LPIPS by $12.3\\%$ and improves COCO AP by $14.1\\%$ ($1.72$ points) relative to the native labels, and it lowers LPIPS by a further $4.5\\%$ relative to a related assignment adaptation at the same payload.",
+          "title": "Channel-Aware Codebook Design for Task-Oriented Token Communication Over Wireless Networks"
+        },
+        "2611.26068": {
+          "abs": "https://arxiv.org/abs/2611.26068",
+          "authors": [
+            "Aolin Sun",
+            "Ruihong Jiang",
+            "Jincong Mo",
+            "Yangbo Guo",
+            "Zhuangzhuang Cui"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.26068",
+          "pdf": "https://arxiv.org/pdf/2611.26068",
+          "summary": "Satellite-mounted metasurfaces (MS) provide a low-power programmable paradigm for 6G satellite-terrestrial networks, effectively compensating for severe free-space path loss under stringent payload constraints. However, accurate channel prediction for such systems remains fundamentally challenging due to the coupling of dynamic orbital topology, stochastic user geometry, and hardware-imposed phase quantization. This paper proposes a physics-informed deep learning (PIDL) framework that embeds the physics of wireless communication, including monotonicity constraints and asymptotic decay properties, into a deep neural network for outage probability (OP)-aware channel prediction. We construct a realistic system model incorporating spherical user distribution, Spherical Poisson Point Process-based satellite constellation, and practical metasurface quantization. Simulation results demonstrate that the proposed framework achieves over 0.99 prediction accuracy with physically consistent outage trends under varying geometric configurations, constellation densities, and quantization resolutions.",
+          "title": "Physics-Informed Deep Learning for Channel Prediction in Satellite-Mounted Metasurface Reflection Communication Networks"
+        },
+        "2611.26121": {
+          "abs": "https://arxiv.org/abs/2611.26121",
+          "authors": [
+            "Soumya P. Dash",
+            "Italo Atzeni",
+            "George C. Alexandropoulos"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "13 pages, 7 figures",
+          "id": "2611.26121",
+          "pdf": "https://arxiv.org/pdf/2611.26121",
+          "summary": "Channel estimation (CE) errors and correlation among the fading channels are two of the most fundamental factors degrading the performance of any multi-antenna system. This paper aims to analytically capture their joint effect on fluid antenna systems (FASs) performing generalized selection combining (GSC), i.e., combining the received signals at the best $\\tilde{L}$ of the $L$ available ports using maximum ratio combining (MRC). More specifically, the FAS receiver is subject to arbitrarily correlated Nakagami-$m$ fading channels following the fully correlated Jakes' model, and employs a pilot-aided maximum-likelihood rule for CE prior to data detection. A novel tight moment-matching-based Gamma approximation is proposed for the marginal distribution of the estimated channel gains, which is then used to derive the joint statistics of the estimated correlated channels for the case of non-identical integer or half-integer fading severity parameters. Considering that the transmitter employs $M$-ary phase-shift keying or quadrature amplitude modulation, the joint statistics are further exploited to obtain exact finite-integral symbol error probability (SEP) expressions for a GSC-based FAS receiver, along with closed-form counterparts for the case of identical fading parameters. In addition, asymptotic SEP expressions at high signal-to-noise ratio are derived, analytically establishing that non-ideal CE and fading correlation degrade only the FAS's coding gain, while the diversity order is preserved and governed solely by the number of combined ports and the estimated fading severity. The presented numerical SEP investigations offer concrete design insights into the trade-offs between CE quality, fading correlation, and port selection for the GSC-based FAS receiver.",
+          "title": "SEP Analysis of Fluid Antenna GSC Reception under Correlated Nakagami-m Fading and Imperfect Channel Estimation"
+        },
+        "2611.26133": {
+          "abs": "https://arxiv.org/abs/2611.26133",
+          "authors": [
+            "Mingyan Gong",
+            "Bin Lyu"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible",
+          "id": "2611.26133",
+          "pdf": "https://arxiv.org/pdf/2611.26133",
+          "summary": "User fairness has been widely researched in various non-orthogonal multiple access (NOMA) systems. In this paper, max-min or min-max fairness is adopted for a downlink multiuser multiple-input multiple-output NOMA system, where one multi-antenna base station (BS) transmits to multiple NOMA clusters and each cluster is composed of two single-antenna users sharing a single beam on the same time-frequency resource block. Specifically, under perfect channel state information in the transmitter (CSIT), max-min fairness is adopted to maximize the minimum achievable rate among all users. Under partial CSIT, i.e., the BS only knows the distance and channel direction information of each user, min-max fairness is adopted to minimize the maximum outage probability among all users. Under either CSIT case, to avoid solving the coupled problem, zero-forcing beamforming is designed to obtain a power control problem and then a binary search or formula based algorithm is proposed. Theoretical analyses reveal that under either CSIT case, the problem can be guaranteed to have a unique solution and the proposed algorithm is computationally efficient due to only simple closed-form expressions involved.",
+          "title": "Absolute User Fairness for a Downlink Multiuser MIMO-NOMA System"
+        },
+        "2611.26137": {
+          "abs": "https://arxiv.org/abs/2611.26137",
+          "authors": [
+            "Federico Mason",
+            "Matteo Neri",
+            "Maria Fratello",
+            "Julia Makhalova",
+            "Fabrice Bartolomei",
+            "Giovanni Petri",
+            "Christian G. Benar"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.26137",
+          "pdf": "https://arxiv.org/pdf/2611.26137",
+          "summary": "Stereo-electroencephalography (SEEG) is an invasive technique used in the presurgical evaluation of drug-resistant epilepsy to support the localization of the Epileptogenic Zone (EZ). SEEG data are particularly complex to analyze, as they include hundreds of components, named channels, each associated with a different brain site, with interactions varying in both time and frequency. In this study, we propose a new framework for SEEG analysis, based on the Canonical Polyadic (CP) decomposition, to extract the latent modes underlying seizure generation. We model SEEG signals as a third-order tensor (channel x time x frequency), and factorize the tensor into rank-1 factors. We then exploit the channel-specific factor as an unsupervised feature set for identifying the EZ. The framework is validated on SEEG-recorded seizures from 35 patients with drug-resistant epilepsy. The results show that the joint combination of multiple frequency bands significantly enhances classification performance.",
+          "title": "Reading Across Space, Time and Frequencies: Tensor Decomposition of SEEG Signals to Support Epileptogenic Zone Definition"
+        },
+        "2611.26142": {
+          "abs": "https://arxiv.org/abs/2611.26142",
+          "authors": [
+            "Giulia Tacconi",
+            "Federico Mason",
+            "Lorenzo Ferri",
+            "Elena Pasini",
+            "Lidia Di Vito",
+            "Matteo Martinoni",
+            "Lara Alvisi",
+            "Anna Scarabello",
+            "Luca Zanuttini",
+            "Francesca Bisulli",
+            "Andrea Zanella"
+          ],
+          "categories": [
+            "eess.SP",
+            "physics.med-ph"
+          ],
+          "comment": null,
+          "id": "2611.26142",
+          "pdf": "https://arxiv.org/pdf/2611.26142",
+          "summary": "Stereo-electroencephalography (SEEG) represents the most effective technique for the detection of the Epileptogenic Zone (EZ) in drug-resistant epilepsy. This procedure produces a multi-dimensional signal with hundreds of components, named channels, each associated with a different brain location. In this work, we propose a joint Hidden Markov Model (HMM), in which each SEEG channel is described by a latent Markov chain, with states shared across the network and channel-specific transition probabilities. Accordingly, we develop a detection algorithm that identifies the channels belonging to the EZ by quantifying, through the Kullback-Leibler divergence, the difference between their transition probabilities in the inter-ictal period and at seizure onset. We evaluate our framework in SEEG recordings from 30 patients with drug-resistant epilepsy and compare it with a benchmark that operates in the same observation space but does not consider a latent-state structure. Compared against medically validated EZ definitions, our study shows that modeling channel-specific temporal transitions can improve EZ localization and offer a data-driven framework to investigate the latent dynamics underlying seizures.",
+          "title": "Transition Dynamics Matter: Hidden Markov Scoring of Epileptogenic Channels in SEEG"
+        },
+        "2611.26220": {
+          "abs": "https://arxiv.org/abs/2611.26220",
+          "authors": [
+            "Geili T A El Sanousi",
+            "Tuan Anh Le",
+            "Raed A A Abd-Alhameed",
+            "Xin-She Yang",
+            "Huan X Nguyen"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.26220",
+          "pdf": "https://arxiv.org/pdf/2611.26220",
+          "summary": "Upper-mid-band XL-MIMO can exploit line-of-sight propagation, but periodic uniform cylindrical arrays may produce grating ridges. We analyse a spherically tessellated concentric circular antenna array with non-separable facet orientations. Under fixed normalised chord spacing and ideal facet visibility, we prove that user channels become asymptotically orthogonal and matched-filter SINR approaches the single-user SNR. Simulations confirm interference decay and SINR convergence. A spectral comparison shows that facet-normal diversity prevents the full-amplitude grating ridges of the cylindrical baseline, with the inter-facet residual decaying with array size.",
+          "title": "Spherical Tessellation of Circular Arrays for Massive MIMO: Favourable Propagation Conditions and Spectral Design"
+        },
+        "2611.26258": {
+          "abs": "https://arxiv.org/abs/2611.26258",
+          "authors": [
+            "Yuanyuan Yao",
+            "Simon Geirnaert",
+            "Alexander Bertrand"
+          ],
+          "categories": [
+            "eess.SP",
+            "q-bio.NC"
+          ],
+          "comment": null,
+          "id": "2611.26258",
+          "pdf": "https://arxiv.org/pdf/2611.26258",
+          "summary": "Neural tracking, the temporal alignment between a continuous stimulus and the elicited brain response, enables decoding of attention from electroencephalography (EEG), yet its application to naturalistic video remains largely unexplored and mainly relies on linear canonical correlation analysis (CCA). We investigate whether a temporal contrastive model, pairing pretrained VideoMAE features with a lightweight EEG encoder trained on a correlation-based InfoNCE objective, can strengthen EEG-video alignment. Benchmarked against CCA under three generalization regimes, the model outperforms CCA across subjects (leave-one-subject-out), matches it within the stimulus manifold (leave-video-segment-out), and falls behind CCA when extrapolating to entirely novel videos (leave-one-video-out). Because this advantage appears only for seen stimuli, we probe its basis: a sham control shows that a high accuracy does not certify genuine alignment, as a synthesized correspondence fit to the seen stimuli can reproduce it without genuine temporal alignment in the training pairs. This does not preclude practical use: on a downstream attention-decoding task with seen stimuli, the model remains better than CCA since the decoding only requires a strong statistical coupling, regardless of whether that coupling is physiologically meaningful. Using a group-averaged EEG reference, we further show that genuine, generalizable coupling is nonetheless learned, only buried in the noise of single-subject EEG. These results indicate that progress hinges on data scale, diversity, and single-subject denoising.",
+          "title": "Temporal Contrastive Alignment of EEG and Naturalistic Video Only Beats Linear Decoding On In-Sample Stimuli"
+        },
+        "2611.26270": {
+          "abs": "https://arxiv.org/abs/2611.26270",
+          "authors": [
+            "Olfa Ben Yahia",
+            "Jean-Francois Frigon",
+            "Brunilde Sanso",
+            "Stephane Martel",
+            "Guillaume Mantelet",
+            "Antoine Lesage-Landry",
+            "Gunes Karabulut Kurt"
+          ],
+          "categories": [
+            "eess.SP",
+            "eess.SY"
+          ],
+          "comment": null,
+          "id": "2611.26270",
+          "pdf": "https://arxiv.org/pdf/2611.26270",
+          "summary": "Service level agreement (SLA) reliability is a key requirement in multibeam satellite systems, where operators must satisfy heterogeneous and time-varying traffic demands using limited resources. Beam hopping (BH) enables flexible resource allocation by activating only a subset of beams at each time slot. However, most existing BH optimization methods rely on predicted channel conditions and do not explicitly control the probability of SLA violation under spectral efficiency uncertainty. This work introduces an SLA-aware chance-constrained BH optimization model for joint beam scheduling and bandwidth allocation. The proposed formulation maximizes the expected delivered traffic while ensuring that each cell demand is satisfied with a target reliability level. By modelling the spectral efficiency prediction error as Gaussian, the probabilistic SLA constraints are reformulated as deterministic second-order cone constraints. Evaluation results demonstrate that the proposed method maintains the target SLA reliability under increasing traffic load and spectral efficiency uncertainty, while maintaining fairness and efficient resource allocation.",
+          "title": "Chance-Constrained Joint Beam Hopping Scheduling and Bandwidth Allocation for LEO Satellites"
+        },
+        "2611.26378": {
+          "abs": "https://arxiv.org/abs/2611.26378",
+          "authors": [
+            "Aimin Li",
+            "Yiğit İnce",
+            "Elif Uysal"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "21 pages. Submitted to IEEE/ACM Transactions on Networking. Journal extension of the ISIT 2026 paper arXiv:2601.16624",
+          "id": "2611.26378",
+          "pdf": "https://arxiv.org/pdf/2611.26378",
+          "summary": "Once a status update enters service, age-optimal policies must wait for it, even when heavy-tailed delays inflate the Age of Information (AoI). We develop a framework in which the sender may preempt the update in service and sample a fresh one, under general service-time distributions and explicit action costs. Our framework covers sources that generate updates at will as well as random update arrivals. Under nondecreasing age costs, we prove that, with preemption, a finite mean delay suffices for a finite average age even under infinite delay variance. We show the optimality of constant service-age thresholds from prior work for exponential service, and exhibit numerically that for general delays the optimal preemption rule depends on both the AoI and the elapsed service time. Under an action-cost budget, we further minimize the Value at Risk (VaR), which bounds the AoI except for a prescribed fraction of time, and the Conditional Value at Risk (CVaR), the mean AoI over that fraction. We reduce both to the same optimality equations without enlarging the state space. Under Pareto and log-normal delays, our algorithm TAILOR keeps the average cost bounded as delay variance grows, while optimal non-preemptive sampling diverges. With optimal preemption, a more variable network can allow fresher data than a steadier one of equal mean delay.",
+          "title": "Optimal Preemption: Guaranteeing Information Freshness in Mean Age and Beyond"
+        },
+        "2611.26393": {
+          "abs": "https://arxiv.org/abs/2611.26393",
+          "authors": [
+            "Jaechan Lim",
+            "David Hicks",
+            "Matt Valentine",
+            "Ki H. Chon"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.26393",
+          "pdf": "https://arxiv.org/pdf/2611.26393",
+          "summary": "Automated external defibrillators (AEDs) are public-access devices intended for use by lay rescuers, yet they must pause chest compressions to analyze the rhythm because compressions corrupt the electrocardiogram (ECG). Removing this pause requires a method that uses the hardware already present in the device, fits within its processor budget, and meets the rhythm-recognition performance required for defibrillator approval. Existing approaches rely either on an auxiliary sensor, which entails a hardware redesign, or on an additional network that reconstructs the ECG before classification. This work classifies the compression-contaminated ECG directly, using only the existing ECG channel of the AED. A cascade of three compact convolutional networks trained with different class ratios verifies each decision with a second network biased toward the proposed outcome; disagreement yields an indeterminate outcome. Evaluated on an independent manufacturer-provided cohort of 464 subjects over 15 train-validation partitions, the cascade satisfies both adjudicable American Heart Association criteria under all six noise conditions at an eight-second window and a signal-to-artifact ratio of 0 dB, with sinus-rhythm specificity of 99.20-99.43% and other non-shockable specificity of 95.48-96.20%, leaving only 1.07-1.48% of segments indeterminate. The criteria are not met at -3 dB. Single networks matched in parameter count and inference cost do not reproduce this performance. Each decision evaluates two of the three networks and requires 6.68 ms on a single thread of a general-purpose processor, and eight-bit quantization reduces the model to 1.45 MiB without changing any compliance verdict. Thus, rhythm analysis during ongoing CPR can be implemented with the ECG hardware already present in public-access AEDs, without auxiliary sensing hardware, subject to validation on the target device.",
+          "title": "Sensor-Free Shockable Rhythm Classification During CPR Using the Existing ECG Channel of Public-Access Automated External Defibrillators"
+        },
+        "2611.26442": {
+          "abs": "https://arxiv.org/abs/2611.26442",
+          "authors": [
+            "Mohamed Abdelkader",
+            "Arafat Al-Dweik",
+            "Sobia Jangsher",
+            "Hamad Yahia",
+            "Shihab Jimaa"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "36 pages, 6 figures, journal",
+          "id": "2611.26442",
+          "pdf": "https://arxiv.org/pdf/2611.26442",
+          "summary": "Decision fusion combines local decisions from distributed sensors to support reliable detection of phenomena in wireless networks. The effectiveness of decision fusion depends on sensing accuracy, reporting-channel reliability, and available communications and computation resources. This article surveys decision-fusion techniques for wireless sensor networks and emerging communication systems, bringing together their theoretical foundations and practical implementation requirements. We review network architectures and hard, soft, and quantized reporting strategies, and examine statistical, learning-based, game-theoretic, and heuristic fusion approaches. Advanced fusion techniques, including relay-aware combining, link-adaptive regeneration, branch selection, and likelihood approximations, are discussed with emphasis on their assumptions, information requirements, and limitations. The survey examines tradeoffs among detection performance, computational complexity, communications overhead, energy consumption, and latency. The tradeoffs are considered across representative sensing applications and emerging technologies, including massive machine-type communication, ultra-reliable low-latency communication, uncrewed aerial vehicle-assisted networks, and the massive Internet of Things. The reviewed literature highlights the importance of jointly considering sensing quality, reporting reliability, and fusion processing when selecting a suitable strategy. Finally, we identify research directions in resource-aware optimization, uncertainty calibration, and robust learning-based fusion under heterogeneous data, missing reports, and changing wireless conditions. Particular attention is given to convergence, generalization, and the costs of training and inference.",
+          "title": "Decision Fusion in Wireless Networks: A Tutorial and Survey of Classical and Learning-Based Methods"
+        },
+        "2611.26512": {
+          "abs": "https://arxiv.org/abs/2611.26512",
+          "authors": [
+            "Victor Monzon Baeza"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.26512",
+          "pdf": "https://arxiv.org/pdf/2611.26512",
+          "summary": "Command and control systems decide automatically on evidence that a fusion rule requires from several sensors. The Age of Information measures how current a datum is when it reaches the fusion node, but existing multi-source results treat additional sources as redundancy: the age at the monitor falls as sources are added. This paper addresses the opposite regime. When a rule demands corroboration the decision waits for the slowest required source, so the binding quantity is a maximum, not a minimum, of source ages. We define the decision age of an arbitrary monotone fusion rule, obtain its distribution in closed form for periodic and event-driven sources, and show that the mean decision age grows linearly with the corroboration level, from the floor of the age sawtooth to its peak. We add a dominance criterion that identifies which sensor governs decision freshness, and a measurement methodology for fielded systems. Freshness becomes a verifiable requirement, and adding sensors is shown to make automatic decisions older rather than fresher.",
+          "title": "Decision Age: Information Freshness under Fusion Rules in Multi-Sensor Command and Control"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-11-20",
+          "complete": true,
+          "total": 41
+        },
+        "eess.SP": {
+          "announcement": "2026-11-20",
+          "complete": true,
+          "total": 40
+        }
+      },
+      "status": "no_new_content",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1795165427.8610446,
-    "next_allowed_at": 1795165442.8610446
+    "last_response_at": 1795250554.9615018,
+    "next_allowed_at": 1795250569.9615018
   },
   "version": 1
 }
