@@ -104009,11 +104009,511 @@
         "cs.IT",
         "eess.SP"
       ]
+    },
+    "2026-11-27": {
+      "ai": {},
+      "candidates": [
+        "2611.33198",
+        "2611.33202",
+        "2611.33456",
+        "2611.33517",
+        "2611.33587",
+        "2611.33613",
+        "2611.33651",
+        "2611.33758",
+        "2611.33773",
+        "2611.33811",
+        "2611.33881",
+        "2611.33986",
+        "2611.34074",
+        "2611.34175",
+        "2611.34267",
+        "2611.34362",
+        "2611.34382",
+        "2611.34447",
+        "2611.34460",
+        "2611.34483",
+        "2611.34550",
+        "2611.34599",
+        "2611.34639",
+        "2611.34677",
+        "2611.34769",
+        "2611.34807"
+      ],
+      "errors": {},
+      "language": "Chinese",
+      "listing_complete": true,
+      "metadata": {
+        "2611.33198": {
+          "abs": "https://arxiv.org/abs/2611.33198",
+          "authors": [
+            "Yuning Zhou",
+            "Ruizhe Jin",
+            "Yunkai Wang",
+            "Zhilan Lu",
+            "Kejia Bian",
+            "Chao Shen",
+            "Feng Bao",
+            "Jianyang Shi",
+            "Ziwei Li",
+            "Junwen Zhang",
+            "Nan Chi"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.AI"
+          ],
+          "comment": null,
+          "id": "2611.33198",
+          "pdf": "https://arxiv.org/pdf/2611.33198",
+          "summary": "Shared prediction across measured optical wireless links requires a common model to accommodate link-dependent waveform dynamics. This paper studies unified learning for underwater optical, 100-m visible-light communication and 4.3-km free-space optical links. We formulate received-waveform forecasting from historical observations and known future transmitted excitation using one shared parameter set. UniMoE-CP combines a shared pool of temporal experts, window-dependent routing and spectral covariate fusion with an autoregressive decoder. The design permits conditional specialization while reusing expert parameters across the measured links. Pooled-training benchmarks evaluate each link separately and report an aggregated result using normalized mean square error (NMSE) and normalized mean absolute error (NMAE). The reported average NMSE reductions are 29.9% for 100-m VLC, 29.1% underwater and 21.4% for 4.3-km FSO. The aggregated average NMSE decreases from 0.1645 for the best baseline to 0.1178 for UniMoE-CP.",
+          "title": "UniMoE-CP: Unified Conditional Waveform Prediction Across Measured Optical Wireless Links"
+        },
+        "2611.33202": {
+          "abs": "https://arxiv.org/abs/2611.33202",
+          "authors": [
+            "Lang Ming",
+            "Longhui Wang",
+            "Yazhou Sun",
+            "Xi Chen",
+            "Jian Wang",
+            "Yu Wang"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.33202",
+          "pdf": "https://arxiv.org/pdf/2611.33202",
+          "summary": "Field measurements are essential for evaluating radio map reconstruction under real-world conditions, but their acquisition is costly. This letter proposes a simulation-assisted parameterized-background data-weak (SA-PBDW) method that combines propagation simulations with sparse field measurements, which jointly estimates background coefficients and a spatial correction to account for discrepancies between simulated and measured power distributions. Dense field measurements are collected for multiple transmitter positions at an urban site. Evaluations on the collected data and RadioMapSeer demonstrate improved reconstruction accuracy and structural fidelity over benchmark methods at reduced sampling rates.",
+          "title": "Simulation-Assisted Radio Map Reconstruction with Sparse Field Measurements"
+        },
+        "2611.33456": {
+          "abs": "https://arxiv.org/abs/2611.33456",
+          "authors": [
+            "Attanasia Garuso",
+            "Silvija Kokalj-Filipovic"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Presented at the 2026 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN). To appear in IEEE Xplore. \\c{opyright} 2026 IEEE",
+          "id": "2611.33456",
+          "pdf": "https://arxiv.org/pdf/2611.33456",
+          "summary": "Radio-frequency (RF) signal processing based on machine learning, including Automatic Modulation Classification (AMC), plays a critical role in Next Generation (NextG) intelligent communications but remains highly vulnerable to adversarial attacks. Prior work explored Variational Information Bottleneck (VIB) as a means to improve robustness, but only in continuous spaces and never for RF classifiers. We investigate the impact of discrete-space information bottlenecks on the adversarial robustness of AMC models. Classification accuracy of attacked modulated RF waveforms is evaluated in two frameworks designed to leverage VIB for adversarial robustness: (i) a two-stage framework where VIB is applied in the preprocessing step using a Vector Quantized Variational Autoencoder (VQVAE) to suppress adversarial perturbations in the process of input signal reconstruction and (ii) a Vector Quantized Classifier (VQC) that leverages VIB inside the classifier proper. The architectures of VQVAE and VQC are identical up to the bottleneck where the VQVAE adds a decoder while VQC utilizes a classification head. We train both VQVAE and VQC with loss functions that we derive from the VIB information-theoretic model. Both frameworks incorporate vector quantization and KL regularization to enforce discrete bottlenecks that filter out adversarial noise. Evaluations under white-box attacks demonstrate that discrete bottlenecks significantly enhance robustness: VQVAE outperforms its continuous VAE (Variational Autoencoder) counterpart, while VQC achieves strong robustness without requiring signal reconstruction.",
+          "title": "Vector Quantized Information Bottleneck Mitigation of Adversarial Attacks on Modulation Classifiers"
+        },
+        "2611.33517": {
+          "abs": "https://arxiv.org/abs/2611.33517",
+          "authors": [
+            "Parthasarathi Khirwadkar",
+            "Mohamed Ghada-Waeel Hamdy",
+            "Robin Rajamäki",
+            "Piya Pal"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "Accepted for publication in the Proceedings of IEEE ISAC 2026",
+          "id": "2611.33517",
+          "pdf": "https://arxiv.org/pdf/2611.33517",
+          "summary": "This paper introduces a subspace coding perspective to bistatic integrated sensing and communication (ISAC), highlighting the role of receiver array geometry in the coupling between communication decoding and sensing. A central insight is that the impact of the interference caused by the sensing channel on the line-of-sight communication path is controlled by the subspace distance between the sensing and communication subspaces, {\\em which strongly depends on the array geometry}. By studying a commonly used successive decoding approach, we derive upper and lower bounds on the communication error probability in terms of an effective SINR, which is explicitly determined by this subspace distance. This reveals that array geometries designed to form well-separated sensing subspace codes can also improve communication reliability in bistatic ISAC. In particular, Bose--Chowla arrays, shown to be near-optimal subspace codes for spatial sensing in our earlier works, can outperform uniform linear arrays in terms of symbol decoding errors. The performance gap is significant when the communication and sensing channels are strongly correlated, and it increases with the number of antennas. Numerical experiments confirm that subspace-coded array geometries provide more favorable sensing--communication tradeoffs than ULAs for iterative joint target localization and decoding (JTD) receiver.",
+          "title": "Subspace-Coding for Bistatic ISAC: Taming Interference via Array Geometry"
+        },
+        "2611.33587": {
+          "abs": "https://arxiv.org/abs/2611.33587",
+          "authors": [
+            "Wei Huang",
+            "Hongfei Chang",
+            "Kaitao Meng",
+            "Tianhe Xu",
+            "Hao Zhang",
+            "Yanan Wu",
+            "Qian Sun"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.33587",
+          "pdf": "https://arxiv.org/pdf/2611.33587",
+          "summary": "In underwater acoustic sensor networks, depth-dependent variations in sound speed refract acoustic rays, complicating the estimation of target positions from travel-time measurements. Propagation-model-based methods rely on an assumed or estimated sound speed profile (SSP), and a mismatch between that profile and the current environment can bias position estimates. To address this limitation, this paper proposes an underwater graph attention network (UGAN) that fuses synchronized time-of-arrival (TOA) observations from multiple stations with reference-station coordinates to estimate three-dimensional target positions without requiring the current sound speed profile at inference. UGAN constructs one graph per target for batch inference. Its geometry--time attention mechanism combines interstation geometry with ordered pairs of TOA observations to compute attention weights in all three graph layers and enrich the messages in the last two layers. A shared nonlinear encoder supplies individual TOA features directly to every layer. In ray-tracing simulations with a fixed five-station deployment and two SSPs held out from training and validation, UGAN achieves mean localization root mean square errors (RMSE) of 0.307, 0.577, and 0.989~m at three increasing TOA noise levels, representing reductions of 52.0\\%, 31.0\\%, and 22.8\\% relative to the evaluated GATv2 baseline, respectively. At the intermediate noise level, incorporating station-pair relations into the messages reduces the mean localization RMSE by 9.4\\% with relation-based attention scoring enabled. For 4,000 target observations, UGAN takes a median of 58.14~ms on the same GPU, 7.0\\% less time than GATv2.",
+          "title": "Geometry-Time Graph Attention for 3-D TOA Localization in Underwater Acoustic Sensor Networks"
+        },
+        "2611.33613": {
+          "abs": "https://arxiv.org/abs/2611.33613",
+          "authors": [
+            "Run Zheng"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.33613",
+          "pdf": "https://arxiv.org/pdf/2611.33613",
+          "summary": "We determine the exact minimum distances of two families of primitive narrow-sense BCH codes of length $q^m-1$, where $q$ is a prime power and $m\\geq 4$. For $1\\leq i\\leq\\lfloor m/2\\rfloor$, codes with designed distance $q^m-q^{m-1}-q^{m-1-i}-1$ have minimum distance and Bose distance both equal to their designed distance. Furthermore, for integers $\\ell, i, s$ satisfying $3\\leq\\ell<m-1$ and $\\lfloor m/(\\ell+1)\\rfloor\\leq i\\leq s<\\lfloor(m-1)/\\ell\\rfloor$, codes with designed distance $q^m-q^{m-1}-q^{m-1-i}-q^s-1$ have Bose distance equal to their designed distance and minimum distance $q^m-q^{m-1}-q^{m-1-i}-1$. Consequently, the gap between the minimum distance and the Bose distance in this family is exactly $q^s$ and grows without bound as $m$ increases, with fixed $\\ell$.The proofs proceed by constructing good zero-sets from quadratic forms for the first family, and by combining upper bounds provided by the first family with lower bounds derived from the divisibility of codeword weights in punctured generalized Reed--Muller codes for the second. We also derive explicit dimension formulas by counting cyclotomic cosets.",
+          "title": "Exact Minimum Distances of Primitive Narrow-Sense BCH Codes: At and Beyond the Bose Distance"
+        },
+        "2611.33651": {
+          "abs": "https://arxiv.org/abs/2611.33651",
+          "authors": [
+            "Yafei Wang",
+            "Yuchen Zhang",
+            "Yiming Zhu",
+            "Jiayang Wan",
+            "Wenjin Wang",
+            "Symeon Chatzinotas",
+            "Björn Ottersten"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.33651",
+          "pdf": "https://arxiv.org/pdf/2611.33651",
+          "summary": "Symbol-level precoding (SLP) improves multiuser transmission by exploiting constructive interference based on user symbols. A microwave linear analog computer (MiLAC) maps a reduced number of radio-frequency (RF) port input signals to a large antenna array through a tunable passive microwave network. Their combination enables MiLAC to reduce the RF-chain burden of SLP, while SLP offers symbol-dependent design flexibility that can alleviate the performance loss caused by a limited number of RF chains and practical circuit constraints of MiLAC. This work investigates the joint design of SLP and MiLAC and analyzes how a limited number of RF chains and practical circuit constraints affect performance. For ideal MiLAC networks, we characterize the condition for attaining fully digital SLP performance and quantify the associated performance loss otherwise. We propose the joint effective subspace MiLAC-SLP (JES-MiLAC-SLP) algorithm to jointly optimize the analog beamforming matrix and SLP signals over a symbol block. For stem-connected MiLAC networks with finite tuning ranges and quantized tuning states, we propose the hardware-constrained JES-MiLAC-SLP (HC-JES-MiLAC-SLP) algorithm. It identifies circuit state changes for which SLP can better compensate the errors caused by circuit limitations, and updates the circuit state accordingly. Numerical results validate the derived findings and show that joint design reduces errors relative to separate MiLAC and SLP designs. Under the considered configurations, HC-JES-MiLAC-SLP substantially narrows the gap to fully digital SLP.",
+          "title": "Symbol-Level Precoding With Microwave Linear Analog Computers (MiLACs): Performance Limits and Stem-Connected Hardware Design"
+        },
+        "2611.33758": {
+          "abs": "https://arxiv.org/abs/2611.33758",
+          "authors": [
+            "Haoran Chang",
+            "Sweekar Piya",
+            "Xiajun Jiang",
+            "Qianqian Zhang"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.33758",
+          "pdf": "https://arxiv.org/pdf/2611.33758",
+          "summary": "Semantic communication offers a promising approach to support intelligent services in next-generation wireless networks by efficiently transmitting task-relevant information. However, its performance can degrade significantly when input data and wireless channel conditions differ from those encountered during training. In this paper, we propose a robust semantic communication framework that addresses these distributional mismatches through two independent but complementary modules. At the transmitter, a domain-generalization module extracts task-relevant features while suppressing domain-specific information. At the receiver, a pilot-assisted channel characterization module extracts channel context from received pilot signals to guide semantic recovery under varying wireless conditions. Through the end-to-end training of semantic encoder-decoder pair with domain alignment and channel adaptation models, the proposed framework improves task performance under simultaneous input and channel distribution shifts with limited transmitter-receiver coordination during deployment. Simulation results show that the proposed framework improves classification accuracy by more than $18\\%$ over a conventional semantic communication baseline in the unseen scenarios.",
+          "title": "Domain-Generalizable Semantic Communications With Pilot-Assisted Adaptation over Wireless Channels"
+        },
+        "2611.33773": {
+          "abs": "https://arxiv.org/abs/2611.33773",
+          "authors": [
+            "Mojtaba Hajiabadi",
+            "Saeid Pakravan",
+            "Hadi Zayyani",
+            "Mohammad Salman",
+            "Ming Zeng"
+          ],
+          "categories": [
+            "eess.SP",
+            "cs.LG",
+            "eess.SY"
+          ],
+          "comment": null,
+          "id": "2611.33773",
+          "pdf": "https://arxiv.org/pdf/2611.33773",
+          "summary": "Accurate channel estimation in reconfigurable intelligent surface (RIS)-assisted millimeter-wave (mmWave) massive multiple-input multiple-output (MIMO) systems remains challenging due to the passive nature of the RIS, the high dimensionality of the cascaded channel, and the presence of non-Gaussian impulsive disturbances. This paper proposes a robust sparsity-aware adaptive estimator, termed reweighted zero-attracting stochastic Shannon entropy (RZA-SSE), for angular-domain channel estimation. The algorithm combines a double-window kernel-based Shannon entropy criterion with a norm-normalized \\(\\ell_1\\) penalty. Both the data-driven term and the nonsmooth penalty are differentiated using exact Wirtinger calculus. An exact weight-error recursion and a mean-square energy relation are derived. Local stability is analyzed via a joint coefficient--penalty state representation, and an approximate steady-state mean-square deviation (MSD) expression is obtained. Extensive simulations under Gaussian-mixture impulsive noise demonstrate that ZA-SSE consistently outperforms the state-of-the-art benchmarks in steady-state MSD.",
+          "title": "Robust Adaptive Channel Estimation for RIS-Assisted mmWave Massive MIMO via a Stochastic Shannon Entropy Criterion"
+        },
+        "2611.33811": {
+          "abs": "https://arxiv.org/abs/2611.33811",
+          "authors": [
+            "Haoxuan Luo",
+            "Ryan Gabrys",
+            "Farzad Farnoud"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "21 pages, 4 figures. Full version of a work accepted for poster presentation at the 2027 Data Compression Conference (DCC)",
+          "id": "2611.33811",
+          "pdf": "https://arxiv.org/pdf/2611.33811",
+          "summary": "Small edits to raw data can cause large changes in the compressed version, which can be costly in applications such as data synchronization and incremental backup. We study quantization stability, the probability that two perturbed distributions map to the same representative, and codebook stability, the probability that the resulting Huffman codebooks are the same. We first quantize the empirical distribution and then construct a Huffman code from the quantized distribution, which can improve codebook stability at the cost of some compression efficiency. We study two quantizers based on a shifted and scaled lattice in the probability simplex: the Euclidean Lattice Quantizer (ELQ) and the KL Quantizer (KLQ). For ELQ, we derive bounds on quantization stability and KL distortion. For KLQ, we show that its quantization cells can be determined by comparisons with adjacent lattice codewords and use the distances to the cell boundaries to derive a quantization stability bound. For a symmetric codebook of positive types, we obtain the exact worst-case KL distortion over the full probability simplex. We also give a heuristic choice $\\alpha^\\star$ of the minimum codeword probability and compare it with the minimum coordinate of a Lloyd-optimized codebook. Simulations using canonical Huffman coding compare ELQ and KLQ with an existing compander-based quantizer and show the trade-off between KL distortion, codebook stability, and encoded length under random deletions.",
+          "title": "Quantization and Codebook Stability of Euclidean and KL Lattice Quantizers"
+        },
+        "2611.33881": {
+          "abs": "https://arxiv.org/abs/2611.33881",
+          "authors": [
+            "Raghuram C. Kamath",
+            "Carlos Aldana",
+            "Kavya Guruswamy"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "5 pages (4 pages and a page of references), 3 figures, 3 tables. Submitted to IEEE Antennas and Wireless Propagation Letters",
+          "id": "2611.33881",
+          "pdf": "https://arxiv.org/pdf/2611.33881",
+          "summary": "Channel state information (CSI) from commodity Wi-Fi receivers is increasingly used to estimate delay spread and fading. For multi-stream data frames, the access point may apply transmit beamforming, and the CSI then describes the precoded channel $\\mathbf{HQ}$ instead of the propagation channel $\\mathbf{H}$. This letter gives a blind test for eigen-beamforming based on the near-orthogonality and power ordering of the stream columns, evaluated at the receive-chain gain ratio that minimizes their coherence. The test needs no calibration or packet alignment, tolerates gain changes between sounding and data frames, and builds on the $\\mathrm{Beta}(1,N_r-1)$ law of the squared column coherence under unprecoded Rayleigh fading. Simulations with compressed feedback, subcarrier grouping, feedback delay, antenna correlation, and SNRs of 10-30 dB give false-alarm rates of at most $2.9\\times10^{-3}$ at the chosen thresholds and show precoding scales the per-entry RMS delay spread by factors of 0.3 to 5.7. The per-subcarrier Gram matrix $\\hat{\\mathbf{H}}\\hat{\\mathbf{H}}^{H}$ is preserved: the Frobenius norm is unchanged with two transmit antennas and within 1.7 dB (95th percentile) with four. With two generations of commercial access points at 5 and 6 GHz, 880 of the 896 two-stream data frames they sent to the client tested as precoded, including 601 of 605 IEEE 802.11be frames without a beamforming flag. A third access point gave 0 of 5221 in 802.11n mode and 4003 of 5225 flagged frames in 802.11ac mode, fewer in motion; a fourth gave 3283 of 3296 with beamforming on and 0 of 3223 with it off.",
+          "title": "Detecting Transmit Precoding in Commodity Wi-Fi Channel State Information and Its Effect on Measured Channel Statistics"
+        },
+        "2611.33986": {
+          "abs": "https://arxiv.org/abs/2611.33986",
+          "authors": [
+            "Victor Rabiet"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "5 pages, 1 figure. Submitted to IEEE Wireless Communications Letters. Code and data: this https URL",
+          "id": "2611.33986",
+          "pdf": "https://arxiv.org/pdf/2611.33986",
+          "summary": "Gaussian useful-gain and mean-interference approximations can cause opposite power-sizing errors in reconfigurable intelligent surface (RIS)-assisted non-orthogonal multiple access (NOMA). We extend a source-side thermal energy harvesting model with Poisson interference and certify two-sided outage bounds. In a tested environment, the combined required signal-to-noise ratio error has opposite signs at 20 and 24 elements per user. Under another power convention, mean or moment-matched Gamma-distributed interference can predict false feasibility with exact useful gain. In the Gamma case, the Gaussian gain approximation can mask this false feasibility. Propagated Chernoff bounds give sufficient designs. Results concern the specified model and tested regimes.",
+          "title": "Certified Outage Bounds for RIS-Assisted NOMA with Source-Side Thermal Energy Harvesting"
+        },
+        "2611.34074": {
+          "abs": "https://arxiv.org/abs/2611.34074",
+          "authors": [
+            "Mahmoud Aldababsa",
+            "Khalid Yahya"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "5 pages",
+          "id": "2611.34074",
+          "pdf": "https://arxiv.org/pdf/2611.34074",
+          "summary": "Noise-domain orthogonal time frequency space (ND-OTFS) encodes bits through opposite correlations in Gaussian delay--Doppler pairs of equal average energy. This letter derives the exact conditional bit error probability (BEP) of maximum-likelihood detection using generalized covariance eigenvalues and characteristic-function inversion. For scalar channels, we obtain an incomplete-beta expression and its finite-sum Rayleigh average. Partial correlation yields an error floor for a fixed observation count. At unit correlation, the conditional BEP decays with an signal-to-noise ratio (SNR) exponent equal to the number of pair observations, and common Rayleigh fading yields diversity order one. Simulations validate the analysis and quantify pair-placement effects.",
+          "title": "Exact Error Analysis of Noise-Domain OTFS with Paired Covariance Signaling"
+        },
+        "2611.34175": {
+          "abs": "https://arxiv.org/abs/2611.34175",
+          "authors": [
+            "Wenjing Wei",
+            "Chentao Yue",
+            "Branka Vucetic",
+            "Yonghui Li"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "5 pages, 5 figures. Accepted for publication in IEEE Communications Letters",
+          "id": "2611.34175",
+          "pdf": "https://arxiv.org/pdf/2611.34175",
+          "summary": "Conventional low-density parity-check (LDPC) belief propagation (BP) decoding operates on a Tanner graph, with no factor describing the source structure. This paper proposes a semantic Tanner graph for LDPC-coded text transmission and develops semantic-factor-aided BP (SF-BP) decoding. The source text is tokenized into discrete tokens, which are then mapped to binary messages for channel coding. For each token, the proposed graph introduces a semantic factor connected to the corresponding information-bit variable nodes forming the token. A fine-tuned language model assigns this factor a posterior distribution over all possible token symbols in the alphabet at each token position. During SF-BP decoding, semantic-factor and LDPC parity-check messages are combined at their shared variable nodes for message passing. Simulation results show that SF-BP significantly improves the block error rate (BLER) and Sentence-BERT similarity (BERT: Bidirectional Encoder Representations from Transformers) compared with conventional BP. For example, SF-BP reduces BLER from approximately 1 to 6.51 x 10^-6 and increases Sentence-BERT similarity from 0.21 to 1 - 1.26 x 10^-6 for the (1248, 1040) LDPC code at 4 dB.",
+          "title": "Semantic Tanner-Graph Decoding for LDPC Codes"
+        },
+        "2611.34267": {
+          "abs": "https://arxiv.org/abs/2611.34267",
+          "authors": [
+            "Lan Deng",
+            "Zhao Hu",
+            "Nian Li"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.34267",
+          "pdf": "https://arxiv.org/pdf/2611.34267",
+          "summary": "Linear codes over finite fields with few weights are of significant interest due to their applications in areas such as secret sharing schemes, strongly regular graphs, and association schemes. In this paper, we construct several classes of p-ary linear codes based on Weil sums via the defining-set construction of bivariate form, where p is an odd prime. Utilizing the theory of quadratic forms and Weil sums over finite fields, the parameters and weight distributions of the codes are completely determined. As a result, several families of three-weight or four-weight linear codes are obtained from our construction. In addition, it is shown that most of our codes are minimal.",
+          "title": "Several classes of few-weight linear codes based on Weil sums"
+        },
+        "2611.34362": {
+          "abs": "https://arxiv.org/abs/2611.34362",
+          "authors": [
+            "Lan Deng",
+            "Zhao Hu",
+            "Nian Li"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": null,
+          "id": "2611.34362",
+          "pdf": "https://arxiv.org/pdf/2611.34362",
+          "summary": "In this paper, we construct linear codes over the commutative non-unital ring $u\\mathbb{F}_q+u^2\\mathbb{F}_q+u^3\\mathbb{F}_q$, where $u^4=0$, using simplicial complexes in $\\mathbb{F}_q^m$ and their complements. For codes defined by two arbitrary nonempty simplicial complexes, we determine the lengths and $\\mathbb{F}_q$-dimensions. When each complex has a single maximal element with nonempty proper support, we use an $\\mathbb{F}_q$-linear Gray map and exponential sums to determine the parameters and Lee weight distributions of four classes of codes. These classes have two, at most five, at most four, and at most eight nonzero Lee weights, respectively. Puncturing the Gray images yields projective codes with dual minimum distance three. Using the Griesmer bound, we obtain families of distance-optimal projective codes, including a binary family whose lengths exceed the bound by three. The Gray images are Euclidean self-orthogonal for $q=3$ and for $q=2$ under an additional condition, and Hermitian self-orthogonal for $q=4$. We also give sufficient conditions for minimality of both the Gray images and the projective codes.",
+          "title": "Four Classes of Few-Weight Linear Codes over $u\\mathbb{F}_q+u^2\\mathbb{F}_q+u^3\\mathbb{F}_q$ from Simplicial Complexes"
+        },
+        "2611.34382": {
+          "abs": "https://arxiv.org/abs/2611.34382",
+          "authors": [
+            "Isaac Barouch Essayag",
+            "Aryeh Lev Zabokritskiy"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "25 pages, 1 figure",
+          "id": "2611.34382",
+          "pdf": "https://arxiv.org/pdf/2611.34382",
+          "summary": "We prove that the code whose servers store all $q^s-1$ nonzero linear combinations of $s$ information symbols over $\\mathbb{F}_q$ is a functional batch code with list size $(q^s+q-2)/2$: every list of $(q^s+q-2)/2$ requested nonzero linear combinations, repetitions allowed, can be recovered from pairwise disjoint sets of at most two servers. This holds for every finite field and every $s\\ge1$, and the list size cannot be increased, even if recovery sets of any size are allowed. For $q=2$ the statement is the functional batch conjecture for the binary simplex code, in its stronger form with recovery sets of size at most two, and it follows from the conjecture of Balister, Győri and Schelp on perfect matchings of $\\mathbb{F}_2^n$ with prescribed differences, which was proved by the second author in a separate paper. We also determine the minimum length of a functional batch code with $s$ information symbols over $\\mathbb{F}_q$: it is $m(q^s-1)$ for the list size $m(q^s+q-2)/2$, for every $m\\ge1$, and, for odd $q$, it is $2(q^s-1)/(q-1)$ for the list size $(q^s-1)/(q-1)+1$.",
+          "title": "The Functional Batch Conjecture And Its Extension To All Finite Fields"
+        },
+        "2611.34447": {
+          "abs": "https://arxiv.org/abs/2611.34447",
+          "authors": [
+            "Zhiqiang Li",
+            "Yubo Sun",
+            "Gennian Ge"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "20 pages",
+          "id": "2611.34447",
+          "pdf": "https://arxiv.org/pdf/2611.34447",
+          "summary": "We consider a $q$-ary $n\\times n$ array subject to a $(1,1)$-criss-cross deletion, which removes one row and one column. We first derive a sphere-packing type lower bound on the redundancy of codes correcting such deletions. For every $q\\geq 2$ and $n\\geq 27$, the redundancy is greater than $2n+2\\log_q n-2$. For fixed $q$, it is at least $2n-1+2\\log_q n-o_q(1)$ as $n\\to\\infty$. We then present two code constructions. The first construction achieves redundancy $2n-1+2\\log_q n+o_q(1)$ by selecting a largest syndrome class. It matches the lower bound up to a vanishing term and admits $O_q(n^2)$-time decoding. The second construction has redundancy $2n+2\\log_q n+O_q(1)$ and admits $O_q(n^2)$-time algorithms for both encoding and decoding. For fixed $q$, these running times are linear in the number of array entries.",
+          "title": "Optimal \\texorpdfstring{$(1,1)$}{(1,1)}-Criss-Cross Deletion-Correcting Codes with Linear-Time Encoder and Decoder"
+        },
+        "2611.34460": {
+          "abs": "https://arxiv.org/abs/2611.34460",
+          "authors": [
+            "Kuranage Roche Rayan Ranasinghe",
+            "Giuseppe Thadeu Freitas de Abreu"
+          ],
+          "categories": [
+            "cs.IT"
+          ],
+          "comment": "Submitted to an IEEE conference",
+          "id": "2611.34460",
+          "pdf": "https://arxiv.org/pdf/2611.34460",
+          "summary": "We propose a generalization of factor graphs and the sum-product algorithm (SPA), widely used in the estimation of data, channel state information and sensing parameters, to unknowns that are functions, such as waveforms, time-varying channels and continuous-aperture array currents, which must otherwise be sampled first. In order to mitigate the challenge that functions have no probability density functions (PDFs), the proposed scheme measures densities relative to the prior of each function, not to the flat reference implicit in every PDF. Messages then become likelihood ratios, and the factor-node rule an average over the priors, still exact on trees. For Gaussian models, the proposed functional SPA (FSPA) is Gaussian belief propagation (GaBP) with kernels in place of matrices and a grid-independent convergence condition, whereas scalar GaBP on grid samples provably slows down under refinement, as information hops from sample to sample. Simulations in a multi-user detection setting confirms the latter, and shows that sampling first can also fail for smooth priors.",
+          "title": "Functional Factor Graphs and the Functional Sum-Product Algorithm"
+        },
+        "2611.34483": {
+          "abs": "https://arxiv.org/abs/2611.34483",
+          "authors": [
+            "Gustavo Fraidenraich",
+            "Thales Wulfert Cabral",
+            "Farshad Rostamighadi",
+            "Kai-Kit Wong",
+            "Kin-Fai Tong"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.34483",
+          "pdf": "https://arxiv.org/pdf/2611.34483",
+          "summary": "In this paper, we investigate the interference-limited outage performance of fast fluid antenna multiple access (FAMA), in which the receive port is selected according to the instantaneous symbol-based signal-to-interference energy ratio. For any positive-definite spatial covariance matrix and an arbitrary finite number of candidate ports, we show that constant-modulus multiuser interference admits an exact reduction to the comparison of two independent correlated exponential random vectors. This representation leads to a nonnegative double multi-index series for the outage probability, a recursive coefficient evaluation, and a certified truncation-error bound. We then study the distinct asymptotic regime where the number of candidate ports goes to infinity while the physical aperture remains unchanged, assuming exponential spatial correlation. For this model, we derive an explicit finite-port series requiring no numerical integration, and characterize continuous port selection through a convergent one-dimensional series for arbitrary thresholds. The analysis further yields an exact expression relating the maximum supportable number of users to the antenna aperture size and target outage probability. Numerical results validate the finite-port and asymptotic analyses, and illustrate that given sufficient aperture size, a user utilizing fast FAMA can overcome a massive number of interferers for decent communication performance.",
+          "title": "Fast Fluid Antenna Multiple Access: Exact Analysis and Fixed-Aperture Asymptotics"
+        },
+        "2611.34550": {
+          "abs": "https://arxiv.org/abs/2611.34550",
+          "authors": [
+            "Yanhao Huo",
+            "Shijun Xiang"
+          ],
+          "categories": [
+            "cs.IT",
+            "cs.AI"
+          ],
+          "comment": null,
+          "id": "2611.34550",
+          "pdf": "https://arxiv.org/pdf/2611.34550",
+          "summary": "Semantic communication shifts the transmission goal from the accurate recovery of syntactic symbols to the reliable conveyance of semantic content, yet a systematic information-theoretic characterization of information hiding at the semantic layer is still missing. Building on the semantic information theory of Niu-Zhang and the classical information hiding theory of Moulin-O'Sullivan, this paper establishes an information-theoretic framework for information hiding under semantic communication. The classical hiding model is extended to a two-layer structure (semantic host, syntactic host, syntactic composite signal, syntactic received, semantic received) bridged by synonymous mappings f_s, f_x and the inverse mapping f_y^{-1}, subject to four distortion constraints: syntactic transparency, semantic fidelity, syntactic perturbation, and semantic destruction. The capacity is cast as a Stackelberg game with the hider moving first and the payoff J(Q,A) = I(U~; Y~ | K) - I(U~; S~ | K), yielding the single-letter maximin C^s = max_Q min_A J(Q,A), whose achievability and converse follow from random coding and joint typicality decoding. Relative to the classical capacity, comparison payoffs built from the up/down semantic mutual information give the endpoint sandwich C^s_end(0,1) <= C^s <= C^s_end(1,0) with the classical value C in the same interval, while closing semantic tolerance yields C^s_no-tol <= C_cl under a fair comparison. These results clarify that semantic hiding is not unconditionally superior to classical hiding. Binary, ternary, and Gaussian examples confirm the degeneration under one-to-one mappings and the capacity loss under coarsening.",
+          "title": "An Information-Theoretic Analysis of Information Hiding in Semantic Communication"
+        },
+        "2611.34599": {
+          "abs": "https://arxiv.org/abs/2611.34599",
+          "authors": [
+            "Dominik Jasiówka",
+            "Patryk Ciężarek",
+            "Joanna Zysnawska",
+            "Ludwin Molina Arias"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.34599",
+          "pdf": "https://arxiv.org/pdf/2611.34599",
+          "summary": "Respiratory rate (RR) is one of the earliest indicators of clinical deterioration, which makes its continuous measurement clinically valuable. In routine practice, however, RR is monitored almost exclusively with contact-based sensors, which require skin attachment, may alter natural breathing, and are poorly tolerated by vulnerable groups such as newborns and elderly patients. Non-contact sensing removes these constraints, with RGB video and depth imaging among its most accessible modalities. In this work, we present a low-cost, real-time platform based on a single multimodal sensor that provides both RGB and time-of-flight (ToF) data streams, implemented on a Raspberry Pi 5 edge device. The system integrates three RGB optical-flow pipelines, namely Farnebäck, Horn--Schunck, and Lucas--Kanade, together with a depth-based pipeline incorporating region-of-interest stabilization and distance-derived signal extraction, enabling the two modalities to be evaluated independently under the same experimental protocol. The proposed approach was evaluated on twelve healthy volunteers following a controlled protocol, including normal breathing, hyperventilation, and breath-holding, using a piezoresistive respiratory belt as a reference. RGB-based methods achieved lower RR estimation errors, with Lucas--Kanade attaining the lowest median MAE (3.83 BPM), whereas the ToF-based pipeline, although less accurate for RR estimation (median MAE 6.24 BPM), reached a higher apnea detection sensitivity (0.66 vs 0.51-0.55). These findings highlight the complementary strengths of both modalities and support their integration into unified low-cost platforms.",
+          "title": "A Real-Time Low-Cost Platform for Non-Contact Respiratory Rate Monitoring: A Comparative Evaluation of RGB Optical Flow and Time-of-Flight Depth Sensing"
+        },
+        "2611.34639": {
+          "abs": "https://arxiv.org/abs/2611.34639",
+          "authors": [
+            "Malte Stelzer",
+            "Timo Bartels",
+            "Dinu Mihailescu-Stoica",
+            "Niko Harnge",
+            "Sören Kohnert",
+            "Florian Poprawa",
+            "Marc Zeller",
+            "Tim Fingscheidt"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": null,
+          "id": "2611.34639",
+          "pdf": "https://arxiv.org/pdf/2611.34639",
+          "summary": "Reliable speed-over-ground estimation is essential for automated railway vehicles. However, the accuracy of a velocity estimate alone does not indicate whether the underlying RaDAR measurement is physically plausible. This paper introduces a velocity-conditioned Gaussian spectral modeling framework for anomaly detection and velocity consistency assessment. A neural encoder estimates the vehicle velocity from complex Doppler spectra, while a Gaussian decoder models the expected spectral distribution conditioned on a velocity estimate. Three complementary inference-time online indicators are derived: the spectral anomaly score (SAS), conditional anomaly score (CAS), and absolute velocity disagreement (AVD). Experiments demonstrate the sensitivity of the scores to velocity deviations. Under controlled spectral anomalies, SAS and CAS outperform conventional spectral indicators in most conditions. Furthermore, AVD exhibits strong correlations with actual velocity estimation errors (Pearson $r>0.99$) for the investigated extra-peak and local anomalies. These results demonstrate the potential of online conditional spectral modeling to assess measurement plausibility and velocity estimation reliability without requiring ground-truth velocities during inference.",
+          "title": "Doppler RaDAR Single-Frame Anomaly Detection and Consistency Assessment by Velocity-Conditioned Gaussian Spectral Modeling"
+        },
+        "2611.34677": {
+          "abs": "https://arxiv.org/abs/2611.34677",
+          "authors": [
+            "Edward J. Daw"
+          ],
+          "categories": [
+            "eess.SP",
+            "astro-ph.IM",
+            "hep-ex",
+            "physics.ins-det"
+          ],
+          "comment": "11 pages, 5 figures",
+          "id": "2611.34677",
+          "pdf": "https://arxiv.org/pdf/2611.34677",
+          "summary": "We describe FOREST, a real, first order digital resonant filter and orthogonal state generator. We show that in spite of the imaginary nature of the roots of the transfer function of a resonator, appropriate interpretation of this transfer function nonetheless leads to a practical first order filter with real coefficients. We use a discrete state space model of FOREST to predict the resonator properties, and implement the filter in digital signal processing slices on a digital signal processing platform. Applications are in real time digital signal processing, engineering fields such as mains electricity monitoring and motor control, any application requiring a phase locked loop, and physics applications utilising high-quality-factor resonators.",
+          "title": "First Order Real Resonant Digital Filters and A Novel Orthogonal State Generator"
+        },
+        "2611.34769": {
+          "abs": "https://arxiv.org/abs/2611.34769",
+          "authors": [
+            "Raghuram C. Kamath",
+            "Carlos Aldana",
+            "Kavya Guruswamy"
+          ],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "5 pages, 4 figures, 3 tables. Submitted to IEEE Transactions on Antennas and Propagation (Communication). Companion letter submitted to IEEE Antennas and Wireless Propagation Letters",
+          "id": "2611.34769",
+          "pdf": "https://arxiv.org/pdf/2611.34769",
+          "summary": "A wireless product experiences the channel through its own antennas and, when worn, its user's body. Commodity Wi-Fi receivers report channel state information (CSI) per frame and can serve as device-referred sounders if their impairments are corrected. Synthetic ground truth reproducing a commercial receiver's impairments shows that five corrections are needed: subcarrier mapping, receive-chain order, per-packet alignment, received-signal-strength referencing, and window-response removal. Without them, the RMS delay spread reads up to 191% high, the coherence bandwidth falls to about half, or the Rician $K$-factor and Doppler estimates lose their meaning; with all five, the median delay-spread bias is between $-6\\%$ and $+14\\%$. Applied to beacons from seven access points, including a body-worn receiver at six indoor sites at 5 and 6 GHz, the chain gives delay spreads of 24-96 ns; walking lowers the median correlation over one beacon interval from 0.85 to 0.15, near the estimator's floor. Unprecoded data frames gave 0.2-1.2 times the beacons' delay spread on the same channel, so the two should not be pooled.",
+          "title": "Device-Referred Channel Sounding With Commodity Wi-Fi Receivers: Error Budget and Body-Worn Measurements at 5 and 6 GHz"
+        },
+        "2611.34807": {
+          "abs": "https://arxiv.org/abs/2611.34807",
+          "authors": [
+            "Parker Huggins",
+            "Alphan Sahin",
+            "Elza Erkip"
+          ],
+          "categories": [
+            "cs.IT",
+            "eess.SP"
+          ],
+          "comment": "This work has been accepted to IEEE Signal Processing Letters",
+          "id": "2611.34807",
+          "pdf": "https://arxiv.org/pdf/2611.34807",
+          "summary": "In this letter, we study pairwise distances between sequences with a common aperiodic autocorrelation function. First, we show that pairwise distances are determined by a ternary signed pattern encoding the relative zero flips between spectral factors. Then, for Huffman sequences, we prove that Dihedral symmetries of the zeros preserve pairwise distances, and we further derive lower bounds on the minimum distance. The results in this letter offer a starting point for designing codes with a fixed autocorrelation. These codes are relevant in integrated sensing and communication.",
+          "title": "On the Distance Properties of Huffman Sequences"
+        }
+      },
+      "sources": {
+        "cs.IT": {
+          "announcement": "2026-11-26",
+          "complete": true,
+          "total": 35
+        },
+        "eess.SP": {
+          "announcement": "2026-11-26",
+          "complete": true,
+          "total": 39
+        }
+      },
+      "status": "no_new_content",
+      "targets": [
+        "cs.IT",
+        "eess.SP"
+      ]
     }
   },
   "transport": {
-    "last_response_at": 1795687126.509167,
-    "next_allowed_at": 1795687141.509167
+    "last_response_at": 1795773807.3486907,
+    "next_allowed_at": 1795773822.3486907
   },
   "version": 1
 }
